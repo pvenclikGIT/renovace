@@ -4,6 +4,7 @@ import FloatingCta from './components/FloatingCta'
 import Hero from './sections/Hero'
 import Process from './sections/Process'
 import Why from './sections/Why'
+import Comparison from './sections/Comparison'
 import Materials from './sections/Materials'
 import PhotoStrip from './sections/PhotoStrip'
 import Gallery from './sections/Gallery'
@@ -22,6 +23,7 @@ export default function App() {
         <Hero />
         <Process />
         <Why />
+        <Comparison />
         <Materials />
         <PhotoStrip />
         <Gallery />
