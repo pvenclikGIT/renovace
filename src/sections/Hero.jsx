@@ -1,59 +1,67 @@
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { IconArrow } from '../components/Icons'
 import styles from './Hero.module.css'
 
 const stats = [
-  { num: '180+', label: 'Realizací' },
-  { num: '3 dny', label: 'Průměrná doba' },
-  { num: '10 let', label: 'Záruka kvality' },
+  { num: '180+', label: 'dokončených koupelen' },
+  { num: '3 dny', label: 'průměrná realizace' },
+  { num: '10 let', label: 'záruka na těsnost' },
 ]
 
 const stagger = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.1, delayChildren: 0.05 } },
+  show: { transition: { staggerChildren: 0.11, delayChildren: 0.1 } },
 }
 const item = {
-  hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } },
+  hidden: { opacity: 0, y: 28 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.75, ease: [0.16, 1, 0.3, 1] } },
 }
 
 export default function Hero() {
   return (
     <section className={styles.hero}>
       <div className={styles.left}>
-        <motion.div variants={stagger} initial="hidden" animate="show">
+        <motion.div variants={stagger} initial="hidden" animate="show" className={styles.content}>
           <motion.div variants={item} className={styles.tag}>
             <span className={styles.tagDot} />
-            Praha & Středočeský kraj
+            Praha & Středočeský kraj — bez bourání
           </motion.div>
 
           <motion.h1 variants={item} className={styles.h1}>
-            <span className={styles.line}>Nová</span>
-            <span className={styles.line}>koupelna</span>
-            <span className={styles.line}><em>bez bourání.</em></span>
+            <span className={styles.line}>Koupelna,</span>
+            <span className={styles.line}>kterou jste</span>
+            <span className={`${styles.line} ${styles.lineGold}`}>vždycky chtěli.</span>
           </motion.h1>
 
           <motion.p variants={item} className={styles.sub}>
-            Epoxidové, pryskyřičné a cementové stěrky přímo na stávající obklady.
-            Žádný prach, žádný chaos — výsledek za 3 dny.
+            Epoxidové, cementové a pryskyřičné stěrky přímo na stávající obklady.
+            Tloušťka 2–3 mm. Žádné bourání, žádný prach, žádné překvapení v ceně.
+            Vaše koupelna — hotová za 3 dny.
           </motion.p>
 
           <motion.div variants={item} className={styles.actions}>
             <a href="#contact" className={styles.btnPrimary}>
-              Konzultace zdarma <ArrowRight size={16} strokeWidth={2} />
+              Chci konzultaci zdarma
+              <span className={styles.btnIcon}><IconArrow /></span>
             </a>
             <a href="#gallery" className={styles.btnGhost}>
-              Realizace <ArrowRight size={15} strokeWidth={1.5} />
+              Prohlédnout realizace
             </a>
           </motion.div>
 
           <motion.div variants={item} className={styles.stats}>
-            {stats.map(s => (
+            {stats.map((s, i) => (
               <div key={s.label} className={styles.stat}>
                 <span className={styles.statNum}>{s.num}</span>
                 <span className={styles.statLabel}>{s.label}</span>
+                {i < stats.length - 1 && <span className={styles.statDiv} />}
               </div>
             ))}
+          </motion.div>
+
+          <motion.div variants={item} className={styles.trust}>
+            <span className={styles.trustDot} />
+            Realizace do 48 hodin od první zprávy
           </motion.div>
         </motion.div>
       </div>
@@ -61,24 +69,36 @@ export default function Hero() {
       <div className={styles.right}>
         <motion.div
           className={styles.imgWrap}
-          initial={{ opacity: 0, scale: 1.06 }}
+          initial={{ opacity: 0, scale: 1.08 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
         >
-          <img src="/renovace/images/real-12.jpg" alt="Realizace koupelny se stěrkou" />
+          <img src="/renovace/images/real-12.jpg" alt="Koupelna po realizaci cementové stěrky" />
+          <div className={styles.imgOverlay} />
         </motion.div>
 
         <motion.div
           className={styles.badge}
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          initial={{ opacity: 0, x: 24 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className={styles.badgeTop}>
-            <span className={styles.badgeDot} />
-            <span className={styles.badgeLabel}>Bez demolice</span>
+            <span className={styles.badgePulse} />
+            <span className={styles.badgeLabel}>Právě realizujeme</span>
           </div>
-          <div className={styles.badgeText}>Tloušťka pouhé 2–3 mm</div>
+          <div className={styles.badgeText}>Cementová stěrka · Praha 6</div>
+          <div className={styles.badgeSub}>3 dny · Hotovo bez bourání</div>
+        </motion.div>
+
+        <motion.div
+          className={styles.scrollHint}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2, duration: 0.8 }}
+        >
+          <span className={styles.scrollLine} />
+          <span className={styles.scrollText}>Přejít dolů</span>
         </motion.div>
       </div>
     </section>

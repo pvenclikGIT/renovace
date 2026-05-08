@@ -7,6 +7,7 @@ import Why from './sections/Why'
 import Materials from './sections/Materials'
 import PhotoStrip from './sections/PhotoStrip'
 import Gallery from './sections/Gallery'
+import Myths from './sections/Myths'
 import Segments from './sections/Segments'
 import Testimonials from './sections/Testimonials'
 import Faq from './sections/Faq'
@@ -24,6 +25,7 @@ export default function App() {
         <Materials />
         <PhotoStrip />
         <Gallery />
+        <Myths />
         <Segments />
         <Testimonials />
         <Faq />

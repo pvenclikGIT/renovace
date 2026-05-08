@@ -1,22 +1,24 @@
 .wrap { max-width: 720px; }
 .tag {
   display: inline-flex; align-items: center; gap: 0.6rem;
-  font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em;
+  font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em;
   text-transform: uppercase; color: var(--gold);
-  background: var(--gold-pale); padding: 0.4rem 1rem;
-  border-radius: 100px; margin-bottom: 1.25rem;
+  background: var(--gold-pale); padding: 0.42rem 1rem;
+  border-radius: 100px; margin-bottom: 1.25rem; width: fit-content;
 }
+.tagDot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
 .title {
   font-family: var(--font-head);
-  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-size: clamp(2.1rem, 3.8vw, 3.2rem);
   font-weight: 700; line-height: 1.08;
-  color: var(--dark); letter-spacing: -0.03em;
+  color: var(--dark); letter-spacing: -0.035em;
 }
 .title em { font-style: normal; color: var(--gold); }
 .lead {
-  font-size: 1.05rem; font-weight: 300; color: var(--text2);
-  line-height: 1.72; margin-top: 1.25rem; max-width: 540px;
+  font-size: 1rem; font-weight: 300; color: var(--text2);
+  line-height: 1.72; margin-top: 1.25rem; max-width: 560px;
 }
 .light .title { color: var(--white); }
-.light .lead { color: rgba(255,255,255,0.6); }
-.light .tag { background: rgba(201,150,60,0.2); color: var(--gold3); }
+.light .lead { color: rgba(255,255,255,0.55); }
+.light .tag { background: rgba(201,150,60,0.18); color: var(--gold3); }
+.light .tagDot { background: var(--gold3); }

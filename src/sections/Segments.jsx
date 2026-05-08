@@ -1,45 +1,48 @@
+import { IconCheck } from '../components/Icons'
 import FadeIn from '../components/FadeIn'
 import SectionHeader from '../components/SectionHeader'
 import styles from './Segments.module.css'
-import { Check } from 'lucide-react'
 
 const segments = [
   {
-    icon: '🏠',
-    sub: 'Primární segment',
-    title: 'Páry 30–50 let',
-    desc: 'Vlastní byt nebo dům v Praze nebo Středočeském kraji. Ona chce koupelnu svých snů. On chce bez zbytečného chaosu a za rozumné peníze.',
+    icon: '/renovace/images/real-08.jpg',
+    sub: 'Nejčastěji',
+    badge: 'Primární segment',
+    title: 'Páry s vlastním bytem',
+    desc: 'Koupelna z devadesátek nebo nultých let, která vám denně kazí náladu. Chcete změnu — ale bez toho, aby přišel řemeslník a vyřídil vás na měsíc. Přesně pro vás.',
     points: [
-      'Hotovo za 3 dny bez chaosu',
-      'Žádný zásah do dispozice bytu',
-      'Pevná cena, žádné vícepráce',
-      'Deset let bez starostí',
+      'Hotovo za 3 dny, ne za 3 týdny',
+      'Pevná cena ještě před zahájením',
+      'Fyzický vzorek před podpisem',
+      'Záruční list na 10 let',
     ],
     featured: true,
   },
   {
-    icon: '🏢',
+    icon: null,
     sub: 'Sekundární segment',
-    title: 'Developeři & pronajímatelé',
-    desc: 'Potřebujete renovovat rychle, opakovaně a se spolehlivou kvalitou. Jsme partner pro celé projekty.',
+    badge: null,
+    title: 'Správci a pronajímatelé',
+    desc: 'Potřebujete renovovat opakovaně, rychle a bez přemýšlení. Jeden dodavatel, stejná kvalita, koordinace podle vašeho harmonogramu. Od tří bytů řešíme vše najednou.',
     points: [
-      'Množstevní slevy od 3 jednotek',
-      'Koordinace dle vašeho harmonogramu',
-      'Dokumentace pro investory',
-      'Jednotný výsledek napříč projektem',
+      'Množstevní sleva od 3 jednotek',
+      'Koordinace dle vašeho plánu',
+      'Dokumentace pro účetnictví',
+      'Totožný výsledek napříč projektem',
     ],
     featured: false,
   },
   {
-    icon: '🏨',
+    icon: null,
     sub: 'Terciární segment',
-    title: 'Hotely & wellness',
-    desc: 'Prémiový segment kde bezúdržbovost je klíčová. Povrchy odolají intenzivnímu provozu a zůstanou krásné roky.',
+    badge: null,
+    title: 'Hotely a wellness',
+    desc: 'Koupelna v hotelovém provozu musí vydržet tisíce cyklů ručníků, sprchových gelů a úklidové chemie. Epoxidová stěrka tuhle zátěž snese — a přitom vypadá jako luxusní design.',
     points: [
-      'Voděodolné — ideální pro spa',
-      'Antifungální, snadný úklid',
-      'Provoz obnoven do 24–48 hodin',
-      'Reference v pražských hotelech',
+      'Provoz obnoven do 24–48 h',
+      'Odolnost vůči hotelové chemii',
+      'Protiskluz certif. R10/R11',
+      'Reference z pražských hotelů',
     ],
     featured: false,
   },
@@ -50,30 +53,41 @@ export default function Segments() {
     <section id="segments" className={styles.section}>
       <FadeIn>
         <SectionHeader
-          tag="Pro koho"
-          title="Řešení pro<br /><em>každý typ klienta</em>"
+          tag="Pro koho pracujeme"
+          title={`Tři typy klientů.\n<em>Jedno řemeslo.</em>`}
+          lead="Výsledek je vždy stejný — technologicky správně provedená stěrka s zárukou. Liší se pouze rozsah a podmínky spolupráce."
         />
       </FadeIn>
-
       <div className={styles.grid}>
         {segments.map((s, i) => (
           <FadeIn key={s.title} delay={i * 0.12}>
             <div className={`${styles.card} ${s.featured ? styles.featured : ''}`}>
-              {s.featured && (
-                <div className={styles.badge}>Nejčastěji</div>
+              {s.featured && <div className={styles.badge}>Nejčastěji</div>}
+              {s.icon && (
+                <div className={styles.cardImg}>
+                  <img src={s.icon} alt={s.title} />
+                  <div className={styles.cardImgOverlay} />
+                </div>
               )}
-              <div className={styles.cardIcon}>{s.icon}</div>
-              <div className={styles.sub}>{s.sub}</div>
-              <h3 className={styles.title}>{s.title}</h3>
-              <p className={styles.desc}>{s.desc}</p>
-              <ul className={styles.list}>
-                {s.points.map(p => (
-                  <li key={p}>
-                    <Check size={13} strokeWidth={2} className={styles.check} />
-                    {p}
-                  </li>
-                ))}
-              </ul>
+              <div className={styles.cardBody}>
+                <div className={styles.sub}>{s.sub}</div>
+                <h3 className={styles.title}>{s.title}</h3>
+                <p className={styles.desc}>{s.desc}</p>
+                <ul className={styles.list}>
+                  {s.points.map(p => (
+                    <li key={p}>
+                      <span className={styles.checkWrap}><IconCheck /></span>
+                      {p}
+                    </li>
+                  ))}
+                </ul>
+                <a href="#contact" className={styles.cardCta}>
+                  Chci konzultaci
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </a>
+              </div>
             </div>
           </FadeIn>
         ))}

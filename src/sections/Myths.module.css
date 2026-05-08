@@ -1,0 +1,49 @@
+.section { background: var(--bg); padding: var(--py) var(--px); }
+.header { max-width: 600px; margin-bottom: 3.5rem; }
+.tag {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--gold); background: var(--gold-pale);
+  padding: 0.42rem 1rem; border-radius: 100px; margin-bottom: 1.25rem; width: fit-content;
+}
+.tagDot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+.title { font-family: var(--font-head); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 700; line-height: 1.1; color: var(--dark); letter-spacing: -0.03em; margin-bottom: 1rem; }
+.title em { font-style: normal; color: var(--gold); }
+.lead { font-size: 1rem; color: var(--text2); line-height: 1.7; font-weight: 300; }
+
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--bg3); border: 1px solid var(--bg3); border-radius: var(--radius-lg); overflow: hidden; }
+
+.item {
+  background: var(--white); padding: 1.75rem 1.75rem;
+  cursor: pointer; transition: background 0.2s;
+}
+.item:hover { background: #FAFAF8; }
+.itemOpen { background: #FAFAF8; }
+
+.itemHeader { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+.mythLabel { display: flex; flex-direction: column; gap: 0.5rem; flex: 1; }
+.mythBadge {
+  display: inline-block; font-size: 0.62rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  background: #FEE2E2; color: #DC2626;
+  padding: 0.22rem 0.65rem; border-radius: 100px; width: fit-content;
+}
+.mythText { font-family: var(--font-head); font-size: 1rem; font-weight: 700; color: var(--dark); line-height: 1.35; letter-spacing: -0.01em; }
+
+.toggle {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--bg2); display: flex; align-items: center; justify-content: center;
+  color: var(--gold); flex-shrink: 0; transition: background 0.2s, transform 0.3s;
+}
+.itemOpen .toggle { background: var(--gold); color: white; transform: rotate(45deg); }
+
+.truth { padding: 1.25rem 0 0.5rem; border-top: 1px solid var(--bg2); margin-top: 1.25rem; }
+.truthBadge {
+  display: inline-block; font-size: 0.62rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  background: #DCFCE7; color: #16A34A;
+  padding: 0.22rem 0.65rem; border-radius: 100px; margin-bottom: 0.75rem;
+}
+.truth p { font-size: 0.875rem; color: var(--text2); line-height: 1.72; font-weight: 300; }
+
+@media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
