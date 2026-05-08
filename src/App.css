@@ -1,0 +1,2 @@
+/* App-level resets only — design tokens live in index.css */
+#root { isolation: isolate; }

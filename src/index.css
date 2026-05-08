@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream: #F7F3EE;
+  --cream-dark: #EDE5D8;
+  --cream-darker: #DDD0BB;
+  --stone: #C4B49A;
+  --stone-dark: #9C8B74;
+  --charcoal: #1E1A17;
+  --charcoal-mid: #3A3530;
+  --charcoal-light: #6B6560;
+  --warm-white: #FDFAF6;
+  --gold: #A8935A;
+  --gold-light: #C8A96E;
+  --gold-pale: #E8D9B8;
+  --teal: #3D7A77;
+  --teal-light: #5B9E9B;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --nav-h: 72px;
+  --section-px: clamp(1.5rem, 6vw, 7rem);
+  --section-py: clamp(4rem, 8vw, 8rem);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font-body); background: var(--warm-white); color: var(--charcoal); overflow-x: hidden; line-height: 1.6; }
+::selection { background: var(--gold-pale); color: var(--charcoal); }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; font-family: var(--font-body); }
+img { display: block; max-width: 100%; }
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--stone); border-radius: 3px; }
