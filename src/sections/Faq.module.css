@@ -1,58 +1,18 @@
-.section {
-  background: var(--cream);
-  padding: var(--section-py) var(--section-px);
-}
-
-.columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0 5vw;
-  margin-top: 4rem;
-}
-
+.section { background: var(--white); padding: var(--py) var(--px); }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 0 5vw; margin-top: 4rem; }
 .col { display: flex; flex-direction: column; }
-
-.item {
-  border-bottom: 1px solid var(--cream-darker);
-}
-.item:first-child { border-top: 1px solid var(--cream-darker); }
-
+.item { border-bottom: 1px solid var(--bg3); }
+.item:first-child { border-top: 1px solid var(--bg3); }
 .question {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.6rem 0;
-  background: none;
-  border: none;
-  text-align: left;
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--charcoal);
-  cursor: pointer;
-  transition: color 0.2s;
+  width: 100%; display: flex; justify-content: space-between;
+  align-items: flex-start; gap: 1rem; padding: 1.5rem 0;
+  background: none; border: none; text-align: left;
+  font-family: var(--font-head); font-size: 1rem; font-weight: 600;
+  color: var(--dark); cursor: pointer; transition: color 0.2s;
+  letter-spacing: -0.01em;
 }
-
 .question:hover { color: var(--gold); }
-
-.question svg {
-  color: var(--gold);
-  flex-shrink: 0;
-  margin-top: 4px;
-}
-
-.answer {
-  font-size: 0.875rem;
-  color: var(--charcoal-light);
-  line-height: 1.75;
-  font-weight: 300;
-  padding-bottom: 1.6rem;
-  padding-right: 2rem;
-}
-
-@media (max-width: 760px) {
-  .columns { grid-template-columns: 1fr; gap: 0; }
-  .col:last-child .item:first-child { border-top: none; }
-}
+.question svg { color: var(--gold); flex-shrink: 0; margin-top: 3px; transition: transform 0.3s var(--ease); }
+.open .question svg { transform: rotate(45deg); }
+.answer { font-size: 0.875rem; color: var(--text2); line-height: 1.75; font-weight: 300; padding-bottom: 1.5rem; padding-right: 2rem; }
+@media (max-width: 760px) { .columns { grid-template-columns: 1fr; gap: 0; } .col:last-child .item:first-child { border-top: none; } }
