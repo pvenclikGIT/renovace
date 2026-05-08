@@ -16,3 +16,5 @@
 .legal a:hover { color: var(--white); }
 @media (max-width: 900px) { .top { grid-template-columns: 1fr 1fr; gap: 2.5rem; } }
 @media (max-width: 560px) { .top { grid-template-columns: 1fr; gap: 2rem; } .bottom { flex-direction: column; text-align: center; } }
+
+.logoWrap { display: flex; align-items: center; margin-bottom: 1.25rem; }
