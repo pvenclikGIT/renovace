@@ -1,0 +1,50 @@
+.bar {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 150;
+  background: var(--dark);
+  border-top: 1px solid rgba(201,150,60,0.2);
+  box-shadow: 0 -8px 32px rgba(23,20,18,0.25);
+}
+.inner {
+  max-width: 1400px; margin: 0 auto;
+  padding: 0.9rem var(--px);
+  display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+}
+.left { display: flex; align-items: center; gap: 0.85rem; }
+.pulse {
+  width: 9px; height: 9px; border-radius: 50%; background: #4CAF50;
+  flex-shrink: 0; animation: p 2s infinite;
+}
+@keyframes p { 0%,100%{box-shadow:0 0 0 0 rgba(76,175,80,.45);}50%{box-shadow:0 0 0 6px rgba(76,175,80,0);} }
+.text { display: flex; flex-direction: column; gap: 1px; }
+.strong { font-size: 0.85rem; font-weight: 700; color: var(--white); letter-spacing: -0.02em; }
+.sub { font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.4); }
+.actions { display: flex; align-items: center; gap: 0.6rem; flex-shrink: 0; }
+.btnCall {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  font-family: var(--font); font-size: 0.78rem; font-weight: 700;
+  color: var(--white); background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 0.6rem 1.1rem; border-radius: 100px;
+  transition: background 0.2s;
+}
+.btnCall:hover { background: rgba(255,255,255,0.15); }
+.btnCta {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  font-family: var(--font); font-size: 0.78rem; font-weight: 700;
+  color: var(--white); background: var(--gold);
+  padding: 0.6rem 1.25rem; border-radius: 100px;
+  transition: background 0.2s, transform 0.2s;
+}
+.btnCta:hover { background: var(--gold2); transform: translateY(-1px); }
+.close {
+  background: none; border: none; color: rgba(255,255,255,0.3);
+  padding: 0.4rem; cursor: pointer; border-radius: 50%;
+  transition: color 0.2s; display: flex; align-items: center;
+}
+.close:hover { color: var(--white); }
+@media (max-width: 640px) {
+  .inner { flex-wrap: wrap; gap: 0.75rem; }
+  .sub { display: none; }
+  .btnCall span { display: none; }
+  .strong { font-size: 0.8rem; }
+}

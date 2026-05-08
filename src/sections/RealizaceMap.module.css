@@ -1,0 +1,38 @@
+.section { background: var(--white); padding: var(--py) var(--px); }
+.inner { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5vw; align-items: start; }
+.header { position: sticky; top: calc(var(--nav-h) + 2rem); }
+.tag { display: inline-flex; align-items: center; gap: 0.6rem; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); background: var(--gold-pale); padding: 0.42rem 1rem; border-radius: 100px; margin-bottom: 1.25rem; width: fit-content; }
+.tagDot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+.title { font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 800; line-height: 1.1; color: var(--dark); letter-spacing: -0.04em; margin-bottom: 1rem; }
+.title em { font-style: normal; color: var(--gold); }
+.lead { font-size: 0.95rem; font-weight: 300; color: var(--mid); line-height: 1.72; }
+
+.mapWrap { position: relative; background: var(--bg); border-radius: var(--r-lg); padding: 1.5rem; border: 1px solid var(--bg3); }
+.svg { width: 100%; height: auto; display: block; }
+
+.tooltip {
+  position: absolute; top: 1.25rem; right: 1.25rem;
+  background: var(--dark); border-radius: var(--r);
+  padding: 0.75rem 1rem; opacity: 0; transform: scale(0.95);
+  transition: opacity 0.2s, transform 0.2s; pointer-events: none;
+  min-width: 120px;
+}
+.tooltipVisible { opacity: 1; transform: scale(1); }
+.ttLabel { font-size: 0.72rem; font-weight: 700; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.25rem; }
+.ttCount { font-size: 1.2rem; font-weight: 900; color: white; letter-spacing: -0.04em; }
+
+.legend { display: flex; gap: 1rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--bg3); flex-wrap: wrap; }
+.legendItem { display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; font-weight: 500; color: var(--mid); }
+.legendDot { border-radius: 50%; flex-shrink: 0; }
+
+.stats { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; margin-top: 2rem; }
+.statCard { background: var(--bg); border-radius: var(--r-lg); padding: 1.5rem 1.25rem; border: 1px solid var(--bg3); text-align: center; }
+.statNum { font-size: 1.8rem; font-weight: 900; color: var(--dark); letter-spacing: -0.05em; }
+.statLabel { font-size: 0.72rem; font-weight: 500; color: var(--mid); margin-top: 0.25rem; }
+
+@media (max-width: 960px) {
+  .inner { grid-template-columns: 1fr; }
+  .header { position: static; }
+  .stats { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 560px) { .stats { grid-template-columns: 1fr 1fr; } }
