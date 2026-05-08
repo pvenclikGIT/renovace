@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import styles from './Hero.module.css'
 
 const stats = [
@@ -65,13 +65,7 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className={styles.placeholder}>
-            <div className={styles.placeholderInner}>
-              <span>🛁</span>
-              <p>Fotografie realizace</p>
-              <small>Nahraďte vlastním snímkem</small>
-            </div>
-          </div>
+          <img src="/renovace/images/real-12.jpg" alt="Realizace koupelny se stěrkou" />
         </motion.div>
 
         <motion.div

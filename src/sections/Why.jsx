@@ -13,13 +13,7 @@ export default function Why() {
   return (
     <section id="why" className={styles.section}>
       <div className={styles.visual}>
-        <div className={styles.placeholder}>
-          <div className={styles.placeholderInner}>
-            <span>✦</span>
-            <p>Detail povrchu stěrky</p>
-            <small>Vlastní fotografie</small>
-          </div>
-        </div>
+        <img src="/renovace/images/real-06.jpg" alt="Sprchový kout se stěrkou" />
         <div className={styles.quoteWrap}>
           <blockquote className={styles.quote}>
             „Koupelna hotová za 3 dny —<br />

@@ -1,14 +1,6 @@
 .section { display: grid; grid-template-columns: 1fr 1fr; min-height: 85vh; }
 .visual { position: relative; background: var(--dark); overflow: hidden; }
-.placeholder {
-  width: 100%; height: 100%; min-height: 560px;
-  background: linear-gradient(145deg, #222 0%, #111 100%);
-  display: flex; align-items: center; justify-content: center;
-}
-.placeholderInner { text-align: center; color: #444; padding: 2rem; }
-.placeholderInner span { display: block; font-size: 2.5rem; opacity: 0.3; margin-bottom: 0.75rem; }
-.placeholderInner p { font-family: var(--font-head); font-size: 0.95rem; font-weight: 600; color: #555; }
-.placeholderInner small { font-size: 0.75rem; opacity: 0.5; }
+.visual img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; display: block; }
 .quoteWrap {
   position: absolute; bottom: 0; left: 0; right: 0;
   padding: 3rem 2.5rem;
@@ -16,8 +8,7 @@
 }
 .quote {
   font-family: var(--font-head); font-size: clamp(1.1rem, 2vw, 1.4rem);
-  font-weight: 700; color: var(--white); line-height: 1.4;
-  letter-spacing: -0.02em;
+  font-weight: 700; color: var(--white); line-height: 1.4; letter-spacing: -0.02em;
 }
 .quote em { font-style: normal; color: var(--gold2); }
 .content {
@@ -29,7 +20,6 @@
 .feature {
   display: flex; gap: 1.25rem; align-items: flex-start;
   padding: 1.75rem 0; border-bottom: 1px solid var(--bg2);
-  transition: background 0.2s;
 }
 .feature:first-child { border-top: 1px solid var(--bg2); }
 .iconWrap {

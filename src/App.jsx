@@ -5,6 +5,7 @@ import Hero from './sections/Hero'
 import Process from './sections/Process'
 import Why from './sections/Why'
 import Materials from './sections/Materials'
+import PhotoStrip from './sections/PhotoStrip'
 import Gallery from './sections/Gallery'
 import Segments from './sections/Segments'
 import Testimonials from './sections/Testimonials'
@@ -21,6 +22,7 @@ export default function App() {
         <Process />
         <Why />
         <Materials />
+        <PhotoStrip />
         <Gallery />
         <Segments />
         <Testimonials />
