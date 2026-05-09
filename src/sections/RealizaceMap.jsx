@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import FadeIn from '../components/FadeIn'
 import styles from './RealizaceMap.module.css'
 
-const API_KEY = import.meta.env.VITE_MAPYCZ_API_KEY
+const API_KEY = import.meta.env.VITE_MAPYCZ_API_KEY ?? 'f1eMlZ2r_OkS7QKgl_asXPHI5DixmzHCn_NJ2apRbD0'
 
 const districts = [
   { id: 'p1',  label: 'Praha 1',       lat: 50.0875, lng: 14.4208, count: 8  },
@@ -47,11 +47,11 @@ export default function RealizaceMap() {
       })
       leafletRef.current = map
 
-      // Mapy.cz tiles
+      // Mapy.com tiles
       L.tileLayer(
-        `https://api.mapy.cz/v1/maptiles/basic/256/{z}/{x}/{y}?apikey=${API_KEY}`,
+        `https://api.mapy.com/v1/maptiles/basic/256/{z}/{x}/{y}?apikey=${API_KEY}`,
         {
-          attribution: '© <a href="https://mapy.cz" target="_blank">Mapy.cz</a> · <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>',
+          attribution: '© <a href="https://mapy.com" target="_blank">Mapy.com</a> · <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>',
           maxZoom: 19,
         }
       ).addTo(map)
