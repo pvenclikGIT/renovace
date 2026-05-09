@@ -13,7 +13,7 @@ const tiers = [
   {
     id: 'standard',
     name: 'Standardní provedení',
-    tagline: 'Cementová stěrka, rovné plochy',
+    tagline: 'Cementová stěrka, rovné plochy a stěny',
     rate: 3000,
     rateLabel: '3 000',
     badgeText: null,
@@ -23,10 +23,10 @@ const tiers = [
       { ok: true,  text: 'Cementová stěrka na stěny i podlahu' },
       { ok: true,  text: 'Rovné plochy a jednoduché vzory' },
       { ok: true,  text: 'Výběr z 32 odstínů kolekce' },
-      { ok: true,  text: 'Příprava, broušení, skelná perlinka' },
+      { ok: true,  text: 'Příprava podkladu, broušení, skelná perlinka' },
       { ok: true,  text: 'Vodotěsná impregnace' },
       { ok: true,  text: 'Záruční list na 5 let' },
-      { ok: false, text: 'Niky, rohy, složitější detaily' },
+      { ok: false, text: 'Niky, rohy a složitější detaily' },
       { ok: false, text: 'Prémiové materiály' },
     ],
     example: { m2: 22, price: '66 000' },
@@ -35,8 +35,8 @@ const tiers = [
   },
   {
     id: 'medium',
-    name: 'Střední náročnost',
-    tagline: 'Epoxidová stěrka, niky a rohy',
+    name: 'Střední provedení',
+    tagline: 'Epoxidová stěrka, niky a rohy v ceně',
     rate: 3750,
     rateLabel: '3 750',
     badgeText: 'Nejoblíbenější',
@@ -44,13 +44,13 @@ const tiers = [
     matName: 'Epoxidová stěrka',
     features: [
       { ok: true, text: 'Epoxidová stěrka na stěny i podlahu' },
-      { ok: true, text: 'Niky, rohy, více detailů' },
+      { ok: true, text: 'Niky, rohy a detailnější plochy' },
       { ok: true, text: 'Lesklý nebo saténový povrch' },
-      { ok: true, text: 'Příprava, broušení, skelná perlinka' },
+      { ok: true, text: 'Příprava podkladu, broušení, skelná perlinka' },
       { ok: true, text: 'Plná vodotěsná impregnace' },
       { ok: true, text: 'Protiskluzová certifikace R10' },
       { ok: true, text: 'Záruční list na 10 let' },
-      { ok: true, text: 'Doprava Praha zdarma' },
+      { ok: true, text: 'Doprava po Praze zdarma' },
     ],
     example: { m2: 22, price: '82 500' },
     suitable: 'Sprchové kouty, nájemní byty, hotely, penziony',
@@ -72,11 +72,11 @@ const tiers = [
       { ok: true, text: 'Prémiová nano impregnace' },
       { ok: true, text: 'Protiskluzová certifikace R10/R11' },
       { ok: true, text: 'Záruční list na 10 let' },
-      { ok: true, text: 'Doprava Praha zdarma, prioritní termín' },
-      { ok: true, text: 'Fyzické vzorky s přivezeme na konzultaci' },
+      { ok: true, text: 'Doprava po Praze zdarma, prioritní termín' },
+      { ok: true, text: 'Fyzické vzorky přivezeme osobně ke konzultaci' },
     ],
     example: { m2: 22, price: '99 000' },
-    suitable: 'Luxusní rezidence, wellness, hotely 4+ hvězdiček',
+    suitable: 'Luxusní rezidence, wellness, hotely 4 a více hvězdiček',
     cta: 'Poptat pryskyřičnou stěrku',
   },
 ]
@@ -88,7 +88,7 @@ const materials = [
     accentColor: '#3D7A77',
     tags: ['Stěny', 'Podlaha', 'Maximální odolnost'],
     rate: '3 750',
-    desc: 'Tvrdá jako kámen, hladká jako leštěný mramor. Nejodolnější volba s nulovou nasákavostí. Ideální pro sprchové kouty a podlahy vystavené vysoké vlhkosti.',
+    desc: 'Tvrdá jako kámen, hladká jako leštěný mramor. Epoxidová stěrka je nejodolnější volba s nulovou nasákavostí. Sprchové kouty, vany i podlahy vystavené každodenní vlhkosti ji jen tak nezlomí.',
     pros: ['Extrémní pevnost a odolnost', 'Lesklý nebo saténový povrch', 'Nulová nasákavost', 'Bezspárový monolit'],
     ideal: 'Sprchové kouty, vany, podlahy. Moderní a průmyslový styl.',
   },
@@ -98,7 +98,7 @@ const materials = [
     accentColor: '#C9963C',
     tags: ['Stěny', 'Podlaha', 'Nejoblíbenější'],
     rate: '3 000',
-    desc: 'Minerální textura, skandinávský klid. Přirozený matný charakter připomínající beton. Oblíbená volba designérů interiérů v celé Evropě.',
+    desc: 'Minerální textura, skandinávský klid. Přirozený matný povrch připomínající pohledový beton. Nejoblíbenější volba designérů interiérů v celé Evropě pro svůj nadčasový charakter.',
     pros: ['Přírodní matný povrch', 'Betonový efekt bez betonu', 'Teplé přírodní tóny', 'Výborná prodyšnost'],
     ideal: 'Stěny, příčky, méně exponované plochy. Skandinávský a minimalistický styl.',
   },
@@ -106,11 +106,11 @@ const materials = [
     slug: 'pryskyrice',
     name: 'Pryskyřičná stěrka',
     accentColor: '#3D3830',
-    tags: ['Stěny', 'Podlaha', 'Premium'],
+    tags: ['Stěny', 'Podlaha', 'Prémiová'],
     rate: '4 500',
-    desc: 'Nejplastičtější z trojice. Lze tvarovat, barvit, kombinovat. Ideální pro designové vzory a prémiové wellness prostory.',
+    desc: 'Nejplastičtější z trojice. Tvarujte ji, barvěte, kombinujte. Pryskyřičná stěrka umí imitovat mramor nebo leštěný beton v barvách a vzorech, které standardní materiály nikdy nedají.',
     pros: ['Neomezené barvy a vzory', 'Imitace mramoru nebo leštěného betonu', 'Prémiový designový výsledek', 'Exkluzivní povrch bez spár'],
-    ideal: 'Designové interiéry, wellness, hotely 4+ hvězdiček.',
+    ideal: 'Designové interiéry, wellness, hotely 4 a více hvězdiček.',
   },
 ]
 
@@ -179,37 +179,61 @@ function IconCertificate() {
 }
 
 const included = [
-  { Icon: IconChat,        title: 'Konzultace zdarma',   note: 'Z fotek nebo na místě, bez závazku' },
-  { Icon: IconLayers,      title: 'Příprava podkladu',   note: 'Broušení, odmašťování, penetrace, skelná perlinka' },
-  { Icon: IconDrop,        title: 'Vodotěsná impregnace',note: 'Certifikovaný systém, součást každé zakázky' },
-  { Icon: IconTruck,       title: 'Doprava Praha zdarma',note: 'Středočeský kraj od 590 Kč' },
-  { Icon: IconSparkle,     title: 'Úklid po realizaci',  note: 'Odcházíme bez jediného zrnka prachu' },
-  { Icon: IconCertificate, title: 'Záruční list písemně',note: '5 nebo 10 let na těsnost ke každé zakázce' },
+  { Icon: IconChat,        title: 'Konzultace zdarma',    note: 'Z fotek nebo na místě, bez závazku' },
+  { Icon: IconLayers,      title: 'Příprava podkladu',    note: 'Broušení, odmašťování, penetrace, skelná perlinka' },
+  { Icon: IconDrop,        title: 'Vodotěsná impregnace', note: 'Certifikovaný systém, součást každé zakázky' },
+  { Icon: IconTruck,       title: 'Doprava Praha zdarma', note: 'Středočeský kraj od 590 Kč' },
+  { Icon: IconSparkle,     title: 'Úklid po realizaci',   note: 'Odcházíme bez jediného zrnka prachu' },
+  { Icon: IconCertificate, title: 'Záruční list písemně', note: '5 nebo 10 let na těsnost ke každé zakázce' },
 ]
 
 const extras = [
-  { label: 'Protiskluzová certifikace R10',     price: '+150 Kč/m²',   note: 'Doporučeno pro podlahy, vhodné pro rodiny s dětmi' },
-  { label: 'Demontáž a montáž příslušenství',   price: 'od 500 Kč',    note: 'Háčky, police, zrcadlo, sprchová tyč' },
-  { label: 'Express termín do 48 h',            price: '+20 %',        note: 'Dle aktuální dostupnosti' },
-  { label: 'Projekty mimo Prahu',               price: 'individuálně', note: 'Větší projekty po celé ČR' },
-  { label: 'Hotely, nájemní byty, developeři',  price: 'individuálně', note: 'Množstevní sleva od 3 koupelen' },
+  { label: 'Protiskluzová certifikace R10',    price: '+150 Kč/m²',   note: 'Doporučeno pro podlahy, vhodné pro rodiny s dětmi' },
+  { label: 'Demontáž a montáž příslušenství',  price: 'od 500 Kč',    note: 'Háčky, police, zrcadlo, sprchová tyč' },
+  { label: 'Express termín do 48 h',           price: '+20 %',        note: 'Dle aktuální dostupnosti' },
+  { label: 'Projekty mimo Prahu',              price: 'individuálně', note: 'Větší projekty po celé ČR' },
+  { label: 'Hotely, nájemní byty, developeři', price: 'individuálně', note: 'Množstevní sleva od 3 koupelen' },
 ]
 
-const process = [
-  { num: '01', title: 'Konzultace a výběr', desc: 'Přivezeme fyzické vzorky, poradíme s materiálem, barvou i texturou. Stačí pár fotek na WhatsApp. Prohlídka a konzultace jsou zdarma.', badge: 'Zdarma', detail: 'Do 48 h od poptávky' },
-  { num: '02', title: 'Příprava podkladu', desc: 'Stávající obklady přebrousíme, odmaštíme a ošetříme adhezním přípravkem. Vkládáme skelnou perlinku, klíč k tomu, aby stěrka nepraskala nad původními spárami.', badge: 'Den 1', detail: 'Mokrý proces, bez prachu' },
-  { num: '03', title: 'Aplikace ve vrstvách', desc: 'Nanášíme 4-6 vrstev. Každá musí dostatečně zatvrdnout. Urychlovat se nedá, na tomhle stojí výsledná pevnost a estetika povrchu.', badge: 'Den 1-3', detail: 'Epoxid, cement, pryskyřice' },
-  { num: '04', title: 'Lak a předání', desc: 'Finální vrstva je polyuretanový lak, který určí míru lesku a zajistí voděodolnost. Po 24 hodinách je koupelna schůdná. Záruční list součástí.', badge: 'Den 3-4', detail: 'Záruční list součástí' },
+const steps = [
+  {
+    num: '01',
+    title: 'Konzultace a výběr materiálu',
+    desc: 'Stačí pár fotek na WhatsApp nebo krátká prohlídka. Přivezeme fyzické vzorky, poradíme s materiálem, barvou i texturou. Konzultace je zcela zdarma a bez závazku.',
+    badge: 'Zdarma',
+    detail: 'Do 48 h od poptávky',
+  },
+  {
+    num: '02',
+    title: 'Příprava podkladu',
+    desc: 'Stávající obklady přebrousíme, odmaštíme a ošetříme adhezním přípravkem. Vkládáme skelnou perlinku, klíč k tomu, aby stěrka nepraskala nad původními spárami.',
+    badge: 'Den 1',
+    detail: 'Mokrý proces, bez prachu',
+  },
+  {
+    num: '03',
+    title: 'Aplikace ve vrstvách',
+    desc: 'Nanášíme 4-6 vrstev. Každá musí dostatečně zatvrdnout. Žádné zkratky. Na přesném technologickém postupu stojí pevnost i estetika povrchu, která vydrží desetiletí.',
+    badge: 'Den 1-3',
+    detail: 'Epoxid, cement nebo pryskyřice',
+  },
+  {
+    num: '04',
+    title: 'Finální lak a předání',
+    desc: 'Poslední vrstva je polyuretanový lak, který určí míru lesku a zajistí voděodolnost. Po 24 hodinách je koupelna schůdná. Záruční list dostanete při předání.',
+    badge: 'Den 3-4',
+    detail: 'Záruční list součástí',
+  },
 ]
 
 const faqs = [
   {
     q: 'Proč je cena za m² a ne za celou koupelnu?',
-    a: 'Koupelny se liší velikostí i složitostí. Dvě koupelny stejné podlahové plochy mohou mít úplně jiný počet m² stěn, různý počet nik, rohů nebo sprchových koutů. Cena za m² je jediný transparentní způsob, jak vám dát přesnou nabídku. Kalkulaci spočítáme zdarma po konzultaci nebo z fotek.',
+    a: 'Koupelny se liší velikostí i složitostí. Dvě koupelny stejné podlahové plochy mohou mít zcela jiný počet m² stěn, různý počet nik, rohů nebo sprchových koutů. Cena za m² je jediný transparentní způsob, jak vám dát přesnou nabídku. Kalkulaci spočítáme zdarma po konzultaci nebo z fotek.',
   },
   {
     q: 'Co přesně zahrnuje cena 3 000-4 500 Kč/m²?',
-    a: 'Vše, co je potřeba pro hotový výsledek. Příprava podkladu, skelná perlinka, všechny vrstvy materiálu, finální lak, vodotěsná impregnace, úklid po práci a záruční list. Ceny jsou bez DPH. Doplatek nastává jen u volitelných příplatků jako protiskluz nebo express termín.',
+    a: 'Vše, co je potřeba pro hotový výsledek: příprava podkladu, skelná perlinka, všechny vrstvy materiálu, finální lak, vodotěsná impregnace, úklid po práci a záruční list. Ceny jsou bez DPH. Doplatek nastává jen u volitelných příplatků jako protiskluz nebo express termín.',
   },
   {
     q: 'Lze stěrku aplikovat i na staré, popraskané nebo nerovné obklady?',
@@ -217,19 +241,19 @@ const faqs = [
   },
   {
     q: 'Jak probíhá platba?',
-    a: 'Záloha 30 % při podpisu smlouvy, doplatek 70 % po předání hotové koupelny. Přijímáme bankovní převod i hotovost. Žádné platby před podpisem smlouvy.',
+    a: 'Záloha 30 % při podpisu smlouvy, doplatek 70 % po předání hotové koupelny. Přijímáme bankovní převod i hotovost. Žádné platby předem bez podpisu smlouvy.',
   },
   {
-    q: 'Jak dlouho po realizaci musím čekat, než mohu koupelnu používat?',
-    a: 'Po 24 hodinách je podlaha schůdná. Plnou odolnost vůči chemii a vlhkosti má povrch po 7 dnech. Přesný harmonogram dostanete při předání.',
+    q: 'Jak dlouho po realizaci mohu koupelnu používat?',
+    a: 'Po 24 hodinách je podlaha schůdná. Plnou odolnost vůči chemii a vlhkosti získá povrch po 7 dnech. Přesný harmonogram dostanete při předání.',
   },
   {
     q: 'Jaká je údržba nového povrchu?',
-    a: 'Velmi jednoduchá. Neutrální čistič, měkký hadr nebo mop. Žádné agresivní chemikálie, žádné spáry, kde by se hromadil nečistota nebo plíseň. Při předání dostanete stručný návod na péči.',
+    a: 'Velmi jednoduchá. Neutrální čistič a měkký hadr nebo mop. Žádné agresivní chemikálie, žádné spáry, kde by se hromadila nečistota nebo plíseň. Při předání dostanete stručný návod na péči.',
   },
   {
     q: 'Pracujete i mimo Prahu a Středočeský kraj?',
-    a: 'U větších projektů (hotely, bytové komplexy, developeři) jedeme po celé ČR. Kontaktujte nás přímo a domluvíme se individuálně.',
+    a: 'U větších projektů, jako jsou hotely, bytové komplexy nebo developerské projekty, jedeme po celé ČR. Kontaktujte nás přímo a domluvíme se individuálně.',
   },
 ]
 
@@ -302,31 +326,31 @@ export default function Cenik() {
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <FadeIn>
-            <nav className={styles.breadcrumb} aria-label="Drobeckova navigace">
-              <Link to="/">Domu</Link>
+            <nav className={styles.breadcrumb} aria-label="Drobečková navigace">
+              <Link to="/">Domů</Link>
               <span aria-hidden="true">/</span>
-              <span>Cenik</span>
+              <span>Ceník</span>
             </nav>
 
             <div className={styles.heroTag}>
               <span className={styles.heroDot} />
-              Transparentni ceny bez prekvapeni
+              Transparentní ceny, bez překvapení
             </div>
 
             <h1 className={styles.heroH1}>
-              Kolik stoji nova<br />
+              Kolik stojí nová<br />
               <em className={styles.heroGold}>koupelna bez bourání?</em>
             </h1>
 
             <p className={styles.heroLead}>
-              Cena stěrky se pohybuje od <strong>3 000 do 4 500 Kč/m²</strong> bez DPH a zahrnuje práci i materiál.
-              Vyplatí se to? Pro průměrnou koupelnu ušetříte oproti klasické rekonstrukci{' '}
-              <strong>80 000-150 000 Kč</strong> a máte hotovo za 3 dny místo 6 týdnů.
+              Stěrka vyjde od <strong>3 000 do 4 500 Kč/m²</strong> bez DPH a zahrnuje práci i materiál.
+              Průměrná koupelna vychází kolem 66 000-99 000 Kč bez DPH.
+              Klasická rekonstrukce? Klidně 200 000 Kč a 6 týdnů čekání.
             </p>
 
             <div className={styles.heroActions}>
               <a href={`${HOME}#contact`} className={styles.heroBtnPrimary}>
-                Chci orientacni cenu
+                Chci nezávaznou kalkulaci
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
                   <path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
@@ -361,18 +385,19 @@ export default function Cenik() {
         </div>
       </section>
 
-      {/* ── SROVNANI ──────────────────────────────────────────── */}
+      {/* ── SROVNÁNÍ ──────────────────────────────────────────── */}
       <section className={styles.whyCheaper}>
         <div className={styles.compareInner}>
           <FadeIn>
             <div className={styles.compareText}>
-              <div className={styles.compareTag}>Proc je to levnejsi?</div>
+              <div className={styles.compareTag}>Proč je to levnější?</div>
               <h2 className={styles.compareH2}>
                 Klasická rekonstrukce vs. <strong>stěrka bez bourání</strong>
               </h2>
               <p className={styles.compareLead}>
-                Tradiční rekonstrukce koupelny stojí 80 000-200 000 Kč a trvá 3-6 týdnů. Stěrka jde přímo
-                na stávající obklady. Žádné bourání, žádný prach, žádný odpad. Výsledek za zlomek ceny.
+                Tradiční rekonstrukce stojí 80 000-200 000 Kč a paralyzuje byt na 3-6 týdnů.
+                Stěrka jde přímo přes stávající obklady. Žádné bourání, žádný prach, žádný kontejner sutě.
+                Výsledek za zlomek ceny, za zlomek času.
               </p>
             </div>
 
@@ -394,14 +419,14 @@ export default function Cenik() {
         </div>
       </section>
 
-      {/* ── CENOVE TIERS ──────────────────────────────────────── */}
+      {/* ── CENOVÉ SAZBY ──────────────────────────────────────── */}
       <section className={styles.section}>
         <div className={styles.inner}>
           <FadeIn>
             <SectionHeader
               tag="Cenové sazby"
               title="Tři úrovně provedení. <em>Jedna cena za m².</em>"
-              lead="Cena závisí na materiálu a složitosti provedení. Všechny sazby jsou bez DPH a zahrnují práci i materiál."
+              lead="Cena závisí na materiálu a složitosti práce. Všechny sazby jsou bez DPH a zahrnují práci i materiál."
             />
           </FadeIn>
 
@@ -464,20 +489,20 @@ export default function Cenik() {
         </div>
       </section>
 
-      {/* ── MATERIALY ─────────────────────────────────────────── */}
+      {/* ── MATERIÁLY ─────────────────────────────────────────── */}
       <section className={`${styles.section} ${styles.sectionDark}`}>
         <div className={styles.inner}>
           <FadeIn>
             <SectionHeader
               tag="Materiály"
               title="Tři charaktery. <em>Jeden výsledek.</em>"
-              lead="Každý materiál má svůj charakter. Vybereme společně ten, který sedí vašemu prostoru a rozpočtu."
+              lead="Každý materiál má svůj vlastní charakter. Vybereme společně ten, který nejlépe sedí vašemu prostoru a rozpočtu."
               light
             />
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <div className={styles.matTabs} role="tablist" aria-label="Vyber materialu">
+            <div className={styles.matTabs} role="tablist" aria-label="Výběr materiálu">
               {materials.map(m => (
                 <button
                   key={m.slug}
@@ -546,14 +571,14 @@ export default function Cenik() {
         </div>
       </section>
 
-      {/* ── CO JE V CENE ──────────────────────────────────────── */}
+      {/* ── CO JE V CENĚ ──────────────────────────────────────── */}
       <section className={styles.section}>
         <div className={styles.inner}>
           <FadeIn>
             <SectionHeader
-              tag="Co je v cene"
+              tag="Co je v ceně"
               title="Vždy zahrnuto. <em>Bez skrytých nákladů.</em>"
-              lead="Žádné vícepráce, žádné faktury navíc. Cenu dostanete po konzultaci a ta se nemění."
+              lead="Žádné vícepráce, žádné faktury navíc. Cenu dostanete před zahájením práce, závazně. Nemění se."
             />
           </FadeIn>
 
@@ -567,7 +592,7 @@ export default function Cenik() {
                       <path d="M8 11l2.5 2.5 4-4" stroke="#4CAF50" strokeWidth="1.5" strokeLinecap="round"/>
                     </svg>
                   </div>
-                  <h3 className={styles.includedCardTitle}>Vzdy v cene</h3>
+                  <h3 className={styles.includedCardTitle}>Vždy v ceně</h3>
                 </div>
                 <ul className={styles.includedList}>
                   {included.map(it => (
@@ -592,7 +617,7 @@ export default function Cenik() {
                       <path d="M11 7v4l3 2" stroke="var(--gold)" strokeWidth="1.5" strokeLinecap="round"/>
                     </svg>
                   </div>
-                  <h3 className={styles.includedCardTitle}>Volitelné príplatky</h3>
+                  <h3 className={styles.includedCardTitle}>Volitelné příplatky</h3>
                 </div>
                 <ul className={styles.extrasList}>
                   {extras.map(ex => (
@@ -611,18 +636,18 @@ export default function Cenik() {
         </div>
       </section>
 
-      {/* ── PROCESS ───────────────────────────────────────────── */}
+      {/* ── JAK TO FUNGUJE ────────────────────────────────────── */}
       <section className={`${styles.section} ${styles.sectionAlt}`}>
         <div className={styles.inner}>
           <FadeIn>
             <SectionHeader
               tag="Jak to funguje"
               title="Od první zprávy <em>k hotové koupelně.</em>"
-              lead="Čtyři kroky. Přesně víte, co se bude dít, kdy to bude hotové a kolik to bude stát, ještě předtím než se do toho pustíme."
+              lead="Čtyři kroky od poptávky k předání. Přesně víte, co se bude dít, kdy to bude hotové a kolik to bude stát."
             />
           </FadeIn>
           <div className={styles.processGrid}>
-            {process.map((step, i) => (
+            {steps.map((step, i) => (
               <FadeIn key={step.num} delay={i * 0.1}>
                 <div className={styles.processCard}>
                   <div className={styles.processTopRow}>
@@ -641,12 +666,12 @@ export default function Cenik() {
         </div>
       </section>
 
-      {/* ── PRIKLAD KALKULACE ─────────────────────────────────── */}
+      {/* ── PŘÍKLAD KALKULACE ─────────────────────────────────── */}
       <section className={styles.section}>
         <div className={styles.inner}>
           <FadeIn>
             <SectionHeader
-              tag="Priklad kalkulace"
+              tag="Příklad kalkulace"
               title="Kolik vyjde <em>průměrná koupelna?</em>"
               lead="Průměrná koupelna: podlaha 6 m², stěny 16 m², celkem 22 m². Cementová stěrka, standardní provedení."
             />
@@ -656,11 +681,11 @@ export default function Cenik() {
             <div className={styles.calc}>
               <div className={styles.calcRows}>
                 {[
-                  { item: 'Stěny 16 m² × 3 000 Kč/m²',      val: '48 000 Kč' },
-                  { item: 'Podlaha 6 m² × 3 000 Kč/m²',      val: '18 000 Kč' },
-                  { item: 'Příprava podkladu a impregnace',   val: 'zahrnuto' },
-                  { item: 'Doprava Praha',                     val: 'zdarma' },
-                  { item: 'Záruční list na 5 let',             val: 'zahrnuto' },
+                  { item: 'Stěny 16 m² × 3 000 Kč/m²',     val: '48 000 Kč' },
+                  { item: 'Podlaha 6 m² × 3 000 Kč/m²',     val: '18 000 Kč' },
+                  { item: 'Příprava podkladu a impregnace',  val: 'zahrnuto'  },
+                  { item: 'Doprava Praha',                    val: 'zdarma'    },
+                  { item: 'Záruční list na 5 let',            val: 'zahrnuto'  },
                 ].map(row => (
                   <div key={row.item} className={styles.calcRow}>
                     <span className={styles.calcItem}>{row.item}</span>
@@ -673,24 +698,24 @@ export default function Cenik() {
                 <span className={styles.calcTotalNum}>66 000 Kč</span>
               </div>
               <p className={styles.calcNote}>
-                Orientacni kalkulace. Konecna cena zavisi na stavu povrchu a zvolene barvě.
-                Pro přesnější kalkulaci zkuste{' '}
+                Toto je orientační kalkulace. Konečná cena závisí na stavu povrchu a zvoleném materiálu.
+                Přesnější odhad dostanete přes{' '}
                 <a href={`${HOME}#calculator`}>interaktivní kalkulátor</a> nebo{' '}
-                <a href={`${HOME}#contact`}>napište nám</a>.
+                <a href={`${HOME}#contact`}>napište nám</a> a spočítáme to zdarma.
               </p>
             </div>
           </FadeIn>
         </div>
       </section>
 
-      {/* ── FAQ ───────────────────────────────────────────────── */}
+      {/* ── ČASTÉ DOTAZY ──────────────────────────────────────── */}
       <section className={`${styles.section} ${styles.sectionAlt}`}>
         <div className={styles.inner}>
           <FadeIn>
             <SectionHeader
-              tag="Caste dotazy"
+              tag="Časté dotazy"
               title="Otázky o ceníku <em>a platbách</em>"
-              lead="Nejcastejsi dotazy zakazniku k cenam, materialum a prubahu prace."
+              lead="Nejčastější dotazy zákazníků k cenám, materiálům a průběhu práce. Nezodpovězené otázky? Napište nebo zavolejte."
             />
           </FadeIn>
           <FadeIn delay={0.1}>
@@ -716,13 +741,13 @@ export default function Cenik() {
                 Chcete přesnou cenu<br />pro vaši koupelnu?
               </h2>
               <p className={styles.ctaLead}>
-                Pošlete nám pár fotek přes WhatsApp nebo e-mail. Do 24 hodin dostanete
-                orientacni cenu, volne terminy a doporuceni materialu. Zcela zdarma a bez zavazku.
+                Pošlete nám pár fotek přes WhatsApp nebo e-mail. Během 24 hodin dostanete
+                orientační cenu, volné termíny a doporučení vhodného materiálu. Zdarma, bez závazku.
               </p>
             </div>
             <div className={styles.ctaRight}>
               <a href={`${HOME}#contact`} className={styles.ctaBtn}>
-                Nezavazna poptavka
+                Nezávazná poptávka
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
                   <path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
