@@ -1,7 +1,6 @@
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import FloatingCta from './components/FloatingCta'
-import StickyBar from './components/StickyBar'
 import Hero from './sections/Hero'
 import Urgency from './sections/Urgency'
 import Process from './sections/Process'
@@ -50,7 +49,6 @@ export default function App() {
       </main>
       <Footer />
       <FloatingCta />
-      <StickyBar />
     </>
   )
 }
