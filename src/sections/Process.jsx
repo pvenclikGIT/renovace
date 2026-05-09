@@ -53,14 +53,15 @@ export default function Process() {
             <div className={styles.step}>
               <div className={styles.stepTop}>
                 <span className={styles.num}>{s.num}</span>
-                <div className={styles.badges}>
-                  <span className={styles.dayBadge}>{s.day}</span>
-                  <span className={styles.detailBadge}>{s.detail}</span>
-                </div>
+                <span className={styles.dayBadge}>{s.day}</span>
               </div>
               <div className={styles.stepAccent} />
               <h3 className={styles.title}>{s.title}</h3>
               <p className={styles.text}>{s.text}</p>
+              <div className={styles.detailRow}>
+                <span className={styles.detailDot} aria-hidden="true" />
+                <span className={styles.detail}>{s.detail}</span>
+              </div>
             </div>
           </FadeIn>
         ))}

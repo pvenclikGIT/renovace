@@ -206,6 +206,10 @@ const faqs = [
     a: 'Vše, co je potřeba pro hotový výsledek: příprava podkladu, skelná perlinka, všechny vrstvy materiálu, finální lak, vodotěsná impregnace, úklid po práci a záruční list. Ceny jsou bez DPH. Doplatek nastává jen u volitelných příplatků jako protiskluz nebo přednostní termín.',
   },
   {
+    q: 'Která stěrka je vhodná pro mou koupelnu?',
+    a: 'Cementovou stěrku používáme na stěny a méně exponované plochy. Na podlahy do mokrého provozu (sprchový kout, koupelnová podlaha) volíme epoxidovou nebo pryskyřičnou. Epoxid je tvrdý a levnější, pryskyřice je pružná a vhodná na podlahové topení nebo designové vzory. Při konzultaci vždy navrhneme materiál podle konkrétní plochy a způsobu užívání. Cena se liší podle materiálu, ne podle typu klienta. Stejnou kvalitu dáváme do bytu, hotelu i kanceláří.',
+  },
+  {
     q: 'Lze stěrku aplikovat i na staré, popraskané nebo nerovné obklady?',
     a: 'Ve většině případů ano. Drobné praskliny nebo nerovnosti zvládneme jako součást přípravy podkladu. Pokud jsou obklady nestabilní nebo výrazně poškozené, zjistíme to při konzultaci a sdělíme vám to vždy předem. Žádné překvapení na faktuře.',
   },

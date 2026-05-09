@@ -12,8 +12,7 @@ const faqs = [
   { q: 'Co se stane, když se stěrka poškodí?', a: 'Lokální oprava je možná. Povrch se v poškozené oblasti přebrousí, zatmelí a nalakuje. Výsledek není stoprocentně neviditelný, ale výrazně méně nápadný než u keramiky, kde nikdy neseženete stejnou sérii dlaždic. Větší šok absorbuje pryskyřice lépe než keramika.' },
   { q: 'Jak se o stěrku starám?', a: 'Stačí pH neutrální čisticí prostředky. Žádné abrazivní pískovce ani drátěnky. Jednou za pár let lze nanést novou vrstvu finálního laku, který povrch "omladí". Nedoporučujeme nechávat stát agresivní chemii (odstraňovač rtěnky, aceton) déle než nutno.' },
   { q: 'Kde je háček? Proč to není všude?', a: 'Háček je v aplikaci. Stěrka je technologicky náročná. Špatně provedená praská, puchýřuje nebo nedrží. Proto je na trhu hodně levných firem se špatnými referencemi. My děláme stěrky denně, máme certifikace materiálů a záruční list ke každé zakázce.' },
-  { q: 'Jezdíte jen do Prahy?', a: 'Primárně Praha a Středočeský kraj. Pro větší projekty (3 a více koupelen) přijedeme i dál. Kontaktujte nás a domluvíme se.' },
-  { q: 'Mohu si objednat vzorek domů?', a: 'Ano, a doporučujeme to. Fyzický vzorek ve vaší koupelně při vašem osvětlení je jiný zážitek než fotka na monitoru. Při konzultaci přivezeme vzorkovou desku nebo ji zašleme poštou. Povrch si osaháte, přiložíte k bateriím a nábytku.' },
+  { q: 'Jezdíte jen do Prahy?', a: 'Primárně Praha a Středočeský kraj. Pro větší projekty (3 a více koupelen) přijedeme i dál. Kontaktujte nás a domluvíme se. Fyzický vzorek vaší vybrané barvy přivážíme osobně při konzultaci, ať si ho osaháte ve vašem světle a u vaší baterie.' },
 ]
 
 function FaqItem({ q, a }) {
