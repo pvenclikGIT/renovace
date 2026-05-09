@@ -178,10 +178,18 @@
 .tiers { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 3rem; }
 
 .tierCard {
+  container-type: inline-size;
   background: var(--white); border-radius: var(--r-lg);
-  border: 1.5px solid var(--bg3); padding: 2.25rem 2rem;
+  border: 1.5px solid var(--bg3); padding: var(--space-7) var(--space-6);
   display: flex; flex-direction: column; position: relative;
   transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+/* Wider tier cards (1-col layout) get larger price typography */
+@container (min-width: 480px) {
+  .tierCard { padding: var(--space-8) var(--space-7); }
+  .tierName { font-size: var(--fs-xl); }
+  .tierNum { font-size: var(--fs-3xl); }
 }
 .tierCard:hover { border-color: var(--bg4); box-shadow: 0 8px 32px rgba(0,0,0,0.07); }
 
