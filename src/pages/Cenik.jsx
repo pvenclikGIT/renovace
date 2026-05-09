@@ -669,55 +669,6 @@ export default function Cenik() {
         </div>
       </section>
 
-      {/* ── CTA BANNER ────────────────────────────────────────── */}
-      <section className={styles.ctaBanner}>
-        <FadeIn>
-          <div className={styles.ctaInner}>
-            <div className={styles.ctaLeft}>
-              <div className={styles.ctaTag}>
-                <span className={styles.ctaDot} />
-                Konzultace zdarma, odpovídáme do 24 h
-              </div>
-              <h2 className={styles.ctaH2}>
-                Chcete přesnou cenu<br />pro vaši koupelnu?
-              </h2>
-              <p className={styles.ctaLead}>
-                Pošlete nám pár fotek přes WhatsApp nebo e-mail. Během 24 hodin dostanete
-                orientační cenu, volné termíny a doporučení vhodného materiálu. Zdarma, bez závazku.
-              </p>
-            </div>
-            <div className={styles.ctaRight}>
-              <a href={`${HOME}#contact`} className={styles.ctaBtn}>
-                Nezávazná poptávka
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-                  <path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </a>
-              <div className={styles.ctaContacts}>
-                <a href="tel:+420776661661" className={styles.ctaContact}>
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                    <path d="M3 3h2.5l1.5 3.5L5 8c1 2 2 3 4 4l1.5-2 3.5 1.5V14C14 14 9 16 3 3z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round"/>
-                  </svg>
-                  +420 776 661 661
-                </a>
-                <a href="tel:+420604913683" className={styles.ctaContact}>
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                    <path d="M3 3h2.5l1.5 3.5L5 8c1 2 2 3 4 4l1.5-2 3.5 1.5V14C14 14 9 16 3 3z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round"/>
-                  </svg>
-                  +420 604 913 683
-                </a>
-                <a href="mailto:info@bezspar.cz" className={styles.ctaContact}>
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                    <rect x="2" y="4" width="12" height="9" rx="1.5" stroke="currentColor" strokeWidth="1.2"/>
-                    <path d="M2 5l6 5 6-5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
-                  </svg>
-                  info@bezspar.cz
-                </a>
-              </div>
-            </div>
-          </div>
-        </FadeIn>
-      </section>
 
     </main>
   )
