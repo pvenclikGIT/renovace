@@ -1,6 +1,7 @@
 .section { background: var(--dark); padding: var(--py) var(--px); }
+.section > * { max-width: var(--max-w-tight); margin-left: auto; margin-right: auto; }
 
-.header { max-width: 680px; margin-bottom: 4rem; }
+.header { max-width: 680px; margin-bottom: clamp(2.5rem, 5vw, 4rem); margin-left: 0; }
 .tag { display: inline-flex; align-items: center; gap: 0.6rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold3); background: rgba(201,150,60,0.15); padding: 0.42rem 1rem; border-radius: 100px; margin-bottom: 1.25rem; width: fit-content; }
 .tagDot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
 .title { font-size: clamp(2rem, 3.8vw, 3.2rem); font-weight: 800; line-height: 1.08; color: var(--white); letter-spacing: -0.04em;
@@ -26,7 +27,7 @@
 .slider {
   position: relative;
   width: 100%;
-  padding-top: 52%;
+  aspect-ratio: 16 / 9;
   background: var(--dark2);
   overflow: hidden;
   cursor: col-resize;
@@ -132,11 +133,14 @@
 }
 
 @media (max-width: 640px) {
-  .slider { padding-top: 75%; }
-  .cta { flex-direction: column; align-items: stretch; }
+  .slider { aspect-ratio: 4 / 3; }
+  .cta { flex-direction: column; align-items: stretch; padding: 1.4rem 1.4rem; }
   .ctaBtn { justify-content: center; }
   .tabs { gap: 0.4rem; }
   .tab { font-size: 0.8125rem; padding: 0.45rem 0.9rem; }
+  .labelBefore, .labelAfter { bottom: 0.85rem; }
+  .labelBefore { left: 0.85rem; }
+  .labelAfter { right: 0.85rem; }
   .labelBefore .lblLong,
   .labelAfter .lblLong { display: none; }
   .labelBefore .lblShort,

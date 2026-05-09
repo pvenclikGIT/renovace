@@ -1,5 +1,6 @@
 .section { background: var(--bg2); padding: var(--py) var(--px); }
-.header { max-width: 640px; margin-bottom: 4rem; }
+.section > * { max-width: var(--max-w-tight); margin-left: auto; margin-right: auto; }
+.header { max-width: 640px; margin-bottom: clamp(2.5rem, 5vw, 4rem); margin-left: 0; }
 .tag { display: inline-flex; align-items: center; gap: 0.6rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); background: var(--gold-pale); padding: 0.42rem 1rem; border-radius: 100px; margin-bottom: 1.25rem; width: fit-content; }
 .tagDot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
 .title { font-size: clamp(2rem, 3.8vw, 3.2rem); font-weight: 800; line-height: 1.08; color: var(--dark); letter-spacing: -0.04em;
@@ -7,7 +8,7 @@
 .title em { font-style: normal; color: var(--gold); }
 .lead { font-size: clamp(1rem, 1.4vw, 1.125rem); font-weight: 300; color: var(--mid); line-height: 1.72; }
 
-.grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: start; }
+.grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(2rem, 4vw, 3rem); align-items: start; }
 
 .preview { border-radius: var(--r-lg); overflow: hidden; }
 .previewImgWrap { position: relative; }

@@ -1,17 +1,17 @@
 .section { background: var(--white); padding: var(--py) var(--px); }
-.inner { max-width: 1160px; margin: 0 auto; }
+.inner { max-width: var(--max-w-tight); margin: 0 auto; }
 
 .featuredRow {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
-  margin-top: 4rem;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
   margin-bottom: 1.5rem;
 }
 
 .smallRow {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
 }
 
@@ -45,7 +45,7 @@
 
 .featImg {
   width: 100%;
-  height: 240px;
+  aspect-ratio: 16 / 10;
   flex-shrink: 0;
   overflow: hidden;
   position: relative;
@@ -105,7 +105,7 @@
 
 .smallImg {
   width: 100%;
-  height: 240px;
+  aspect-ratio: 16 / 10;
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
@@ -124,7 +124,8 @@
   .smallRow { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) {
-  .featImg { height: 200px; }
-  .smallImg { height: 180px; }
-  .featBody { padding: 1.5rem 1.5rem 1.75rem; }
+  .featBody { padding: 1.5rem 1.4rem 1.75rem; }
+  .smallBody { padding: 1.5rem 1.4rem 1.75rem; }
+  .title { font-size: 1.3rem; }
+  .smallTitle { font-size: 1.05rem; }
 }

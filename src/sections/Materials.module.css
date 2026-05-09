@@ -1,8 +1,9 @@
 .section { background: var(--dark); padding: var(--py) var(--px); }
-.grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 4rem; }
+.section > * { max-width: var(--max-w-tight); margin-left: auto; margin-right: auto; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; margin-top: clamp(2.5rem, 5vw, 4rem); }
 .card { background: rgba(255,255,255,.05); border-radius: var(--r-lg); overflow: hidden; border: 1px solid rgba(255,255,255,.06); transition: transform 0.3s var(--ease), border-color 0.3s; }
 .card:hover { transform: translateY(-5px); border-color: rgba(201,150,60,.3); }
-.cardImg { height: 220px; overflow: hidden; }
+.cardImg { aspect-ratio: 4 / 3; overflow: hidden; }
 .cardImg img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s var(--ease); }
 .card:hover .cardImg img { transform: scale(1.06); }
 .cardBody { padding: 1.75rem 1.75rem 2rem; }
@@ -13,5 +14,5 @@
 .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .tag { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,.35); padding: 0.25rem 0.75rem; border: 1px solid rgba(255,255,255,.1); border-radius: 100px; transition: border-color 0.25s, color 0.25s; }
 .card:hover .tag { border-color: rgba(201,150,60,.3); color: rgba(255,255,255,.6); }
-@media (max-width: 860px) { .grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 560px) { .grid { grid-template-columns: 1fr; } .cardImg { height: 180px; } }
+@media (max-width: 860px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .grid { grid-template-columns: 1fr; gap: 1.25rem; } .cardImg { aspect-ratio: 16 / 10; } }

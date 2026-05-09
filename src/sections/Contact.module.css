@@ -1,5 +1,12 @@
 .section { background: var(--bg); padding: var(--py) var(--px); }
-.inner { display: grid; grid-template-columns: 1fr 1.35fr; gap: 6vw; align-items: start; }
+.inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: start;
+  max-width: var(--max-w-tight);
+  margin: 0 auto;
+}
 .left { display: flex; flex-direction: column; gap: 2.5rem; }
 .infoList { display: flex; flex-direction: column; gap: 1.5rem; }
 .infoItem { display: flex; gap: 1rem; align-items: flex-start; }
@@ -15,10 +22,10 @@
 .formHeader { margin-bottom: 0.25rem; }
 .formTitle { font-size: 1.35rem; font-weight: 800; color: var(--dark); margin-bottom: 0.25rem; letter-spacing: -0.03em; }
 .formSub { font-size: 1rem; font-weight: 400; color: var(--light); }
-.row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .group { display: flex; flex-direction: column; gap: 0.4rem; }
 .label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--light); }
-.input, .select, .textarea { font-family: var(--font); font-size: 1rem; font-weight: 400; color: var(--dark); background: var(--bg); border: 1.5px solid var(--bg3); border-radius: var(--r); padding: 0.85rem 1rem; width: 100%; outline: none; transition: border-color 0.2s, box-shadow 0.2s; appearance: none; }
+.input, .select, .textarea { font-family: var(--font); font-size: 1rem; font-weight: 400; color: var(--dark); background: var(--bg); border: 1.5px solid var(--bg3); border-radius: var(--r); padding: 0.85rem 1rem; width: 100%; min-height: var(--tap); outline: none; transition: border-color 0.2s, box-shadow 0.2s; appearance: none; }
 .input::placeholder, .textarea::placeholder { color: var(--light); }
 .input:focus, .select:focus, .textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,150,60,.1); }
 .textarea { resize: vertical; min-height: 100px; }
@@ -38,6 +45,7 @@
   color: var(--dark); background: var(--bg);
   border: 1.5px solid var(--bg3); border-radius: var(--r);
   padding: 0.85rem 1rem; width: 100%;
+  min-height: var(--tap);
   display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;
   cursor: pointer; text-align: left;
   transition: border-color 0.2s, box-shadow 0.2s;
@@ -60,7 +68,8 @@
 .csOption {
   font-family: var(--font); font-size: 1rem; font-weight: 400;
   color: var(--dark2); background: none; border: none;
-  width: 100%; text-align: left; padding: 0.75rem 1rem;
+  width: 100%; text-align: left; padding: 0.85rem 1rem;
+  min-height: var(--tap);
   display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;
   cursor: pointer; transition: background 0.15s, color 0.15s;
 }
@@ -70,5 +79,17 @@
 
 .csCheck { color: var(--gold); flex-shrink: 0; display: flex; }
 
-@media (max-width: 960px) { .inner { grid-template-columns: 1fr; gap: 3rem; } .row { grid-template-columns: 1fr; } .form { padding: 1.75rem; } }
-@media (max-width: 480px) { .form { padding: 1.25rem; } .success { padding: 2.5rem 1.25rem; min-height: unset; } }
+@media (max-width: 960px) {
+  .inner { grid-template-columns: 1fr; gap: 3rem; }
+  .row { grid-template-columns: 1fr; }
+  .form { padding: 1.75rem; }
+}
+@media (max-width: 560px) {
+  .left { gap: 2rem; }
+  .formTitle { font-size: 1.2rem; }
+}
+@media (max-width: 480px) {
+  .form { padding: 1.4rem 1.2rem; }
+  .success { padding: 2.5rem 1.25rem; min-height: unset; }
+  .infoIcon { width: 38px; height: 38px; }
+}

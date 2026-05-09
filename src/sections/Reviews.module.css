@@ -1,6 +1,6 @@
 .section { background: var(--bg); padding: var(--py) var(--px); }
-.inner { max-width: 1160px; margin: 0 auto; }
-.header { margin-bottom: 4rem; }
+.inner { max-width: var(--max-w-tight); margin: 0 auto; }
+.header { margin-bottom: clamp(2.5rem, 5vw, 4rem); }
 .tag { display: inline-flex; align-items: center; gap: 0.6rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); background: var(--gold-pale); padding: 0.42rem 1rem; border-radius: 100px; margin-bottom: 1.25rem; width: fit-content; }
 .tagDot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
 .headerRow { display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
@@ -16,7 +16,7 @@
 .googleLink { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.8125rem; font-weight: 600; color: #4285F4; transition: opacity 0.2s; }
 .googleLink:hover { opacity: 0.75; }
 
-.grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
 .card {
   background: var(--white); border-radius: var(--r-lg); padding: 1.5rem;
   border: 1px solid var(--bg3); display: flex; flex-direction: column; gap: 0.85rem;
@@ -30,5 +30,10 @@
 .gLogo { margin-left: auto; flex-shrink: 0; }
 .text { font-size: 1rem; font-weight: 300; color: var(--dark3); line-height: 1.7; font-style: italic; flex: 1; }
 
-@media (max-width: 860px) { .grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 560px) { .grid { grid-template-columns: 1fr; } .headerRow { flex-direction: column; } }
+@media (max-width: 860px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) {
+  .grid { grid-template-columns: 1fr; }
+  .headerRow { flex-direction: column; align-items: flex-start; }
+  .score { padding: 1rem 1.25rem; gap: 1rem; }
+  .scoreNum { font-size: 2.5rem; }
+}

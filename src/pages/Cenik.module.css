@@ -2,7 +2,7 @@
 .page { background: var(--bg); min-height: 100vh; }
 
 /* ── Shared ── */
-.inner { max-width: 1160px; margin: 0 auto; }
+.inner { max-width: var(--max-w-tight); margin: 0 auto; }
 .section { padding: var(--py) var(--px); }
 .sectionDark { background: var(--dark2); }
 .sectionAlt  { background: var(--bg2); }
@@ -11,15 +11,19 @@
    HERO
 ───────────────────────────────────────────────────────────── */
 .hero {
-  min-height: 88svh; padding-top: var(--nav-h);
-  display: grid; grid-template-columns: 1fr 1fr; background: var(--bg);
+  min-height: clamp(560px, 78svh, 760px);
+  padding-top: var(--nav-h);
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  background: var(--bg);
 }
 
 .heroLeft {
   display: flex; align-items: center;
-  padding: clamp(3rem,5vw,5rem) var(--px) clamp(3rem,4vw,4rem);
+  padding: clamp(2.5rem,4.5vw,4.5rem) clamp(1.5rem, 5vw, 5rem) clamp(2.5rem,4vw,4rem) var(--px);
+  min-width: 0;
 }
-.heroContent { width: 100%; max-width: 560px; }
+.heroContent { width: 100%; max-width: 560px; min-width: 0; }
 
 .breadcrumb {
   display: flex; align-items: center; gap: 0.4rem;
@@ -81,18 +85,22 @@
 .statDiv  { display: none; }
 
 /* pravý sloupec — fotka */
-.heroRight { position: relative; overflow: hidden; background: var(--dark2); }
-.heroImg   { width: 100%; height: 100%; object-fit: cover; display: block; }
+.heroRight { position: relative; overflow: hidden; background: var(--dark2); min-height: 100%; }
+.heroImg   {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
 .heroOverlay {
   position: absolute; inset: 0;
   background: linear-gradient(to right, rgba(23,20,18,0.14) 0%, transparent 50%),
               linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 50%);
 }
 .heroPriceBadge {
-  position: absolute; bottom: 2.5rem; left: -1px;
+  position: absolute; bottom: clamp(1.5rem, 3vw, 2.5rem); left: 0;
   background: var(--white); border-radius: 0 var(--r) var(--r) 0;
-  padding: 1.1rem 1.75rem; box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+  padding: 1rem 1.6rem; box-shadow: var(--shadow-md);
   display: flex; flex-direction: column; gap: 0.25rem;
+  max-width: calc(100% - 2rem);
 }
 .heroBadgeLabel { font-size: var(--fs-xs); font-weight: 700; color: var(--light); letter-spacing: 0.08em; text-transform: uppercase; }
 .heroBadgeNum   { font-size: 1.35rem; font-weight: 800; color: var(--dark); letter-spacing: -0.03em; line-height: 1; }
@@ -354,48 +362,91 @@
 /* ─────────────────────────────────────────────────────────────
    RESPONSIVE
 ───────────────────────────────────────────────────────────── */
-@media (max-width: 1100px) {
-  .tiers { grid-template-columns: 1fr 1fr; }
+@media (max-width: 1280px) {
+  .hero { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); }
+}
+
+@media (max-width: 1180px) {
+  .tiers { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+  .tierCard { padding: 1.85rem 1.5rem; }
 }
 
 @media (max-width: 1024px) {
-  .hero { grid-template-columns: 1fr; }
-  .heroRight { min-height: 60vw; }
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .heroLeft { padding-bottom: clamp(2rem, 4vw, 3rem); }
+  .heroRight { aspect-ratio: 16 / 10; min-height: auto; }
   .heroPriceBadge { display: none; }
+  .tiers { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+  .tierCard { padding: 2rem 1.75rem; }
+}
+
+@media (max-width: 960px) {
+  .matPanelBody { grid-template-columns: 1fr; gap: 2rem; padding: 2rem; }
+  .matPriceCard { min-width: unset; }
 }
 
 @media (max-width: 900px) {
-  .matPanelBody { grid-template-columns: 1fr; }
-  .matPriceCard { min-width: unset; }
-  .compareRow     { grid-template-columns: 1.3fr 1fr; }
-  .compareClassic { display: none; }
-  .compareClassicHead { display: none; }
+  .compareTable { border-radius: var(--r); }
+  .compareRow {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+    padding: 0.9rem 1.1rem;
+  }
+  .compareHead { display: none; }
+  .compareLabel {
+    grid-row: 1; font-size: var(--fs-xs);
+    text-transform: uppercase; letter-spacing: 0.06em;
+    color: rgba(255,255,255,0.35);
+  }
+  .compareClassic, .compareUs {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 0.75rem;
+  }
+  .compareClassic::before {
+    content: 'Klasika'; font-size: var(--fs-2xs); letter-spacing: 0.08em;
+    text-transform: uppercase; color: rgba(255,255,255,0.3); font-weight: 600;
+  }
+  .compareUs::before {
+    content: 'BezSpár'; font-size: var(--fs-2xs); letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--gold); font-weight: 700;
+  }
 }
 
 @media (max-width: 760px) {
-  .faqColumns { grid-template-columns: 1fr; }
+  .faqColumns { grid-template-columns: 1fr; gap: 0; margin-top: 2.5rem; }
   .faqCol:last-child .faqItem:first-child { border-top: none; }
+  .heroH1 { line-height: 1.08; }
 }
 
 @media (max-width: 720px) {
-  .tiers        { grid-template-columns: 1fr; }
+  .tiers        { grid-template-columns: 1fr; gap: 1.25rem; }
   .includedGrid { grid-template-columns: 1fr; }
-  .heroStats    { flex-wrap: wrap; gap: 0 0; }
-  .stat         { padding-right: 1.75rem; }
-  .statNum      { font-size: 1.4rem; }
-  .calcRow      { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
+  .heroStats    { flex-wrap: wrap; gap: 1rem 0; }
+  .stat         { padding-right: 1.5rem; }
+  .stat:not(:last-child)::after { right: 0.75rem; }
+  .statNum      { font-size: 1.5rem; }
+  .calcRow      { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+  .calcRows, .calcTotal, .calcNote { padding-left: 1.4rem; padding-right: 1.4rem; }
 }
 
 @media (max-width: 560px) {
-  .faqA { padding-right: 1rem; }
+  .faqA { padding-right: 1rem; font-size: 0.95rem; }
+  .faqQ { font-size: 0.95rem; padding: 1.25rem 0; }
+  .faqToggle { width: var(--tap); height: var(--tap); }
   .heroActions { flex-direction: column; align-items: stretch; }
   .heroBtnPrimary, .heroBtnGhost { justify-content: center; }
+  .heroStats { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .stat { padding-right: 0; }
+  .stat:not(:last-child)::after { display: none; }
 }
 
 @media (max-width: 480px) {
   .matTabs    { gap: 0.5rem; }
   .matTab     { font-size: var(--fs-xs); padding: 0.6rem 1rem; }
-  .tierCard   { padding: 1.75rem 1.5rem; }
-  .compareRow { padding: 0.65rem 0.9rem; font-size: var(--fs-xs); }
-  .compareHead { padding: 0.5rem 0.9rem; }
+  .tierCard   { padding: 1.6rem 1.4rem; }
+  .matPanelBody { padding: 1.5rem 1.25rem; gap: 1.5rem; }
+  .matPriceCard { padding: 1.5rem 1.4rem; }
 }

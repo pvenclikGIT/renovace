@@ -8,7 +8,7 @@
 .inner {
   padding: 2.25rem var(--px);
   display: flex; align-items: center; justify-content: space-between;
-  gap: 2.5rem; max-width: 1400px; margin: 0 auto;
+  gap: 2.5rem; max-width: var(--max-w); margin: 0 auto;
 }
 
 /* ── Left ── */
