@@ -11,16 +11,20 @@
    HERO
 ───────────────────────────────────────────────────────────── */
 .hero {
-  min-height: clamp(540px, 78svh, 760px);
-  padding-top: var(--nav-h);
+  min-height: clamp(520px, 78svh, 760px);
+  padding-block-start: var(--nav-h);
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   background: var(--bg);
 }
+@supports (min-height: 78dvh) {
+  .hero { min-height: clamp(520px, 78dvh, 760px); }
+}
 
 .heroLeft {
   display: flex; align-items: center;
-  padding: var(--space-8) var(--space-5) var(--space-7);
+  padding-block: var(--space-8) var(--space-7);
+  padding-inline: var(--space-5);
   min-width: 0;
 }
 .heroContent { width: 100%; max-width: 560px; min-width: 0; }
@@ -57,6 +61,8 @@
   font-size: var(--fs-lead); font-weight: 300; color: var(--mid);
   line-height: var(--lh-relaxed);
   margin-bottom: var(--space-6);
+  max-width: 52ch;
+  text-wrap: pretty;
 }
 .heroLead strong { font-weight: 600; color: var(--dark3); }
 
@@ -408,7 +414,8 @@
   .heroLeft {
     justify-content: center;
     text-align: center;
-    padding: var(--space-7) var(--space-5) var(--space-8);
+    padding-block: var(--space-7) var(--space-8);
+    padding-inline: var(--space-5);
   }
   .heroContent { margin-left: auto; margin-right: auto; }
   .breadcrumb { justify-content: center; }

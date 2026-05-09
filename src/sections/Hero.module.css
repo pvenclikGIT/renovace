@@ -1,15 +1,19 @@
 .hero {
   min-height: clamp(540px, 86svh, 880px);
-  padding-top: var(--nav-h);
+  padding-block-start: var(--nav-h);
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   background: var(--bg);
+}
+@supports (min-height: 86dvh) {
+  .hero { min-height: clamp(540px, 86dvh, 880px); }
 }
 
 .left {
   display: flex;
   align-items: center;
-  padding: var(--space-8) var(--space-5) var(--space-7);
+  padding-block: var(--space-8) var(--space-7);
+  padding-inline: var(--space-5);
   min-width: 0;
 }
 .content {
@@ -61,8 +65,9 @@
   font-weight: 300;
   color: var(--mid);
   line-height: var(--lh-relaxed);
-  max-width: 480px;
+  max-width: 52ch;
   margin-bottom: var(--space-6);
+  text-wrap: pretty;
 }
 .sub strong { font-weight: 600; color: var(--dark3); }
 
@@ -245,7 +250,8 @@
   .left {
     justify-content: center;
     text-align: center;
-    padding: var(--space-7) var(--space-5) var(--space-8);
+    padding-block: var(--space-7) var(--space-8);
+    padding-inline: var(--space-5);
   }
   .content { margin-left: auto; margin-right: auto; }
   .tag, .sub { margin-left: auto; margin-right: auto; }
