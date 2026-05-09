@@ -120,7 +120,7 @@ const CATEGORIES = [
         id: 'huntsman',
         name: 'HUNTSMAN / Araldite',
         country: 'USA', flag: '🇺🇸',
-        logo: `${BASE}huntsman.png`,
+        logo: `${BASE}huntsman.svg`,
         system: 'Araldite – epoxidové pryskyřice',
         desc: 'Araldite je synonymum pro epoxidové pryskyřice. Huntsman dodává základní suroviny, ze kterých jsou vyráběny nejkvalitnější stěrkové systémy světa.',
       },
