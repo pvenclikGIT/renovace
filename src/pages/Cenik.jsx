@@ -5,6 +5,9 @@ import FadeIn from '../components/FadeIn'
 import SectionHeader from '../components/SectionHeader'
 import styles from './Cenik.module.css'
 
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, '')
+const HOME = `${BASE}/`
+
 /* ─── DATA ─────────────────────────────────────────────────── */
 
 const tiers = [
@@ -269,7 +272,7 @@ export default function Cenik() {
             </p>
 
             <div className={styles.heroActions}>
-              <a href="/#contact" className={styles.heroBtnPrimary}>
+              <a href={`${HOME}#contact`} className={styles.heroBtnPrimary}>
                 Chci orientacni cenu
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
                   <path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -385,7 +388,7 @@ export default function Cenik() {
                   </ul>
 
                   <a
-                    href="/#contact"
+                    href={`${HOME}#contact`}
                     className={`${styles.tierCta} ${tier.highlight ? styles.tierCtaGold : ''}`}
                   >
                     {tier.cta}
@@ -402,7 +405,7 @@ export default function Cenik() {
             <p className={styles.tiersNote}>
               Ceny jsou orientační pro průměrnou koupelnu (podlaha 6 m² + stěny 16 m² = 22 m² celkem).
               Přesnou kalkulaci dostanete zdarma po konzultaci nebo z fotek.{' '}
-              <a href="/#contact">Napište nám</a>
+              <a href={`${HOME}#contact`}>Napište nám</a>
             </p>
           </FadeIn>
         </div>
@@ -478,7 +481,7 @@ export default function Cenik() {
                         Průměrná koupelna 22 m²:
                         <strong> {(parseInt(mat.rate.replace(' ', '')) * 22).toLocaleString('cs-CZ')} Kč bez DPH</strong>
                       </div>
-                      <a href="/#contact" className={styles.matPriceCta} style={{ background: mat.accentColor }}>
+                      <a href={`${HOME}#contact`} className={styles.matPriceCta} style={{ background: mat.accentColor }}>
                         Poptat {mat.name}
                       </a>
                     </div>
@@ -619,8 +622,8 @@ export default function Cenik() {
               <p className={styles.calcNote}>
                 Orientacni kalkulace. Konecna cena zavisi na stavu povrchu a zvolene barvě.
                 Pro přesnější kalkulaci zkuste{' '}
-                <a href="/#calculator">interaktivní kalkulátor</a> nebo{' '}
-                <a href="/#contact">napište nám</a>.
+                <a href={`${HOME}#calculator`}>interaktivní kalkulátor</a> nebo{' '}
+                <a href={`${HOME}#contact`}>napište nám</a>.
               </p>
             </div>
           </FadeIn>
@@ -665,7 +668,7 @@ export default function Cenik() {
               </p>
             </div>
             <div className={styles.ctaRight}>
-              <a href="/#contact" className={styles.ctaBtn}>
+              <a href={`${HOME}#contact`} className={styles.ctaBtn}>
                 Nezavazna poptavka
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
                   <path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

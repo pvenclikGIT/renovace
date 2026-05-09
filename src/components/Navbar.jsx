@@ -3,12 +3,13 @@ import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import styles from './Navbar.module.css'
 
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, '')
+
 const links = [
   { label: 'Jak to funguje', href: '#process' },
   { label: 'Proč stěrka', href: '#why' },
   { label: 'Materiály', href: '#materials' },
   { label: 'Realizace', href: '#gallery' },
-  { label: 'FAQ', href: '#faq' },
 ]
 
 function BSLogo({ light = false }) {
@@ -40,7 +41,7 @@ export default function Navbar() {
   }, [])
   const close = () => setOpen(false)
 
-  const homeHref = (hash) => isHome ? hash : `/${hash}`
+  const homeHref = (hash) => isHome ? hash : `${BASE}/${hash}`
 
   return (
     <>
@@ -50,7 +51,8 @@ export default function Navbar() {
         </Link>
         <ul className={styles.links}>
           {links.map(l => <li key={l.href}><a href={homeHref(l.href)}>{l.label}</a></li>)}
-          <li><Link to="/cenik" className={`${location.pathname === '/cenik' ? styles.navActive : ''}`}>Ceník</Link></li>
+          <li><Link to="/cenik" className={location.pathname === '/cenik' ? styles.navActive : ''}>Ceník</Link></li>
+          <li><a href={homeHref('#faq')}>FAQ</a></li>
           <li><a href={homeHref('#contact')} className={styles.cta}>Konzultace zdarma</a></li>
         </ul>
         <button className={styles.hamburger} onClick={() => setOpen(v => !v)} aria-label="Menu">
@@ -62,6 +64,7 @@ export default function Navbar() {
         <div className={styles.drawerInner}>
           {links.map(l => <a key={l.href} href={homeHref(l.href)} onClick={close} className={styles.drawerLink}>{l.label}</a>)}
           <Link to="/cenik" onClick={close} className={styles.drawerLink}>Ceník</Link>
+          <a href={homeHref('#faq')} onClick={close} className={styles.drawerLink}>FAQ</a>
           <a href={homeHref('#contact')} onClick={close} className={styles.drawerCta}>Konzultace zdarma</a>
         </div>
       </div>
