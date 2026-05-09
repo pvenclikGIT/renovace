@@ -71,7 +71,7 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
         >
-          <img src="/renovace/images/real-12.jpg" alt="Koupelna po realizaci cementové stěrky" />
+          <img src="/images/real-12.jpg" alt="Koupelna po realizaci cementové stěrky" />
           <div className={styles.imgOverlay} />
         </motion.div>
 

@@ -4,21 +4,21 @@ import styles from './Materials.module.css'
 
 const materials = [
   {
-    img: '/renovace/images/real-03.jpg',
+    img: '/images/real-03.jpg',
     name: 'Epoxidová stěrka',
     desc: 'Tvrdá jako kámen, hladká jako leštěný mramor. Nejodolnější volba s nulovou nasákavostí. Ideální pro sprchové kouty a podlahy.',
     tags: ['Maximální odolnost', 'Lesklý povrch', 'Bezfugový', '100% voděodolný'],
     ideal: 'Sprchové kouty, vany, podlahy',
   },
   {
-    img: '/renovace/images/real-04.jpg',
+    img: '/images/real-04.jpg',
     name: 'Cementová stěrka',
     desc: 'Minerální textura, skandinávský klid. Přirozený matný charakter připomínající beton. Oblíbená volba designérů interiérů.',
     tags: ['Matný povrch', 'Přírodní look', 'Betonový efekt', 'Teplé tóny'],
     ideal: 'Stěny, příčky, méně exponované plochy',
   },
   {
-    img: '/renovace/images/real-15.webp',
+    img: '/images/real-15.webp',
     name: 'Pryskyřičná stěrka',
     desc: 'Nejplastičtější z trojice. Lze tvarovat, barvit, kombinovat. Ideální pro designové vzory a prémiové wellness prostory.',
     tags: ['Neomezené barvy', 'Prémiový segment', 'Kreativní vzory', 'Exkluzivní vzhled'],

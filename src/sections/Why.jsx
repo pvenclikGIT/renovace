@@ -18,7 +18,7 @@ export default function Why() {
   return (
     <section id="why" className={styles.section}>
       <div className={styles.visual}>
-        <img src="/renovace/images/real-06.jpg" alt="Sprchový kout bez spár" />
+        <img src="/images/real-06.jpg" alt="Sprchový kout bez spár" />
         <div className={styles.visualOverlay} />
         <div className={styles.quoteWrap}>
           <svg className={styles.quoteIcon} width="36" height="28" viewBox="0 0 36 28" fill="none">

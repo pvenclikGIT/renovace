@@ -5,7 +5,7 @@ import styles from './Segments.module.css'
 
 const segments = [
   {
-    img: '/renovace/images/real-08.jpg',
+    img: '/images/real-08.jpg',
     badge: 'Nejčastěji',
     sub: 'Soukromé osoby',
     title: 'Páry s vlastním bytem',
@@ -15,7 +15,7 @@ const segments = [
     dark: false,
   },
   {
-    img: '/renovace/images/dev-02.jpg',
+    img: '/images/dev-02.jpg',
     badge: 'Pro projekty',
     sub: 'Developeři',
     title: 'Bytové projekty a developerské stavby',
@@ -25,7 +25,7 @@ const segments = [
     dark: true,
   },
   {
-    img: '/renovace/images/dev-01.jpg',
+    img: '/images/dev-01.jpg',
     badge: null,
     sub: 'Správa nemovitostí',
     title: 'Pronajímatelé a správci',
@@ -35,7 +35,7 @@ const segments = [
     dark: false,
   },
   {
-    img: '/renovace/images/hotel-01.jpg',
+    img: '/images/hotel-01.jpg',
     badge: null,
     sub: 'Prémiový segment',
     title: 'Hotely a wellness',

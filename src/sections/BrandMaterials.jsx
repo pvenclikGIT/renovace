@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import FadeIn from '../components/FadeIn'
 import styles from './BrandMaterials.module.css'
 
-const BASE = '/renovace/images/brands/'
+const BASE = '/images/brands/'
 
 const CATEGORIES = [
   {

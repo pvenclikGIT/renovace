@@ -5,8 +5,7 @@ import FadeIn from '../components/FadeIn'
 import SectionHeader from '../components/SectionHeader'
 import styles from './Cenik.module.css'
 
-const BASE = import.meta.env.BASE_URL.replace(/\/$/, '')
-const HOME = `${BASE}/`
+const HOME = '/'
 
 /* ─── DATA ─────────────────────────────────────────────────── */
 

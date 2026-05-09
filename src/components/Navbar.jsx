@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import styles from './Navbar.module.css'
 
-const BASE = import.meta.env.BASE_URL.replace(/\/$/, '')
+const BASE = ''
 
 const links = [
   { label: 'Jak to funguje', href: '#process' },
