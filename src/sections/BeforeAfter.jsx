@@ -6,6 +6,7 @@ import styles from './BeforeAfter.module.css'
 const pairs = [
   {
     label: 'Cementová stěrka · Praha 6',
+    short: 'Praha 6',
     before: '/renovace/images/real-01.jpg',
     after:  '/renovace/images/real-12.jpg',
     beforeLabel: 'Před – staré obklady',
@@ -13,6 +14,7 @@ const pairs = [
   },
   {
     label: 'Epoxidová stěrka · Vinohrady',
+    short: 'Vinohrady',
     before: '/renovace/images/real-07.jpg',
     after:  '/renovace/images/real-04.jpg',
     beforeLabel: 'Před – původní koupelna',
@@ -20,6 +22,7 @@ const pairs = [
   },
   {
     label: 'Cementová stěrka · Beroun',
+    short: 'Beroun',
     before: '/renovace/images/real-05.jpg',
     after:  '/renovace/images/real-08.jpg',
     beforeLabel: 'Před – dlažba a obklady',
@@ -111,7 +114,8 @@ export default function BeforeAfter() {
               className={`${styles.tab} ${active === i ? styles.tabActive : ''}`}
               onClick={() => setActive(i)}
             >
-              {p.label}
+              <span className={styles.tabLong}>{p.label}</span>
+              <span className={styles.tabShort}>{p.short}</span>
             </button>
           ))}
         </div>
