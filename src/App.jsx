@@ -16,6 +16,7 @@ import Myths from './sections/Myths'
 import Segments from './sections/Segments'
 import RealizaceMap from './sections/RealizaceMap'
 import Certificates from './sections/Certificates'
+import BrandMaterials from './sections/BrandMaterials'
 import Reviews from './sections/Reviews'
 import Testimonials from './sections/Testimonials'
 import Faq from './sections/Faq'
@@ -42,6 +43,7 @@ export default function App() {
         <Segments />
         <RealizaceMap />
         <Certificates />
+        <BrandMaterials />
         <Reviews />
         <Testimonials />
         <Faq />
