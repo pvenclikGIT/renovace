@@ -73,7 +73,7 @@ export default function ColorSwatch() {
                 <circle cx="7" cy="7" r="6" stroke="currentColor" strokeWidth="1.2"/>
                 <path d="M7 6v4M7 4.5v.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
               </svg>
-              Zobrazené fotografie jsou ilustrativní. Fyzický vzorek vám přivezeme při konzultaci — barva na monitoru se vždy liší.
+              Zobrazené fotografie jsou ilustrativní. Fyzický vzorek vám přivezeme při konzultaci – barva na monitoru se vždy liší.
             </div>
             <a href="#contact" className={styles.swatchCta}>
               Chci fyzický vzorník domů

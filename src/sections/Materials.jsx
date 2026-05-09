@@ -30,7 +30,7 @@ export default function Materials() {
   return (
     <section id="materials" className={styles.section}>
       <FadeIn>
-        <SectionHeader light tag="Materiály" title={`Tři <em>charaktery</em>,\njeden výsledek`} lead="Každý materiál má svůj charakter. Vybereme společně ten, který sedí vašemu prostoru." />
+        <SectionHeader light tag="Materiály" title={`Tři <em>charaktery</em>, jeden výsledek`} lead="Každý materiál má svůj charakter. Vybereme společně ten, který sedí vašemu prostoru." />
       </FadeIn>
       <div className={styles.grid}>
         {materials.map((m, i) => (

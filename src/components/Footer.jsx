@@ -15,7 +15,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.top}>
         <div className={styles.brand}>
-          <a href="#" className={styles.logoWrap} aria-label="BezSpár.cz — domů">
+          <a href="#" className={styles.logoWrap} aria-label="BezSpár.cz – domů">
             <BSLogo light />
           </a>
           <p className={styles.desc}>
@@ -57,7 +57,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.bottom}>
-        <span>© 2025 BezSpár.cz — Koupelna bez bourání. Všechna práva vyhrazena.</span>
+        <span>© 2025 BezSpár.cz – Koupelna bez bourání. Všechna práva vyhrazena.</span>
         <div className={styles.legal}>
           <a href="#">Zpracování osobních údajů</a>
           <a href="#">Obchodní podmínky</a>

@@ -9,7 +9,7 @@ const segments = [
     badge: 'Nejčastěji',
     sub: 'Soukromé osoby',
     title: 'Páry s vlastním bytem',
-    desc: 'Koupelna z devadesátek, která vám denně kazí náladu. Chcete změnu — bez toho, aby přišel řemeslník a vyřídil vás na měsíc. Přesně pro vás.',
+    desc: 'Koupelna z devadesátek, která vám denně kazí náladu. Chcete změnu – bez toho, aby přišel řemeslník a vyřídil vás na měsíc. Přesně pro vás.',
     points: ['Hotovo za 3 dny, ne za 3 týdny', 'Pevná cena ještě před zahájením', 'Fyzický vzorek před podpisem', 'Záruční list na 10 let'],
     featured: true,
     dark: false,
@@ -19,7 +19,7 @@ const segments = [
     badge: 'Pro projekty',
     sub: 'Developeři',
     title: 'Bytové projekty a developerské stavby',
-    desc: 'Potřebujete vybavit desítky koupelen ve stejné kvalitě, ve stanoveném termínu a bez překvapení. Jsme partner pro celé projekty — od prvního bytu po celý bytový dům.',
+    desc: 'Potřebujete vybavit desítky koupelen ve stejné kvalitě, ve stanoveném termínu a bez překvapení. Jsme partner pro celé projekty – od prvního bytu po celý bytový dům.',
     points: ['Jednotná kvalita napříč celým projektem', 'Koordinace přesně dle vašeho HMG', 'Množstevní ceny od 5 jednotek', 'Dokumentace a předávací protokoly'],
     featured: true,
     dark: true,
@@ -39,7 +39,7 @@ const segments = [
     badge: null,
     sub: 'Prémiový segment',
     title: 'Hotely a wellness',
-    desc: 'Koupelna v hotelovém provozu musí vydržet tisíce cyklů. Epoxidová stěrka tuhle zátěž snese — a přitom vypadá jako luxusní design.',
+    desc: 'Koupelna v hotelovém provozu musí vydržet tisíce cyklů. Epoxidová stěrka tuhle zátěž snese – a přitom vypadá jako luxusní design.',
     points: ['Provoz obnoven do 24–48 h', 'Odolnost vůči hotelové chemii', 'Protiskluz certif. R10/R11', 'Reference z pražských hotelů'],
     featured: false,
     dark: false,
@@ -52,8 +52,8 @@ export default function Segments() {
       <FadeIn>
         <SectionHeader
           tag="Pro koho pracujeme"
-          title={`Čtyři typy klientů.\n<em>Jedno řemeslo.</em>`}
-          lead="Výsledek je vždy stejný — technologicky správně provedená stěrka se zárukou. Liší se pouze rozsah a podmínky spolupráce."
+          title={`Čtyři typy klientů. <em>Jedno řemeslo.</em>`}
+          lead="Výsledek je vždy stejný – technologicky správně provedená stěrka se zárukou. Liší se pouze rozsah a podmínky spolupráce."
         />
       </FadeIn>
 

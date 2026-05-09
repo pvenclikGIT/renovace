@@ -8,7 +8,7 @@ import styles from './Contact.module.css'
 const info = [
   { Icon: IconPhone, label: 'Zavolejte', text: '+420 XXX XXX XXX', note: 'Po–Pá 8:00–18:00' },
   { Icon: IconMail, label: 'Napište', text: 'info@sterkabad.cz', note: 'Odpovídáme do 4 hodin' },
-  { Icon: IconPin, label: 'Kde pracujeme', text: 'Praha & Středočeský kraj', note: 'Větší projekty — celá ČR' },
+  { Icon: IconPin, label: 'Kde pracujeme', text: 'Praha & Středočeský kraj', note: 'Větší projekty – celá ČR' },
   { Icon: IconZap, label: 'Orientační cena', text: 'Do 24 hodin', note: 'Stačí pár fotek na WhatsApp' },
 ]
 
@@ -29,8 +29,8 @@ export default function Contact() {
           <FadeIn>
             <SectionHeader
               tag="Pojďme se bavit"
-              title={`Konzultace zdarma.\n<em>Bez závazku.</em>`}
-              lead="Pošlete nám pár fotek vaší koupelny — na WhatsApp nebo e-mailem. Do 24 hodin dostanete orientační cenu a termín."
+              title={`Konzultace zdarma. <em>Bez závazku.</em>`}
+              lead="Pošlete nám pár fotek vaší koupelny – na WhatsApp nebo e-mailem. Do 24 hodin dostanete orientační cenu a termín."
             />
           </FadeIn>
 
@@ -125,7 +125,7 @@ export default function Contact() {
                   </div>
                   <div className={styles.group}>
                     <label className={styles.label}>Zpráva (nepovinné)</label>
-                    <textarea className={styles.textarea} placeholder="Stav obkladů, představa o barvě, co vás trápí… Fotky pošlete e-mailem nebo na WhatsApp — jsou velkou pomocí." value={form.message} onChange={set('message')} rows={3} />
+                    <textarea className={styles.textarea} placeholder="Stav obkladů, představa o barvě, co vás trápí… Fotky pošlete e-mailem nebo na WhatsApp – jsou velkou pomocí." value={form.message} onChange={set('message')} rows={3} />
                   </div>
                   <button type="submit" className={`${styles.submit} ${status === 'loading' ? styles.submitLoading : ''}`} disabled={status === 'loading'}>
                     {status === 'loading' ? 'Odesíláme…' : (

@@ -2,12 +2,12 @@ import FadeIn from '../components/FadeIn'
 import styles from './Certificates.module.css'
 
 const certs = [
-  { icon: '🛡', title: 'Vodotěsnost', desc: 'Certifikát EN 14891 — voděodolnost pod obklady i bez nich', color: '#3D7A77' },
+  { icon: '🛡', title: 'Vodotěsnost', desc: 'Certifikát EN 14891 – voděodolnost pod obklady i bez nich', color: '#3D7A77' },
   { icon: '👣', title: 'Protiskluz R10/R11', desc: 'Certifikovaná protiskluzová třída pro mokré provozy', color: '#C9963C' },
-  { icon: '🌿', title: 'Zdravotní nezávadnost', desc: 'Atesty na styk s potravinami — bez emisí po vytvrzení', color: '#4A7B4E' },
+  { icon: '🌿', title: 'Zdravotní nezávadnost', desc: 'Atesty na styk s potravinami – bez emisí po vytvrzení', color: '#4A7B4E' },
   { icon: '🔥', title: 'Požární odolnost', desc: 'Třída reakce na oheň B-s1,d0 dle EN 13501-1', color: '#C94040' },
   { icon: '♻️', title: 'Ekologická výroba', desc: 'Materiály bez obsahu těžkých kovů a formaldehydu', color: '#2D7A3A' },
-  { icon: '⭐', title: 'Garance kvality', desc: '10 let záruka na těsnost a přilnavost — záruční list ke každé zakázce', color: '#C9963C' },
+  { icon: '⭐', title: 'Garance kvality', desc: '10 let záruka na těsnost a přilnavost – záruční list ke každé zakázce', color: '#C9963C' },
 ]
 
 const brands = ['MAPEI', 'SIKA', 'WEBER', 'ARDEX', 'KNAUF', 'BAUMIT']

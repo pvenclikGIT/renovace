@@ -6,21 +6,21 @@ const steps = [
   {
     num: '01',
     title: 'Konzultace a výběr',
-    text: 'Přijedeme k vám — nebo stačí pár fotek na WhatsApp. Poradíme s typem materiálu, barvou i texturou. Přivezeme fyzické vzorky, ať si sáhnete. Prohlídka a konzultace jsou zdarma.',
+    text: 'Přijedeme k vám – nebo stačí pár fotek na WhatsApp. Poradíme s typem materiálu, barvou i texturou. Přivezeme fyzické vzorky, ať si sáhnete. Prohlídka a konzultace jsou zdarma.',
     day: 'Zdarma',
     detail: 'Do 48 h od poptávky',
   },
   {
     num: '02',
     title: 'Příprava podkladu',
-    text: 'Stávající obklady přebrousíme, odmaštíme a ošetříme adhezním přípravkem. Do první vrstvy vkládáme skelnou perlinku — to je klíč k tomu, aby stěrka nepraskala nad původními spárami.',
+    text: 'Stávající obklady přebrousíme, odmaštíme a ošetříme adhezním přípravkem. Do první vrstvy vkládáme skelnou perlinku – to je klíč k tomu, aby stěrka nepraskala nad původními spárami.',
     day: 'Den 1',
     detail: 'Mokrý proces, bez prachu',
   },
   {
     num: '03',
     title: 'Aplikace ve vrstvách',
-    text: 'Nanášíme 4–6 vrstev v závislosti na stavu podkladu. Každá vrstva musí dostatečně zatvrdnout. Urychlovat se nedá — na tomhle stojí výsledná pevnost a estetika povrchu.',
+    text: 'Nanášíme 4–6 vrstev v závislosti na stavu podkladu. Každá vrstva musí dostatečně zatvrdnout. Urychlovat se nedá – na tomhle stojí výsledná pevnost a estetika povrchu.',
     day: 'Den 1–3',
     detail: 'Epoxid, cement, pryskyřice',
   },
@@ -40,8 +40,8 @@ export default function Process() {
         <FadeIn>
           <SectionHeader
             tag="Jak to funguje"
-            title={`Čtyři kroky. Žádná\n<em>překvapení po cestě.</em>`}
-            lead="Přesně víte, co se bude dít, kdy to bude hotové a kolik to bude stát — ještě předtím, než se do toho pustíme."
+            title={`Čtyři kroky. Žádná <em>překvapení po cestě.</em>`}
+            lead="Přesně víte, co se bude dít, kdy to bude hotové a kolik to bude stát – ještě předtím, než se do toho pustíme."
           />
         </FadeIn>
       </div>

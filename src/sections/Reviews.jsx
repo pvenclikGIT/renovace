@@ -4,10 +4,10 @@ import styles from './Reviews.module.css'
 const reviews = [
   { name: 'Jana Krejčí', time: 'před 2 týdny', rating: 5, text: 'Naprosto spokojená! Přijeli v pondělí, hotovo ve čtvrtek. Koupelna vypadá luxusně a hlavně žádný prach po celém bytě. Doporučuji všem!' },
   { name: 'Pavel Horák', time: 'před měsícem', rating: 5, text: 'Profesionální přístup, pevná cena, žádné vícepráce. Jako správce bytů ocením hlavně rychlost a předvídatelnost. Budu objednávat znovu.' },
-  { name: 'Michaela S.', time: 'před 3 týdny', rating: 5, text: 'Bála jsem se, že to bude klouzat. Vůbec ne — mají certifikovaný protiskluz. Výsledek je úžasný, přesně to šedé co jsem chtěla.' },
+  { name: 'Michaela S.', time: 'před 3 týdny', rating: 5, text: 'Bála jsem se, že to bude klouzat. Vůbec ne – mají certifikovaný protiskluz. Výsledek je úžasný, přesně to šedé co jsem chtěla.' },
   { name: 'Tomáš Blažek', time: 'před 5 dny', rating: 5, text: 'Renovace penzionu proběhla přesně dle plánu. Pokoje byly dostupné druhý den. Hosté se ptají, kde jsme pořídili "ty italské obklady".' },
   { name: 'Lucie Procházková', time: 'před týdnem', rating: 5, text: 'Malá koupelna v panelákui se proměnila. Vybrala jsem greige a je to přesně to, co jsem viděla na vzorku. Fyzický vzorek domů byl skvělý nápad.' },
-  { name: 'Martin Dvořák', time: 'před 2 měsíci', rating: 5, text: 'Developer — 8 bytů najednou, koordinace perfektní. Každý byt vypadá stejně dobře. Cena za jednotku je výrazně nižší než bourání.' },
+  { name: 'Martin Dvořák', time: 'před 2 měsíci', rating: 5, text: 'Developer – 8 bytů najednou, koordinace perfektní. Každý byt vypadá stejně dobře. Cena za jednotku je výrazně nižší než bourání.' },
 ]
 
 export default function Reviews() {

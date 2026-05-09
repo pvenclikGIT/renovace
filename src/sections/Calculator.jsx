@@ -63,7 +63,7 @@ export default function Calculator() {
 
       <div className={styles.grid}>
 
-        {/* LEFT — inputs */}
+        {/* LEFT – inputs */}
         <FadeIn delay={0.1}>
           <div className={styles.inputs}>
 
@@ -192,7 +192,7 @@ export default function Calculator() {
           </div>
         </FadeIn>
 
-        {/* RIGHT — result */}
+        {/* RIGHT – result */}
         <FadeIn delay={0.2}>
           <div className={styles.result}>
 
@@ -269,7 +269,7 @@ export default function Calculator() {
 
             <div className={styles.disclaimer}>
               Kalkulátor je orientační bez DPH. Výsledná cena závisí na konkrétním stavu podkladu
-              a přesném rozměření. Závaznou nabídku dostanete po bezplatné prohlídce — přijíždíme do 48 h.
+              a přesném rozměření. Závaznou nabídku dostanete po bezplatné prohlídce – přijíždíme do 48 h.
             </div>
 
             <AnimatePresence mode="wait">
@@ -294,7 +294,7 @@ export default function Calculator() {
                     </button>
                   </div>
                   <div className={styles.emailNote}>
-                    Nebo nás rovnou kontaktujte —&nbsp;
+                    Nebo nás rovnou kontaktujte –&nbsp;
                     <a href="#contact">konzultace zdarma →</a>
                   </div>
                 </motion.div>

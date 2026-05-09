@@ -5,14 +5,14 @@ import SectionHeader from '../components/SectionHeader'
 import styles from './Faq.module.css'
 
 const faqs = [
-  { q: 'Kolik to stojí? Kde se vzala ta cena?', a: 'Průměrná koupelna 5–8 m² s aplikací stěrky na stěny i podlahu vyjde na 18 000–45 000 Kč. Cena závisí na velikosti, zvoleném materiálu a stavu podkladu. Po prohlídce dostanete pevnou nabídku — bez skrytých položek a bez možnosti doúčtování.' },
-  { q: 'Jak dlouho budu bez koupelny?', a: 'Celý proces trvá 3–5 pracovních dní. Po posledním lakování vyčkáte 24 hodin, pak je koupelna plně funkční. Plnou chemickou odolnost (šampony, čisticí prostředky) má povrch po 7 dnech — to vás upozorníme dopředu.' },
-  { q: 'Drží to na starých kachličkách? Fakt?', a: 'Ano. Epoxidová chemie se na minerální podklad po správném přebroušení a ošetření adhezním přípravkem váže silněji než původní lepidlo. Kritický detail: skelná perlinka ve spodní vrstvě zabrání pnutí nad původními spárami. Bez ní by stěrka mohla po čase prasknout — s ní nepraská.' },
-  { q: 'Co se stane, když se stěrka poškodí?', a: 'Lokální oprava je možná. Povrch se v poškozené oblasti přebrousí, zatmelí a nalakuje. Výsledek není stoprocentně neviditelný, ale výrazně méně nápadný než u keramiky, kde nikdy neseženete stejnou sérii dlaždic. Větší šok absorbuje pryskyřice lépe než keramika — není tak brittle.' },
-  { q: 'Jak se o stěrku starám?', a: 'Stačí pH neutrální čisticí prostředky — žádné abrazivní pískovce ani drátěnky. Jednou za pár let lze nanést novou vrstvu finálního laku, který povrch "omlazí". Nedoporučujeme nechávat stát agresivní chemii (odstraňovač rtěnky, aceton) déle než nutno.' },
-  { q: 'Kde je háček? Proč to není všude?', a: 'Háček je v aplikaci. Stěrka je technologicky náročná — špatně provedená praská, puchýřuje nebo nedrží. Proto je na trhu hodně levných firem s špatnými referencemi. My děláme stěrky denně, máme certifikace materiálů a záruční list ke každé zakázce.' },
-  { q: 'Jezdíte jen do Prahy?', a: 'Primárně Praha a Středočeský kraj. Pro větší projekty (3+ koupelny) přijedeme i dál — kontaktujte nás a domluvíme se.' },
-  { q: 'Mohu si objednat vzorek domů?', a: 'Ano — a doporučujeme to. Fyzický vzorek ve vaší koupelně při vašem osvětlení je jiný zážitek než fotka na monitoru. Při konzultaci přivezeme vzorkovou desku nebo ji zašleme poštou. Povrch si osaháte, přiložíte k bateriím a nábytku.' },
+  { q: 'Kolik to stojí? Kde se vzala ta cena?', a: 'Průměrná koupelna 5–8 m² s aplikací stěrky na stěny i podlahu vyjde na 18 000–45 000 Kč. Cena závisí na velikosti, zvoleném materiálu a stavu podkladu. Po prohlídce dostanete pevnou nabídku – bez skrytých položek a bez možnosti doúčtování.' },
+  { q: 'Jak dlouho budu bez koupelny?', a: 'Celý proces trvá 3–5 pracovních dní. Po posledním lakování vyčkáte 24 hodin, pak je koupelna plně funkční. Plnou chemickou odolnost (šampony, čisticí prostředky) má povrch po 7 dnech – to vás upozorníme dopředu.' },
+  { q: 'Drží to na starých kachličkách? Fakt?', a: 'Ano. Epoxidová chemie se na minerální podklad po správném přebroušení a ošetření adhezním přípravkem váže silněji než původní lepidlo. Kritický detail: skelná perlinka ve spodní vrstvě zabrání pnutí nad původními spárami. Bez ní by stěrka mohla po čase prasknout – s ní nepraská.' },
+  { q: 'Co se stane, když se stěrka poškodí?', a: 'Lokální oprava je možná. Povrch se v poškozené oblasti přebrousí, zatmelí a nalakuje. Výsledek není stoprocentně neviditelný, ale výrazně méně nápadný než u keramiky, kde nikdy neseženete stejnou sérii dlaždic. Větší šok absorbuje pryskyřice lépe než keramika – není tak brittle.' },
+  { q: 'Jak se o stěrku starám?', a: 'Stačí pH neutrální čisticí prostředky – žádné abrazivní pískovce ani drátěnky. Jednou za pár let lze nanést novou vrstvu finálního laku, který povrch "omlazí". Nedoporučujeme nechávat stát agresivní chemii (odstraňovač rtěnky, aceton) déle než nutno.' },
+  { q: 'Kde je háček? Proč to není všude?', a: 'Háček je v aplikaci. Stěrka je technologicky náročná – špatně provedená praská, puchýřuje nebo nedrží. Proto je na trhu hodně levných firem s špatnými referencemi. My děláme stěrky denně, máme certifikace materiálů a záruční list ke každé zakázce.' },
+  { q: 'Jezdíte jen do Prahy?', a: 'Primárně Praha a Středočeský kraj. Pro větší projekty (3+ koupelny) přijedeme i dál – kontaktujte nás a domluvíme se.' },
+  { q: 'Mohu si objednat vzorek domů?', a: 'Ano – a doporučujeme to. Fyzický vzorek ve vaší koupelně při vašem osvětlení je jiný zážitek než fotka na monitoru. Při konzultaci přivezeme vzorkovou desku nebo ji zašleme poštou. Povrch si osaháte, přiložíte k bateriím a nábytku.' },
 ]
 
 function FaqItem({ q, a }) {
@@ -51,7 +51,7 @@ export default function Faq() {
       <FadeIn>
         <SectionHeader
           tag="Časté otázky"
-          title={`Ptáte se. Tady jsou\n<em>přímé odpovědi.</em>`}
+          title={`Ptáte se. Tady jsou <em>přímé odpovědi.</em>`}
           lead="Bez marketingového kecu. Otázky, které dostáváme nejčastěji, a odpovědi, které vás skutečně odblokují."
         />
       </FadeIn>

@@ -4,14 +4,14 @@ import { IconNoDemo, IconDust, IconTime, IconPrice, IconWater, IconShield, IconL
 import styles from './Why.module.css'
 
 const features = [
-  { Icon: IconTime, title: 'Koupelna za 3 dny, ne za 3 týdny', text: 'Tradiční rekonstrukce s bouráním paralyzuje váš byt na 3–6 týdnů. Stěrka jde přímo na stávající obklady — přijdeme v pondělí, v pátek předáváme hotovou koupelnu.' },
+  { Icon: IconTime, title: 'Koupelna za 3 dny, ne za 3 týdny', text: 'Tradiční rekonstrukce s bouráním paralyzuje váš byt na 3–6 týdnů. Stěrka jde přímo na stávající obklady – přijdeme v pondělí, v pátek předáváme hotovou koupelnu.' },
   { Icon: IconDust, title: 'Nulový prach. Žádný chaos.', text: 'Bourání keramiky = centimetry prachu ve skříních, v posteli, v elektronice. Aplikace stěrky je mokrý proces s odsáváním. Zbytek bytu zůstane přesně takový, jaký byl.' },
-  { Icon: IconPrice, title: 'Cena, která se nemění', text: 'Vícepráce u nás neexistují. Cenu dostanete po prohlídce — závaznou. Žádné "to jsme nečekali" a žádné faktury, ze kterých spadnete ze židle.' },
+  { Icon: IconPrice, title: 'Cena, která se nemění', text: 'Vícepráce u nás neexistují. Cenu dostanete po prohlídce – závaznou. Žádné "to jsme nečekali" a žádné faktury, ze kterých spadnete ze židle.' },
   { Icon: IconWater, title: 'Voděodolnost v každém centimetru', text: 'Stěrka tvoří neprostupný monolit. Na rozdíl od dlažby, kde může voda pronikat poškozenou spárou pod obklad a roky nepozorovaně podemílat konstrukci.' },
-  { Icon: IconShield, title: 'Odolnost na 10–15 let', text: 'Správně aplikovaná stěrka přežije vše, co do koupelny přijde — parfémy, barvicí sady, chemii i každodenní sprchování celé rodiny. Záruční list to potvrzuje.' },
-  { Icon: IconLeaf, title: 'Ekologická volba bez kompromisů', text: 'Tradiční rekonstrukce = stovky kilogramů suti na skládce. Stěrka starou keramiku neprobourá — jen ji překryje. Méně odpadu, méně energie, stejný výsledek.' },
-  { Icon: IconWarm, title: 'Teplo pod nohama, nižší účty', text: 'Vrstva 2–3 mm má minimální tepelnou setrvačnost. Podlahové topení reaguje okamžitě — nehřeje centimetry lepidla a keramiky, ale rovnou prostor. Úspora energie měřitelná.' },
-  { Icon: IconPaint, title: 'Design bez kompromisů', text: 'Stovky odstínů, matný i lesklý povrch, betonový efekt, mramorování. Stěrku vytáhnete na stěny, podlahu i pult pod umyvadlem — vše splyne v jeden celistvý materiál.' },
+  { Icon: IconShield, title: 'Odolnost na 10–15 let', text: 'Správně aplikovaná stěrka přežije vše, co do koupelny přijde – parfémy, barvicí sady, chemii i každodenní sprchování celé rodiny. Záruční list to potvrzuje.' },
+  { Icon: IconLeaf, title: 'Ekologická volba bez kompromisů', text: 'Tradiční rekonstrukce = stovky kilogramů suti na skládce. Stěrka starou keramiku neprobourá – jen ji překryje. Méně odpadu, méně energie, stejný výsledek.' },
+  { Icon: IconWarm, title: 'Teplo pod nohama, nižší účty', text: 'Vrstva 2–3 mm má minimální tepelnou setrvačnost. Podlahové topení reaguje okamžitě – nehřeje centimetry lepidla a keramiky, ale rovnou prostor. Úspora energie měřitelná.' },
+  { Icon: IconPaint, title: 'Design bez kompromisů', text: 'Stovky odstínů, matný i lesklý povrch, betonový efekt, mramorování. Stěrku vytáhnete na stěny, podlahu i pult pod umyvadlem – vše splyne v jeden celistvý materiál.' },
 ]
 
 export default function Why() {
@@ -41,7 +41,7 @@ export default function Why() {
         <FadeIn>
           <SectionHeader
             tag="8 důvodů, proč ne bourání"
-            title={`Tradiční rekonstrukce\nvs. <em>stěrka na obklady</em>`}
+            title={`Tradiční rekonstrukce vs. <em>stěrka na obklady</em>`}
             lead="Výsledek je stejný. Cesta k němu je diametrálně odlišná. Zde je osm konkrétních důvodů, proč si klienti vybírají stěrku."
           />
         </FadeIn>

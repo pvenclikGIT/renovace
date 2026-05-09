@@ -45,7 +45,7 @@ export default function Comparison() {
             <em>20 kategorií. 20–0.</em>
           </h2>
           <p className={styles.lead}>
-            Neříkáme, že stěrka je lepší ve všem. Říkáme, ať si to porovnáte sami — kategorie po kategorii.
+            Neříkáme, že stěrka je lepší ve všem. Říkáme, ať si to porovnáte sami – kategorie po kategorii.
           </p>
         </div>
       </FadeIn>

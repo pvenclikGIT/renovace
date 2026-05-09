@@ -4,8 +4,8 @@ import styles from './Testimonials.module.css'
 
 const reviews = [
   {
-    initials: 'KV', name: 'Kristýna Vlčková', loc: 'Praha 3 — Žižkov', type: 'Rodinný byt',
-    text: 'Celý byt jsme měli v pořádku — jen koupelna byla z devadesátek. Bála jsem se týdnů plných prachu a stavbaření. Místo toho přišli v pondělí, pracovali tři dny a v pátek jsem měla koupelnu, která vypadá jako z Pinterestu.',
+    initials: 'KV', name: 'Kristýna Vlčková', loc: 'Praha 3 – Žižkov', type: 'Rodinný byt',
+    text: 'Celý byt jsme měli v pořádku – jen koupelna byla z devadesátek. Bála jsem se týdnů plných prachu a stavbaření. Místo toho přišli v pondělí, pracovali tři dny a v pátek jsem měla koupelnu, která vypadá jako z Pinterestu.',
     material: 'Cementová stěrka · Antracit',
   },
   {
@@ -26,7 +26,7 @@ export default function Testimonials() {
       <FadeIn>
         <SectionHeader
           tag="Co říkají klienti"
-          title={`Reference, které\nnás <em>pohání vpřed</em>`}
+          title={`Reference, které nás <em>pohání vpřed</em>`}
           lead="Tři různé příběhy, jeden společný jmenovatel: koupelna bez bourání funguje přesně tak, jak jsme slíbili."
         />
       </FadeIn>

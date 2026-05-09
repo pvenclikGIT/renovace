@@ -14,7 +14,7 @@ function BSLogo({ light = false }) {
   const dark = light ? 'white' : '#171412'
   const sub = light ? 'rgba(255,255,255,0.4)' : '#9C968F'
   return (
-    <svg width="180" height="46" viewBox="0 0 180 46" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="BezSpár.cz — Koupelna bez bourání">
+    <svg width="180" height="46" viewBox="0 0 180 46" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="BezSpár.cz – Koupelna bez bourání">
       <text x="0" y="36" fontFamily="Poppins, sans-serif" fontSize="38" fontWeight="900" fill={dark} letterSpacing="-2">BS</text>
       <rect x="0" y="41" width="56" height="3" rx="1.5" fill="#C9963C"/>
       <rect x="0" y="45" width="36" height="1.5" rx="0.75" fill="#C9963C" opacity="0.35"/>
@@ -38,7 +38,7 @@ export default function Navbar() {
   return (
     <>
       <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
-        <a href="#" className={styles.logo} aria-label="BezSpár.cz — domů">
+        <a href="#" className={styles.logo} aria-label="BezSpár.cz – domů">
           <BSLogo />
         </a>
         <ul className={styles.links}>

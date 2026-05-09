@@ -24,7 +24,7 @@ export default function Hero() {
         <motion.div variants={stagger} initial="hidden" animate="show" className={styles.content}>
           <motion.div variants={item} className={styles.tag}>
             <span className={styles.tagDot} />
-            Praha & Středočeský kraj — bez bourání
+            Praha & Středočeský kraj – bez bourání
           </motion.div>
 
           <motion.h1 variants={item} className={styles.h1}>
@@ -36,7 +36,7 @@ export default function Hero() {
           <motion.p variants={item} className={styles.sub}>
             Epoxidové, cementové a pryskyřičné stěrky přímo na stávající obklady.
             Tloušťka 2–3 mm. Žádné bourání, žádný prach, žádné překvapení v ceně.
-            Vaše koupelna — hotová za 3 dny.
+            Vaše koupelna – hotová za 3 dny.
           </motion.p>
 
           <motion.div variants={item} className={styles.actions}>

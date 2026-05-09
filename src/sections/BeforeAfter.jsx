@@ -8,22 +8,22 @@ const pairs = [
     label: 'Cementová stěrka · Praha 6',
     before: '/renovace/images/real-01.jpg',
     after:  '/renovace/images/real-12.jpg',
-    beforeLabel: 'Před — staré obklady',
-    afterLabel:  'Po — cementová stěrka',
+    beforeLabel: 'Před – staré obklady',
+    afterLabel:  'Po – cementová stěrka',
   },
   {
     label: 'Epoxidová stěrka · Vinohrady',
     before: '/renovace/images/real-07.jpg',
     after:  '/renovace/images/real-04.jpg',
-    beforeLabel: 'Před — původní koupelna',
-    afterLabel:  'Po — epoxidová stěrka',
+    beforeLabel: 'Před – původní koupelna',
+    afterLabel:  'Po – epoxidová stěrka',
   },
   {
     label: 'Cementová stěrka · Beroun',
     before: '/renovace/images/real-05.jpg',
     after:  '/renovace/images/real-08.jpg',
-    beforeLabel: 'Před — dlažba a obklady',
-    afterLabel:  'Po — cementová stěrka',
+    beforeLabel: 'Před – dlažba a obklady',
+    afterLabel:  'Po – cementová stěrka',
   },
 ]
 
@@ -57,10 +57,10 @@ function Slider({ pair }) {
       onTouchMove={onTouchMove}
       onMouseLeave={() => setDragging(false)}
     >
-      {/* AFTER — full width bottom layer */}
+      {/* AFTER – full width bottom layer */}
       <img src={pair.after} alt={pair.afterLabel} className={styles.imgAfter} draggable={false} />
 
-      {/* BEFORE — clipped top layer */}
+      {/* BEFORE – clipped top layer */}
       <div className={styles.beforeWrap} style={{ width: `${pos}%` }}>
         <img src={pair.before} alt={pair.beforeLabel} className={styles.imgBefore} draggable={false} />
       </div>
@@ -99,7 +99,7 @@ export default function BeforeAfter() {
         <div className={styles.header}>
           <div className={styles.tag}><span className={styles.tagDot}/>Před a po</div>
           <h2 className={styles.title}>Slova nestačí.<br/><em>Posuňte a uvidíte.</em></h2>
-          <p className={styles.lead}>Táhněte posuvník doleva a doprava. Stejná koupelna — před stěrkou a po ní.</p>
+          <p className={styles.lead}>Táhněte posuvník doleva a doprava. Stejná koupelna – před stěrkou a po ní.</p>
         </div>
       </FadeIn>
 
@@ -133,7 +133,7 @@ export default function BeforeAfter() {
         <div className={styles.cta}>
           <div className={styles.ctaLeft}>
             <strong>Chcete takhle vypadat vaše koupelna?</strong>
-            <span>Konzultace a orientační cena do 24 hodin — zdarma.</span>
+            <span>Konzultace a orientační cena do 24 hodin – zdarma.</span>
           </div>
           <a href="#contact" className={styles.ctaBtn}>
             Chci konzultaci zdarma
