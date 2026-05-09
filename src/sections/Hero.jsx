@@ -24,7 +24,7 @@ export default function Hero() {
         <motion.div variants={stagger} initial="hidden" animate="show" className={styles.content}>
           <motion.div variants={item} className={styles.tag}>
             <span className={styles.tagDot} />
-            Praha a Středočeský kraj. Bez bourání.
+            Praha a Středočeský kraj
           </motion.div>
 
           <motion.h1 variants={item} className={styles.h1}>
