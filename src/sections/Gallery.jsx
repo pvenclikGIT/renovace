@@ -6,15 +6,15 @@ import SectionHeader from '../components/SectionHeader'
 import styles from './Gallery.module.css'
 
 const items = [
-  { src: '/renovace/images/real-12.jpg', label: 'Cementová stěrka – sprcha', sub: 'Praha 6', span: 'large' },
-  { src: '/renovace/images/real-04.jpg', label: 'Epoxidová stěrka', sub: 'Praha 3', span: 'medium' },
-  { src: '/renovace/images/real-06.jpg', label: 'Sprchový kout s LED', sub: 'Beroun', span: 'small' },
-  { src: '/renovace/images/real-08.jpg', label: 'Cementová stěrka', sub: 'Praha 2 – Vinohrady', span: 'medium' },
-  { src: '/renovace/images/real-16.png', label: 'Voděodolná stěrka', sub: 'Středočeský kraj', span: 'small' },
-  { src: '/renovace/images/real-01.jpg', label: 'Stěrka + vana', sub: 'Praha 5', span: 'medium' },
-  { src: '/renovace/images/real-10.jpg', label: 'Tmavá stěrka', sub: 'Praha 10', span: 'small' },
-  { src: '/renovace/images/real-11.jpg', label: 'Moderní koupelna', sub: 'Praha 4', span: 'medium' },
-  { src: '/renovace/images/real-14.webp', label: 'Stěrka za vanou', sub: 'Kladno', span: 'small' },
+  { src: '/renovace/images/podlaha-04.jpg', label: 'Microcement – stěny + rohová vana', sub: 'Praha západ', span: 'large' },
+  { src: '/renovace/images/podlaha-01.jpg', label: 'Cementová stěrka – podlaha i stěny', sub: 'Praha 3', span: 'small' },
+  { src: '/renovace/images/podlaha-07.jpg', label: 'Epoxidová stěrka – sprchový kout', sub: 'Praha 6', span: 'small' },
+  { src: '/renovace/images/podlaha-03.jpg', label: 'Béžová dekorativní stěrka', sub: 'Praha 5', span: 'medium' },
+  { src: '/renovace/images/podlaha-06.jpg', label: 'Šedá stěrka – kompletní koupelna', sub: 'Středočeský kraj', span: 'medium' },
+  { src: '/renovace/images/podlaha-02.jpg', label: 'Stěrka – detail koupelny', sub: 'Praha 3', span: 'small' },
+  { src: '/renovace/images/podlaha-09.jpg', label: 'Rohová vana + dřevo + stěrka', sub: 'Praha západ', span: 'large' },
+  { src: '/renovace/images/podlaha-05.jpg', label: 'Koupelna s vanou a mikrobetonem', sub: 'Praha západ', span: 'medium' },
+  { src: '/renovace/images/podlaha-08.jpg', label: 'Stěrka – celá koupelna', sub: 'Středočeský kraj', span: 'small' },
 ]
 
 export default function Gallery() {
