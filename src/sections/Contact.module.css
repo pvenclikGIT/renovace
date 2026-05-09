@@ -30,4 +30,44 @@
 .successCheck { margin-bottom: 0.5rem; }
 .success h3 { font-size: 1.5rem; font-weight: 800; color: var(--dark); letter-spacing: -0.03em; }
 .success p { font-size: 1rem; font-weight: 300; color: var(--mid); max-width: 320px; line-height: 1.7; }
+/* ── Custom Select ─────────────────────────────────────── */
+.csWrap { position: relative; width: 100%; }
+
+.csTrigger {
+  font-family: var(--font); font-size: 1rem; font-weight: 400;
+  color: var(--dark); background: var(--bg);
+  border: 1.5px solid var(--bg3); border-radius: var(--r);
+  padding: 0.85rem 1rem; width: 100%;
+  display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;
+  cursor: pointer; text-align: left;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.csTrigger:hover { border-color: var(--bg4); }
+.csOpen { border-color: var(--gold) !important; box-shadow: 0 0 0 3px rgba(201,150,60,.1); }
+.csPlaceholder { color: var(--light); }
+
+.csChevron { color: var(--light); flex-shrink: 0; transition: transform 0.2s var(--ease); display: flex; }
+.csChevronUp { transform: rotate(180deg); color: var(--gold); }
+
+.csDropdown {
+  position: absolute; top: calc(100% + 6px); left: 0; right: 0; z-index: 50;
+  background: var(--white); border: 1.5px solid var(--bg3); border-radius: var(--r);
+  box-shadow: 0 8px 32px rgba(23,20,18,0.12), 0 2px 8px rgba(23,20,18,0.06);
+  overflow: hidden; list-style: none;
+  transform-origin: top center;
+}
+
+.csOption {
+  font-family: var(--font); font-size: 1rem; font-weight: 400;
+  color: var(--dark2); background: none; border: none;
+  width: 100%; text-align: left; padding: 0.75rem 1rem;
+  display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;
+  cursor: pointer; transition: background 0.15s, color 0.15s;
+}
+.csOption:hover { background: var(--bg); color: var(--dark); }
+.csSelected { color: var(--dark); font-weight: 500; }
+.csSelected:hover { background: var(--gold-pale); }
+
+.csCheck { color: var(--gold); flex-shrink: 0; display: flex; }
+
 @media (max-width: 960px) { .inner { grid-template-columns: 1fr; gap: 3rem; } .row { grid-template-columns: 1fr; } .form { padding: 1.75rem; } }

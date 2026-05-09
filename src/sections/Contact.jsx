@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { IconPhone, IconMail, IconPin, IconZap } from '../components/Icons'
 import FadeIn from '../components/FadeIn'
@@ -12,10 +12,101 @@ const info = [
   { Icon: IconZap, label: 'Orientační cena', text: 'Do 24 hodin', note: 'Stačí pár fotek na WhatsApp' },
 ]
 
+function ChevronDown() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+      <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  )
+}
+
+function CheckMark() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+      <path d="M2.5 7l3.5 3.5 5.5-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  )
+}
+
+function CustomSelect({ value, onChange, options, placeholder }) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef(null)
+
+  useEffect(() => {
+    const handler = (e) => { if (ref.current && !ref.current.contains(e.target)) setOpen(false) }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [])
+
+  const selectedLabel = options.find(o => o.value === value)?.label ?? (value || null)
+
+  return (
+    <div ref={ref} className={styles.csWrap}>
+      <button
+        type="button"
+        className={`${styles.csTrigger} ${open ? styles.csOpen : ''} ${!value ? styles.csPlaceholder : ''}`}
+        onClick={() => setOpen(v => !v)}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+      >
+        <span>{selectedLabel ?? placeholder}</span>
+        <span className={`${styles.csChevron} ${open ? styles.csChevronUp : ''}`}>
+          <ChevronDown />
+        </span>
+      </button>
+
+      <AnimatePresence>
+        {open && (
+          <motion.ul
+            role="listbox"
+            className={styles.csDropdown}
+            initial={{ opacity: 0, y: -6, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -4, scale: 0.98 }}
+            transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
+          >
+            {options.map(opt => {
+              const isSelected = opt.value === value
+              return (
+                <li key={opt.value} role="option" aria-selected={isSelected}>
+                  <button
+                    type="button"
+                    className={`${styles.csOption} ${isSelected ? styles.csSelected : ''}`}
+                    onClick={() => { onChange(opt.value); setOpen(false) }}
+                  >
+                    <span>{opt.label}</span>
+                    {isSelected && <span className={styles.csCheck}><CheckMark /></span>}
+                  </button>
+                </li>
+              )
+            })}
+          </motion.ul>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
+
+const typeOptions = [
+  { value: 'soukroma', label: 'Soukromá koupelna' },
+  { value: 'najemni', label: 'Nájemní byt / více bytů' },
+  { value: 'hotel', label: 'Hotel, penzion, wellness' },
+  { value: 'jine', label: 'Jiné' },
+]
+
+const sizeOptions = [
+  { value: 'nevim', label: 'Nevím přesně' },
+  { value: 'do5', label: 'Do 5 m²' },
+  { value: '5-10', label: '5–10 m²' },
+  { value: '10-20', label: '10–20 m²' },
+  { value: '20plus', label: 'Více než 20 m²' },
+]
+
 export default function Contact() {
   const [status, setStatus] = useState('idle')
   const [form, setForm] = useState({ name: '', phone: '', email: '', type: '', size: '', message: '' })
   const set = k => e => setForm(f => ({ ...f, [k]: e.target.value }))
+  const setVal = k => v => setForm(f => ({ ...f, [k]: v }))
   const submit = e => {
     e.preventDefault()
     setStatus('loading')
@@ -104,23 +195,21 @@ export default function Contact() {
                   <div className={styles.row}>
                     <div className={styles.group}>
                       <label className={styles.label}>Typ projektu</label>
-                      <select className={styles.select} value={form.type} onChange={set('type')}>
-                        <option value="">Vyberte…</option>
-                        <option>Soukromá koupelna</option>
-                        <option>Nájemní byt / více bytů</option>
-                        <option>Hotel, penzion, wellness</option>
-                        <option>Jiné</option>
-                      </select>
+                      <CustomSelect
+                        value={form.type}
+                        onChange={setVal('type')}
+                        options={typeOptions}
+                        placeholder="Vyberte…"
+                      />
                     </div>
                     <div className={styles.group}>
                       <label className={styles.label}>Přibližná plocha</label>
-                      <select className={styles.select} value={form.size} onChange={set('size')}>
-                        <option value="">Nevím přesně</option>
-                        <option>Do 5 m²</option>
-                        <option>5–10 m²</option>
-                        <option>10–20 m²</option>
-                        <option>Více než 20 m²</option>
-                      </select>
+                      <CustomSelect
+                        value={form.size}
+                        onChange={setVal('size')}
+                        options={sizeOptions}
+                        placeholder="Nevím přesně"
+                      />
                     </div>
                   </div>
                   <div className={styles.group}>
