@@ -35,6 +35,8 @@
   width: 100%;
   max-width: 580px;
   min-width: 0;
+  /* Lets H1 + sub paragraph scale to .content width via cqi */
+  container-type: inline-size;
 }
 
 /* ── Eyebrow tag ── */
@@ -58,9 +60,14 @@
   flex-shrink: 0;
 }
 
-/* ── Headline ── */
+/* ── Headline ──
+   Sized by .content's inline width (cqi) instead of viewport.
+   Prevents wrap-to-4-lines on desktop where 2-col layout
+   constrains content to 580px while viewport is 1280+px.
+   8cqi keeps "Koupelna bez bourání." (21 chars) on one line
+   across 280px (mobile 1col) → 580px (desktop content max). */
 .h1 {
-  font-size: var(--fs-hero);
+  font-size: clamp(1.5rem, 8cqi, 3.25rem);
   font-weight: 800;
   line-height: var(--lh-tight);
   letter-spacing: -0.04em;
