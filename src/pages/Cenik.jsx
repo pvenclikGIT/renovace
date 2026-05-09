@@ -283,31 +283,55 @@ export default function Cenik() {
 
       {/* ── HERO ──────────────────────────────────────────────── */}
       <section className={styles.hero}>
-        <div className={styles.heroInner}>
-          <FadeIn>
-            <nav className={styles.breadcrumb} aria-label="Drobečková navigace">
-              <Link to="/">Domů</Link>
-              <span aria-hidden="true">/</span>
-              <span>Ceník</span>
-            </nav>
 
-            <div className={styles.heroTag}>
+        {/* levý sloupec — text */}
+        <div className={styles.heroLeft}>
+          <motion.div
+            className={styles.heroContent}
+            variants={{ hidden: {}, show: { transition: { staggerChildren: 0.1, delayChildren: 0.05 } } }}
+            initial="hidden"
+            animate="show"
+          >
+            <motion.nav
+              className={styles.breadcrumb}
+              aria-label="Drobečková navigace"
+              variants={{ hidden: { opacity: 0, y: 12 }, show: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}
+            >
+              <Link to="/">Domů</Link>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M4 2l4 4-4 4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <span aria-current="page">Ceník</span>
+            </motion.nav>
+
+            <motion.div
+              className={styles.heroTag}
+              variants={{ hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0, transition: { duration: 0.6 } } }}
+            >
               <span className={styles.heroDot} />
               Transparentní ceny, bez překvapení
-            </div>
+            </motion.div>
 
-            <h1 className={styles.heroH1}>
+            <motion.h1
+              className={styles.heroH1}
+              variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { duration: 0.7 } } }}
+            >
               Kolik stojí nová<br />
               <em className={styles.heroGold}>koupelna bez bourání?</em>
-            </h1>
+            </motion.h1>
 
-            <p className={styles.heroLead}>
+            <motion.p
+              className={styles.heroLead}
+              variants={{ hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0, transition: { duration: 0.65 } } }}
+            >
               Stěrka vyjde od <strong>3 000 do 4 500 Kč/m²</strong> bez DPH a zahrnuje práci i materiál.
-              Průměrná koupelna vychází kolem 66 000-99 000 Kč bez DPH.
-              Klasická rekonstrukce? Klidně 200 000 Kč a 6 týdnů čekání.
-            </p>
+              Průměrná koupelna kolem 66 000–99 000 Kč. Klasická rekonstrukce? Klidně 200 000 Kč a 6 týdnů čekání.
+            </motion.p>
 
-            <div className={styles.heroActions}>
+            <motion.div
+              className={styles.heroActions}
+              variants={{ hidden: { opacity: 0, y: 14 }, show: { opacity: 1, y: 0, transition: { duration: 0.6 } } }}
+            >
               <a href={`${HOME}#contact`} className={styles.heroBtnPrimary}>
                 Chci nezávaznou kalkulaci
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
@@ -320,28 +344,47 @@ export default function Cenik() {
                 </svg>
                 776 661 661
               </a>
-            </div>
-          </FadeIn>
+            </motion.div>
 
-          <FadeIn delay={0.15}>
-            <div className={styles.heroStats}>
+            <motion.div
+              className={styles.heroStats}
+              variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0.6, delay: 0.1 } } }}
+            >
               {[
                 { num: '180+',   label: 'dokončených koupelen' },
                 { num: '3 dny',  label: 'průměrná realizace' },
                 { num: '10 let', label: 'záruka na těsnost' },
-                { num: '0 Kč',   label: 'konzultace zdarma' },
-              ].map((s, i, arr) => (
-                <div key={s.label} className={styles.heroStatWrap}>
-                  <div className={styles.heroStat}>
-                    <span className={styles.heroStatNum}>{s.num}</span>
-                    <span className={styles.heroStatLabel}>{s.label}</span>
-                  </div>
-                  {i < arr.length - 1 && <span className={styles.heroStatDiv} aria-hidden="true" />}
+              ].map((s, i) => (
+                <div key={s.label} className={styles.stat}>
+                  <span className={styles.statNum}>{s.num}</span>
+                  <span className={styles.statLabel}>{s.label}</span>
+                  {i < 2 && <span className={styles.statDiv} />}
                 </div>
               ))}
-            </div>
-          </FadeIn>
+            </motion.div>
+          </motion.div>
         </div>
+
+        {/* pravý sloupec — fotka */}
+        <motion.div
+          className={styles.heroRight}
+          initial={{ opacity: 0, scale: 1.06 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <img
+            src="/renovace/images/real-05.jpg"
+            alt="Dokončená koupelna s epoxidovou stěrkou"
+            className={styles.heroImg}
+          />
+          <div className={styles.heroOverlay} />
+          <div className={styles.heroPriceBadge}>
+            <span className={styles.heroBadgeLabel}>Průměrná realizace</span>
+            <span className={styles.heroBadgeNum}>od 66 000 Kč</span>
+            <span className={styles.heroBadgeSub}>bez DPH · práce i materiál</span>
+          </div>
+        </motion.div>
+
       </section>
 
       {/* ── SROVNÁNÍ ──────────────────────────────────────────── */}

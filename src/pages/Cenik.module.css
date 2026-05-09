@@ -10,38 +10,48 @@
 /* ─────────────────────────────────────────────────────────────
    HERO
 ───────────────────────────────────────────────────────────── */
-.hero { padding: calc(var(--nav-h) + clamp(3rem,5vw,5rem)) var(--px) clamp(3rem,4vw,4rem); }
-.heroInner { max-width: 860px; margin: 0 auto; }
+.hero {
+  min-height: 88svh; padding-top: var(--nav-h);
+  display: grid; grid-template-columns: 1fr 1fr; background: var(--bg);
+}
+
+.heroLeft {
+  display: flex; align-items: center;
+  padding: clamp(3rem,5vw,5rem) var(--px) clamp(3rem,4vw,4rem);
+}
+.heroContent { width: 100%; max-width: 560px; }
 
 .breadcrumb {
-  display: flex; align-items: center; gap: 0.5rem; list-style: none;
+  display: flex; align-items: center; gap: 0.4rem;
   font-size: var(--fs-xs); font-weight: 500; color: var(--light);
-  letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
 }
-.breadcrumb a:hover { color: var(--gold); transition: color 0.2s; }
-.breadcrumb span:last-child { color: var(--dark); }
+.breadcrumb a { color: var(--light); transition: color 0.2s; }
+.breadcrumb a:hover { color: var(--gold); }
+.breadcrumb svg { opacity: 0.4; flex-shrink: 0; }
+.breadcrumb span[aria-current] { color: var(--dark); font-weight: 600; }
 
 .heroTag {
   display: inline-flex; align-items: center; gap: 0.6rem;
   font-size: var(--fs-xs); font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--gold); background: var(--gold-pale); padding: 0.42rem 1rem;
-  border-radius: 100px; margin-bottom: 1.75rem;
+  border-radius: 100px; margin-bottom: 1.75rem; width: fit-content;
 }
 .heroDot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
 
 .heroH1 {
-  font-size: clamp(2.6rem,4.5vw,4.6rem); font-weight: 800; line-height: 1.05;
+  font-size: clamp(2.6rem,4vw,4.4rem); font-weight: 800; line-height: 1.05;
   letter-spacing: -0.04em; color: var(--dark); margin-bottom: 1.5rem;
 }
 .heroGold { color: var(--gold); font-style: normal; }
 
 .heroLead {
   font-size: var(--fs-lead); font-weight: 300; color: var(--mid);
-  line-height: 1.72; max-width: 660px; margin-bottom: 2.25rem;
+  line-height: 1.72; margin-bottom: 2.25rem;
 }
 .heroLead strong { font-weight: 600; color: var(--dark3); }
 
-.heroActions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
+.heroActions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
 .heroBtnPrimary {
   display: inline-flex; align-items: center; gap: 0.55rem;
   background: var(--dark); color: var(--white); padding: 1rem 2rem;
@@ -57,12 +67,36 @@
 }
 .heroBtnGhost:hover { border-color: var(--gold); color: var(--gold); }
 
-.heroStats { display: flex; align-items: center; flex-wrap: wrap; padding-top: 2rem; border-top: 1px solid var(--bg3); }
-.heroStatWrap { display: flex; align-items: center; }
-.heroStat { display: flex; flex-direction: column; gap: 0.2rem; padding-right: 2.5rem; }
-.heroStatNum  { font-size: 1.75rem; font-weight: 800; line-height: 1; color: var(--dark); letter-spacing: -0.04em; }
-.heroStatLabel { font-size: var(--fs-xs); color: var(--light); }
-.heroStatDiv  { width: 1px; height: 30px; background: var(--bg3); flex-shrink: 0; margin-right: 2.5rem; }
+.heroStats {
+  display: flex; align-items: center;
+  padding-top: 2rem; border-top: 1px solid var(--bg3);
+}
+.stat { display: flex; flex-direction: column; gap: 0.2rem; padding-right: 2.5rem; position: relative; }
+.stat:not(:last-child)::after {
+  content: ''; position: absolute; right: 1.25rem; top: 50%; transform: translateY(-50%);
+  width: 1px; height: 26px; background: var(--bg3);
+}
+.statNum  { font-size: 1.75rem; font-weight: 800; line-height: 1; color: var(--dark); letter-spacing: -0.04em; }
+.statLabel { font-size: var(--fs-xs); color: var(--light); }
+.statDiv  { display: none; }
+
+/* pravý sloupec — fotka */
+.heroRight { position: relative; overflow: hidden; background: var(--dark2); }
+.heroImg   { width: 100%; height: 100%; object-fit: cover; display: block; }
+.heroOverlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(23,20,18,0.14) 0%, transparent 50%),
+              linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 50%);
+}
+.heroPriceBadge {
+  position: absolute; bottom: 2.5rem; left: -1px;
+  background: var(--white); border-radius: 0 var(--r) var(--r) 0;
+  padding: 1.1rem 1.75rem; box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+  display: flex; flex-direction: column; gap: 0.25rem;
+}
+.heroBadgeLabel { font-size: var(--fs-xs); font-weight: 700; color: var(--light); letter-spacing: 0.08em; text-transform: uppercase; }
+.heroBadgeNum   { font-size: 1.35rem; font-weight: 800; color: var(--dark); letter-spacing: -0.03em; line-height: 1; }
+.heroBadgeSub   { font-size: var(--fs-xs); color: var(--light); }
 
 /* ─────────────────────────────────────────────────────────────
    SROVNANI
@@ -321,37 +355,47 @@
    RESPONSIVE
 ───────────────────────────────────────────────────────────── */
 @media (max-width: 1100px) {
-  .tiers          { grid-template-columns: 1fr 1fr; }
+  .tiers { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 1024px) {
+  .hero { grid-template-columns: 1fr; }
+  .heroRight { min-height: 60vw; }
+  .heroPriceBadge { display: none; }
 }
 
 @media (max-width: 900px) {
-  .matPanelBody   { grid-template-columns: 1fr; }
-  .matPriceCard   { min-width: unset; }
+  .matPanelBody { grid-template-columns: 1fr; }
+  .matPriceCard { min-width: unset; }
   .compareRow     { grid-template-columns: 1.3fr 1fr; }
   .compareClassic { display: none; }
   .compareClassicHead { display: none; }
-}
-
-@media (max-width: 720px) {
-  .tiers          { grid-template-columns: 1fr; }
-  .includedGrid   { grid-template-columns: 1fr; }
-  .heroStats      { flex-direction: column; gap: 1.25rem; padding-top: 1.5rem; }
-  .heroStatDiv    { display: none; }
-  .heroStat       { flex-direction: row; align-items: baseline; gap: 0.5rem; padding-right: 0; }
-  .heroStatNum    { font-size: 1.4rem; }
-  .calcRow        { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
 }
 
 @media (max-width: 760px) {
   .faqColumns { grid-template-columns: 1fr; }
   .faqCol:last-child .faqItem:first-child { border-top: none; }
 }
-@media (max-width: 560px) { .faqA { padding-right: 1rem; } }
+
+@media (max-width: 720px) {
+  .tiers        { grid-template-columns: 1fr; }
+  .includedGrid { grid-template-columns: 1fr; }
+  .heroStats    { flex-wrap: wrap; gap: 0 0; }
+  .stat         { padding-right: 1.75rem; }
+  .statNum      { font-size: 1.4rem; }
+  .calcRow      { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
+}
+
+@media (max-width: 560px) {
+  .faqA { padding-right: 1rem; }
+  .heroActions { flex-direction: column; align-items: stretch; }
+  .heroBtnPrimary, .heroBtnGhost { justify-content: center; }
+}
 
 @media (max-width: 480px) {
-  .matTabs        { gap: 0.5rem; }
-  .matTab         { font-size: var(--fs-xs); padding: 0.6rem 1rem; }
-  .tierCard       { padding: 1.75rem 1.5rem; }
-  .compareRow     { padding: 0.65rem 0.9rem; font-size: var(--fs-xs); }
-  .compareHead    { padding: 0.5rem 0.9rem; }
+  .matTabs    { gap: 0.5rem; }
+  .matTab     { font-size: var(--fs-xs); padding: 0.6rem 1rem; }
+  .tierCard   { padding: 1.75rem 1.5rem; }
+  .compareRow { padding: 0.65rem 0.9rem; font-size: var(--fs-xs); }
+  .compareHead { padding: 0.5rem 0.9rem; }
 }
