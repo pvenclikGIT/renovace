@@ -1,11 +1,11 @@
-.section { background: var(--bg); padding: var(--py) var(--px); }
+.section { background: var(--white); padding: var(--py) var(--px); }
 .header { max-width: 680px; margin-bottom: 4rem; }
 .tag { display: inline-flex; align-items: center; gap: 0.6rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); background: var(--gold-pale); padding: 0.42rem 1rem; border-radius: 100px; margin-bottom: 1.25rem; width: fit-content; }
 .tagDot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
 .title { font-size: clamp(2rem, 3.8vw, 3.2rem); font-weight: 800; line-height: 1.08; color: var(--dark); letter-spacing: -0.04em;
   text-wrap: balance; margin-bottom: 1rem; }
 .title em { font-style: normal; color: var(--gold); }
-.lead { font-size: clamp(1rem, 1.4vw, 1.125rem); font-weight: 300; color: var(--mid); line-height: 1.72; }
+.lead { font-size: clamp(1rem, 1.4vw, 1.125rem); font-weight: 300; color: var(--dark3); line-height: 1.72; }
 .lead strong { font-weight: 700; color: var(--dark); }
 
 .grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 2.5rem; align-items: start; }
@@ -16,7 +16,7 @@
 .groupLabel {
   display: flex; align-items: center; gap: 0.45rem;
   font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--mid);
+  text-transform: uppercase; color: var(--dark2);
 }
 .groupLabel svg { color: var(--gold); flex-shrink: 0; }
 
@@ -40,7 +40,7 @@
 
 .sliderMinMax {
   display: flex; justify-content: space-between;
-  font-size: 0.8125rem; font-weight: 400; color: var(--light);
+  font-size: 0.8125rem; font-weight: 400; color: var(--mid);
 }
 .sliderMid {
   font-size: 0.75rem; font-weight: 500; color: var(--gold);
@@ -55,7 +55,7 @@
   flex-wrap: wrap;
 }
 .totalItem { display: flex; flex-direction: column; gap: 2px; }
-.totalLabel { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--light); }
+.totalLabel { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); }
 .totalVal { font-size: 1.1rem; font-weight: 900; color: var(--dark); letter-spacing: -0.04em; }
 .totalPlus { font-size: 1.2rem; font-weight: 300; color: var(--gold); }
 .totalItemBig .totalVal { color: var(--gold); font-size: 1.3rem; }
@@ -75,12 +75,12 @@
 .compBadge { font-size: 0.6875rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); background: white; padding: 0.2rem 0.6rem; border-radius: 100px; border: 1px solid var(--gold-pale2); white-space: nowrap; }
 .compBadgePrem { color: #7B4F00; background: var(--gold-pale2); border-color: var(--gold); }
 .compBtnActive .compBadge { background: var(--gold-pale2); }
-.compDesc { font-size: 0.875rem; font-weight: 300; color: var(--mid); line-height: 1.4; }
+.compDesc { font-size: 0.875rem; font-weight: 300; color: var(--dark3); line-height: 1.4; }
 .compRate { font-size: 0.875rem; font-weight: 800; color: var(--gold); }
 
 /* IN PRICE */
 .inPrice { background: var(--white); border-radius: var(--r-lg); padding: 1.1rem 1.4rem; border: 1px solid var(--bg3); }
-.inPriceTitle { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mid); margin-bottom: 0.75rem; }
+.inPriceTitle { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dark2); margin-bottom: 0.75rem; }
 .inPriceList { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
 .inPriceList li { display: flex; align-items: center; gap: 0.55rem; font-size: 1rem; font-weight: 400; color: var(--dark3); }
 
@@ -91,46 +91,46 @@
   position: sticky; top: calc(var(--nav-h) + 1.5rem);
 }
 .resultTop { display: flex; flex-direction: column; gap: 0.4rem; }
-.resultLabel { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+.resultLabel { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
 .resultPrice { font-size: clamp(1.65rem, 2.8vw, 2.3rem); font-weight: 900; color: var(--white); letter-spacing: -0.05em; line-height: 1.05; }
-.resultSub { font-size: 0.8125rem; font-weight: 300; color: rgba(255,255,255,0.32); }
+.resultSub { font-size: 0.8125rem; font-weight: 300; color: rgba(255,255,255,0.58); }
 
 /* Breakdown */
 .breakdown { display: flex; flex-direction: column; gap: 0; border-top: 1px solid rgba(255,255,255,0.07); padding-top: 0.5rem; }
-.breakRow { display: flex; justify-content: space-between; align-items: center; padding: 0.38rem 0; font-size: 0.875rem; font-weight: 400; color: rgba(255,255,255,0.38); }
+.breakRow { display: flex; justify-content: space-between; align-items: center; padding: 0.38rem 0; font-size: 0.875rem; font-weight: 400; color: rgba(255,255,255,0.65); }
 .breakTotal { font-weight: 700; color: var(--white); padding-top: 0.65rem; margin-top: 0.3rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 1rem; }
 
 /* Range box */
 .rangeBox { background: rgba(255,255,255,0.04); border-radius: var(--r); padding: 1rem 1.2rem; border: 1px solid rgba(255,255,255,0.07); }
 .rangeRow { display: flex; gap: 1rem; align-items: stretch; margin-bottom: 0.85rem; }
 .rangeItem { display: flex; flex-direction: column; gap: 2px; flex: 1; }
-.rangeItemLabel { font-size: 0.75rem; font-weight: 600; color: rgba(255,255,255,0.28); letter-spacing: 0.06em; text-transform: uppercase; }
+.rangeItemLabel { font-size: 0.75rem; font-weight: 600; color: rgba(255,255,255,0.55); letter-spacing: 0.06em; text-transform: uppercase; }
 .rangeItemVal { font-size: 1rem; font-weight: 800; color: var(--white); letter-spacing: -0.03em; }
-.rangeItemNote { font-size: 0.75rem; font-weight: 300; color: rgba(255,255,255,0.22); }
+.rangeItemNote { font-size: 0.75rem; font-weight: 300; color: rgba(255,255,255,0.48); }
 .rangeDivider { width: 1px; background: rgba(255,255,255,0.07); flex-shrink: 0; }
 .rangeBar { position: relative; height: 5px; background: rgba(255,255,255,0.1); border-radius: 3px; }
 .rangeBarFill { position: absolute; left: 0; top: 0; bottom: 0; background: var(--gold); border-radius: 3px; transition: width 0.4s var(--ease); min-width: 5px; }
 .rangeBarThumb { position: absolute; top: 50%; transform: translate(-50%,-50%); width: 13px; height: 13px; border-radius: 50%; background: var(--gold); border: 2px solid #171412; transition: left 0.4s var(--ease); }
-.rangeBarLabels { display: flex; justify-content: space-between; margin-top: 0.45rem; font-size: 0.75rem; font-weight: 500; color: rgba(255,255,255,0.2); }
+.rangeBarLabels { display: flex; justify-content: space-between; margin-top: 0.45rem; font-size: 0.75rem; font-weight: 500; color: rgba(255,255,255,0.42); }
 
 /* Savings */
 .savingsBox { background: rgba(201,150,60,0.1); border: 1px solid rgba(201,150,60,0.2); border-radius: var(--r); padding: 0.95rem 1.2rem; }
 .savingsLabel { display: flex; align-items: center; gap: 0.45rem; font-size: 0.75rem; font-weight: 700; color: var(--gold2); margin-bottom: 0.3rem; }
 .savingsAmt { font-size: 1.45rem; font-weight: 900; color: var(--gold); letter-spacing: -0.04em; }
-.savingsNote { font-size: 0.67rem; font-weight: 300; color: rgba(255,255,255,0.25); margin-top: 0.2rem; line-height: 1.5; }
+.savingsNote { font-size: 0.67rem; font-weight: 300; color: rgba(255,255,255,0.52); margin-top: 0.2rem; line-height: 1.5; }
 
-.disclaimer { font-size: 0.8125rem; font-weight: 300; color: rgba(255,255,255,0.2); line-height: 1.65; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1.1rem; }
+.disclaimer { font-size: 0.8125rem; font-weight: 300; color: rgba(255,255,255,0.48); line-height: 1.65; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.1rem; }
 
 /* Email */
 .emailRow { display: flex; flex-direction: column; gap: 0.55rem; }
-.emailLabel { font-size: 0.73rem; font-weight: 600; color: rgba(255,255,255,0.45); }
+.emailLabel { font-size: 0.73rem; font-weight: 600; color: rgba(255,255,255,0.65); }
 .emailFlex { display: flex; gap: 0.5rem; }
 .emailInput { font-family: var(--font); font-size: 1rem; font-weight: 400; flex: 1; background: rgba(255,255,255,0.07); border: 1.5px solid rgba(255,255,255,0.12); color: white; padding: 0.78rem 1rem; border-radius: var(--r); outline: none; transition: border-color 0.2s; min-width: 0; }
 .emailInput::placeholder { color: rgba(255,255,255,0.22); }
 .emailInput:focus { border-color: var(--gold); }
 .emailBtn { font-family: var(--font); background: var(--gold); color: white; padding: 0.78rem 1.2rem; border: none; border-radius: var(--r); font-size: 1rem; font-weight: 700; cursor: pointer; transition: background 0.2s; white-space: nowrap; flex-shrink: 0; }
 .emailBtn:hover { background: var(--gold2); }
-.emailNote { font-size: 0.8125rem; font-weight: 300; color: rgba(255,255,255,0.25); }
+.emailNote { font-size: 0.8125rem; font-weight: 300; color: rgba(255,255,255,0.48); }
 .emailNote a { color: var(--gold2); font-weight: 600; }
 
 .sentMsg { display: flex; align-items: center; gap: 0.7rem; font-size: 1rem; font-weight: 600; color: #4CAF50; padding: 0.82rem 1rem; background: rgba(76,175,80,0.1); border-radius: var(--r); border: 1px solid rgba(76,175,80,0.2); }
