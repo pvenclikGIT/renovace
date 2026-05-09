@@ -7,7 +7,7 @@
     var l = window.location;
     l.replace(
       l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-      '/?p=' + encodeURIComponent(l.pathname + l.search) + l.hash
+      '/renovace/?p=' + encodeURIComponent(l.pathname + l.search) + l.hash
     );
   </script>
 </head>
