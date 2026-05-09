@@ -1,3 +1,18 @@
+/*
+  HERO — pure fluid responsive design.
+
+  Principles (Google-style):
+   • Every typography size, padding, margin, gap consumes a fluid token
+     (clamp-based) from index.css. There is no @media override that
+     bumps a font-size or pads differently.
+   • @media is reserved for STRUCTURAL layout shifts only:
+       1280px → tighten column proportions
+       1024px → stack columns + center text
+        640px → stack actions vertically (CTAs full-width on phones)
+   • Hero scales smoothly from 320px iPhone SE to 1920px+ desktop.
+   • Image flows naturally below text on mobile (aspect-ratio).
+*/
+
 .hero {
   min-height: clamp(540px, 86svh, 880px);
   padding-block-start: var(--nav-h);
@@ -22,7 +37,7 @@
   min-width: 0;
 }
 
-/* ── Tag ── */
+/* ── Eyebrow tag ── */
 .tag {
   display: inline-flex; align-items: center; gap: var(--space-2);
   font-size: var(--fs-2xs);
@@ -31,7 +46,8 @@
   text-transform: uppercase;
   color: var(--gold);
   background: var(--gold-pale);
-  padding: var(--space-2) var(--space-4);
+  padding-block: var(--space-2);
+  padding-inline: var(--space-4);
   border-radius: 100px;
   margin-bottom: var(--space-5);
   width: fit-content;
@@ -42,7 +58,7 @@
   flex-shrink: 0;
 }
 
-/* ── H1 ── */
+/* ── Headline ── */
 .h1 {
   font-size: var(--fs-hero);
   font-weight: 800;
@@ -73,7 +89,8 @@
 
 /* ── Actions ── */
 .actions {
-  display: flex; align-items: center;
+  display: flex;
+  align-items: center;
   gap: var(--space-3);
   flex-wrap: wrap;
   margin-bottom: var(--space-7);
@@ -81,7 +98,8 @@
 .btnPrimary {
   display: inline-flex; align-items: center; gap: var(--space-2);
   background: var(--dark); color: var(--white);
-  padding: var(--space-3) var(--space-6);
+  padding-block: var(--space-3);
+  padding-inline: var(--space-6);
   font-size: var(--fs-btn); font-weight: 700;
   border-radius: 100px;
   border: none; cursor: pointer;
@@ -93,7 +111,8 @@
 .btnGhost {
   display: inline-flex; align-items: center; gap: var(--space-2);
   color: var(--dark);
-  padding: var(--space-3) var(--space-5);
+  padding-block: var(--space-3);
+  padding-inline: var(--space-5);
   border: 1.5px solid var(--bg4);
   font-size: var(--fs-btn); font-weight: 500;
   border-radius: 100px;
@@ -102,14 +121,14 @@
 }
 .btnGhost:hover { border-color: var(--gold); color: var(--gold); }
 
-/* ── Stats (3-col grid, always side-by-side) ── */
+/* ── Stats (always 3-col grid, content scales fluidly) ── */
 .stats {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: center;
   gap: var(--space-3);
-  padding-top: var(--space-5);
-  border-top: 1px solid var(--bg3);
+  padding-block-start: var(--space-5);
+  border-block-start: 1px solid var(--bg3);
   margin-bottom: var(--space-4);
 }
 .stat {
@@ -173,11 +192,12 @@
 /* ── Floating live-job badge (desktop only) ── */
 .badge {
   position: absolute;
-  bottom: var(--space-6);
-  left: 0;
+  inset-block-end: var(--space-6);
+  inset-inline-start: 0;
   background: var(--white);
   border-radius: 0 var(--r) var(--r) 0;
-  padding: var(--space-3) var(--space-5);
+  padding-block: var(--space-3);
+  padding-inline: var(--space-5);
   box-shadow: var(--shadow-md);
   min-width: 220px;
   max-width: calc(100% - 2rem);
@@ -206,8 +226,8 @@
 /* ── Scroll hint (desktop only) ── */
 .scrollHint {
   position: absolute;
-  bottom: var(--space-6);
-  right: var(--space-5);
+  inset-block-end: var(--space-6);
+  inset-inline-end: var(--space-5);
   display: flex; flex-direction: column; align-items: center;
   gap: var(--space-2);
   pointer-events: none;
@@ -233,16 +253,15 @@
 }
 
 /* ─────────────────────────────────────────────
-   LAYOUT BREAKPOINTS — only structural changes,
-   typography and spacing scale fluidly via tokens.
+   STRUCTURAL BREAKPOINTS
+   No font-size or padding overrides here —
+   typography and spacing scale via fluid tokens.
    ───────────────────────────────────────────── */
 
-/* Tablet: tighten column proportions slightly */
 @media (max-width: 1280px) {
   .hero { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); }
 }
 
-/* Stack columns: text above, image below + center text */
 @media (max-width: 1024px) {
   .hero {
     grid-template-columns: 1fr;
@@ -251,74 +270,16 @@
   .left {
     justify-content: center;
     text-align: center;
-    padding-block: var(--space-7) var(--space-8);
-    padding-inline: var(--space-5);
   }
-  .content { margin-left: auto; margin-right: auto; }
-  .tag, .sub { margin-left: auto; margin-right: auto; }
+  .content { margin-inline: auto; }
+  .tag, .sub { margin-inline: auto; }
   .actions, .stats, .trust { justify-content: center; }
   .right { aspect-ratio: 16 / 10; min-height: auto; }
   .badge, .scrollHint { display: none; }
 }
 
-/*
-  Mobile: nav + hero copy fills exactly one viewport.
-  Image (.right) starts at the fold line — invisible until user scrolls.
-
-  Mechanism:
-    .hero  = min-height 100svh (whole first screen)
-    .left  = min-height calc(100svh - nav)  → text column fills viewport
-              minus the fixed navbar; image is pushed to row 2 below.
-*/
 @media (max-width: 640px) {
-  .hero { min-height: 100svh; }
-  @supports (min-height: 100dvh) { .hero { min-height: 100dvh; } }
-
-  .left {
-    min-height: calc(100svh - var(--nav-h));
-    padding-block: var(--space-4);
-    align-items: center;
-  }
-  @supports (min-height: 100dvh) {
-    .left { min-height: calc(100dvh - var(--nav-h)); }
-  }
-  .tag {
-    margin-bottom: var(--space-3);
-    padding: 0.3rem 0.85rem;
-    font-size: var(--fs-2xs);
-  }
-  .h1 {
-    margin-bottom: var(--space-3);
-    line-height: 1.08;
-  }
-  .sub {
-    font-size: var(--fs-body);
-    line-height: 1.55;
-    max-width: 40ch;
-    margin-bottom: var(--space-4);
-  }
-  .actions {
-    flex-direction: column;
-    align-items: stretch;
-    gap: var(--space-2);
-    margin-bottom: var(--space-4);
-  }
-  .btnPrimary, .btnGhost {
-    justify-content: center;
-    padding: 0.75rem 1.1rem;
-    font-size: 0.9rem;
-  }
-  .stats {
-    padding-top: var(--space-3);
-    margin-bottom: var(--space-3);
-    gap: var(--space-2);
-  }
-  .statNum { font-size: 1.05rem; }
-  .statLabel { font-size: 0.65rem; line-height: 1.3; }
-  .stat:not(:last-child)::after { height: 22px; }
-  .trust {
-    font-size: var(--fs-xs);
-    line-height: 1.4;
-  }
+  .actions { flex-direction: column; align-items: stretch; }
+  .btnPrimary, .btnGhost { justify-content: center; }
   .right { aspect-ratio: 4 / 3; }
 }

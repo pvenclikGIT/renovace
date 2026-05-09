@@ -138,13 +138,13 @@
   max-width: calc(100% - 2rem);
 }
 .heroBadgeLabel { font-size: var(--fs-xs); font-weight: 700; color: var(--light); letter-spacing: 0.08em; text-transform: uppercase; }
-.heroBadgeNum   { font-size: 1.35rem; font-weight: 800; color: var(--dark); letter-spacing: -0.03em; line-height: 1; }
+.heroBadgeNum   { font-size: var(--fs-xl); font-weight: 800; color: var(--dark); letter-spacing: -0.03em; line-height: 1; }
 .heroBadgeSub   { font-size: var(--fs-xs); color: var(--light); }
 
 /* ─────────────────────────────────────────────────────────────
    SROVNANI
 ───────────────────────────────────────────────────────────── */
-.whyCheaper { background: var(--dark); padding: clamp(3rem,5vw,5.5rem) var(--px); }
+.whyCheaper { background: var(--dark); padding-block: var(--section-py); padding-inline: var(--section-px); }
 .compareInner { max-width: 1160px; margin: 0 auto; }
 
 .compareTag {
@@ -152,8 +152,9 @@
   color: var(--gold); margin-bottom: 0.75rem;
 }
 .compareH2 {
-  font-size: clamp(1.6rem,2.8vw,2.4rem); font-weight: 700; line-height: 1.2;
-  color: var(--white); letter-spacing: -0.03em; margin-bottom: 1.1rem;
+  font-size: var(--fs-3xl); font-weight: 700; line-height: var(--lh-snug);
+  color: var(--white); letter-spacing: -0.03em; margin-bottom: var(--space-4);
+  text-wrap: balance;
 }
 .compareH2 strong { color: var(--gold); }
 .compareLead { font-size: var(--fs-sm); color: rgba(255,255,255,0.45); line-height: 1.75; margin-bottom: 2rem; max-width: 640px; }
@@ -175,7 +176,12 @@
 /* ─────────────────────────────────────────────────────────────
    TIERS
 ───────────────────────────────────────────────────────────── */
-.tiers { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 3rem; }
+.tiers {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
 
 .tierCard {
   container-type: inline-size;
@@ -209,8 +215,8 @@
 
 .tierTop { margin-bottom: 1.5rem; }
 .tierName {
-  font-size: 1.25rem; font-weight: 800; color: var(--dark);
-  letter-spacing: -0.02em; margin-bottom: 0.3rem;
+  font-size: var(--fs-lg); font-weight: 800; color: var(--dark);
+  letter-spacing: -0.02em; margin-bottom: var(--space-1);
 }
 .tierHighlight .tierName { color: var(--white); }
 
@@ -218,7 +224,7 @@
 .tierHighlight .tierTagline { color: rgba(255,255,255,0.4); }
 
 .tierRateRow { display: flex; align-items: baseline; gap: 0.4rem; margin-bottom: 0.6rem; flex-wrap: wrap; }
-.tierNum { font-size: clamp(1.8rem,2.6vw,2.4rem); font-weight: 900; color: var(--dark); letter-spacing: -0.04em; line-height: 1; }
+.tierNum { font-size: var(--fs-2xl); font-weight: 900; color: var(--dark); letter-spacing: -0.04em; line-height: 1; }
 .tierUnit { font-size: var(--fs-sm); color: var(--light); align-self: center; }
 .tierHighlight .tierNum  { color: var(--white); }
 .tierHighlight .tierUnit { color: rgba(255,255,255,0.4); }
@@ -284,7 +290,7 @@
   border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.04);
 }
 .matAccentBar { height: 4px; }
-.matPanelBody { display: grid; grid-template-columns: 1fr auto; gap: 3rem; padding: 2.25rem 2.5rem; align-items: start; }
+.matPanelBody { display: grid; grid-template-columns: 1fr auto; gap: var(--space-7); padding: var(--space-7); align-items: start; }
 
 .matPanelTags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
 .matPanelTag {
@@ -292,7 +298,7 @@
   color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.07);
   padding: 0.2rem 0.7rem; border-radius: 100px;
 }
-.matPanelName { font-size: 1.5rem; font-weight: 800; color: var(--white); letter-spacing: -0.03em; margin-bottom: 0.75rem; }
+.matPanelName { font-size: var(--fs-2xl); font-weight: 800; color: var(--white); letter-spacing: -0.03em; margin-bottom: var(--space-3); text-wrap: balance; }
 .matPanelDesc { font-size: var(--fs-sm); color: rgba(255,255,255,0.5); line-height: 1.65; margin-bottom: 0.75rem; }
 .matPanelSuitable { font-size: var(--fs-sm); color: rgba(255,255,255,0.45); line-height: 1.6; margin-bottom: 1.25rem; }
 .matPanelSuitable strong { color: rgba(255,255,255,0.65); font-weight: 600; }
@@ -306,11 +312,11 @@
 
 .matPriceCard {
   background: var(--dark); border-radius: var(--r); border: 1px solid rgba(255,255,255,0.08);
-  padding: 1.75rem 2rem; min-width: 240px;
+  padding: var(--space-6) var(--space-7); min-width: 240px;
 }
 .matPriceLabel { font-size: var(--fs-xs); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 0.4rem; }
 .matPriceVal { display: flex; align-items: baseline; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0; }
-.matPriceNum  { font-size: 2rem; font-weight: 900; color: var(--white); letter-spacing: -0.04em; line-height: 1; }
+.matPriceNum  { font-size: var(--fs-3xl); font-weight: 900; color: var(--white); letter-spacing: -0.04em; line-height: 1; }
 .matPriceUnit { font-size: var(--fs-sm); color: rgba(255,255,255,0.35); align-self: center; }
 .matPriceDivider { height: 1px; background: rgba(255,255,255,0.08); margin: 1.25rem 0; }
 .matPriceNote { font-size: var(--fs-xs); color: rgba(255,255,255,0.4); line-height: 1.6; margin-bottom: 1.5rem; }
@@ -336,7 +342,7 @@
   width: 46px; height: 46px; border-radius: 12px;
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
-.includedCardTitle { font-size: 1.1rem; font-weight: 700; color: var(--dark); }
+.includedCardTitle { font-size: var(--fs-lg); font-weight: 700; color: var(--dark); letter-spacing: -0.02em; }
 
 .includedList { list-style: none; display: flex; flex-direction: column; gap: 1.1rem; }
 .includedItem { display: flex; align-items: flex-start; gap: 0.9rem; }
@@ -374,7 +380,7 @@
   padding: 1.35rem 2rem; background: var(--dark);
 }
 .calcTotalLabel { font-size: var(--fs-sm); font-weight: 500; color: rgba(255,255,255,0.5); }
-.calcTotalNum   { font-size: 1.6rem; font-weight: 800; color: var(--gold); letter-spacing: -0.03em; }
+.calcTotalNum   { font-size: var(--fs-2xl); font-weight: 800; color: var(--gold); letter-spacing: -0.03em; }
 .calcNote { padding: 1.1rem 2rem; font-size: var(--fs-xs); color: var(--light); line-height: 1.6; }
 .calcNote a { color: var(--gold); }
 .calcNote a:hover { text-decoration: underline; }
@@ -387,10 +393,13 @@
 .faqItem { border-bottom: 1px solid var(--bg3); }
 .faqItem:first-child { border-top: 1px solid var(--bg3); }
 .faqQ {
-  width: 100%; display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;
-  padding: 1.5rem 0; background: none; border: none; text-align: left;
-  font-family: var(--font); font-size: 1rem; font-weight: 700; color: var(--dark);
+  width: 100%; display: flex; justify-content: space-between; align-items: center;
+  gap: var(--space-3);
+  padding-block: var(--space-5);
+  background: none; border: none; text-align: left;
+  font-family: var(--font); font-size: var(--fs-body); font-weight: 700; color: var(--dark);
   cursor: pointer; transition: color 0.2s; letter-spacing: -0.02em;
+  min-height: var(--tap);
 }
 .faqQ:hover { color: var(--gold); }
 .faqToggle {
@@ -400,18 +409,19 @@
 }
 .faqOpen .faqQ { color: var(--gold); }
 .faqOpen .faqToggle { background: var(--gold); color: white; transform: rotate(45deg); }
-.faqA { font-size: 1rem; font-weight: 300; color: var(--mid); line-height: 1.75; padding: 0.25rem 0 1.5rem; padding-right: 2.5rem; }
+.faqA {
+  font-size: var(--fs-body); font-weight: 300; color: var(--mid);
+  line-height: var(--lh-relaxed);
+  padding-block: 0 var(--space-5);
+  padding-inline-end: var(--space-7);
+  text-wrap: pretty;
+}
 
 /* ─────────────────────────────────────────────────────────────
    RESPONSIVE
 ───────────────────────────────────────────────────────────── */
 @media (max-width: 1280px) {
   .hero { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); }
-}
-
-@media (max-width: 1180px) {
-  .tiers { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
-  .tierCard { padding: 1.85rem 1.5rem; }
 }
 
 @media (max-width: 1024px) {
@@ -422,18 +432,15 @@
   .heroLeft {
     justify-content: center;
     text-align: center;
-    padding-block: var(--space-7) var(--space-8);
-    padding-inline: var(--space-5);
   }
-  .heroContent { margin-left: auto; margin-right: auto; }
+  .heroContent { margin-inline: auto; }
   .breadcrumb { justify-content: center; }
-  .heroTag { margin-left: auto; margin-right: auto; }
-  .heroLead { margin-left: auto; margin-right: auto; max-width: 540px; }
+  .heroTag { margin-inline: auto; }
+  .heroLead { margin-inline: auto; }
   .heroActions, .heroStats { justify-content: center; }
   .heroRight { aspect-ratio: 16 / 10; min-height: auto; }
   .heroPriceBadge { display: none; }
-  .tiers { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); }
-  .tierCard { padding: var(--space-6) var(--space-5); }
+  .tiers { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 960px) {
@@ -469,9 +476,8 @@
 }
 
 @media (max-width: 760px) {
-  .faqColumns { grid-template-columns: 1fr; gap: 0; margin-top: 2.5rem; }
+  .faqColumns { grid-template-columns: 1fr; gap: 0; }
   .faqCol:last-child .faqItem:first-child { border-top: none; }
-  .heroH1 { line-height: 1.08; }
 }
 
 @media (max-width: 720px) {
@@ -487,10 +493,5 @@
   .heroRight { aspect-ratio: 4 / 3; }
 }
 
-@media (max-width: 480px) {
-  .matTabs    { gap: 0.5rem; }
-  .matTab     { font-size: var(--fs-xs); padding: 0.6rem 1rem; }
-  .tierCard   { padding: 1.6rem 1.4rem; }
-  .matPanelBody { padding: 1.5rem 1.25rem; gap: 1.5rem; }
-  .matPriceCard { padding: 1.5rem 1.4rem; }
-}
+/* Fluid tokens already scale paddings down on small viewports.
+   No @media font-size or padding overrides needed below 480px. */
