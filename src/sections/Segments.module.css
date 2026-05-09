@@ -119,9 +119,17 @@
 @media (max-width: 960px) {
   .featuredRow { grid-template-columns: 1fr; }
   .smallRow { grid-template-columns: 1fr; }
-  .featCard { flex-direction: column; }
-  .featImg { width: 100%; height: 200px; }
-  .featImgOverlay { background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.25) 100%); }
-  .smallCard { flex-direction: column; }
-  .smallImg { width: 100%; height: 180px; }
+  .featImg { width: 220px; }
+  .smallImg { width: 170px; }
+}
+
+@media (max-width: 640px) {
+  .featImg { width: 38%; min-width: 110px; }
+  .smallImg { width: 36%; min-width: 100px; }
+  .featBody { padding: 1.25rem 1.25rem 1.5rem; }
+  .smallBody { padding: 1.25rem 1.25rem 1.5rem; }
+  .title { font-size: 1.2rem; }
+  .smallTitle { font-size: 1rem; }
+  .desc { font-size: 0.9rem; }
+  .smallDesc { font-size: 0.9rem; }
 }
