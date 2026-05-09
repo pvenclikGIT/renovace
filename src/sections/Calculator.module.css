@@ -135,5 +135,5 @@
 
 .sentMsg { display: flex; align-items: center; gap: 0.7rem; font-size: 1rem; font-weight: 600; color: #4CAF50; padding: 0.82rem 1rem; background: rgba(76,175,80,0.1); border-radius: var(--r); border: 1px solid rgba(76,175,80,0.2); }
 
-@media (max-width: 960px) { .grid { grid-template-columns: 1fr; } .result { position: static; } }
+@media (max-width: 960px) { .grid { grid-template-columns: 1fr; } .result { position: static; } .compBtn:hover { transform: none; } .compBtnActive { transform: none !important; } }
 @media (max-width: 480px) { .emailFlex { flex-direction: column; } .totalRow { gap: 0.5rem; } }
