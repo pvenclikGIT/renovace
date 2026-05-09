@@ -97,6 +97,9 @@
 }
 .labelAfter span { background: rgba(201,150,60,0.75); }
 
+.lblLong { display: inline; }
+.lblShort { display: none; }
+
 .hint {
   display: flex; align-items: center; gap: 0.5rem; justify-content: center;
   margin-top: 0.85rem;
@@ -134,4 +137,6 @@
   .ctaBtn { justify-content: center; }
   .tabs { gap: 0.4rem; }
   .tab { font-size: 0.8125rem; padding: 0.45rem 0.9rem; }
+  .lblLong { display: none; }
+  .lblShort { display: inline; }
 }

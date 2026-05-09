@@ -84,10 +84,16 @@ function Slider({ pair }) {
 
       {/* LABELS */}
       <div className={styles.labelBefore} style={{ opacity: pos > 15 ? 1 : 0 }}>
-        <span>{pair.beforeLabel}</span>
+        <span>
+          <span className={styles.lblLong}>{pair.beforeLabel}</span>
+          <span className={styles.lblShort}>Před</span>
+        </span>
       </div>
       <div className={styles.labelAfter} style={{ opacity: pos < 85 ? 1 : 0 }}>
-        <span>{pair.afterLabel}</span>
+        <span>
+          <span className={styles.lblLong}>{pair.afterLabel}</span>
+          <span className={styles.lblShort}>Po</span>
+        </span>
       </div>
     </div>
   )
