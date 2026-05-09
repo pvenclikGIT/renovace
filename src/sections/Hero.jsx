@@ -28,15 +28,13 @@ export default function Hero() {
           </motion.div>
 
           <motion.h1 variants={item} className={styles.h1}>
-            <span className={styles.line}>Koupelna,</span>
-            <span className={styles.line}>kterou jste</span>
-            <span className={`${styles.line} ${styles.lineGold}`}>vždycky chtěli.</span>
+            <span className={styles.line}>Koupelna bez bourání.</span>
+            <span className={styles.line}>Rekonstrukce</span>
+            <span className={`${styles.line} ${styles.lineGold}`}>v papučích.</span>
           </motion.h1>
 
           <motion.p variants={item} className={styles.sub}>
-            Epoxidové, cementové a pryskyřičné stěrky přímo na stávající obklady.
-            Tloušťka 2–3 mm. Žádné bourání, žádný prach, žádné překvapení v ceně.
-            Vaše koupelna – hotová za 3 dny.
+            Dopřejte své koupelně luxusní vzhled bez nekonečného chaosu. Specializujeme se na aplikaci epoxidových, cementových a pryskyřičných stěrek přímo na stávající obklady, čímž eliminujeme potřebu jakéhokoliv bourání. Celý proces je čistý, tloušťka materiálu nepřesáhne 3 mm.
           </motion.p>
 
           <motion.div variants={item} className={styles.actions}>
