@@ -59,6 +59,8 @@
   cursor: pointer;
   transition: border-color 0.25s, background 0.25s, box-shadow 0.25s, transform 0.25s;
   user-select: none;
+  min-width: 0;
+  overflow: hidden;
 }
 .card:hover {
   border-color: rgba(201,150,60,0.4);
