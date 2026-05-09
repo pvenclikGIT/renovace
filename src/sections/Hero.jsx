@@ -24,17 +24,17 @@ export default function Hero() {
         <motion.div variants={stagger} initial="hidden" animate="show" className={styles.content}>
           <motion.div variants={item} className={styles.tag}>
             <span className={styles.tagDot} />
-            Praha a okolí · bez bourání
+            Praha a Středočeský kraj. Bez bourání.
           </motion.div>
 
           <motion.h1 variants={item} className={styles.h1}>
-            <span className={styles.line}>Koupelna</span>
-            <span className={styles.line}>bez bourání.</span>
-            <span className={`${styles.line} ${styles.lineGold}`}>V papučích.</span>
+            <span className={styles.line}>Koupelna bez bourání.</span>
+            <span className={styles.line}>Rekonstrukce</span>
+            <span className={`${styles.line} ${styles.lineGold}`}>v papučích.</span>
           </motion.h1>
 
           <motion.p variants={item} className={styles.sub}>
-            Epoxidové, cementové a pryskyřičné stěrky přímo na stávající obklady. Žádné bourání, žádný prach. Tloušťka jen 3 mm.
+            Dopřejte své koupelně luxusní vzhled bez nekonečného chaosu. Specializujeme se na aplikaci epoxidových, cementových a pryskyřičných stěrek přímo na stávající obklady, čímž eliminujeme potřebu jakéhokoliv bourání. Celý proces je čistý, tloušťka materiálu nepřesáhne 3 mm.
           </motion.p>
 
           <motion.div variants={item} className={styles.actions}>
