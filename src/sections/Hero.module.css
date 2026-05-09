@@ -143,15 +143,25 @@
     grid-template-columns: 1fr;
     min-height: auto;
   }
-  .left { padding-bottom: clamp(2rem, 4vw, 3rem); }
+  .left {
+    justify-content: center;
+    text-align: center;
+    padding: clamp(1.5rem, 3.5vw, 2.5rem) var(--px) clamp(1.75rem, 4vw, 3rem);
+  }
+  .content { margin-left: auto; margin-right: auto; }
+  .tag { margin-left: auto; margin-right: auto; }
+  .sub { margin-left: auto; margin-right: auto; }
+  .actions { justify-content: center; }
+  .stats { justify-content: center; }
+  .trust { justify-content: center; }
   .right { aspect-ratio: 16 / 10; min-height: auto; }
   .badge { display: none; }
   .scrollHint { display: none; }
 }
 
 @media (max-width: 640px) {
-  .h1 { font-size: clamp(2.2rem, 9vw, 3rem); }
-  .stats { flex-direction: column; align-items: flex-start; gap: 1.1rem; }
+  .h1 { font-size: clamp(1.6rem, 6.5vw, 2rem); line-height: 1.08; }
+  .stats { flex-direction: column; align-items: center; gap: 1rem; }
   .stat { padding-right: 0; }
   .stat::after { display: none; }
   .actions { flex-direction: column; align-items: stretch; }
@@ -160,7 +170,13 @@
 }
 
 @media (max-width: 480px) {
+  .h1 { font-size: clamp(1.45rem, 6vw, 1.85rem); }
   .btnPrimary { padding: 0.85rem 1.4rem; }
   .btnGhost { padding: 0.85rem 1.4rem; }
-  .tag { font-size: 0.7rem; }
+  .tag { font-size: 0.65rem; padding: 0.35rem 0.85rem; }
+}
+
+@media (max-width: 360px) {
+  .h1 { font-size: clamp(1.3rem, 6vw, 1.6rem); }
+  .tag { font-size: 0.6rem; letter-spacing: 0.08em; }
 }
