@@ -124,13 +124,67 @@ const compareRows = [
   { label: 'Záruka na těsnost',                classic: '2-5 let',             us: 'Až 10 let'           },
 ]
 
+function IconChat() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+      <path d="M19 3H3c-.6 0-1 .4-1 1v10c0 .6.4 1 1 1h12.5L20 19V4c0-.6-.4-1-1-1z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round"/>
+      <path d="M6 8.5h10M6 11.5h6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+    </svg>
+  )
+}
+function IconLayers() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+      <path d="M2 7.5L11 3l9 4.5-9 4.5-9-4.5z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round"/>
+      <path d="M2 11.5l9 4.5 9-4.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M2 15.5l9 4.5 9-4.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  )
+}
+function IconDrop() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+      <path d="M11 2C11 2 4 9.5 4 14a7 7 0 0 0 14 0C18 9.5 11 2 11 2z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round"/>
+      <path d="M8.5 16c.5 1.5 2 2.5 3.5 2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+    </svg>
+  )
+}
+function IconTruck() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+      <rect x="2" y="7" width="12" height="8" rx="1" stroke="currentColor" strokeWidth="1.4"/>
+      <path d="M14 10h4l2 3v2h-6V10z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round"/>
+      <circle cx="6" cy="17" r="1.8" stroke="currentColor" strokeWidth="1.4"/>
+      <circle cx="17" cy="17" r="1.8" stroke="currentColor" strokeWidth="1.4"/>
+    </svg>
+  )
+}
+function IconSparkle() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+      <path d="M11 2v4M11 16v4M2 11h4M16 11h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+      <path d="M4.9 4.9l2.8 2.8M14.3 14.3l2.8 2.8M4.9 17.1l2.8-2.8M14.3 7.7l2.8-2.8" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
+      <circle cx="11" cy="11" r="2.5" stroke="currentColor" strokeWidth="1.4"/>
+    </svg>
+  )
+}
+function IconCertificate() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+      <path d="M5 2h9.5L19 6.5V18H5V2z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round"/>
+      <path d="M14 2v4.5h5" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round"/>
+      <path d="M8 10.5h6M8 13.5h4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+    </svg>
+  )
+}
+
 const included = [
-  { icon: '🛡', title: 'Konzultace zdarma',      note: 'Z fotek nebo na místě, bez závazku' },
-  { icon: '🔧', title: 'Příprava podkladu',       note: 'Broušení, odmašťování, penetrace, skelná perlinka' },
-  { icon: '💧', title: 'Vodotěsná impregnace',    note: 'Certifikovaný systém, součást každé zakázky' },
-  { icon: '🚗', title: 'Doprava Praha zdarma',    note: 'Středočeský kraj od 590 Kč' },
-  { icon: '🧹', title: 'Úklid po realizaci',      note: 'Odcházíme bez jediného zrnka prachu' },
-  { icon: '📄', title: 'Záruční list písemně',    note: '5 nebo 10 let na těsnost ke každé zakázce' },
+  { Icon: IconChat,        title: 'Konzultace zdarma',   note: 'Z fotek nebo na místě, bez závazku' },
+  { Icon: IconLayers,      title: 'Příprava podkladu',   note: 'Broušení, odmašťování, penetrace, skelná perlinka' },
+  { Icon: IconDrop,        title: 'Vodotěsná impregnace',note: 'Certifikovaný systém, součást každé zakázky' },
+  { Icon: IconTruck,       title: 'Doprava Praha zdarma',note: 'Středočeský kraj od 590 Kč' },
+  { Icon: IconSparkle,     title: 'Úklid po realizaci',  note: 'Odcházíme bez jediného zrnka prachu' },
+  { Icon: IconCertificate, title: 'Záruční list písemně',note: '5 nebo 10 let na těsnost ke každé zakázce' },
 ]
 
 const extras = [
@@ -518,7 +572,7 @@ export default function Cenik() {
                 <ul className={styles.includedList}>
                   {included.map(it => (
                     <li key={it.title} className={styles.includedItem}>
-                      <span className={styles.includedEmoji} aria-hidden="true">{it.icon}</span>
+                      <span className={styles.includedIcon}><it.Icon /></span>
                       <div>
                         <span className={styles.includedLabel}>{it.title}</span>
                         <span className={styles.includedNote}>{it.note}</span>
