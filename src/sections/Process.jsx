@@ -6,29 +6,29 @@ const steps = [
   {
     num: '01',
     title: 'Konzultace a výběr',
-    text: 'Přijedeme k vám – nebo stačí pár fotek na WhatsApp. Poradíme s typem materiálu, barvou i texturou. Přivezeme fyzické vzorky, ať si sáhnete. Prohlídka a konzultace jsou zdarma.',
+    text: 'Přijedeme k vám, nebo stačí pár fotek na WhatsApp. Poradíme s typem materiálu, barvou i texturou. Přivezeme fyzické vzorky, ať si sáhnete. Prohlídka a konzultace jsou zdarma.',
     day: 'Zdarma',
-    detail: 'Do 48 h od poptávky',
+    detail: 'Termín během pár dnů od poptávky',
   },
   {
     num: '02',
     title: 'Příprava podkladu',
-    text: 'Stávající obklady přebrousíme, odmaštíme a ošetříme adhezním přípravkem. Do první vrstvy vkládáme skelnou perlinku – to je klíč k tomu, aby stěrka nepraskala nad původními spárami.',
-    day: 'Den 1',
+    text: 'Stávající obklady přebrousíme, odmaštíme a ošetříme adhezním přípravkem. Do první vrstvy vkládáme skelnou perlinku. To je klíč k tomu, aby stěrka nepraskala nad původními spárami.',
+    day: 'Začátek prací',
     detail: 'Mokrý proces, bez prachu',
   },
   {
     num: '03',
     title: 'Aplikace ve vrstvách',
-    text: 'Nanášíme 4–6 vrstev v závislosti na stavu podkladu. Každá vrstva musí dostatečně zatvrdnout. Urychlovat se nedá – na tomhle stojí výsledná pevnost a estetika povrchu.',
-    day: 'Den 1–3',
+    text: 'Nanášíme 4 až 6 vrstev v závislosti na stavu podkladu. Každá vrstva musí dostatečně zatvrdnout. Urychlovat se nedá. Právě na tom stojí výsledná pevnost a estetika povrchu.',
+    day: 'Druhý týden',
     detail: 'Epoxid, cement, pryskyřice',
   },
   {
     num: '04',
     title: 'Lak a předání',
     text: 'Finální vrstva je polyuretanový lak, který určí míru lesku a zajistí voděodolnost. Po 24 hodinách je koupelna schůdná. Plnou odolnost vůči chemii má po 7 dnech.',
-    day: 'Den 3–4',
+    day: 'Předání',
     detail: 'Záruční list součástí',
   },
 ]
@@ -42,7 +42,7 @@ export default function Process() {
             <SectionHeader
               tag="Jak to funguje"
               title={`Čtyři kroky. Žádná <em>překvapení po cestě.</em>`}
-              lead="Přesně víte, co se bude dít, kdy to bude hotové a kolik to bude stát – ještě předtím, než se do toho pustíme."
+              lead="Přesně víte, co se bude dít, kdy to bude hotové a kolik to bude stát. Ještě předtím, než se do toho pustíme."
             />
           </FadeIn>
         </div>

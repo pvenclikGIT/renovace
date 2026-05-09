@@ -4,7 +4,7 @@ import styles from './Hero.module.css'
 
 const stats = [
   { num: '180+', label: 'dokončených koupelen' },
-  { num: '3 dny', label: 'průměrná realizace' },
+  { num: '~14 dní', label: 'běžná realizace' },
   { num: '10 let', label: 'záruka na těsnost' },
 ]
 
@@ -24,7 +24,7 @@ export default function Hero() {
         <motion.div variants={stagger} initial="hidden" animate="show" className={styles.content}>
           <motion.div variants={item} className={styles.tag}>
             <span className={styles.tagDot} />
-            Praha & Středočeský kraj – bez bourání
+            Praha a Středočeský kraj. Bez bourání.
           </motion.div>
 
           <motion.h1 variants={item} className={styles.h1}>
@@ -59,7 +59,7 @@ export default function Hero() {
 
           <motion.div variants={item} className={styles.trust}>
             <span className={styles.trustDot} />
-            Realizace do 48 hodin od první zprávy
+            Ozveme se do 24 hodin. Termín domluvíme během pár dnů.
           </motion.div>
         </motion.div>
       </div>
@@ -86,7 +86,7 @@ export default function Hero() {
             <span className={styles.badgeLabel}>Právě realizujeme</span>
           </div>
           <div className={styles.badgeText}>Cementová stěrka · Praha 6</div>
-          <div className={styles.badgeSub}>3 dny · Hotovo bez bourání</div>
+          <div className={styles.badgeSub}>Hotovo bez bourání</div>
         </motion.div>
 
         <motion.div

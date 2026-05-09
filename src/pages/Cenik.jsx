@@ -31,7 +31,7 @@ const tiers = [
       { ok: false, text: 'Prémiové materiály' },
     ],
     example: { m2: 22, price: '66 000' },
-    suitable: 'Soukromé koupelny, rodinné domy, byty',
+    suitable: 'Stěny a méně exponované plochy. Na podlahy do mokrého provozu nedoporučujeme, tam volíme epoxid nebo pryskyřici.',
     cta: 'Poptat cementovou stěrku',
   },
   {
@@ -54,7 +54,7 @@ const tiers = [
       { ok: true, text: 'Doprava po Praze zdarma' },
     ],
     example: { m2: 22, price: '82 500' },
-    suitable: 'Sprchové kouty, nájemní byty, hotely, penziony',
+    suitable: 'Stěny i podlahy, sprchové kouty, vany, mokré a chemicky zatížené provozy.',
     cta: 'Poptat epoxidovou stěrku',
   },
   {
@@ -63,7 +63,7 @@ const tiers = [
     tagline: 'Pryskyřičná stěrka, designové efekty',
     rate: 4500,
     rateLabel: '4 500',
-    badgeText: 'Hotelová kvalita',
+    badgeText: 'Designová volba',
     highlight: false,
     matName: 'Pryskyřičná stěrka',
     features: [
@@ -77,7 +77,7 @@ const tiers = [
       { ok: true, text: 'Fyzické vzorky přivezeme osobně ke konzultaci' },
     ],
     example: { m2: 22, price: '99 000' },
-    suitable: 'Luxusní rezidence, wellness, hotely 4 a více hvězdiček',
+    suitable: 'Stěny i podlahy, podlahové topení, designové vzory a leštěné povrchy.',
     cta: 'Poptat pryskyřičnou stěrku',
   },
 ]
@@ -91,7 +91,7 @@ const materials = [
     rate: '3 750',
     desc: 'Tvrdá jako kámen, hladká jako leštěný mramor. Epoxidová stěrka je nejodolnější volba s nulovou nasákavostí. Sprchové kouty, vany i podlahy vystavené každodenní vlhkosti ji jen tak nezlomí.',
     pros: ['Extrémní pevnost a odolnost', 'Lesklý nebo saténový povrch', 'Nulová nasákavost', 'Bezspárový monolit'],
-    ideal: 'Sprchové kouty, vany, podlahy. Moderní a průmyslový styl.',
+    ideal: 'Stěny i podlahy, sprchové kouty, vany, mokré provozy. Moderní a průmyslový styl.',
   },
   {
     slug: 'cement',
@@ -101,7 +101,7 @@ const materials = [
     rate: '3 000',
     desc: 'Minerální textura, skandinávský klid. Přirozený matný povrch připomínající pohledový beton. Nejoblíbenější volba designérů interiérů v celé Evropě pro svůj nadčasový charakter.',
     pros: ['Přírodní matný povrch', 'Betonový efekt bez betonu', 'Teplé přírodní tóny', 'Výborná prodyšnost'],
-    ideal: 'Stěny, příčky, méně exponované plochy. Skandinávský a minimalistický styl.',
+    ideal: 'Stěny, příčky, méně exponované plochy. Na podlahy do mokrého provozu nedoporučujeme. Skandinávský a minimalistický styl.',
   },
   {
     slug: 'pryskyrice',
@@ -111,18 +111,18 @@ const materials = [
     rate: '4 500',
     desc: 'Nejplastičtější z trojice. Tvarujte ji, barvěte, kombinujte. Pryskyřičná stěrka umí imitovat mramor nebo leštěný beton v barvách a vzorech, které standardní materiály nikdy nedají.',
     pros: ['Neomezené barvy a vzory', 'Imitace mramoru nebo leštěného betonu', 'Prémiový designový výsledek', 'Exkluzivní povrch bez spár'],
-    ideal: 'Designové interiéry, wellness, hotely 4 a více hvězdiček.',
+    ideal: 'Stěny i podlahy, podlahové topení, designové vzory, leštěné povrchy a wellness provozy.',
   },
 ]
 
 const compareRows = [
-  { label: 'Celková cena (průměrná koupelna)', classic: '80 000-200 000 Kč', us: 'od 66 000 Kč bez DPH' },
-  { label: 'Délka realizace',                  classic: '3-6 týdnů',          us: '3 dny v průměru'     },
-  { label: 'Bourání a hluk',                   classic: 'Ano, intenzivní',     us: 'Žádné'               },
-  { label: 'Prach v bytě',                     classic: 'Centimetry všude',    us: 'Žádný'               },
-  { label: 'Stavební odpad',                   classic: 'Kontejner sutě',      us: 'Žádný'               },
-  { label: 'Bydlení v průběhu',                classic: 'Většinou nelze',      us: 'Lze bez problémů'    },
-  { label: 'Záruka na těsnost',                classic: '2-5 let',             us: 'Až 10 let'           },
+  { label: 'Celková cena (průměrná koupelna)', classic: '80 000 až 200 000 Kč', us: 'od 66 000 Kč bez DPH' },
+  { label: 'Délka realizace',                  classic: '1 až 2 měsíce',        us: 'běžně do 14 dnů'      },
+  { label: 'Bourání a hluk',                   classic: 'Ano, intenzivní',      us: 'Žádné'                },
+  { label: 'Prach v prostoru',                 classic: 'Centimetry všude',     us: 'Žádný'                },
+  { label: 'Stavební odpad',                   classic: 'Kontejner sutě',       us: 'Žádný'                },
+  { label: 'Bydlení v průběhu',                classic: 'Většinou nelze',       us: 'Lze bez problémů'     },
+  { label: 'Záruka na těsnost',                classic: '2 až 5 let',           us: 'Až 10 let'            },
 ]
 
 function IconChat() {
@@ -191,9 +191,9 @@ const included = [
 const extras = [
   { label: 'Protiskluzová certifikace R10',    price: '+150 Kč/m²',   note: 'Doporučeno pro podlahy, vhodné pro rodiny s dětmi' },
   { label: 'Demontáž a montáž příslušenství',  price: 'od 500 Kč',    note: 'Háčky, police, zrcadlo, sprchová tyč' },
-  { label: 'Express termín do 48 h',           price: '+20 %',        note: 'Dle aktuální dostupnosti' },
+  { label: 'Přednostní termín',                price: '+20 %',        note: 'Dle aktuální dostupnosti' },
   { label: 'Projekty mimo Prahu',              price: 'individuálně', note: 'Větší projekty po celé ČR' },
-  { label: 'Hotely, nájemní byty, developeři', price: 'individuálně', note: 'Množstevní sleva od 3 koupelen' },
+  { label: 'Hotely, developeři, komerční',     price: 'individuálně', note: 'Množstevní sleva od 3 koupelen' },
 ]
 
 const faqs = [
@@ -202,8 +202,8 @@ const faqs = [
     a: 'Koupelny se liší velikostí i složitostí. Dvě koupelny stejné podlahové plochy mohou mít zcela jiný počet m² stěn, různý počet nik, rohů nebo sprchových koutů. Cena za m² je jediný transparentní způsob, jak vám dát přesnou nabídku. Kalkulaci spočítáme zdarma po konzultaci nebo z fotek.',
   },
   {
-    q: 'Co přesně zahrnuje cena 3 000-4 500 Kč/m²?',
-    a: 'Vše, co je potřeba pro hotový výsledek: příprava podkladu, skelná perlinka, všechny vrstvy materiálu, finální lak, vodotěsná impregnace, úklid po práci a záruční list. Ceny jsou bez DPH. Doplatek nastává jen u volitelných příplatků jako protiskluz nebo express termín.',
+    q: 'Co přesně zahrnuje cena 3 000 až 4 500 Kč/m²?',
+    a: 'Vše, co je potřeba pro hotový výsledek: příprava podkladu, skelná perlinka, všechny vrstvy materiálu, finální lak, vodotěsná impregnace, úklid po práci a záruční list. Ceny jsou bez DPH. Doplatek nastává jen u volitelných příplatků jako protiskluz nebo přednostní termín.',
   },
   {
     q: 'Lze stěrku aplikovat i na staré, popraskané nebo nerovné obklady?',
@@ -325,7 +325,7 @@ export default function Cenik() {
               variants={{ hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0, transition: { duration: 0.65 } } }}
             >
               Stěrka vyjde od <strong>3 000 do 4 500 Kč/m²</strong> bez DPH a zahrnuje práci i materiál.
-              Průměrná koupelna kolem 66 000–99 000 Kč. Klasická rekonstrukce? Klidně 200 000 Kč a 6 týdnů čekání.
+              Průměrná koupelna kolem 66 000 až 99 000 Kč. Klasická rekonstrukce? Klidně 200 000 Kč a 1 až 2 měsíce čekání.
             </motion.p>
 
             <motion.div
@@ -352,7 +352,7 @@ export default function Cenik() {
             >
               {[
                 { num: '180+',   label: 'dokončených koupelen' },
-                { num: '3 dny',  label: 'průměrná realizace' },
+                { num: '~14 dní', label: 'běžná realizace' },
                 { num: '10 let', label: 'záruka na těsnost' },
               ].map((s, i) => (
                 <div key={s.label} className={styles.stat}>
@@ -397,7 +397,7 @@ export default function Cenik() {
                 Klasická rekonstrukce vs. <strong>stěrka bez bourání</strong>
               </h2>
               <p className={styles.compareLead}>
-                Tradiční rekonstrukce stojí 80 000-200 000 Kč a paralyzuje byt na 3-6 týdnů.
+                Klasická rekonstrukce stojí 80 000 až 200 000 Kč a paralyzuje provoz na 1 až 2 měsíce.
                 Stěrka jde přímo přes stávající obklady. Žádné bourání, žádný prach, žádný kontejner sutě.
                 Výsledek za zlomek ceny, za zlomek času.
               </p>

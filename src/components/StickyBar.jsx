@@ -33,7 +33,7 @@ export default function StickyBar() {
               <div className={styles.pulse} />
               <div className={styles.text}>
                 <span className={styles.strong}>Volný termín tento týden</span>
-                <span className={styles.sub}>Konzultace a cena zdarma · Praha & Středočeský kraj</span>
+                <span className={styles.sub}>Konzultace a cena zdarma · Praha a Středočeský kraj</span>
               </div>
             </div>
             <div className={styles.actions}>

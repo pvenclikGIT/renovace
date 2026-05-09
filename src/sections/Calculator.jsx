@@ -55,7 +55,7 @@ export default function Calculator() {
           <div className={styles.tag}><span className={styles.tagDot}/>Kalkulátor ceny</div>
           <h2 className={styles.title}>Kolik to bude stát?<br/><em>Zjistěte hned.</em></h2>
           <p className={styles.lead}>
-            Cena <strong>3 000–4 500 Kč/m²</strong> zahrnuje práci i materiál bez DPH.
+            Cena <strong>3 000 až 4 500 Kč/m²</strong> zahrnuje práci i materiál bez DPH.
             Orientační výpočet za 30 sekund. Přesná nabídka po bezplatné prohlídce.
           </p>
         </div>
@@ -263,13 +263,13 @@ export default function Calculator() {
               </div>
               <div className={styles.savingsAmt}>až {fmt(saving)} Kč</div>
               <div className={styles.savingsNote}>
-                Klasická rekonstrukce s bouráním: 8 500–12 000 Kč/m² (obklady + lepidlo + práce + odvoz suti)
+                Klasická rekonstrukce s bouráním: 8 500 až 12 000 Kč/m² (obklady, lepidlo, práce, odvoz suti)
               </div>
             </div>
 
             <div className={styles.disclaimer}>
               Kalkulátor je orientační bez DPH. Výsledná cena závisí na konkrétním stavu podkladu
-              a přesném rozměření. Závaznou nabídku dostanete po bezplatné prohlídce – přijíždíme do 48 h.
+              a přesném rozměření. Závaznou nabídku dostanete po bezplatné prohlídce. Termín domluvíme během pár dnů.
             </div>
 
             <AnimatePresence mode="wait">
@@ -294,7 +294,7 @@ export default function Calculator() {
                     </button>
                   </div>
                   <div className={styles.emailNote}>
-                    Nebo nás rovnou kontaktujte –&nbsp;
+                    Nebo nás rovnou kontaktujte:&nbsp;
                     <a href="#contact">konzultace zdarma →</a>
                   </div>
                 </motion.div>

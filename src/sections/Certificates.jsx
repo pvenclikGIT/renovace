@@ -73,12 +73,12 @@ const IconQuality = () => (
 /* ── Data ─────────────────────────────────────────────────────────── */
 
 const certs = [
-  { Icon: IconWaterproof, title: 'Vodotěsnost',           desc: 'Certifikát EN 14891 – voděodolnost pod obklady i bez nich',     color: '#3D7A77' },
+  { Icon: IconWaterproof, title: 'Vodotěsnost',           desc: 'Certifikát EN 14891, voděodolnost pod obklady i bez nich',      color: '#3D7A77' },
   { Icon: IconAntislip,   title: 'Protiskluz R10/R11',    desc: 'Certifikovaná protiskluzová třída pro mokré provozy',            color: '#C9963C' },
-  { Icon: IconHealthSafe, title: 'Zdravotní nezávadnost', desc: 'Atesty na styk s potravinami – bez emisí po vytvrzení',          color: '#4A7B4E' },
+  { Icon: IconHealthSafe, title: 'Zdravotní nezávadnost', desc: 'Atesty na styk s potravinami, bez emisí po vytvrzení',           color: '#4A7B4E' },
   { Icon: IconFireResist, title: 'Požární odolnost',      desc: 'Třída reakce na oheň B-s1,d0 dle EN 13501-1',                   color: '#C94040' },
   { Icon: IconEco,        title: 'Ekologická výroba',     desc: 'Materiály bez obsahu těžkých kovů a formaldehydu',              color: '#2D7A3A' },
-  { Icon: IconQuality,    title: 'Garance kvality',       desc: '10 let záruka na těsnost a přilnavost – záruční list ke každé zakázce', color: '#C9963C' },
+  { Icon: IconQuality,    title: 'Garance kvality',       desc: '10 let záruka na těsnost a přilnavost, záruční list ke každé zakázce', color: '#C9963C' },
 ]
 
 
@@ -88,7 +88,7 @@ export default function Certificates() {
       <div className={styles.inner}>
       <FadeIn>
         <div className={styles.header}>
-          <div className={styles.tag}><span className={styles.tagDot}/>Certifikáty & záruky</div>
+          <div className={styles.tag}><span className={styles.tagDot}/>Certifikáty a záruky</div>
           <h2 className={styles.title}>Nejde jen o hezký<br/><em>výsledek.</em></h2>
           <p className={styles.lead}>Používáme certifikované materiály předních evropských výrobců. Každá realizace má záruční list a atesty.</p>
         </div>

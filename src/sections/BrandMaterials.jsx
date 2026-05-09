@@ -17,15 +17,15 @@ const CATEGORIES = [
         name: 'BASF / MasterBuilders',
         country: 'Německo', flag: '🇩🇪',
         logo: `${BASE}basf.svg`,
-        system: 'MasterTop – epoxidové & PU podlahy',
-        desc: 'Největší chemická firma světa. Systém MasterTop pokrývá celé spektrum – od jednovrstvých epoxidových nátěrů po prémiové polyuretanové stěrky pro koupelny a wellness.',
+        system: 'MasterTop, epoxidové a PU podlahy',
+        desc: 'Největší chemická firma světa. Systém MasterTop pokrývá celé spektrum, od jednovrstvých epoxidových nátěrů po prémiové polyuretanové stěrky pro koupelny a wellness.',
       },
       {
         id: 'sto',
         name: 'STO',
         country: 'Německo', flag: '🇩🇪',
         logo: `${BASE}sto.svg`,
-        system: 'StoLook – microcement & dekorativní povrchy',
+        system: 'StoLook, microcement a dekorativní povrchy',
         desc: 'Německý specialista na dekorativní povrchy. StoLook microcement a stěrkové systémy jsou oblíbené u architektů pro jejich minerální, čistě betonový vzhled na stěnách i podlahách.',
       },
       {
@@ -33,7 +33,7 @@ const CATEGORIES = [
         name: 'SIKA',
         country: 'Švýcarsko', flag: '🇨🇭',
         logo: `${BASE}sika.png`,
-        system: 'Sikafloor – vodotěsné podlahové systémy',
+        system: 'Sikafloor, vodotěsné podlahové systémy',
         desc: 'Sikafloor dominuje tam, kde je prioritou absolutní vodotěsnost a mechanická odolnost. Standardní systém v luxusních wellness centrech a hotelových lázních.',
       },
       {
@@ -42,14 +42,14 @@ const CATEGORIES = [
         country: 'Německo', flag: '🇩🇪',
         logo: `${BASE}ardex.png`,
         system: 'Pandomo Floor & Loft',
-        desc: 'Rolls-Royce mezi stěrkami. Pandomo Floor je považován za nejodolnější a vizuálně nejčistší systém na trhu – první volba pro architektonicky výrazné koupelny.',
+        desc: 'Rolls-Royce mezi stěrkami. Pandomo Floor je považován za nejodolnější a vizuálně nejčistší systém na trhu. První volba pro architektonicky výrazné koupelny.',
       },
       {
         id: 'mapei',
         name: 'MAPEI',
         country: 'Itálie', flag: '🇮🇹',
         logo: `${BASE}mapei.png`,
-        system: 'Ultratop Loft – stěrky & hydroizolace',
+        system: 'Ultratop Loft, stěrky a hydroizolace',
         desc: 'Španělská špička v poměru odolnosti a estetiky. Nejpropracovanější systém hydroizolací pod stěrku zajišťuje, že koupelna nikdy nepropustí ani kapku vlhkosti do konstrukce.',
       },
       {
@@ -57,8 +57,8 @@ const CATEGORIES = [
         name: 'REMMERS',
         country: 'Německo', flag: '🇩🇪',
         logo: `${BASE}remmers.svg`,
-        system: 'PU systémy – pružné podlahové stěrky',
-        desc: 'Vysoce odolné polyuretanové systémy s výjimečnou pružností. Klíčová volba pro koupelny s podlahovým topením – stěrka se hýbe s dilataèními pohyby a nepraská.',
+        system: 'PU systémy, pružné podlahové stěrky',
+        desc: 'Vysoce odolné polyuretanové systémy s výjimečnou pružností. Klíčová volba pro koupelny s podlahovým topením, kde se stěrka hýbe s dilatačními pohyby a nepraská.',
       },
     ],
   },
@@ -90,7 +90,7 @@ const CATEGORIES = [
         country: 'Švýcarsko', flag: '🇨🇭',
         logo: `${BASE}resiplan.png`,
         system: 'Pryskyřičné stěrky pro vlhká prostředí',
-        desc: 'Švýcarská preciznost v epoxidových pryskyřicích. Systémy Resiplan jsou navrženy přímo pro vlhké prostory – odolávají chemii, trvalé vlhkosti i teplotním změnám.',
+        desc: 'Švýcarská preciznost v epoxidových pryskyřicích. Systémy Resiplan jsou navrženy přímo pro vlhké prostory. Odolávají chemii, trvalé vlhkosti i teplotním změnám.',
       },
       {
         id: 'fotiadis',
@@ -98,7 +98,7 @@ const CATEGORIES = [
         country: 'Řecko', flag: '🇬🇷',
         logo: `${BASE}fotiadis.png`,
         system: 'Dekorativní beton & microtopping',
-        desc: 'Řecký specialista na dekorativní betonové povrchy a microtopping. Systémy přinášejí středomořský design s moderní technologií – oblíbené v hotelech na Kypru i v Praze.',
+        desc: 'Řecký specialista na dekorativní betonové povrchy a microtopping. Systémy přinášejí středomořský design s moderní technologií. Oblíbené v hotelech na Kypru i v Praze.',
       },
       {
         id: 'duracon',
@@ -121,7 +121,7 @@ const CATEGORIES = [
         name: 'HUNTSMAN / Araldite',
         country: 'USA', flag: '🇺🇸',
         logo: `${BASE}huntsman.svg`,
-        system: 'Araldite – epoxidové pryskyřice',
+        system: 'Araldite, epoxidové pryskyřice',
         desc: 'Araldite je synonymum pro epoxidové pryskyřice. Huntsman dodává základní suroviny, ze kterých jsou vyráběny nejkvalitnější stěrkové systémy světa.',
       },
       {
@@ -205,8 +205,8 @@ export default function BrandMaterials() {
           <div className={styles.tag}><span className={styles.tagDot} />Naši dodavatelé</div>
           <h2 className={styles.title}>Materiály, na která<br /><em>přísaháme.</em></h2>
           <p className={styles.lead}>
-            Pracujeme výhradně se systémy světových lídrů. Žádné no-name —
-            každý materiál má záruční list, atest a laboratorně ověřenou odolnost.
+            Pracujeme výhradně se systémy světových lídrů. Žádné no-name značky.
+            Každý materiál má záruční list, atest a laboratorně ověřenou odolnost.
           </p>
         </div>
       </FadeIn>

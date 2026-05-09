@@ -4,14 +4,14 @@ import { IconNoDemo, IconDust, IconTime, IconPrice, IconWater, IconShield, IconL
 import styles from './Why.module.css'
 
 const features = [
-  { Icon: IconTime, title: 'Koupelna za 3 dny, ne za 3 týdny', text: 'Tradiční rekonstrukce s bouráním paralyzuje váš byt na 3–6 týdnů. Stěrka jde přímo na stávající obklady – přijdeme v pondělí, v pátek předáváme hotovou koupelnu.' },
-  { Icon: IconDust, title: 'Nulový prach. Žádný chaos.', text: 'Bourání keramiky = centimetry prachu ve skříních, v posteli, v elektronice. Aplikace stěrky je mokrý proces s odsáváním. Zbytek bytu zůstane přesně takový, jaký byl.' },
-  { Icon: IconPrice, title: 'Cena, která se nemění', text: 'Vícepráce u nás neexistují. Cenu dostanete po prohlídce – závaznou. Žádné "to jsme nečekali" a žádné faktury, ze kterých spadnete ze židle.' },
+  { Icon: IconTime, title: 'Koupelna za 2 týdny, ne za 2 měsíce', text: 'Klasická rekonstrukce s bouráním paralyzuje provoz na 1 až 2 měsíce. Stěrka jde přímo na stávající obklady. Při dodržení technologických postupů je celá koupelna hotová běžně do 14 dnů, ve výjimečných případech zvládneme i kratší termín.' },
+  { Icon: IconDust, title: 'Nulový prach. Žádný chaos.', text: 'Bourání keramiky znamená centimetry prachu ve skříních, v posteli, v elektronice. Aplikace stěrky je mokrý proces s odsáváním. Zbytek prostoru zůstane přesně takový, jaký byl.' },
+  { Icon: IconPrice, title: 'Cena, která se nemění', text: 'Vícepráce u nás neexistují. Cenu dostanete po prohlídce. Závaznou. Žádné "to jsme nečekali" a žádné faktury, ze kterých spadnete ze židle.' },
   { Icon: IconWater, title: 'Voděodolnost v každém centimetru', text: 'Stěrka tvoří neprostupný monolit. Na rozdíl od dlažby, kde může voda pronikat poškozenou spárou pod obklad a roky nepozorovaně podemílat konstrukci.' },
-  { Icon: IconShield, title: 'Odolnost na 10–15 let', text: 'Správně aplikovaná stěrka přežije vše, co do koupelny přijde – parfémy, barvicí sady, chemii i každodenní sprchování celé rodiny. Záruční list to potvrzuje.' },
-  { Icon: IconLeaf, title: 'Ekologická volba bez kompromisů', text: 'Tradiční rekonstrukce = stovky kilogramů suti na skládce. Stěrka starou keramiku neprobourá – jen ji překryje. Méně odpadu, méně energie, stejný výsledek.' },
-  { Icon: IconWarm, title: 'Teplo pod nohama, nižší účty', text: 'Vrstva 2–3 mm má minimální tepelnou setrvačnost. Podlahové topení reaguje okamžitě – nehřeje centimetry lepidla a keramiky, ale rovnou prostor. Úspora energie měřitelná.' },
-  { Icon: IconPaint, title: 'Design bez kompromisů', text: 'Stovky odstínů, matný i lesklý povrch, betonový efekt, mramorování. Stěrku vytáhnete na stěny, podlahu i pult pod umyvadlem – vše splyne v jeden celistvý materiál.' },
+  { Icon: IconShield, title: 'Odolnost na 10 až 15 let', text: 'Správně aplikovaná stěrka přežije vše, co do koupelny přijde. Parfémy, barvicí sady, chemii i každodenní sprchování celé rodiny. Záruční list to potvrzuje.' },
+  { Icon: IconLeaf, title: 'Ekologická volba bez kompromisů', text: 'Klasická rekonstrukce znamená stovky kilogramů suti na skládce. Stěrka starou keramiku neprobourá. Jen ji překryje. Méně odpadu, méně energie, stejný výsledek.' },
+  { Icon: IconWarm, title: 'Teplo pod nohama, nižší účty', text: 'Vrstva 2 až 3 mm má minimální tepelnou setrvačnost. Podlahové topení reaguje okamžitě. Nehřeje centimetry lepidla a keramiky, ale rovnou prostor. Úspora energie měřitelná.' },
+  { Icon: IconPaint, title: 'Design bez kompromisů', text: 'Stovky odstínů, matný i lesklý povrch, betonový efekt, mramorování. Stěrku vytáhnete na stěny, podlahu i pult pod umyvadlem. Vše splyne v jeden celistvý materiál.' },
 ]
 
 export default function Why() {
@@ -25,7 +25,7 @@ export default function Why() {
             <path d="M0 28V16.8C0 7.5 5.6 1.9 16.8 0l1.9 3.7c-6.5 1.9-9.8 4.7-10.3 9.1H15V28H0zm20 0V16.8C20 7.5 25.6 1.9 36.8 0L38.7 3.7c-6.5 1.9-9.8 4.7-10.3 9.1H35V28H20z" fill="white" opacity="0.18"/>
           </svg>
           <blockquote className={styles.quote}>
-            Koupelna hotová za 3 dny. Bez jediného zrnka prachu jinde v bytě. Nevěřila jsem, že to jde.
+            Koupelna hotová do dvou týdnů. Bez jediného zrnka prachu jinde v bytě. Nevěřila jsem, že to jde.
           </blockquote>
           <div className={styles.quoteAuthor}>
             <div className={styles.quoteAvatar}>KV</div>

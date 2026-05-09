@@ -6,23 +6,23 @@ const materials = [
   {
     img: '/renovace/images/real-03.jpg',
     name: 'Epoxidová stěrka',
-    desc: 'Tvrdá jako kámen, hladká jako leštěný mramor. Nejodolnější volba s nulovou nasákavostí. Ideální pro sprchové kouty a podlahy.',
+    desc: 'Tvrdá jako kámen, hladká jako leštěný mramor. Nejodolnější volba s nulovou nasákavostí. Standardní volba na podlahy a do mokrých zón.',
     tags: ['Maximální odolnost', 'Lesklý povrch', 'Bezfugový', '100% voděodolný'],
-    ideal: 'Sprchové kouty, vany, podlahy',
+    ideal: 'Stěny i podlahy, sprchové kouty, vany, mokré provozy',
   },
   {
     img: '/renovace/images/real-04.jpg',
     name: 'Cementová stěrka',
     desc: 'Minerální textura, skandinávský klid. Přirozený matný charakter připomínající beton. Oblíbená volba designérů interiérů.',
     tags: ['Matný povrch', 'Přírodní look', 'Betonový efekt', 'Teplé tóny'],
-    ideal: 'Stěny, příčky, méně exponované plochy',
+    ideal: 'Stěny a méně exponované plochy. Na podlahy do mokrého provozu nedoporučujeme, tam volíme epoxid nebo pryskyřici.',
   },
   {
     img: '/renovace/images/real-15.webp',
     name: 'Pryskyřičná stěrka',
-    desc: 'Nejplastičtější z trojice. Lze tvarovat, barvit, kombinovat. Ideální pro designové vzory a prémiové wellness prostory.',
-    tags: ['Neomezené barvy', 'Prémiový segment', 'Kreativní vzory', 'Exkluzivní vzhled'],
-    ideal: 'Design interiéry, wellness, hotely',
+    desc: 'Nejplastičtější z trojice. Lze tvarovat, barvit, kombinovat. Pružná, takže snáší dilatační pohyby a podlahové topení.',
+    tags: ['Neomezené barvy', 'Pružnost', 'Kreativní vzory', 'Exkluzivní vzhled'],
+    ideal: 'Stěny i podlahy, podlahové topení, designové vzory a leštěné povrchy',
   },
 ]
 

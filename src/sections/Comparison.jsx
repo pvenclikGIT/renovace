@@ -13,7 +13,7 @@ const rows = [
   { cat: 'Vizuální dojem',            sterka: 'Luxusní plynulost',             classic: 'Mřížka spár',               win: true },
   { cat: 'Oprava poškození',          sterka: 'Lokální přetření',              classic: 'Výměna dlaždice + shánění série', win: true },
   { cat: 'Počet spár',                sterka: 'Nulový',                        classic: 'Stovky metrů',              win: true },
-  { cat: 'Tloušťka vrstvy',           sterka: 'Jen 2–3 mm',                   classic: 'Zvyšuje výšku podlahy',     win: true },
+  { cat: 'Tloušťka vrstvy',           sterka: 'Jen 2 až 3 mm',                classic: 'Zvyšuje výšku podlahy',     win: true },
   { cat: 'Podlahové topení',          sterka: 'Lepší vedení tepla',            classic: 'Horší tepelná vodivost',    win: true },
   { cat: 'Alergie a plísňové spory',  sterka: 'Eliminovány',                   classic: 'Spáry jsou zdrojem spor',   win: true },
   { cat: 'Životnost povrchu',         sterka: 'Dekády bez degradace',          classic: 'Spáry praskají a žloutnou', win: true },
@@ -42,10 +42,10 @@ export default function Comparison() {
           </div>
           <h2 className={styles.title}>
             Stěrka vs. klasické obklady.<br />
-            <em>20 kategorií. 20–0.</em>
+            <em>20 kategorií. 20 ku 0.</em>
           </h2>
           <p className={styles.lead}>
-            Neříkáme, že stěrka je lepší ve všem. Říkáme, ať si to porovnáte sami – kategorie po kategorii.
+            Neříkáme, že stěrka je lepší ve všem. Říkáme, ať si to porovnáte sami. Kategorie po kategorii.
           </p>
         </div>
       </FadeIn>

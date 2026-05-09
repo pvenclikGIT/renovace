@@ -7,40 +7,40 @@ const segments = [
   {
     img: '/renovace/images/real-08.jpg',
     badge: 'Nejčastěji',
-    sub: 'Soukromé osoby',
-    title: 'Páry s vlastním bytem',
-    desc: 'Koupelna z devadesátek, která vám denně kazí náladu. Chcete změnu – bez toho, aby přišel řemeslník a vyřídil vás na měsíc. Přesně pro vás.',
-    points: ['Hotovo za 3 dny, ne za 3 týdny', 'Pevná cena ještě před zahájením', 'Fyzický vzorek před podpisem', 'Záruční list na 10 let'],
+    sub: 'Byty a rodinné domy',
+    title: 'Soukromé bydlení',
+    desc: 'Koupelna z devadesátek, která vám denně kazí náladu. Chcete změnu bez toho, aby přišel řemeslník a vyřídil vás na měsíc. Přesně pro vás. Stejnou kvalitu nabízíme v paneláku, ve vile i v rodinném domě.',
+    points: ['Běžně hotovo do 14 dnů, ne za 2 měsíce', 'Pevná cena ještě před zahájením', 'Fyzický vzorek před podpisem', 'Záruční list na 10 let'],
     featured: true,
     dark: false,
   },
   {
     img: '/renovace/images/dev-02.jpg',
     badge: 'Pro projekty',
-    sub: 'Developeři',
+    sub: 'Developeři a investoři',
     title: 'Bytové projekty a developerské stavby',
-    desc: 'Potřebujete vybavit desítky koupelen ve stejné kvalitě, ve stanoveném termínu a bez překvapení. Jsme partner pro celé projekty – od prvního bytu po celý bytový dům.',
+    desc: 'Potřebujete vybavit desítky koupelen ve stejné kvalitě, ve stanoveném termínu a bez překvapení. Jsme partner pro celé projekty. Od prvního bytu po celý bytový dům.',
     points: ['Jednotná kvalita napříč celým projektem', 'Koordinace přesně dle vašeho HMG', 'Množstevní ceny od 5 jednotek', 'Dokumentace a předávací protokoly'],
     featured: true,
     dark: true,
   },
   {
-    img: '/renovace/images/dev-01.jpg',
+    img: '/renovace/images/hotel-01.jpg',
     badge: null,
-    sub: 'Správa nemovitostí',
-    title: 'Pronajímatelé a správci',
-    desc: 'Rychle, opakovaně, spolehlivě. Jeden dodavatel, stejná kvalita, koordinace podle vašeho harmonogramu. Od tří bytů řešíme vše najednou.',
-    points: ['Množstevní sleva od 3 jednotek', 'Koordinace dle vašeho plánu', 'Dokumentace pro účetnictví', 'Totožný výsledek napříč projektem'],
+    sub: 'Hotely a wellness',
+    title: 'Hospitality a lázeňské provozy',
+    desc: 'Koupelna v hotelovém provozu musí vydržet tisíce cyklů. Epoxidová nebo pryskyřičná stěrka tuhle zátěž snese a přitom vypadá jako luxusní design. Realizace plánujeme do mezisezónních pauz.',
+    points: ['Plánujeme do mezisezónních pauz', 'Odolnost vůči hotelové chemii', 'Protiskluz certif. R10/R11', 'Reference z pražských hotelů'],
     featured: false,
     dark: false,
   },
   {
-    img: '/renovace/images/hotel-01.jpg',
+    img: '/renovace/images/dev-01.jpg',
     badge: null,
-    sub: 'Prémiový segment',
-    title: 'Hotely a wellness',
-    desc: 'Koupelna v hotelovém provozu musí vydržet tisíce cyklů. Epoxidová stěrka tuhle zátěž snese – a přitom vypadá jako luxusní design.',
-    points: ['Provoz obnoven do 24–48 h', 'Odolnost vůči hotelové chemii', 'Protiskluz certif. R10/R11', 'Reference z pražských hotelů'],
+    sub: 'Komerční prostory a kanceláře',
+    title: 'Kanceláře, retail a komerční objekty',
+    desc: 'Sociální zázemí v kancelářích, showroomech, gastro provozu i v retailu. Bezspárový povrch se snadno udržuje a vydrží zátěž denního provozu. Realizujeme i mimo provozní hodiny.',
+    points: ['Realizace mimo provozní hodiny po dohodě', 'Splňuje hygienické nároky', 'Snadná údržba, žádné spáry', 'Faktura s DPH a předávací protokol'],
     featured: false,
     dark: false,
   },
@@ -53,8 +53,8 @@ export default function Segments() {
       <FadeIn>
         <SectionHeader
           tag="Pro koho pracujeme"
-          title={`Čtyři typy klientů. <em>Jedno řemeslo.</em>`}
-          lead="Výsledek je vždy stejný – technologicky správně provedená stěrka se zárukou. Liší se pouze rozsah a podmínky spolupráce."
+          title={`Byty, hotely, kanceláře. <em>Jedno řemeslo.</em>`}
+          lead="Stejnou technologii a stejnou záruku dáváme do panelákové koupelny i do hotelového wellness. Liší se rozsah a podmínky spolupráce, ne kvalita provedení."
         />
       </FadeIn>
 
