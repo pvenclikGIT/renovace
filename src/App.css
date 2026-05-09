@@ -1,2 +1,2 @@
 /* App-level resets only – design tokens live in index.css */
-#root { isolation: isolate; }
+#root { isolation: isolate; overflow-x: clip; }
