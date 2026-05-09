@@ -26,6 +26,25 @@
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --r: 14px;
   --r-lg: 22px;
+
+  /* ── Type scale ── */
+  --fs-2xs:  0.6875rem;
+  --fs-xs:   0.75rem;
+  --fs-sm:   0.8125rem;
+  --fs-btn:  0.875rem;
+  --fs-body: 1rem;
+  --fs-lead: clamp(1rem, 1.4vw, 1.125rem);
+  --fs-lg:   clamp(1.125rem, 1.8vw, 1.25rem);
+  --fs-xl:   clamp(1.25rem, 2.2vw, 1.5rem);
+  --fs-2xl:  clamp(1.5rem, 2.8vw, 2.25rem);
+  --fs-3xl:  clamp(2rem, 3.8vw, 3.2rem);
+  --fs-hero: clamp(2.8rem, 5vw, 5.2rem);
+
+  /* ── Line heights ── */
+  --lh-tight:   1.1;
+  --lh-snug:    1.3;
+  --lh-base:    1.55;
+  --lh-relaxed: 1.75;
 }
 
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }

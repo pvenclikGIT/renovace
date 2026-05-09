@@ -19,22 +19,23 @@
 .num { font-size: 3.2rem; font-weight: 900; color: var(--bg4); line-height: 1; letter-spacing: -0.05em; transition: color 0.3s; user-select: none; }
 .step:hover .num { color: var(--gold-pale2); }
 .badges { display: flex; flex-direction: column; align-items: flex-end; gap: 0.4rem; }
-.dayBadge { font-size: 0.62rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); background: var(--gold-pale); padding: 0.28rem 0.75rem; border-radius: 100px; }
-.detailBadge { font-size: 0.6rem; color: var(--light); font-weight: 500; background: var(--bg2); padding: 0.22rem 0.65rem; border-radius: 100px; white-space: nowrap; }
-.title { font-size: 1.05rem; font-weight: 800; color: var(--dark); margin-bottom: 0.7rem; letter-spacing: -0.025em; line-height: 1.25; }
-.text { font-size: 0.84rem; font-weight: 300; color: var(--mid); line-height: 1.72; }
+.dayBadge { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); background: var(--gold-pale); padding: 0.28rem 0.75rem; border-radius: 100px; }
+.detailBadge { font-size: 0.75rem; color: var(--light); font-weight: 500; background: var(--bg2); padding: 0.22rem 0.65rem; border-radius: 100px; white-space: nowrap; }
+.title { font-size: 1.05rem; font-weight: 800; color: var(--dark); margin-bottom: 0.7rem; letter-spacing: -0.025em;
+  text-wrap: balance; line-height: 1.25; }
+.text { font-size: 1rem; font-weight: 300; color: var(--mid); line-height: 1.72; }
 
 .cta {
   margin-top: 3rem; padding: 2rem 2.5rem;
   background: var(--dark); border-radius: var(--r-lg);
   display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;
 }
-.ctaText { font-size: 0.95rem; font-weight: 300; color: rgba(255,255,255,0.6); }
+.ctaText { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.6); }
 .ctaText strong { color: white; font-weight: 700; }
 .ctaBtn {
   display: inline-flex; align-items: center; gap: 0.6rem;
   background: var(--gold); color: white; padding: 0.9rem 1.75rem;
-  font-size: 0.82rem; font-weight: 700; border-radius: 100px; white-space: nowrap;
+  font-size: 1rem; font-weight: 700; border-radius: 100px; white-space: nowrap;
   transition: background 0.2s, transform 0.2s;
 }
 .ctaBtn:hover { background: var(--gold2); transform: translateY(-1px); }

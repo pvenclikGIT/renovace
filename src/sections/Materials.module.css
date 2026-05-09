@@ -7,10 +7,10 @@
 .card:hover .cardImg img { transform: scale(1.06); }
 .cardBody { padding: 1.75rem 1.75rem 2rem; }
 .cardName { font-size: 1.3rem; font-weight: 800; color: var(--white); margin-bottom: 0.65rem; letter-spacing: -0.03em; }
-.cardDesc { font-size: 0.855rem; font-weight: 300; color: rgba(255,255,255,.45); line-height: 1.7; margin-bottom: 1.25rem; }
-.ideal { font-size: 0.75rem; font-weight: 400; color: var(--gold2); margin-bottom: 1.25rem; line-height: 1.5; }
-.idealLabel { display: block; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.2rem; }
+.cardDesc { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,.45); line-height: 1.7; margin-bottom: 1.25rem; }
+.ideal { font-size: 0.875rem; font-weight: 400; color: var(--gold2); margin-bottom: 1.25rem; line-height: 1.5; }
+.idealLabel { display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.2rem; }
 .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-.tag { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,.35); padding: 0.25rem 0.75rem; border: 1px solid rgba(255,255,255,.1); border-radius: 100px; transition: border-color 0.25s, color 0.25s; }
+.tag { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,.35); padding: 0.25rem 0.75rem; border: 1px solid rgba(255,255,255,.1); border-radius: 100px; transition: border-color 0.25s, color 0.25s; }
 .card:hover .tag { border-color: rgba(201,150,60,.3); color: rgba(255,255,255,.6); }
 @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }

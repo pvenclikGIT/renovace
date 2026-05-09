@@ -1,15 +1,16 @@
 .section { background: var(--dark); padding: var(--py) var(--px); }
 
 .header { max-width: 680px; margin-bottom: 3rem; }
-.tag { display: inline-flex; align-items: center; gap: 0.6rem; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold3); background: rgba(201,150,60,0.15); padding: 0.42rem 1rem; border-radius: 100px; margin-bottom: 1.25rem; width: fit-content; }
+.tag { display: inline-flex; align-items: center; gap: 0.6rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold3); background: rgba(201,150,60,0.15); padding: 0.42rem 1rem; border-radius: 100px; margin-bottom: 1.25rem; width: fit-content; }
 .tagDot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
-.title { font-size: clamp(2rem, 3.8vw, 3.2rem); font-weight: 800; line-height: 1.08; color: var(--white); letter-spacing: -0.04em; margin-bottom: 1rem; }
+.title { font-size: clamp(2rem, 3.8vw, 3.2rem); font-weight: 800; line-height: 1.08; color: var(--white); letter-spacing: -0.04em;
+  text-wrap: balance; margin-bottom: 1rem; }
 .title em { font-style: normal; color: var(--gold); }
-.lead { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.45); line-height: 1.72; }
+.lead { font-size: clamp(1rem, 1.4vw, 1.125rem); font-weight: 300; color: rgba(255,255,255,0.45); line-height: 1.72; }
 
 .tabs { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
 .tab {
-  font-family: var(--font); font-size: 0.78rem; font-weight: 500;
+  font-family: var(--font); font-size: 0.875rem; font-weight: 500;
   color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.08); padding: 0.55rem 1.1rem;
   border-radius: 100px; cursor: pointer;
@@ -87,7 +88,7 @@
 
 .labelBefore span, .labelAfter span {
   display: inline-block;
-  font-size: 0.72rem; font-weight: 700;
+  font-size: 0.8125rem; font-weight: 700;
   color: white; letter-spacing: 0.04em; text-transform: uppercase;
   background: rgba(0,0,0,0.55); padding: 0.35rem 0.85rem;
   border-radius: 100px; backdrop-filter: blur(4px);
@@ -97,7 +98,7 @@
 .hint {
   display: flex; align-items: center; gap: 0.5rem; justify-content: center;
   margin-top: 0.85rem;
-  font-size: 0.72rem; font-weight: 500; color: rgba(255,255,255,0.3);
+  font-size: 0.8125rem; font-weight: 500; color: rgba(255,255,255,0.3);
   letter-spacing: 0.04em;
 }
 
@@ -111,11 +112,11 @@
 }
 .ctaLeft { display: flex; flex-direction: column; gap: 0.3rem; }
 .ctaLeft strong { font-size: 1rem; font-weight: 800; color: var(--white); letter-spacing: -0.02em; }
-.ctaLeft span { font-size: 0.85rem; font-weight: 300; color: rgba(255,255,255,0.45); }
+.ctaLeft span { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.45); }
 .ctaBtn {
   display: inline-flex; align-items: center; gap: 0.6rem;
   background: var(--gold); color: white; padding: 0.9rem 1.75rem;
-  font-size: 0.82rem; font-weight: 700; border-radius: 100px; white-space: nowrap;
+  font-size: 1rem; font-weight: 700; border-radius: 100px; white-space: nowrap;
   font-family: var(--font); transition: background 0.2s, transform 0.2s;
 }
 .ctaBtn:hover { background: var(--gold2); transform: translateY(-1px); }
@@ -125,5 +126,5 @@
   .cta { flex-direction: column; align-items: stretch; }
   .ctaBtn { justify-content: center; }
   .tabs { gap: 0.4rem; }
-  .tab { font-size: 0.72rem; padding: 0.45rem 0.9rem; }
+  .tab { font-size: 0.8125rem; padding: 0.45rem 0.9rem; }
 }

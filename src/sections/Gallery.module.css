@@ -2,7 +2,7 @@
 .header { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; margin-bottom: 3rem; flex-wrap: wrap; }
 .cta {
   display: inline-flex; align-items: center; gap: 0.5rem;
-  font-size: 0.85rem; color: var(--dark); font-weight: 500;
+  font-size: 1rem; color: var(--dark); font-weight: 500;
   background: var(--white); padding: 0.7rem 1.4rem;
   border-radius: 100px; border: 1.5px solid var(--bg3);
   transition: border-color 0.2s, transform 0.2s, gap 0.2s; white-space: nowrap;
@@ -38,8 +38,8 @@
   transition: opacity 0.3s, transform 0.3s var(--ease);
 }
 .item:hover .overlay { opacity: 1; transform: translateY(0); }
-.overlayLabel { display: block; font-family: var(--font-head); font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 0.15rem; }
-.overlaySub { font-size: 0.72rem; color: var(--gold3); }
+.overlayLabel { display: block; font-family: var(--font-head); font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 0.15rem; }
+.overlaySub { font-size: 0.8125rem; color: var(--gold3); }
 
 /* LIGHTBOX */
 .lightbox {
@@ -81,8 +81,8 @@
   width: 100%; padding: 0.85rem 1.25rem;
   display: flex; align-items: center; justify-content: space-between;
 }
-.lbCaption span { font-family: var(--font-head); font-size: 0.95rem; font-weight: 600; color: white; }
-.lbCaption small { font-size: 0.75rem; color: var(--gold3); }
+.lbCaption span { font-family: var(--font-head); font-size: 1rem; font-weight: 600; color: white; }
+.lbCaption small { font-size: 0.875rem; color: var(--gold3); }
 
 @media (max-width: 900px) {
   .grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 42vw; gap: 8px; }

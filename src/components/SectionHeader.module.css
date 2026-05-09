@@ -1,7 +1,7 @@
 .wrap { max-width: 720px; }
 .tag {
   display: inline-flex; align-items: center; gap: 0.6rem;
-  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em;
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em;
   text-transform: uppercase; color: var(--gold);
   background: var(--gold-pale); padding: 0.42rem 1rem;
   border-radius: 100px; margin-bottom: 1.25rem; width: fit-content;
@@ -15,7 +15,7 @@
 }
 .title em { font-style: normal; color: var(--gold); }
 .lead {
-  font-size: 1rem; font-weight: 300; color: var(--mid);
+  font-size: clamp(1rem, 1.4vw, 1.125rem); font-weight: 300; color: var(--mid);
   line-height: 1.75; margin-top: 1.25rem; max-width: 560px;
 }
 .light .title { color: var(--white); }
