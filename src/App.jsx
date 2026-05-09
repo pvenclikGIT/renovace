@@ -10,7 +10,6 @@ import Comparison from './sections/Comparison'
 import Materials from './sections/Materials'
 import ColorSwatch from './sections/ColorSwatch'
 import Calculator from './sections/Calculator'
-import PhotoStrip from './sections/PhotoStrip'
 import Gallery from './sections/Gallery'
 import Myths from './sections/Myths'
 import Segments from './sections/Segments'
@@ -37,7 +36,6 @@ export default function App() {
         <Materials />
         <ColorSwatch />
         <Calculator />
-        <PhotoStrip />
         <Gallery />
         <Myths />
         <Segments />

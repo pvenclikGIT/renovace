@@ -6,13 +6,19 @@ import SectionHeader from '../components/SectionHeader'
 import styles from './Gallery.module.css'
 
 const items = [
-  { src: '/renovace/images/podlaha-04.jpg', label: 'Microcement – stěny + rohová vana', sub: 'Praha západ', span: 'large' },
-  { src: '/renovace/images/podlaha-01.jpg', label: 'Cementová stěrka – podlaha i stěny', sub: 'Praha 3', span: 'small' },
-  { src: '/renovace/images/podlaha-07.jpg', label: 'Epoxidová stěrka – sprchový kout', sub: 'Praha 6', span: 'small' },
+  { src: '/renovace/images/podlaha-04.jpg', label: 'Microcement – rohová vana + dvojité umývadlo', sub: 'Praha západ', span: 'large' },
+  { src: '/renovace/images/real-05.jpg', label: 'Industriální koupelna – cihla + stěrka', sub: 'Praha 2', span: 'small' },
+  { src: '/renovace/images/podlaha-07.jpg', label: 'Minimalistický sprchový kout', sub: 'Praha 6', span: 'small' },
+  { src: '/renovace/images/real-10.jpg', label: 'Tmavá stěrka – design s pendantovými světly', sub: 'Praha 6', span: 'medium' },
   { src: '/renovace/images/podlaha-03.jpg', label: 'Béžová dekorativní stěrka', sub: 'Praha 5', span: 'medium' },
-  { src: '/renovace/images/podlaha-06.jpg', label: 'Šedá stěrka – kompletní koupelna', sub: 'Středočeský kraj', span: 'medium' },
+  { src: '/renovace/images/real-02.jpg', label: 'Rustikální koupelna – dřevo + kámen + stěrka', sub: 'Praha 9', span: 'small' },
+  { src: '/renovace/images/podlaha-01.jpg', label: 'Cementová stěrka – podlaha i stěny', sub: 'Praha 3', span: 'small' },
+  { src: '/renovace/images/real-11.jpg', label: 'Stěrka + dřevěný nábytek + kamenné umývadlo', sub: 'Praha západ', span: 'large' },
+  { src: '/renovace/images/podlaha-09.jpg', label: 'Rohová vana + dřevo + stěrka', sub: 'Praha západ', span: 'medium' },
+  { src: '/renovace/images/podlaha-06.jpg', label: 'Šedá stěrka – kompletní koupelna', sub: 'Středočeský kraj', span: 'small' },
+  { src: '/renovace/images/real-04.jpg', label: 'Stěrka – dvojité umývadlo s podsvíceným zrcadlem', sub: 'Praha 5', span: 'medium' },
   { src: '/renovace/images/podlaha-02.jpg', label: 'Stěrka – detail koupelny', sub: 'Praha 3', span: 'small' },
-  { src: '/renovace/images/podlaha-09.jpg', label: 'Rohová vana + dřevo + stěrka', sub: 'Praha západ', span: 'large' },
+  { src: '/renovace/images/real-12.jpg', label: 'Stěrka – sprchový kout + dvojité umývadlo', sub: 'Praha 3', span: 'medium' },
   { src: '/renovace/images/podlaha-05.jpg', label: 'Koupelna s vanou a mikrobetonem', sub: 'Praha západ', span: 'medium' },
   { src: '/renovace/images/podlaha-08.jpg', label: 'Stěrka – celá koupelna', sub: 'Středočeský kraj', span: 'small' },
 ]
