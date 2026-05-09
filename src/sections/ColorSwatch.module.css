@@ -36,7 +36,7 @@
   box-shadow: 0 2px 8px rgba(23,20,18,0.12);
 }
 .swatchActive .swatchColor { border-color: var(--gold) !important; box-shadow: 0 0 0 3px rgba(201,150,60,0.25), 0 2px 8px rgba(23,20,18,0.12); }
-.swatchName { font-size: 0.75rem; font-weight: 700; color: var(--dark); text-align: center; line-height: 1.2; }
+.swatchName { font-size: 0.75rem; font-weight: 700; color: var(--dark); text-align: center; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
 .swatchMat { font-size: 0.75rem; font-weight: 300; color: var(--light); }
 
 .swatchNote {
@@ -60,4 +60,7 @@
 }
 @media (max-width: 480px) {
   .swatchGrid { grid-template-columns: repeat(4,1fr); gap: 0.4rem; }
+}
+@media (max-width: 360px) {
+  .swatchGrid { grid-template-columns: repeat(3,1fr); gap: 0.35rem; }
 }

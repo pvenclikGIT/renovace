@@ -25,7 +25,7 @@
   color: var(--white); background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.12);
   padding: 0.6rem 1.1rem; border-radius: 100px;
-  transition: background 0.2s;
+  white-space: nowrap; transition: background 0.2s;
 }
 .btnCall:hover { background: rgba(255,255,255,0.15); }
 .btnCta {
@@ -33,7 +33,7 @@
   font-family: var(--font); font-size: 0.875rem; font-weight: 700;
   color: var(--white); background: var(--gold);
   padding: 0.6rem 1.25rem; border-radius: 100px;
-  transition: background 0.2s, transform 0.2s;
+  white-space: nowrap; transition: background 0.2s, transform 0.2s;
 }
 .btnCta:hover { background: var(--gold2); transform: translateY(-1px); }
 .close {

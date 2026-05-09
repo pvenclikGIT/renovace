@@ -20,7 +20,7 @@
 .step:hover .num { color: var(--gold-pale2); }
 .badges { display: flex; flex-direction: column; align-items: flex-end; gap: 0.4rem; }
 .dayBadge { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); background: var(--gold-pale); padding: 0.28rem 0.75rem; border-radius: 100px; }
-.detailBadge { font-size: 0.75rem; color: var(--light); font-weight: 500; background: var(--bg2); padding: 0.22rem 0.65rem; border-radius: 100px; white-space: nowrap; }
+.detailBadge { font-size: 0.75rem; color: var(--light); font-weight: 500; background: var(--bg2); padding: 0.22rem 0.65rem; border-radius: 100px; white-space: nowrap; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
 .title { font-size: 1.05rem; font-weight: 800; color: var(--dark); margin-bottom: 0.7rem; letter-spacing: -0.025em;
   text-wrap: balance; line-height: 1.25; }
 .text { font-size: 1rem; font-weight: 300; color: var(--mid); line-height: 1.72; }
