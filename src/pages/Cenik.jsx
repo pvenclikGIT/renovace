@@ -12,69 +12,69 @@ const HOME = '/renovace/'
 
 const tiers = [
   {
-    id: 'standard',
-    name: 'Standardní provedení',
-    tagline: 'Cementová stěrka, rovné plochy a stěny',
+    id: 'cementova',
+    name: 'Cementová stěrka',
+    tagline: 'Minerální matný povrch s betonovým efektem',
     rate: 3000,
     rateLabel: '3 000',
     badgeText: null,
     highlight: false,
     matName: 'Cementová stěrka',
     features: [
-      { ok: true,  text: 'Cementová stěrka na stěny i podlahu' },
-      { ok: true,  text: 'Rovné plochy a jednoduché vzory' },
-      { ok: true,  text: 'Výběr z 32 odstínů kolekce' },
-      { ok: true,  text: 'Příprava podkladu, broušení, skelná perlinka' },
-      { ok: true,  text: 'Vodotěsná impregnace' },
-      { ok: true,  text: 'Záruční list na 5 let' },
-      { ok: false, text: 'Niky, rohy a složitější detaily' },
-      { ok: false, text: 'Prémiové materiály' },
+      { ok: true, text: 'Aplikace na stěny a méně exponované plochy' },
+      { ok: true, text: 'Matný minerální povrch, skandinávský klid' },
+      { ok: true, text: 'Výběr z 32 odstínů kolekce' },
+      { ok: true, text: 'Příprava podkladu, broušení, skelná perlinka' },
+      { ok: true, text: 'Vodotěsná impregnace a finální lak' },
+      { ok: true, text: 'Fyzické vzorky před podpisem' },
+      { ok: true, text: 'Doprava po Praze zdarma, úklid po realizaci' },
+      { ok: true, text: 'Záruční list na 5 let' },
     ],
     example: { m2: 22, price: '66 000' },
-    suitable: 'Stěny a méně exponované plochy. Na podlahy do mokrého provozu nedoporučujeme, tam volíme epoxid nebo pryskyřici.',
+    suitable: 'Stěny a méně exponované plochy. Na podlahy do mokrého provozu volíme epoxid nebo pryskyřici.',
     cta: 'Poptat cementovou stěrku',
   },
   {
-    id: 'medium',
-    name: 'Střední provedení',
-    tagline: 'Epoxidová stěrka, niky a rohy v ceně',
+    id: 'epoxidova',
+    name: 'Epoxidová stěrka',
+    tagline: 'Tvrdá jako kámen, na stěny i na podlahy',
     rate: 3750,
     rateLabel: '3 750',
     badgeText: 'Nejoblíbenější',
     highlight: true,
     matName: 'Epoxidová stěrka',
     features: [
-      { ok: true, text: 'Epoxidová stěrka na stěny i podlahu' },
-      { ok: true, text: 'Niky, rohy a detailnější plochy' },
+      { ok: true, text: 'Aplikace na stěny i podlahy' },
+      { ok: true, text: 'Sprchové kouty, vany, mokré a chemicky zatížené provozy' },
       { ok: true, text: 'Lesklý nebo saténový povrch' },
       { ok: true, text: 'Příprava podkladu, broušení, skelná perlinka' },
-      { ok: true, text: 'Plná vodotěsná impregnace' },
-      { ok: true, text: 'Protiskluzová certifikace R10' },
+      { ok: true, text: 'Plná vodotěsná impregnace a polyuretanový lak' },
+      { ok: true, text: 'Protiskluzová certifikace R10 na podlaze' },
+      { ok: true, text: 'Doprava po Praze zdarma, úklid po realizaci' },
       { ok: true, text: 'Záruční list na 10 let' },
-      { ok: true, text: 'Doprava po Praze zdarma' },
     ],
     example: { m2: 22, price: '82 500' },
     suitable: 'Stěny i podlahy, sprchové kouty, vany, mokré a chemicky zatížené provozy.',
     cta: 'Poptat epoxidovou stěrku',
   },
   {
-    id: 'premium',
-    name: 'Prémiové provedení',
-    tagline: 'Pryskyřičná stěrka, designové efekty',
+    id: 'pryskyricna',
+    name: 'Pryskyřičná stěrka',
+    tagline: 'Pružná, designová, snáší podlahové topení',
     rate: 4500,
     rateLabel: '4 500',
     badgeText: 'Designová volba',
     highlight: false,
     matName: 'Pryskyřičná stěrka',
     features: [
-      { ok: true, text: 'Pryskyřičná stěrka, imitace mramoru nebo leštěný beton' },
-      { ok: true, text: 'Sprchový kout se žlabem, složité detaily' },
-      { ok: true, text: 'Individuální barevné vzory a efekty' },
-      { ok: true, text: 'Prémiová nano impregnace' },
-      { ok: true, text: 'Protiskluzová certifikace R10/R11' },
-      { ok: true, text: 'Záruční list na 10 let' },
-      { ok: true, text: 'Doprava po Praze zdarma, prioritní termín' },
+      { ok: true, text: 'Aplikace na stěny i podlahy' },
+      { ok: true, text: 'Podlahové topení, dilatace, teplotní změny' },
+      { ok: true, text: 'Individuální barvy, imitace mramoru, leštěný beton' },
+      { ok: true, text: 'Příprava podkladu, broušení, skelná perlinka' },
+      { ok: true, text: 'Prémiová nano impregnace a polyuretanový lak' },
+      { ok: true, text: 'Protiskluzová certifikace R10/R11 na podlaze' },
       { ok: true, text: 'Fyzické vzorky přivezeme osobně ke konzultaci' },
+      { ok: true, text: 'Záruční list na 10 let' },
     ],
     example: { m2: 22, price: '99 000' },
     suitable: 'Stěny i podlahy, podlahové topení, designové vzory a leštěné povrchy.',
@@ -427,8 +427,8 @@ export default function Cenik() {
           <FadeIn>
             <SectionHeader
               tag="Cenové sazby"
-              title="Tři úrovně provedení. <em>Jedna cena za m².</em>"
-              lead="Cena závisí na materiálu a složitosti práce. Všechny sazby jsou bez DPH a zahrnují práci i materiál."
+              title="Tři materiály. <em>Jedna kvalita pro všechny.</em>"
+              lead="Cena se liší podle zvoleného materiálu, ne podle typu klienta. Stejnou kvalitu provedení dáváme do bytu, do hotelu, do kanceláře i do wellness. Všechny sazby jsou bez DPH a zahrnují práci i materiál."
             />
           </FadeIn>
 
@@ -648,7 +648,7 @@ export default function Cenik() {
             <SectionHeader
               tag="Příklad kalkulace"
               title="Kolik vyjde <em>průměrná koupelna?</em>"
-              lead="Průměrná koupelna: podlaha 6 m², stěny 16 m², celkem 22 m². Cementová stěrka, standardní provedení."
+              lead="Průměrná koupelna: podlaha 6 m², stěny 16 m², celkem 22 m². Kombinace cementové stěrky na stěnách a epoxidové na podlaze."
             />
           </FadeIn>
 
@@ -656,11 +656,11 @@ export default function Cenik() {
             <div className={styles.calc}>
               <div className={styles.calcRows}>
                 {[
-                  { item: 'Stěny 16 m² × 3 000 Kč/m²',     val: '48 000 Kč' },
-                  { item: 'Podlaha 6 m² × 3 000 Kč/m²',     val: '18 000 Kč' },
-                  { item: 'Příprava podkladu a impregnace',  val: 'zahrnuto'  },
-                  { item: 'Doprava Praha',                    val: 'zdarma'    },
-                  { item: 'Záruční list na 5 let',            val: 'zahrnuto'  },
+                  { item: 'Stěny 16 m² × 3 000 Kč/m² (cementová)',  val: '48 000 Kč' },
+                  { item: 'Podlaha 6 m² × 3 750 Kč/m² (epoxidová)', val: '22 500 Kč' },
+                  { item: 'Příprava podkladu a impregnace',         val: 'zahrnuto'  },
+                  { item: 'Doprava Praha',                          val: 'zdarma'    },
+                  { item: 'Záruční list',                           val: 'zahrnuto'  },
                 ].map(row => (
                   <div key={row.item} className={styles.calcRow}>
                     <span className={styles.calcItem}>{row.item}</span>
@@ -670,7 +670,7 @@ export default function Cenik() {
               </div>
               <div className={styles.calcTotal}>
                 <span className={styles.calcTotalLabel}>Celkem bez DPH</span>
-                <span className={styles.calcTotalNum}>66 000 Kč</span>
+                <span className={styles.calcTotalNum}>70 500 Kč</span>
               </div>
               <p className={styles.calcNote}>
                 Toto je orientační kalkulace. Konečná cena závisí na stavu povrchu a zvoleném materiálu.

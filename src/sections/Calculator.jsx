@@ -5,25 +5,25 @@ import styles from './Calculator.module.css'
 
 const complexities = [
   {
-    id: 'standard',
-    label: 'Standardní',
-    desc: 'Rovné plochy, jednoduchý vzor',
+    id: 'cementova',
+    label: 'Cementová stěrka',
+    desc: 'Stěny a méně exponované plochy. Matný minerální povrch.',
     rate: 3000,
-    badge: 'Nejčastější',
-  },
-  {
-    id: 'medium',
-    label: 'Střední náročnost',
-    desc: 'Niky, rohy, více detailů',
-    rate: 3750,
     badge: null,
   },
   {
-    id: 'premium',
-    label: 'Prémiové provedení',
-    desc: 'Sprchový kout se žlabem, imitace mramoru, leštěné povrchy',
+    id: 'epoxidova',
+    label: 'Epoxidová stěrka',
+    desc: 'Stěny i podlahy, mokré provozy. Lesklý povrch.',
+    rate: 3750,
+    badge: 'Nejoblíbenější',
+  },
+  {
+    id: 'pryskyricna',
+    label: 'Pryskyřičná stěrka',
+    desc: 'Stěny i podlahy, podlahové topení, designové vzory.',
     rate: 4500,
-    badge: 'Nejvyšší kvalita',
+    badge: 'Designová volba',
   },
 ]
 
@@ -37,7 +37,7 @@ function fmtExact(n) {
 export default function Calculator() {
   const [floor, setFloor]     = useState(6)
   const [walls, setWalls]     = useState(16)
-  const [complexity, setComp] = useState('standard')
+  const [complexity, setComp] = useState('epoxidova')
   const [sent, setSent]       = useState(false)
   const [email, setEmail]     = useState('')
 
@@ -143,7 +143,7 @@ export default function Calculator() {
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                   <path d="M7 1l1.5 3.5L13 5l-3 3 .5 4L7 10.5l-3.5 1.5.5-4L1 5l4.5-.5L7 1z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round"/>
                 </svg>
-                Náročnost provedení
+                Výběr materiálu
               </div>
               <div className={styles.compGrid}>
                 {complexities.map(c => (
@@ -155,7 +155,7 @@ export default function Calculator() {
                     <div className={styles.compTop}>
                       <span className={styles.compName}>{c.label}</span>
                       {c.badge && (
-                        <span className={`${styles.compBadge} ${c.id === 'premium' ? styles.compBadgePrem : ''}`}>
+                        <span className={`${styles.compBadge} ${c.id === 'pryskyricna' ? styles.compBadgePrem : ''}`}>
                           {c.badge}
                         </span>
                       )}
@@ -248,8 +248,8 @@ export default function Calculator() {
                 <div className={styles.rangeBarThumb} style={{ left: `${((rate - 3000) / 1500) * 100}%` }} />
               </div>
               <div className={styles.rangeBarLabels}>
-                <span>Standardní</span>
-                <span>Prémiové</span>
+                <span>Cementová</span>
+                <span>Pryskyřičná</span>
               </div>
             </div>
 
