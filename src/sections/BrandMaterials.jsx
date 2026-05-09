@@ -157,8 +157,7 @@ function BrandLogo({ logo, name }) {
   )
 }
 
-function BrandCard({ brand, delay }) {
-  const [open, setOpen] = useState(false)
+function BrandCard({ brand, delay, open, onToggle }) {
   return (
     <motion.div
       className={`${styles.card} ${open ? styles.cardOpen : ''}`}
@@ -166,7 +165,7 @@ function BrandCard({ brand, delay }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.42, delay, ease: [0.16, 1, 0.3, 1] }}
-      onClick={() => setOpen(o => !o)}
+      onClick={onToggle}
     >
       <div className={styles.cardTop}>
         <div className={styles.logoWrap}>
@@ -196,6 +195,9 @@ function BrandCard({ brand, delay }) {
 }
 
 export default function BrandMaterials() {
+  const [openId, setOpenId] = useState(null)
+  const toggle = (id) => setOpenId(prev => prev === id ? null : id)
+
   return (
     <section id="brands" className={styles.section}>
       <FadeIn>
@@ -222,7 +224,7 @@ export default function BrandMaterials() {
               </div>
               <div className={styles.grid}>
                 {cat.brands.map((brand, bi) => (
-                  <BrandCard key={brand.id} brand={brand} delay={ci * 0.05 + bi * 0.06} />
+                  <BrandCard key={brand.id} brand={brand} delay={ci * 0.05 + bi * 0.06} open={openId === brand.id} onToggle={() => toggle(brand.id)} />
                 ))}
               </div>
             </div>
