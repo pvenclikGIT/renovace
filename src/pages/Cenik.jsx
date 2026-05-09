@@ -313,7 +313,7 @@ export default function Cenik() {
               variants={{ hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0, transition: { duration: 0.6 } } }}
             >
               <span className={styles.heroDot} />
-              Transparentní ceny, bez překvapení
+              Pevné ceny, bez překvapení
             </motion.div>
 
             <motion.h1
@@ -321,15 +321,14 @@ export default function Cenik() {
               variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { duration: 0.7 } } }}
             >
               Kolik stojí nová<br />
-              <em className={styles.heroGold}>koupelna bez bourání?</em>
+              <em className={styles.heroGold}>koupelna?</em>
             </motion.h1>
 
             <motion.p
               className={styles.heroLead}
               variants={{ hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0, transition: { duration: 0.65 } } }}
             >
-              Stěrka vyjde od <strong>3 000 do 4 500 Kč/m²</strong> bez DPH a zahrnuje práci i materiál.
-              Průměrná koupelna kolem 66 000 až 99 000 Kč. Klasická rekonstrukce? Klidně 200 000 Kč a 1 až 2 měsíce čekání.
+              <strong>3 000 až 4 500 Kč/m²</strong> bez DPH, práce i materiál v ceně. Průměrná koupelna 66 000 až 99 000 Kč. Klasika? 200 000 Kč a 1 až 2 měsíce navíc.
             </motion.p>
 
             <motion.div
