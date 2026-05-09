@@ -20,7 +20,7 @@
   overflow: hidden;
   border: 1.5px solid var(--bg3);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background: var(--bg);
   transition: transform 0.35s var(--ease), box-shadow 0.35s, border-color 0.3s;
   position: relative;
@@ -43,14 +43,14 @@
 .badgeDark { background: var(--gold); }
 
 .featImg {
-  height: 220px;
+  width: 260px;
+  flex-shrink: 0;
   overflow: hidden;
   position: relative;
-  flex-shrink: 0;
 }
 .featImg img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s var(--ease); }
 .featCard:hover .featImg img { transform: scale(1.05); }
-.featImgOverlay { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.25) 100%); }
+.featImgOverlay { position: absolute; inset: 0; background: linear-gradient(to right, transparent 60%, rgba(0,0,0,0.15) 100%); }
 
 .featBody { padding: 2rem 2rem 2.25rem; display: flex; flex-direction: column; flex: 1; }
 
@@ -119,6 +119,9 @@
 @media (max-width: 960px) {
   .featuredRow { grid-template-columns: 1fr; }
   .smallRow { grid-template-columns: 1fr; }
+  .featCard { flex-direction: column; }
+  .featImg { width: 100%; height: 200px; }
+  .featImgOverlay { background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.25) 100%); }
   .smallCard { flex-direction: column; }
   .smallImg { width: 100%; height: 180px; }
 }
