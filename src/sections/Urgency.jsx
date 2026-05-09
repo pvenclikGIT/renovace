@@ -26,55 +26,66 @@ function useCountdown(targetDays) {
   return time
 }
 
+const units = [
+  { key: 'd', label: 'dní' },
+  { key: 'h', label: 'hodin' },
+  { key: 'm', label: 'minut' },
+  { key: 's', label: 'sekund' },
+]
+
 export default function Urgency() {
-  const { d, h, m, s } = useCountdown(6)
+  const time = useCountdown(6)
   const slots = 2
 
   return (
     <FadeIn>
       <section className={styles.section}>
         <div className={styles.inner}>
+
+          {/* Left — text */}
           <div className={styles.left}>
-            <div className={styles.pulse} />
+            <span className={styles.pulse} aria-hidden="true" />
             <div className={styles.texts}>
-              <div className={styles.title}>
+              <p className={styles.title}>
                 Zbývají <em>{slots}</em> volné termíny tento měsíc
-              </div>
-              <div className={styles.sub}>
+              </p>
+              <p className={styles.sub}>
                 Realizace jsou rozepsané do konce měsíce. Konzultaci zarezervujte teď.
-              </div>
+              </p>
             </div>
           </div>
 
+          {/* Center — countdown */}
           <div className={styles.countdown}>
-            {[
-              { val: d, label: 'dní' },
-              { val: h, label: 'hodin' },
-              { val: m, label: 'minut' },
-              { val: s, label: 'sekund' },
-            ].map(({ val, label }) => (
-              <div key={label} className={styles.unit}>
-                <motion.div
-                  key={val}
-                  className={styles.val}
-                  initial={{ y: -8, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.25 }}
-                >
-                  {String(val).padStart(2, '0')}
-                </motion.div>
-                <div className={styles.unitLabel}>{label}</div>
+            {units.map(({ key, label }, i) => (
+              <div key={key} className={styles.unitWrap}>
+                <div className={styles.unit}>
+                  <motion.span
+                    key={time[key]}
+                    className={styles.val}
+                    initial={{ y: -6, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.22 }}
+                  >
+                    {String(time[key]).padStart(2, '0')}
+                  </motion.span>
+                  <span className={styles.unitLabel}>{label}</span>
+                </div>
+                {i < units.length - 1 && (
+                  <span className={styles.sep} aria-hidden="true">:</span>
+                )}
               </div>
             ))}
-            <div className={styles.countdownLabel}>do konce nabídky volných termínů</div>
           </div>
 
+          {/* Right — CTA */}
           <a href="#contact" className={styles.cta}>
             Zarezervovat termín
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </a>
+
         </div>
       </section>
     </FadeIn>

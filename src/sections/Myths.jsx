@@ -57,9 +57,16 @@ export default function Myths() {
               className={`${styles.item} ${open === i ? styles.itemOpen : ''}`}
               onClick={() => setOpen(open === i ? null : i)}
             >
+              <span className={styles.num} aria-hidden="true">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+
               <div className={styles.itemHeader}>
                 <div className={styles.mythLabel}>
-                  <span className={styles.mythBadge}>Mýtus</span>
+                  <span className={styles.mythBadge}>
+                    <span className={styles.mythX}>✕</span>
+                    Mýtus
+                  </span>
                   <span className={styles.mythText}>{m.myth}</span>
                 </div>
                 <div className={styles.toggle}>
@@ -68,6 +75,7 @@ export default function Myths() {
                   </svg>
                 </div>
               </div>
+
               <AnimatePresence>
                 {open === i && (
                   <motion.div
@@ -78,7 +86,10 @@ export default function Myths() {
                     style={{ overflow: 'hidden' }}
                   >
                     <div className={styles.truth}>
-                      <span className={styles.truthBadge}>Realita</span>
+                      <span className={styles.truthBadge}>
+                        <span className={styles.truthCheck}>✓</span>
+                        Realita
+                      </span>
                       <p>{m.truth}</p>
                     </div>
                   </motion.div>
