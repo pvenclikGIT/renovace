@@ -122,3 +122,8 @@
   .featuredRow { grid-template-columns: 1fr; }
   .smallRow { grid-template-columns: 1fr; }
 }
+@media (max-width: 480px) {
+  .featImg { height: 200px; }
+  .smallImg { height: 180px; }
+  .featBody { padding: 1.5rem 1.5rem 1.75rem; }
+}

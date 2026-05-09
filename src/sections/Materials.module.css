@@ -13,4 +13,5 @@
 .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .tag { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,.35); padding: 0.25rem 0.75rem; border: 1px solid rgba(255,255,255,.1); border-radius: 100px; transition: border-color 0.25s, color 0.25s; }
 .card:hover .tag { border-color: rgba(201,150,60,.3); color: rgba(255,255,255,.6); }
-@media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
+@media (max-width: 860px) { .grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .grid { grid-template-columns: 1fr; } .cardImg { height: 180px; } }

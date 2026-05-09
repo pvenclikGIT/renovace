@@ -90,11 +90,13 @@
   .large { grid-column: span 2; grid-row: span 1; }
   .medium { grid-column: span 1; }
   .small { grid-column: span 1; }
+  .half { grid-column: span 2; }
   .lbPrev { left: 0.5rem; }
   .lbNext { right: 0.5rem; }
 }
 @media (max-width: 560px) {
   .grid { grid-template-columns: 1fr; grid-auto-rows: 65vw; }
-  .large, .medium, .small { grid-column: span 1; }
+  .large, .medium, .small, .half { grid-column: span 1; }
   .header { flex-direction: column; align-items: flex-start; }
+  .lbCaption { flex-direction: column; gap: 0.25rem; align-items: flex-start; }
 }

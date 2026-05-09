@@ -170,4 +170,5 @@
 @media (max-width: 400px) {
   .card { padding: 0.9rem 1rem; }
   .brandName { font-size: 0.85rem; }
+  .footer { flex-wrap: wrap; }
 }
