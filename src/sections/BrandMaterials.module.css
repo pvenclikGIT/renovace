@@ -83,6 +83,7 @@
   display: flex; align-items: center; justify-content: center;
   background: white; border-radius: var(--r);
   border: 1px solid var(--bg3); padding: 5px;
+  overflow: hidden;
 }
 .logoImg {
   max-width: 50px; max-height: 30px;
@@ -95,8 +96,9 @@
 .cardOpen .logoImg { filter: grayscale(0%) opacity(1); }
 
 .logoFallback {
-  font-size: 0.65rem; font-weight: 900; color: var(--dark2);
-  letter-spacing: 0.06em; text-align: center; line-height: 1.2;
+  font-size: 0.6rem; font-weight: 900; color: var(--dark2);
+  letter-spacing: 0.04em; text-align: center; line-height: 1.2;
+  word-break: break-all; max-width: 50px;
 }
 
 /* ── Card text ── */
