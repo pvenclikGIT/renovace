@@ -6,8 +6,8 @@ import SectionHeader from '../components/SectionHeader'
 import styles from './Contact.module.css'
 
 const info = [
-  { Icon: IconPhone, label: 'Zavolejte', text: '+420 XXX XXX XXX', note: 'Po–Pá 8:00–18:00' },
-  { Icon: IconMail, label: 'Napište', text: 'info@sterkabad.cz', note: 'Odpovídáme do 4 hodin' },
+  { Icon: IconPhone, label: 'Zavolejte', text: '+420 776 661 661', note: 'Po–Pá 8:00–18:00' },
+  { Icon: IconMail, label: 'Napište', text: 'info@bezspar.cz', note: 'Odpovídáme do 4 hodin' },
   { Icon: IconPin, label: 'Kde pracujeme', text: 'Praha & Středočeský kraj', note: 'Větší projekty – celá ČR' },
   { Icon: IconZap, label: 'Orientační cena', text: 'Do 24 hodin', note: 'Stačí pár fotek na WhatsApp' },
 ]

@@ -31,6 +31,8 @@
 }
 .links a:hover { color: var(--dark); }
 .links a:hover::after { width: 100%; }
+.navActive { color: var(--gold) !important; }
+.navActive::after { width: 100% !important; }
 
 .cta {
   background: var(--dark) !important; color: var(--white) !important;
