@@ -30,7 +30,7 @@
   font-size: var(--fs-2xs);
   font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--light);
-  margin-bottom: 0.2rem;
+  margin-bottom: var(--space-1);
 }
 .infoText {
   font-size: var(--fs-body);
@@ -39,7 +39,7 @@
 .infoNote {
   font-size: var(--fs-sm);
   font-weight: 400; color: var(--light);
-  margin-top: 0.1rem;
+  margin-top: var(--space-1);
 }
 
 .guarantee {
@@ -55,7 +55,7 @@
 .guaranteeTitle {
   font-size: var(--fs-body);
   font-weight: 800; color: var(--dark);
-  margin-bottom: 0.3rem;
+  margin-bottom: var(--space-1);
   letter-spacing: -0.02em;
 }
 .guaranteeText {
@@ -73,7 +73,7 @@
   gap: var(--space-4);
   box-shadow: var(--shadow-md);
 }
-.formHeader { margin-bottom: 0.25rem; }
+.formHeader { margin-bottom: var(--space-1); }
 .formTitle {
   font-size: var(--fs-xl);
   font-weight: 800; color: var(--dark);

@@ -58,7 +58,7 @@
   font-size: var(--fs-sm);
   font-weight: 400;
   color: rgba(255,255,255,0.45);
-  margin-top: 0.15rem;
+  margin-top: var(--space-1);
 }
 
 .content {

@@ -62,7 +62,7 @@
 .loc {
   font-size: var(--fs-sm);
   font-weight: 400; color: var(--light);
-  margin-top: 0.1rem;
+  margin-top: var(--space-1);
 }
 .material {
   font-size: var(--fs-sm);

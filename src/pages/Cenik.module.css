@@ -106,7 +106,7 @@
   border-top: 1px solid var(--bg3);
 }
 .stat {
-  display: flex; flex-direction: column; gap: 0.25rem;
+  display: flex; flex-direction: column; gap: var(--space-1);
   position: relative;
   min-width: 0;
 }
@@ -140,7 +140,7 @@
   position: absolute; bottom: clamp(1.5rem, 3vw, 2.5rem); left: 0;
   background: var(--white); border-radius: 0 var(--r) var(--r) 0;
   padding: 1rem 1.6rem; box-shadow: var(--shadow-md);
-  display: flex; flex-direction: column; gap: 0.25rem;
+  display: flex; flex-direction: column; gap: var(--space-1);
   max-width: calc(100% - 2rem);
 }
 .heroBadgeLabel { font-size: var(--fs-xs); font-weight: 700; color: var(--light); letter-spacing: 0.08em; text-transform: uppercase; }
@@ -354,7 +354,7 @@
 .includedItem { display: flex; align-items: flex-start; gap: 0.9rem; }
 .includedIcon { flex-shrink: 0; margin-top: 1px; color: #4CAF50; display: flex; align-items: center; }
 .includedLabel { display: block; font-size: var(--fs-sm); font-weight: 600; color: var(--dark3); }
-.includedNote  { display: block; font-size: var(--fs-xs); color: var(--light); margin-top: 0.15rem; }
+.includedNote  { display: block; font-size: var(--fs-xs); color: var(--light); margin-top: var(--space-1); }
 
 .extrasList { list-style: none; display: flex; flex-direction: column; }
 .extrasItem {
@@ -363,7 +363,7 @@
 }
 .extrasItem:last-child { border-bottom: none; padding-bottom: 0; }
 .extrasLabel { display: block; font-size: var(--fs-sm); font-weight: 600; color: var(--dark3); }
-.extrasNote  { display: block; font-size: var(--fs-xs); color: var(--light); margin-top: 0.15rem; }
+.extrasNote  { display: block; font-size: var(--fs-xs); color: var(--light); margin-top: var(--space-1); }
 .extrasPrice { font-size: var(--fs-sm); font-weight: 700; color: var(--gold); white-space: nowrap; flex-shrink: 0; }
 
 /* ─────────────────────────────────────────────────────────────
@@ -489,7 +489,7 @@
 @media (max-width: 720px) {
   .tiers        { grid-template-columns: 1fr; gap: 1.25rem; }
   .includedGrid { grid-template-columns: 1fr; }
-  .calcRow      { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+  .calcRow      { flex-direction: column; align-items: flex-start; gap: var(--space-1); }
   .calcRows, .calcTotal, .calcNote { padding-left: 1.4rem; padding-right: 1.4rem; }
 }
 

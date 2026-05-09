@@ -68,7 +68,7 @@
   font-family: var(--font);
   font-size: var(--fs-body);
   font-weight: 700; color: var(--white);
-  margin-bottom: 0.15rem;
+  margin-bottom: var(--space-1);
 }
 .overlaySub {
   font-size: var(--fs-sm);

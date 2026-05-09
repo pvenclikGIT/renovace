@@ -125,7 +125,7 @@
   font-size: var(--fs-2xs);
   font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
   color: rgba(255,255,255,0.38);
-  margin-bottom: 0.3rem;
+  margin-bottom: var(--space-1);
 }
 .panelTitle {
   font-size: var(--fs-xl);

@@ -318,7 +318,7 @@
   gap: var(--space-2);
   font-size: var(--fs-2xs);
   font-weight: 700; color: var(--gold2);
-  margin-bottom: 0.3rem;
+  margin-bottom: var(--space-1);
 }
 .savingsAmt {
   font-size: var(--fs-2xl);
@@ -328,7 +328,7 @@
 .savingsNote {
   font-size: var(--fs-2xs);
   font-weight: 300; color: rgba(255,255,255,0.52);
-  margin-top: 0.2rem;
+  margin-top: var(--space-1);
   line-height: 1.5;
 }
 
