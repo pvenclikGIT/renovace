@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import FadeIn from '../components/FadeIn'
 import SectionHeader from '../components/SectionHeader'
+import Process from '../sections/Process'
 import styles from './Cenik.module.css'
 
 const HOME = '/renovace/'
@@ -195,37 +196,6 @@ const extras = [
   { label: 'Hotely, nájemní byty, developeři', price: 'individuálně', note: 'Množstevní sleva od 3 koupelen' },
 ]
 
-const steps = [
-  {
-    num: '01',
-    title: 'Konzultace a výběr materiálu',
-    desc: 'Stačí pár fotek na WhatsApp nebo krátká prohlídka. Přivezeme fyzické vzorky, poradíme s materiálem, barvou i texturou. Konzultace je zcela zdarma a bez závazku.',
-    badge: 'Zdarma',
-    detail: 'Do 48 h od poptávky',
-  },
-  {
-    num: '02',
-    title: 'Příprava podkladu',
-    desc: 'Stávající obklady přebrousíme, odmaštíme a ošetříme adhezním přípravkem. Vkládáme skelnou perlinku, klíč k tomu, aby stěrka nepraskala nad původními spárami.',
-    badge: 'Den 1',
-    detail: 'Mokrý proces, bez prachu',
-  },
-  {
-    num: '03',
-    title: 'Aplikace ve vrstvách',
-    desc: 'Nanášíme 4-6 vrstev. Každá musí dostatečně zatvrdnout. Žádné zkratky. Na přesném technologickém postupu stojí pevnost i estetika povrchu, která vydrží desetiletí.',
-    badge: 'Den 1-3',
-    detail: 'Epoxid, cement nebo pryskyřice',
-  },
-  {
-    num: '04',
-    title: 'Finální lak a předání',
-    desc: 'Poslední vrstva je polyuretanový lak, který určí míru lesku a zajistí voděodolnost. Po 24 hodinách je koupelna schůdná. Záruční list dostanete při předání.',
-    badge: 'Den 3-4',
-    detail: 'Záruční list součástí',
-  },
-]
-
 const faqs = [
   {
     q: 'Proč je cena za m² a ne za celou koupelnu?',
@@ -273,39 +243,28 @@ function CrossIcon() {
     </svg>
   )
 }
-function PlusIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-      <path d="M9 3v12M3 9h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-    </svg>
-  )
-}
-function MinusIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-      <path d="M3 9h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-    </svg>
-  )
-}
-
 function FaqItem({ q, a }) {
   const [open, setOpen] = useState(false)
   return (
     <div className={`${styles.faqItem} ${open ? styles.faqOpen : ''}`}>
       <button className={styles.faqQ} onClick={() => setOpen(v => !v)} aria-expanded={open}>
         <span>{q}</span>
-        <span className={styles.faqIcon}>{open ? <MinusIcon /> : <PlusIcon />}</span>
+        <span className={styles.faqToggle}>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M8 3v10M3 8h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+          </svg>
+        </span>
       </button>
-      <AnimatePresence initial={false}>
+      <AnimatePresence>
         {open && (
           <motion.div
-            className={styles.faqA}
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            style={{ overflow: 'hidden' }}
           >
-            <p>{a}</p>
+            <p className={styles.faqA}>{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -637,34 +596,7 @@ export default function Cenik() {
       </section>
 
       {/* ── JAK TO FUNGUJE ────────────────────────────────────── */}
-      <section className={`${styles.section} ${styles.sectionAlt}`}>
-        <div className={styles.inner}>
-          <FadeIn>
-            <SectionHeader
-              tag="Jak to funguje"
-              title="Od první zprávy <em>k hotové koupelně.</em>"
-              lead="Čtyři kroky od poptávky k předání. Přesně víte, co se bude dít, kdy to bude hotové a kolik to bude stát."
-            />
-          </FadeIn>
-          <div className={styles.processGrid}>
-            {steps.map((step, i) => (
-              <FadeIn key={step.num} delay={i * 0.1}>
-                <div className={styles.processCard}>
-                  <div className={styles.processTopRow}>
-                    <div className={styles.processNum}>{step.num}</div>
-                    <div className={styles.processBadges}>
-                      <span className={styles.processBadge}>{step.badge}</span>
-                      <span className={styles.processDetail}>{step.detail}</span>
-                    </div>
-                  </div>
-                  <h3 className={styles.processTitle}>{step.title}</h3>
-                  <p className={styles.processDesc}>{step.desc}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Process />
 
       {/* ── PŘÍKLAD KALKULACE ─────────────────────────────────── */}
       <section className={styles.section}>
@@ -718,13 +650,22 @@ export default function Cenik() {
               lead="Nejčastější dotazy zákazníků k cenám, materiálům a průběhu práce. Nezodpovězené otázky? Napište nebo zavolejte."
             />
           </FadeIn>
-          <FadeIn delay={0.1}>
-            <div className={styles.faqList}>
-              {faqs.map(item => (
-                <FaqItem key={item.q} q={item.q} a={item.a} />
-              ))}
-            </div>
-          </FadeIn>
+          <div className={styles.faqColumns}>
+            <FadeIn delay={0.05}>
+              <div className={styles.faqCol}>
+                {faqs.slice(0, Math.ceil(faqs.length / 2)).map(item => (
+                  <FaqItem key={item.q} q={item.q} a={item.a} />
+                ))}
+              </div>
+            </FadeIn>
+            <FadeIn delay={0.15}>
+              <div className={styles.faqCol}>
+                {faqs.slice(Math.ceil(faqs.length / 2)).map(item => (
+                  <FaqItem key={item.q} q={item.q} a={item.a} />
+                ))}
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </section>
 

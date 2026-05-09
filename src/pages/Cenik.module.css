@@ -270,27 +270,6 @@
 .extrasPrice { font-size: var(--fs-sm); font-weight: 700; color: var(--gold); white-space: nowrap; flex-shrink: 0; }
 
 /* ─────────────────────────────────────────────────────────────
-   PROCESS
-───────────────────────────────────────────────────────────── */
-.processGrid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.25rem; margin-top: 3rem; }
-.processCard {
-  background: var(--white); border-radius: var(--r-lg);
-  border: 1.5px solid var(--bg3); padding: 2rem 1.75rem;
-  transition: border-color 0.22s, box-shadow 0.22s;
-}
-.processCard:hover { border-color: var(--gold); box-shadow: 0 6px 24px rgba(201,150,60,0.12); }
-.processTopRow { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1rem; gap: 0.5rem; }
-.processNum { font-size: 2rem; font-weight: 900; color: var(--gold-pale2); letter-spacing: -0.06em; line-height: 1; flex-shrink: 0; }
-.processBadges { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; }
-.processBadge {
-  font-size: var(--fs-2xs); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
-  background: var(--dark); color: var(--white); padding: 0.2rem 0.6rem; border-radius: 100px;
-}
-.processDetail { font-size: var(--fs-2xs); color: var(--light); text-align: right; }
-.processTitle { font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.6rem; }
-.processDesc  { font-size: var(--fs-sm); color: var(--mid); line-height: 1.65; }
-
-/* ─────────────────────────────────────────────────────────────
    CALC
 ───────────────────────────────────────────────────────────── */
 .calc {
@@ -318,20 +297,25 @@
 /* ─────────────────────────────────────────────────────────────
    FAQ
 ───────────────────────────────────────────────────────────── */
-.faqList { max-width: 780px; margin: 3rem auto 0; }
+.faqColumns { display: grid; grid-template-columns: 1fr 1fr; gap: 0 5vw; margin-top: 4rem; }
+.faqCol { display: flex; flex-direction: column; }
 .faqItem { border-bottom: 1px solid var(--bg3); }
 .faqItem:first-child { border-top: 1px solid var(--bg3); }
-.faqOpen .faqQ { color: var(--gold); }
 .faqQ {
-  width: 100%; display: flex; align-items: flex-start; justify-content: space-between;
-  gap: 1.25rem; padding: 1.25rem 0; text-align: left; background: none; border: none;
-  font-size: 1rem; font-weight: 600; color: var(--dark); cursor: pointer;
-  transition: color 0.2s; line-height: 1.4; font-family: var(--font);
+  width: 100%; display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;
+  padding: 1.5rem 0; background: none; border: none; text-align: left;
+  font-family: var(--font); font-size: 1rem; font-weight: 700; color: var(--dark);
+  cursor: pointer; transition: color 0.2s; letter-spacing: -0.02em;
 }
 .faqQ:hover { color: var(--gold); }
-.faqIcon { flex-shrink: 0; color: var(--gold); margin-top: 2px; }
-.faqA { overflow: hidden; }
-.faqA p { padding: 0 2rem 1.25rem 0; font-size: var(--fs-sm); color: var(--mid); line-height: 1.75; }
+.faqToggle {
+  width: 30px; height: 30px; border-radius: 50%; background: var(--bg2);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold); flex-shrink: 0; transition: background 0.25s, transform 0.35s var(--ease);
+}
+.faqOpen .faqQ { color: var(--gold); }
+.faqOpen .faqToggle { background: var(--gold); color: white; transform: rotate(45deg); }
+.faqA { font-size: 1rem; font-weight: 300; color: var(--mid); line-height: 1.75; padding: 0.25rem 0 1.5rem; padding-right: 2.5rem; }
 
 /* ─────────────────────────────────────────────────────────────
    CTA BANNER
@@ -374,7 +358,6 @@
 ───────────────────────────────────────────────────────────── */
 @media (max-width: 1100px) {
   .tiers          { grid-template-columns: 1fr 1fr; }
-  .processGrid    { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 900px) {
@@ -397,8 +380,13 @@
   .calcRow        { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
 }
 
+@media (max-width: 760px) {
+  .faqColumns { grid-template-columns: 1fr; }
+  .faqCol:last-child .faqItem:first-child { border-top: none; }
+}
+@media (max-width: 560px) { .faqA { padding-right: 1rem; } }
+
 @media (max-width: 480px) {
-  .processGrid    { grid-template-columns: 1fr; }
   .matTabs        { gap: 0.5rem; }
   .matTab         { font-size: var(--fs-xs); padding: 0.6rem 1rem; }
   .tierCard       { padding: 1.75rem 1.5rem; }
