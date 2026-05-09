@@ -4,14 +4,14 @@ import FadeIn from '../components/FadeIn'
 import styles from './ColorSwatch.module.css'
 
 const colors = [
-  { id: 'anthracite', name: 'Antracit',       hex: '#3A3A3A', light: false, img: '/images/real-12.jpg', mat: 'Cementová stěrka' },
-  { id: 'concrete',   name: 'Pohledový beton', hex: '#8B8680', light: false, img: '/images/real-04.jpg', mat: 'Cementová stěrka' },
-  { id: 'greige',     name: 'Greige',          hex: '#C4B49A', light: true,  img: '/images/real-08.jpg', mat: 'Cementová stěrka' },
-  { id: 'sand',       name: 'Písková',          hex: '#D4C5AD', light: true,  img: '/images/real-11.jpg', mat: 'Epoxidová stěrka' },
-  { id: 'white',      name: 'Čistá bílá',       hex: '#F0EDE8', light: true,  img: '/images/real-06.jpg', mat: 'Epoxidová stěrka' },
-  { id: 'graphite',   name: 'Grafit',           hex: '#5A5A5A', light: false, img: '/images/real-10.jpg', mat: 'Epoxidová stěrka' },
-  { id: 'darkbrown',  name: 'Tmavá káva',       hex: '#2A1F1A', light: false, img: '/images/real-16.png', mat: 'Pryskyřičná stěrka' },
-  { id: 'taupe',      name: 'Taupe',            hex: '#A89880', light: false, img: '/images/real-03.jpg', mat: 'Pryskyřičná stěrka' },
+  { id: 'anthracite', name: 'Antracit',       hex: '#3A3A3A', light: false, img: '/renovace/images/real-12.jpg', mat: 'Cementová stěrka' },
+  { id: 'concrete',   name: 'Pohledový beton', hex: '#8B8680', light: false, img: '/renovace/images/real-04.jpg', mat: 'Cementová stěrka' },
+  { id: 'greige',     name: 'Greige',          hex: '#C4B49A', light: true,  img: '/renovace/images/real-08.jpg', mat: 'Cementová stěrka' },
+  { id: 'sand',       name: 'Písková',          hex: '#D4C5AD', light: true,  img: '/renovace/images/real-11.jpg', mat: 'Epoxidová stěrka' },
+  { id: 'white',      name: 'Čistá bílá',       hex: '#F0EDE8', light: true,  img: '/renovace/images/real-06.jpg', mat: 'Epoxidová stěrka' },
+  { id: 'graphite',   name: 'Grafit',           hex: '#5A5A5A', light: false, img: '/renovace/images/real-10.jpg', mat: 'Epoxidová stěrka' },
+  { id: 'darkbrown',  name: 'Tmavá káva',       hex: '#2A1F1A', light: false, img: '/renovace/images/real-16.png', mat: 'Pryskyřičná stěrka' },
+  { id: 'taupe',      name: 'Taupe',            hex: '#A89880', light: false, img: '/renovace/images/real-03.jpg', mat: 'Pryskyřičná stěrka' },
 ]
 
 export default function ColorSwatch() {

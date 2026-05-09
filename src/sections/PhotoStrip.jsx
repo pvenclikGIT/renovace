@@ -3,12 +3,12 @@ import { useRef } from 'react'
 import styles from './PhotoStrip.module.css'
 
 const photos = [
-  '/images/real-01.jpg',
-  '/images/real-02.jpg',
-  '/images/real-05.jpg',
-  '/images/real-07.jpg',
-  '/images/real-09.webp',
-  '/images/real-13.jpg',
+  '/renovace/images/real-01.jpg',
+  '/renovace/images/real-02.jpg',
+  '/renovace/images/real-05.jpg',
+  '/renovace/images/real-07.jpg',
+  '/renovace/images/real-09.webp',
+  '/renovace/images/real-13.jpg',
 ]
 
 export default function PhotoStrip() {

@@ -5,7 +5,7 @@ import FadeIn from '../components/FadeIn'
 import SectionHeader from '../components/SectionHeader'
 import styles from './Cenik.module.css'
 
-const HOME = '/'
+const HOME = '/renovace/'
 
 /* ─── DATA ─────────────────────────────────────────────────── */
 
