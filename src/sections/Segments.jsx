@@ -49,6 +49,7 @@ const segments = [
 export default function Segments() {
   return (
     <section id="segments" className={styles.section}>
+      <div className={styles.inner}>
       <FadeIn>
         <SectionHeader
           tag="Pro koho pracujeme"
@@ -120,6 +121,7 @@ export default function Segments() {
             </div>
           </FadeIn>
         ))}
+      </div>
       </div>
     </section>
   )

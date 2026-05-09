@@ -13,6 +13,7 @@ const reviews = [
 export default function Reviews() {
   return (
     <section id="reviews" className={styles.section}>
+      <div className={styles.inner}>
       <FadeIn>
         <div className={styles.header}>
           <div className={styles.tag}><span className={styles.tagDot}/>Recenze</div>
@@ -79,6 +80,7 @@ export default function Reviews() {
             </div>
           </FadeIn>
         ))}
+      </div>
       </div>
     </section>
   )

@@ -40,7 +40,7 @@
 .heroDot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
 
 .heroH1 {
-  font-size: clamp(2.6rem,4vw,4.4rem); font-weight: 800; line-height: 1.05;
+  font-size: var(--fs-hero); font-weight: 800; line-height: 1.05;
   letter-spacing: -0.04em; color: var(--dark); margin-bottom: 1.5rem;
 }
 .heroGold { color: var(--gold); font-style: normal; }
@@ -76,7 +76,7 @@
   content: ''; position: absolute; right: 1.25rem; top: 50%; transform: translateY(-50%);
   width: 1px; height: 26px; background: var(--bg3);
 }
-.statNum  { font-size: 1.75rem; font-weight: 800; line-height: 1; color: var(--dark); letter-spacing: -0.04em; }
+.statNum  { font-size: 2rem; font-weight: 800; line-height: 1; color: var(--dark); letter-spacing: -0.04em; }
 .statLabel { font-size: var(--fs-xs); color: var(--light); }
 .statDiv  { display: none; }
 

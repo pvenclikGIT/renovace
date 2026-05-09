@@ -1,4 +1,5 @@
 .section { background: var(--white); padding: var(--py) var(--px); }
+.inner { max-width: 1160px; margin: 0 auto; }
 .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 0 5vw; margin-top: 4rem; }
 .col { display: flex; flex-direction: column; }
 .item { border-bottom: 1px solid var(--bg3); }

@@ -48,20 +48,22 @@ export default function Faq() {
   const half = Math.ceil(faqs.length / 2)
   return (
     <section id="faq" className={styles.section}>
-      <FadeIn>
-        <SectionHeader
-          tag="Časté otázky"
-          title={`Ptáte se. Tady jsou <em>přímé odpovědi.</em>`}
-          lead="Bez marketingového kecu. Otázky, které dostáváme nejčastěji, a odpovědi, které vás skutečně odblokují."
-        />
-      </FadeIn>
-      <div className={styles.columns}>
-        <FadeIn delay={0.05}>
-          <div className={styles.col}>{faqs.slice(0, half).map(f => <FaqItem key={f.q} {...f} />)}</div>
+      <div className={styles.inner}>
+        <FadeIn>
+          <SectionHeader
+            tag="Časté otázky"
+            title={`Ptáte se. Tady jsou <em>přímé odpovědi.</em>`}
+            lead="Bez marketingového kecu. Otázky, které dostáváme nejčastěji, a odpovědi, které vás skutečně odblokují."
+          />
         </FadeIn>
-        <FadeIn delay={0.15}>
-          <div className={styles.col}>{faqs.slice(half).map(f => <FaqItem key={f.q} {...f} />)}</div>
-        </FadeIn>
+        <div className={styles.columns}>
+          <FadeIn delay={0.05}>
+            <div className={styles.col}>{faqs.slice(0, half).map(f => <FaqItem key={f.q} {...f} />)}</div>
+          </FadeIn>
+          <FadeIn delay={0.15}>
+            <div className={styles.col}>{faqs.slice(half).map(f => <FaqItem key={f.q} {...f} />)}</div>
+          </FadeIn>
+        </div>
       </div>
     </section>
   )

@@ -85,6 +85,7 @@ const certs = [
 export default function Certificates() {
   return (
     <section id="certificates" className={styles.section}>
+      <div className={styles.inner}>
       <FadeIn>
         <div className={styles.header}>
           <div className={styles.tag}><span className={styles.tagDot}/>Certifikáty & záruky</div>
@@ -108,7 +109,7 @@ export default function Certificates() {
           </FadeIn>
         ))}
       </div>
-
+      </div>
     </section>
   )
 }

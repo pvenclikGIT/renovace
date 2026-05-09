@@ -23,6 +23,7 @@ const reviews = [
 export default function Testimonials() {
   return (
     <section id="testimonials" className={styles.section}>
+      <div className={styles.inner}>
       <FadeIn>
         <SectionHeader
           tag="Co říkají klienti"
@@ -61,6 +62,7 @@ export default function Testimonials() {
             </div>
           </FadeIn>
         ))}
+      </div>
       </div>
     </section>
   )

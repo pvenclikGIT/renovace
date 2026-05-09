@@ -1,4 +1,5 @@
 .section { background: var(--white); padding: var(--py) var(--px); }
+.inner { max-width: 1160px; margin: 0 auto; }
 
 .featuredRow {
   display: grid;

@@ -35,6 +35,7 @@ export default function Myths() {
 
   return (
     <section id="myths" className={styles.section}>
+      <div className={styles.inner}>
       <FadeIn>
         <div className={styles.header}>
           <div className={styles.tag}>
@@ -98,6 +99,7 @@ export default function Myths() {
             </div>
           </FadeIn>
         ))}
+      </div>
       </div>
     </section>
   )

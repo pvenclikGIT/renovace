@@ -1,4 +1,5 @@
 .section { background: var(--dark2); padding: var(--py) var(--px); }
+.inner { max-width: 1160px; margin: 0 auto; }
 
 .header { max-width: 640px; margin-bottom: 4rem; }
 .tag {
