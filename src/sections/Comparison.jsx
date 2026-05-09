@@ -55,10 +55,16 @@ export default function Comparison() {
           <div className={styles.tableHead}>
             <div className={styles.thCat}>Kategorie</div>
             <div className={`${styles.thCol} ${styles.thSterka}`}>
-              <span className={styles.thBadge}>Stěrka bez obkladů</span>
+              <span className={styles.thBadge}>
+                <span className={styles.thLong}>Stěrka bez obkladů</span>
+                <span className={styles.thShort}>Stěrka</span>
+              </span>
             </div>
             <div className={`${styles.thCol} ${styles.thClassic}`}>
-              <span className={styles.thBadgeGray}>Klasické obklady</span>
+              <span className={styles.thBadgeGray}>
+                <span className={styles.thLong}>Klasické obklady</span>
+                <span className={styles.thShort}>Obklady</span>
+              </span>
             </div>
           </div>
 
