@@ -22,7 +22,7 @@
   --font: 'Poppins', sans-serif;
   --nav-h: 74px;
   --px: clamp(1.25rem, 5.5vw, 6.5rem);
-  --py: clamp(4rem, 9vw, 9rem);
+  --py: clamp(3rem, 4.5vw, 5rem);
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --r: 14px;
   --r-lg: 22px;
