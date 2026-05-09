@@ -36,17 +36,18 @@ const steps = [
 export default function Process() {
   return (
     <section id="process" className={styles.section}>
-      <div className={styles.header}>
-        <FadeIn>
-          <SectionHeader
-            tag="Jak to funguje"
-            title={`Čtyři kroky. Žádná <em>překvapení po cestě.</em>`}
-            lead="Přesně víte, co se bude dít, kdy to bude hotové a kolik to bude stát – ještě předtím, než se do toho pustíme."
-          />
-        </FadeIn>
-      </div>
+      <div className={styles.inner}>
+        <div className={styles.header}>
+          <FadeIn>
+            <SectionHeader
+              tag="Jak to funguje"
+              title={`Čtyři kroky. Žádná <em>překvapení po cestě.</em>`}
+              lead="Přesně víte, co se bude dít, kdy to bude hotové a kolik to bude stát – ještě předtím, než se do toho pustíme."
+            />
+          </FadeIn>
+        </div>
 
-      <div className={styles.grid}>
+        <div className={styles.grid}>
         {steps.map((s, i) => (
           <FadeIn key={s.num} delay={i * 0.1}>
             <div className={styles.step}>
@@ -63,21 +64,22 @@ export default function Process() {
             </div>
           </FadeIn>
         ))}
-      </div>
-
-      <FadeIn delay={0.3}>
-        <div className={styles.cta}>
-          <div className={styles.ctaText}>
-            <strong>Kde jsme teď?</strong> Aktuálně máme volné termíny od příštího týdne.
-          </div>
-          <a href="#contact" className={styles.ctaBtn}>
-            Zarezervovat termín
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </a>
         </div>
-      </FadeIn>
+
+        <FadeIn delay={0.3}>
+          <div className={styles.cta}>
+            <div className={styles.ctaText}>
+              <strong>Kde jsme teď?</strong> Aktuálně máme volné termíny od příštího týdne.
+            </div>
+            <a href="#contact" className={styles.ctaBtn}>
+              Zarezervovat termín
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </FadeIn>
+      </div>
     </section>
   )
 }

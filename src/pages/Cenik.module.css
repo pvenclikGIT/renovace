@@ -403,4 +403,6 @@
   .matTab         { font-size: var(--fs-xs); padding: 0.6rem 1rem; }
   .tierCard       { padding: 1.75rem 1.5rem; }
   .ctaBanner      { padding: 3rem var(--px); }
+  .compareRow     { padding: 0.65rem 0.9rem; font-size: var(--fs-xs); }
+  .compareHead    { padding: 0.5rem 0.9rem; }
 }

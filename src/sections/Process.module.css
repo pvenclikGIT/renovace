@@ -1,4 +1,5 @@
 .section { background: var(--white); padding: var(--py) var(--px); }
+.inner { max-width: 1160px; margin: 0 auto; }
 .header { margin-bottom: 4rem; }
 .grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; }
 
