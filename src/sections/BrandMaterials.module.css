@@ -1,5 +1,5 @@
 .section {
-  background: var(--white);
+  background: var(--bg);
   padding: var(--py) var(--px);
 }
 
@@ -52,7 +52,7 @@
 
 /* ── Brand Card ── */
 .card {
-  background: var(--bg);
+  background: var(--white);
   border: 1.5px solid var(--bg3);
   border-radius: var(--r-lg);
   padding: 1.1rem 1.25rem;
