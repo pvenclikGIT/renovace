@@ -96,7 +96,7 @@ const CATEGORIES = [
         name: 'NĚMEC',
         country: 'Česko',
         flag: '🇨🇿',
-        logo: `${BASE}nemec.png`,
+        logo: `${BASE}nemec.svg`,
         system: 'Betonepox',
         desc: 'Patentovaný Betonepox je pravděpodobně nejznámější česká stěrka. Epoxid, který je nenasákavý sám o sobě – v koupelně nepotřebuje lakování, které se časem otírá.',
       },

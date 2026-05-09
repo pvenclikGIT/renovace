@@ -81,7 +81,6 @@ const certs = [
   { Icon: IconQuality,    title: 'Garance kvality',       desc: '10 let záruka na těsnost a přilnavost – záruční list ke každé zakázce', color: '#C9963C' },
 ]
 
-const brands = ['MAPEI', 'SIKA', 'WEBER', 'ARDEX', 'KNAUF', 'BAUMIT']
 
 export default function Certificates() {
   return (
@@ -110,16 +109,6 @@ export default function Certificates() {
         ))}
       </div>
 
-      <FadeIn delay={0.2}>
-        <div className={styles.brands}>
-          <div className={styles.brandsLabel}>Certifikované materiály od</div>
-          <div className={styles.brandsRow}>
-            {brands.map(b => (
-              <div key={b} className={styles.brandBadge}>{b}</div>
-            ))}
-          </div>
-        </div>
-      </FadeIn>
     </section>
   )
 }
