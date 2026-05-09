@@ -1,22 +1,30 @@
 .section {
   background: var(--dark);
-  border-top: 1px solid rgba(201,150,60,0.18);
-  border-bottom: 1px solid rgba(201,150,60,0.18);
+  border-block-start: 1px solid rgba(201,150,60,0.18);
+  border-block-end: 1px solid rgba(201,150,60,0.18);
   overflow-x: hidden;
 }
 
 .inner {
-  padding: 2.25rem var(--px);
+  padding-block: var(--space-7);
+  padding-inline: var(--section-px);
   display: flex; align-items: center; justify-content: space-between;
-  gap: 2.5rem; max-width: var(--max-w); margin: 0 auto;
+  gap: var(--space-7);
+  max-width: var(--max-w);
+  margin-inline: auto;
 }
 
-/* ── Left ── */
-.left { display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 220px; }
-
+.left {
+  display: flex; align-items: center;
+  gap: var(--space-3);
+  flex: 1;
+  min-width: 220px;
+}
 .pulse {
-  width: 10px; height: 10px; border-radius: 50%;
-  background: #FF6B35; flex-shrink: 0;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: #FF6B35;
+  flex-shrink: 0;
   animation: pulse 1.8s ease-in-out infinite;
 }
 @keyframes pulse {
@@ -26,56 +34,71 @@
 
 .texts { display: flex; flex-direction: column; gap: 4px; }
 .title {
-  font-size: 1rem; font-weight: 700; color: var(--white);
-  letter-spacing: -0.02em; line-height: 1.4;
+  font-size: var(--fs-body);
+  font-weight: 700; color: var(--white);
+  letter-spacing: -0.02em;
+  line-height: 1.4;
 }
 .title em { font-style: normal; color: var(--gold); }
-.sub { font-size: 0.875rem; font-weight: 300; color: rgba(255,255,255,0.38); line-height: 1.5; }
+.sub {
+  font-size: var(--fs-sm);
+  font-weight: 300; color: rgba(255,255,255,0.38);
+  line-height: 1.5;
+}
 
-/* ── Countdown ── */
 .countdown {
   display: flex; align-items: center; gap: 0;
   flex-shrink: 0;
 }
-
 .unitWrap { display: flex; align-items: center; gap: 0; }
-
-.unit { display: flex; flex-direction: column; align-items: center; gap: 6px; }
-
+.unit {
+  display: flex; flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
 .val {
   display: flex; align-items: center; justify-content: center;
   min-width: 56px; height: 56px;
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 10px;
-  font-size: 1.6rem; font-weight: 900; color: var(--white);
+  font-size: var(--fs-2xl);
+  font-weight: 900; color: var(--white);
   letter-spacing: -0.04em; line-height: 1;
   font-variant-numeric: tabular-nums;
 }
-
 .unitLabel {
-  font-size: 0.6875rem; font-weight: 600;
+  font-size: var(--fs-2xs);
+  font-weight: 600;
   color: rgba(255,255,255,0.3);
-  letter-spacing: 0.08em; text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .sep {
-  font-size: 1.4rem; font-weight: 900;
-  color: var(--gold); opacity: 0.7;
-  padding: 0 0.5rem;
-  padding-bottom: 20px; /* align with numbers vertically */
+  font-size: var(--fs-xl);
+  font-weight: 900;
+  color: var(--gold);
+  opacity: 0.7;
+  padding-inline: var(--space-2);
+  padding-block-end: 20px;
   line-height: 1;
 }
 
-/* ── CTA ── */
 .cta {
-  display: inline-flex; align-items: center; gap: 0.6rem;
+  display: inline-flex; align-items: center;
+  gap: var(--space-2);
   background: var(--gold); color: var(--dark);
-  padding: 0.9rem 1.75rem;
-  font-size: 1rem; font-weight: 700; border-radius: 100px;
+  padding-block: var(--space-3);
+  padding-inline: var(--space-6);
+  font-size: var(--fs-btn);
+  font-weight: 700;
+  border-radius: 100px;
   font-family: var(--font);
+  white-space: nowrap; flex-shrink: 0;
+  letter-spacing: -0.01em;
+  min-height: var(--tap);
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-  white-space: nowrap; flex-shrink: 0; letter-spacing: -0.01em;
 }
 .cta:hover {
   background: var(--gold2);
@@ -83,14 +106,8 @@
   box-shadow: 0 6px 20px rgba(201,150,60,0.4);
 }
 
-/* ── Responsive ── */
 @media (max-width: 900px) {
-  .inner { flex-wrap: wrap; justify-content: center; text-align: center; gap: 1.75rem; }
+  .inner { flex-wrap: wrap; justify-content: center; text-align: center; }
   .left { justify-content: center; flex: unset; width: 100%; }
   .cta { width: 100%; justify-content: center; }
-}
-
-@media (max-width: 480px) {
-  .val { min-width: 48px; height: 48px; font-size: 1.35rem; }
-  .sep { padding: 0 0.35rem; padding-bottom: 16px; font-size: 1.2rem; }
 }

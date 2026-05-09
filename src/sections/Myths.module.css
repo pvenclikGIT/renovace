@@ -1,24 +1,38 @@
-.section { background: var(--dark2); padding: var(--py) var(--px); }
-.inner { max-width: var(--max-w-tight); margin: 0 auto; }
+.section {
+  background: var(--dark2);
+  padding-block: var(--section-py);
+  padding-inline: var(--section-px);
+}
+.inner { max-width: var(--max-w-tight); margin-inline: auto; }
 
-.header { max-width: 640px; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+.header { max-width: 640px; margin-bottom: var(--space-8); }
 .tag {
-  display: inline-flex; align-items: center; gap: 0.6rem;
-  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--gold3);
-  background: rgba(201,150,60,0.15); padding: 0.42rem 1rem;
-  border-radius: 100px; margin-bottom: 1.25rem; width: fit-content;
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-size: var(--fs-2xs);
+  font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold3);
+  background: rgba(201,150,60,0.15);
+  padding-block: var(--space-2);
+  padding-inline: var(--space-4);
+  border-radius: 100px;
+  margin-bottom: var(--space-4);
+  width: fit-content;
 }
 .tagDot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
 .title {
-  font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 800; line-height: 1.08;
+  font-size: var(--fs-3xl);
+  font-weight: 800; line-height: var(--lh-tight);
   color: var(--white); letter-spacing: -0.04em;
-  text-wrap: balance; margin-bottom: 1rem;
+  text-wrap: balance; margin-bottom: var(--space-3);
 }
 .title em { font-style: normal; color: var(--gold); }
-.lead { font-size: clamp(1rem, 1.4vw, 1.125rem); font-weight: 300; color: rgba(255,255,255,0.45); line-height: 1.7; }
+.lead {
+  font-size: var(--fs-lead);
+  font-weight: 300; color: rgba(255,255,255,0.45);
+  line-height: var(--lh-relaxed);
+  text-wrap: pretty;
+}
 
-/* ── Grid ── */
 .grid { display: flex; flex-direction: column; gap: 2px; }
 
 .item {
@@ -26,7 +40,8 @@
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.07);
   border-radius: var(--r-lg);
-  padding: 1.75rem 2rem;
+  padding-block: var(--space-6);
+  padding-inline: var(--space-7);
   cursor: pointer;
   transition: background 0.25s, border-color 0.25s;
 }
@@ -36,63 +51,94 @@
   border-color: rgba(201,150,60,0.3) !important;
 }
 
-/* Big background number */
 .num {
-  position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%);
-  font-size: 5rem; font-weight: 900; color: rgba(255,255,255,0.04);
-  letter-spacing: -0.06em; line-height: 1; pointer-events: none;
+  position: absolute;
+  inset-inline-end: var(--space-5);
+  top: 50%; transform: translateY(-50%);
+  font-size: var(--fs-4xl);
+  font-weight: 900; color: rgba(255,255,255,0.04);
+  letter-spacing: -0.06em; line-height: 1;
+  pointer-events: none;
   transition: color 0.25s;
   user-select: none;
 }
 .itemOpen .num { color: rgba(201,150,60,0.08); }
 
-/* Header row */
-.itemHeader { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; }
-.mythLabel { display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 0; }
+.itemHeader {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: var(--space-5);
+}
+.mythLabel {
+  display: flex; align-items: center;
+  gap: var(--space-3);
+  flex: 1; min-width: 0;
+}
 
 .mythBadge {
-  display: inline-flex; align-items: center; gap: 0.35rem;
-  font-size: 0.6875rem; font-weight: 800; letter-spacing: 0.1em;
-  text-transform: uppercase; background: rgba(220,38,38,0.15);
-  color: #F87171; padding: 0.25rem 0.7rem; border-radius: 100px;
-  white-space: nowrap; flex-shrink: 0; border: 1px solid rgba(220,38,38,0.2);
+  display: inline-flex; align-items: center;
+  gap: var(--space-1);
+  font-size: var(--fs-2xs);
+  font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+  background: rgba(220,38,38,0.15);
+  color: #F87171;
+  padding-block: var(--space-1);
+  padding-inline: var(--space-2);
+  border-radius: 100px;
+  white-space: nowrap; flex-shrink: 0;
+  border: 1px solid rgba(220,38,38,0.2);
 }
 .mythX { font-size: 0.8rem; }
 
 .mythText {
-  font-size: 1rem; font-weight: 600; color: rgba(255,255,255,0.85);
-  line-height: 1.35; letter-spacing: -0.01em;
+  font-size: var(--fs-body);
+  font-weight: 600; color: rgba(255,255,255,0.85);
+  line-height: var(--lh-snug);
+  letter-spacing: -0.01em;
+  text-wrap: balance;
 }
 
-/* Toggle button */
 .toggle {
-  width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0;
-  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1);
+  width: 38px; height: 38px;
+  border-radius: 50%; flex-shrink: 0;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
   display: flex; align-items: center; justify-content: center;
   color: rgba(255,255,255,0.4);
   transition: background 0.2s, color 0.2s, transform 0.3s var(--ease), border-color 0.2s;
 }
 .itemOpen .toggle {
-  background: var(--gold); color: var(--dark); border-color: var(--gold);
+  background: var(--gold); color: var(--dark);
+  border-color: var(--gold);
   transform: rotate(45deg);
 }
 
-/* Truth */
-.truth { padding: 1.25rem 0 0.25rem; margin-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.08); }
+.truth {
+  padding-top: var(--space-4);
+  margin-top: var(--space-4);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
 .truthBadge {
-  display: inline-flex; align-items: center; gap: 0.35rem;
-  font-size: 0.6875rem; font-weight: 800; letter-spacing: 0.1em;
-  text-transform: uppercase; background: rgba(34,197,94,0.12);
-  color: #4ADE80; padding: 0.25rem 0.7rem; border-radius: 100px;
-  margin-bottom: 0.85rem; border: 1px solid rgba(34,197,94,0.2);
+  display: inline-flex; align-items: center;
+  gap: var(--space-1);
+  font-size: var(--fs-2xs);
+  font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+  background: rgba(34,197,94,0.12);
+  color: #4ADE80;
+  padding-block: var(--space-1);
+  padding-inline: var(--space-2);
+  border-radius: 100px;
+  margin-bottom: var(--space-3);
+  border: 1px solid rgba(34,197,94,0.2);
 }
 .truthCheck { font-size: 0.8rem; }
-.truth p { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.6); line-height: 1.75; }
+.truth p {
+  font-size: var(--fs-body);
+  font-weight: 300; color: rgba(255,255,255,0.6);
+  line-height: var(--lh-relaxed);
+  text-wrap: pretty;
+}
 
 @media (max-width: 640px) {
-  .item { padding: 1.4rem 1.25rem; }
-  .num { font-size: 3.5rem; right: 1rem; }
-  .mythLabel { gap: 0.75rem; flex-wrap: wrap; }
-  .mythText { font-size: 0.95rem; }
+  .mythLabel { flex-wrap: wrap; }
   .toggle { width: var(--tap); height: var(--tap); }
 }

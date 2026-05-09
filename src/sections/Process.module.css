@@ -1,90 +1,137 @@
-.section { background: var(--white); padding: var(--py) var(--px); }
-.inner { max-width: var(--max-w-tight); margin: 0 auto; }
-.header { margin-bottom: clamp(2.5rem, 5vw, 4rem); }
-.grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; }
+.section {
+  background: var(--white);
+  padding-block: var(--section-py);
+  padding-inline: var(--section-px);
+}
+.inner { max-width: var(--max-w-tight); margin-inline: auto; }
+.header { margin-bottom: var(--space-8); }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+}
 
 .step {
-  background: var(--bg); border-radius: var(--r-lg);
-  padding: 2.25rem 1.75rem 2rem; position: relative; overflow: hidden;
+  background: var(--bg);
+  border-radius: var(--r-lg);
+  padding-block: var(--space-7) var(--space-6);
+  padding-inline: var(--space-6);
+  position: relative; overflow: hidden;
   display: flex; flex-direction: column;
-  transition: transform 0.3s var(--ease), box-shadow 0.3s; cursor: default;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s;
+  cursor: default;
 }
-.step:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(23,20,18,0.07); }
+.step:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+
 .stepAccent {
-  height: 2px; background: linear-gradient(90deg, var(--gold), var(--gold3));
-  margin: 1.1rem 0 1.25rem; border-radius: 1px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--gold3));
+  margin-block: var(--space-4) var(--space-5);
+  border-radius: 1px;
   transform: scaleX(0); transform-origin: left;
   transition: transform 0.45s var(--ease);
 }
 .step:hover .stepAccent { transform: scaleX(1); }
+
 .stepTop {
   display: flex; justify-content: space-between; align-items: center;
-  gap: 0.75rem;
+  gap: var(--space-3);
 }
 .num {
-  font-size: 2.8rem; font-weight: 900; color: var(--bg4);
+  font-size: var(--fs-4xl);
+  font-weight: 900;
+  color: var(--bg4);
   line-height: 1; letter-spacing: -0.05em;
   transition: color 0.3s; user-select: none;
 }
 .step:hover .num { color: var(--gold-pale2); }
+
 .dayBadge {
-  font-size: 0.7rem; font-weight: 800; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--gold);
+  font-size: var(--fs-2xs);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
   background: var(--gold-pale);
-  padding: 0.32rem 0.7rem; border-radius: 100px;
+  padding-block: var(--space-1);
+  padding-inline: var(--space-3);
+  border-radius: 100px;
   white-space: nowrap; flex-shrink: 0;
 }
+
 .title {
-  font-size: 1.05rem; font-weight: 800; color: var(--dark);
-  margin-bottom: 0.6rem; letter-spacing: -0.025em;
-  text-wrap: balance; line-height: 1.25;
+  font-size: var(--fs-md);
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: var(--space-2);
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+  line-height: var(--lh-snug);
 }
 .text {
-  font-size: 0.9375rem; font-weight: 300; color: var(--mid);
-  line-height: 1.65; flex: 1;
+  font-size: var(--fs-body);
+  font-weight: 300;
+  color: var(--mid);
+  line-height: var(--lh-base);
+  flex: 1;
+  text-wrap: pretty;
 }
+
 .detailRow {
-  display: flex; align-items: center; gap: 0.5rem;
-  margin-top: 1.25rem; padding-top: 1rem;
+  display: flex; align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+  padding-top: var(--space-3);
   border-top: 1px solid var(--bg3);
 }
 .detailDot {
-  width: 5px; height: 5px; border-radius: 50%;
-  background: var(--gold); flex-shrink: 0;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
 }
 .detail {
-  font-size: 0.78rem; font-weight: 600; color: var(--mid);
-  letter-spacing: 0.02em; line-height: 1.4;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--mid);
+  letter-spacing: 0.02em;
+  line-height: 1.4;
 }
 
 .cta {
-  margin-top: 3rem; padding: 2rem 2.5rem;
-  background: var(--dark); border-radius: var(--r-lg);
-  display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;
+  margin-top: var(--space-8);
+  padding-block: var(--space-6);
+  padding-inline: var(--space-7);
+  background: var(--dark);
+  border-radius: var(--r-lg);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--space-6);
+  flex-wrap: wrap;
 }
-.ctaText { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.6); }
+.ctaText {
+  font-size: var(--fs-body);
+  font-weight: 300;
+  color: rgba(255,255,255,0.6);
+}
 .ctaText strong { color: white; font-weight: 700; }
 .ctaBtn {
-  display: inline-flex; align-items: center; gap: 0.6rem;
-  background: var(--gold); color: white; padding: 0.9rem 1.75rem;
-  font-size: 1rem; font-weight: 700; border-radius: 100px; white-space: nowrap;
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  background: var(--gold); color: white;
+  padding-block: var(--space-3);
+  padding-inline: var(--space-6);
+  font-size: var(--fs-btn);
+  font-weight: 700;
+  border-radius: 100px;
+  white-space: nowrap;
+  min-height: var(--tap);
   transition: background 0.2s, transform 0.2s;
 }
 .ctaBtn:hover { background: var(--gold2); transform: translateY(-1px); }
-@media (max-width: 1100px) {
-  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
-  .step { padding: 2rem 1.5rem 1.85rem; }
-  .num { font-size: 2.4rem; }
-}
-@media (max-width: 720px) {
-  .step { padding: 1.75rem 1.4rem 1.6rem; }
-  .num { font-size: 2.2rem; }
-  .dayBadge { font-size: 0.65rem; padding: 0.28rem 0.6rem; }
-  .stepAccent { margin: 0.95rem 0 1.1rem; }
-  .detailRow { margin-top: 1.1rem; padding-top: 0.9rem; }
-}
+
+/* Structural breakpoints only */
+@media (max-width: 1100px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) {
-  .grid { grid-template-columns: 1fr; gap: 1rem; }
-  .cta { flex-direction: column; text-align: center; gap: 1.25rem; padding: 1.5rem; }
+  .grid { grid-template-columns: 1fr; }
+  .cta { flex-direction: column; text-align: center; }
   .ctaBtn { width: 100%; justify-content: center; }
 }

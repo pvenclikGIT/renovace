@@ -1,14 +1,32 @@
-.section { background: var(--bg); padding: var(--py) var(--px); }
-.section > * { max-width: var(--max-w); margin-left: auto; margin-right: auto; }
-.header { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; margin-bottom: clamp(2rem, 4vw, 3rem); flex-wrap: wrap; }
-.cta {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  font-size: 1rem; color: var(--dark); font-weight: 500;
-  background: var(--white); padding: 0.7rem 1.4rem;
-  border-radius: 100px; border: 1.5px solid var(--bg3);
-  transition: border-color 0.2s, transform 0.2s, gap 0.2s; white-space: nowrap;
+.section {
+  background: var(--bg);
+  padding-block: var(--section-py);
+  padding-inline: var(--section-px);
 }
-.cta:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-1px); gap: 0.75rem; }
+.section > * { max-width: var(--max-w); margin-inline: auto; }
+.header {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.cta {
+  display: inline-flex; align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-btn);
+  color: var(--dark);
+  font-weight: 500;
+  background: var(--white);
+  padding-block: var(--space-2);
+  padding-inline: var(--space-5);
+  border-radius: 100px;
+  border: 1.5px solid var(--bg3);
+  transition: border-color 0.2s, transform 0.2s, gap 0.2s;
+  white-space: nowrap;
+  min-height: var(--tap);
+}
+.cta:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-1px); gap: var(--space-3); }
 
 .grid {
   display: grid;
@@ -18,7 +36,8 @@
 }
 .item {
   position: relative; overflow: hidden;
-  border-radius: var(--r); background: var(--bg2);
+  border-radius: var(--r);
+  background: var(--bg2);
   cursor: pointer;
 }
 .large { grid-column: span 6; grid-row: span 2; }
@@ -27,51 +46,74 @@
 .half { grid-column: span 6; }
 
 .img {
-  width: 100%; height: 100%; object-fit: cover; display: block;
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
   transition: transform 0.6s var(--ease);
 }
 .item:hover .img { transform: scale(1.05); }
 
 .overlay {
-  position: absolute; bottom: 0; left: 0; right: 0;
-  padding: 2.5rem 1.25rem 1.25rem;
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline: 0;
+  padding-block: var(--space-7) var(--space-3);
+  padding-inline: var(--space-3);
   background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 100%);
   opacity: 0; transform: translateY(6px);
   transition: opacity 0.3s, transform 0.3s var(--ease);
 }
 .item:hover .overlay { opacity: 1; transform: translateY(0); }
-.overlayLabel { display: block; font-family: var(--font); font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 0.15rem; }
-.overlaySub { font-size: 0.8125rem; color: var(--gold3); }
+.overlayLabel {
+  display: block;
+  font-family: var(--font);
+  font-size: var(--fs-body);
+  font-weight: 700; color: var(--white);
+  margin-bottom: 0.15rem;
+}
+.overlaySub {
+  font-size: var(--fs-sm);
+  color: var(--gold3);
+}
 
 /* LIGHTBOX */
 .lightbox {
   position: fixed; inset: 0; z-index: 500;
   background: rgba(0,0,0,0.93);
   display: flex; align-items: center; justify-content: center;
-  padding: 2rem;
+  padding: var(--space-5);
 }
 .lbClose {
-  position: absolute; top: 1.5rem; right: 1.5rem;
+  position: absolute;
+  inset-block-start: var(--space-4);
+  inset-inline-end: var(--space-4);
   background: rgba(255,255,255,0.1); border: none;
-  color: white; width: 44px; height: 44px; border-radius: 50%;
+  color: white;
+  width: 44px; height: 44px;
+  border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  cursor: pointer; transition: background 0.2s;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 .lbClose:hover { background: rgba(255,255,255,0.2); }
 .lbNav {
-  position: absolute; top: 50%; transform: translateY(-50%);
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
   background: rgba(255,255,255,0.1); border: none;
-  color: white; width: 52px; height: 52px; border-radius: 50%;
+  color: white;
+  width: 52px; height: 52px;
+  border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  cursor: pointer; transition: background 0.2s; z-index: 10;
+  cursor: pointer;
+  transition: background 0.2s; z-index: 10;
 }
 .lbNav:hover { background: rgba(201,150,60,0.5); }
-.lbPrev { left: 1.5rem; }
-.lbNext { right: 1.5rem; }
+.lbPrev { inset-inline-start: var(--space-4); }
+.lbNext { inset-inline-end: var(--space-4); }
 .lbImgWrap {
   max-width: 90vw; max-height: 85vh;
   display: flex; flex-direction: column; align-items: center;
-  border-radius: var(--r-lg); overflow: hidden;
+  border-radius: var(--r-lg);
+  overflow: hidden;
 }
 .lbImg {
   max-width: 100%; max-height: 75vh;
@@ -80,26 +122,37 @@
 }
 .lbCaption {
   background: rgba(255,255,255,0.07);
-  width: 100%; padding: 0.85rem 1.25rem;
+  width: 100%;
+  padding-block: var(--space-3);
+  padding-inline: var(--space-4);
   display: flex; align-items: center; justify-content: space-between;
 }
-.lbCaption span { font-family: var(--font); font-size: 1rem; font-weight: 600; color: white; }
-.lbCaption small { font-size: 0.875rem; color: var(--gold3); }
+.lbCaption span {
+  font-family: var(--font);
+  font-size: var(--fs-body);
+  font-weight: 600; color: white;
+}
+.lbCaption small {
+  font-size: var(--fs-sm);
+  color: var(--gold3);
+}
 
 @media (max-width: 900px) {
-  .grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 42vw; gap: 8px; }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 42vw;
+    gap: 8px;
+  }
   .large { grid-column: span 2; grid-row: span 1; }
-  .medium { grid-column: span 1; }
-  .small { grid-column: span 1; }
+  .medium, .small { grid-column: span 1; }
   .half { grid-column: span 2; }
-  .lbPrev { left: 0.5rem; }
-  .lbNext { right: 0.5rem; }
+  .lbPrev { inset-inline-start: var(--space-2); }
+  .lbNext { inset-inline-end: var(--space-2); }
 }
 @media (max-width: 560px) {
   .grid { grid-template-columns: 1fr; grid-auto-rows: 60vw; gap: 6px; }
   .large, .medium, .small, .half { grid-column: span 1; }
   .header { flex-direction: column; align-items: flex-start; }
-  .lbCaption { flex-direction: column; gap: 0.25rem; align-items: flex-start; }
-  .lbClose { top: 1rem; right: 1rem; }
+  .lbCaption { flex-direction: column; gap: var(--space-1); align-items: flex-start; }
   .lbNav { width: 44px; height: 44px; }
 }

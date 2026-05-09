@@ -1,24 +1,116 @@
-.section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); }
-.visual { position: relative; background: var(--dark); overflow: hidden; min-height: 600px; }
-.visual img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.65; }
-.visualOverlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.1) 55%, transparent 100%); }
-.quoteWrap { position: absolute; bottom: 0; left: 0; right: 0; padding: 2.5rem 2.5rem 3rem; }
-.quoteIcon { margin-bottom: 1rem; display: block; }
-.quote { font-size: clamp(1rem, 1.8vw, 1.25rem); font-weight: 600; color: var(--white); line-height: 1.5; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
-.quoteAuthor { display: flex; align-items: center; gap: 0.85rem; }
-.quoteAvatar { width: 40px; height: 40px; border-radius: 50%; background: var(--gold); display: flex; align-items: center; justify-content: center; font-size: 0.875rem; font-weight: 900; color: white; flex-shrink: 0; }
-.quoteName { font-size: 1rem; font-weight: 700; color: white; }
-.quoteLoc { font-size: 0.8125rem; font-weight: 400; color: rgba(255,255,255,0.45); margin-top: 0.15rem; }
-.content { padding: var(--py) var(--px); background: var(--white); }
-.features { margin-top: 2.5rem; display: flex; flex-direction: column; }
-.feature { display: flex; gap: 1.25rem; align-items: flex-start; padding: 1.4rem 0; border-bottom: 1px solid var(--bg2); }
+.section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+}
+
+.visual {
+  position: relative;
+  background: var(--dark);
+  overflow: hidden;
+  min-height: 600px;
+}
+.visual img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  opacity: 0.65;
+}
+.visualOverlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.1) 55%, transparent 100%);
+}
+
+.quoteWrap {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline: 0;
+  padding: var(--space-7);
+}
+.quoteIcon { margin-bottom: var(--space-3); display: block; }
+.quote {
+  font-size: var(--fs-xl);
+  font-weight: 600;
+  color: var(--white);
+  line-height: var(--lh-snug);
+  margin-bottom: var(--space-5);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+.quoteAuthor {
+  display: flex; align-items: center;
+  gap: var(--space-3);
+}
+.quoteAvatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  font-size: var(--fs-sm);
+  font-weight: 900;
+  color: white;
+  flex-shrink: 0;
+}
+.quoteName {
+  font-size: var(--fs-body);
+  font-weight: 700;
+  color: white;
+}
+.quoteLoc {
+  font-size: var(--fs-sm);
+  font-weight: 400;
+  color: rgba(255,255,255,0.45);
+  margin-top: 0.15rem;
+}
+
+.content {
+  padding-block: var(--section-py);
+  padding-inline: var(--section-px);
+  background: var(--white);
+}
+
+.features {
+  margin-top: var(--space-7);
+  display: flex; flex-direction: column;
+}
+.feature {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  padding-block: var(--space-5);
+  border-bottom: 1px solid var(--bg2);
+}
 .feature:first-child { border-top: 1px solid var(--bg2); }
-.iconWrap { width: 44px; height: 44px; border-radius: var(--r); background: var(--gold-pale); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--gold); transition: background 0.25s, transform 0.25s, color 0.25s; }
-.feature:hover .iconWrap { background: var(--gold); color: white; transform: scale(1.08); }
-.featureTitle { font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.28rem; letter-spacing: -0.02em; }
-.featureText { font-size: 1rem; font-weight: 300; color: var(--mid); line-height: 1.68; }
+
+.iconWrap {
+  width: 44px; height: 44px;
+  border-radius: var(--r);
+  background: var(--gold-pale);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  color: var(--gold);
+  transition: background 0.25s, transform 0.25s, color 0.25s;
+}
+.feature:hover .iconWrap {
+  background: var(--gold); color: white;
+  transform: scale(1.08);
+}
+
+.featureTitle {
+  font-size: var(--fs-body);
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 0.28rem;
+  letter-spacing: -0.02em;
+}
+.featureText {
+  font-size: var(--fs-body);
+  font-weight: 300;
+  color: var(--mid);
+  line-height: var(--lh-base);
+  text-wrap: pretty;
+}
+
 @media (max-width: 1060px) {
   .section { grid-template-columns: 1fr; }
   .visual { min-height: 55vw; }
-  .content { max-width: 800px; margin-left: auto; margin-right: auto; }
+  .content { max-width: 800px; margin-inline: auto; }
 }
