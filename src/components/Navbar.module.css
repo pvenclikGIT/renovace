@@ -2,14 +2,14 @@
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
   height: var(--nav-h); padding: 0 var(--px);
   display: flex; align-items: center; justify-content: space-between;
-  background: rgba(245,243,240,0.88);
-  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  background: rgba(245,243,240,0.92);
+  backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 .scrolled {
-  border-bottom-color: rgba(201,150,60,0.15);
-  box-shadow: 0 2px 28px rgba(23,20,18,0.06);
+  border-bottom-color: rgba(201,150,60,0.18);
+  box-shadow: 0 2px 32px rgba(23,20,18,0.08);
 }
 
 .logo {
@@ -18,15 +18,15 @@
   flex-shrink: 0;
 }
 
-.links { display: flex; align-items: center; gap: 1.75rem; list-style: none; }
+.links { display: flex; align-items: center; gap: 2rem; list-style: none; }
 .links a {
-  font-size: 0.875rem; font-weight: 500; color: var(--mid);
+  font-size: 1rem; font-weight: 500; color: var(--dark2);
   letter-spacing: -0.01em; transition: color 0.2s; position: relative;
   white-space: nowrap;
 }
 .links a::after {
-  content: ''; position: absolute; bottom: -3px; left: 0;
-  width: 0; height: 1.5px; background: var(--gold);
+  content: ''; position: absolute; bottom: -4px; left: 0;
+  width: 0; height: 2px; background: var(--gold); border-radius: 2px;
   transition: width 0.3s var(--ease);
 }
 .links a:hover { color: var(--dark); }
@@ -34,13 +34,17 @@
 
 .cta {
   background: var(--dark) !important; color: var(--white) !important;
-  padding: 0.6rem 1.25rem !important; font-size: 0.875rem !important;
-  font-weight: 700 !important; border-radius: 100px;
-  transition: background 0.25s, transform 0.2s !important;
-  white-space: nowrap;
+  padding: 0.65rem 1.4rem !important; font-size: 1rem !important;
+  font-weight: 600 !important; border-radius: 100px;
+  transition: background 0.25s, transform 0.2s, box-shadow 0.25s !important;
+  white-space: nowrap; letter-spacing: -0.01em;
 }
 .cta::after { display: none !important; }
-.cta:hover { background: var(--gold) !important; transform: translateY(-1px) !important; }
+.cta:hover {
+  background: var(--gold) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 20px rgba(201,150,60,0.35) !important;
+}
 
 .hamburger { display: none; background: none; border: none; color: var(--dark); padding: 4px; }
 
