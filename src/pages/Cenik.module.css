@@ -1,5 +1,6 @@
 /* ── Page ── */
-.page { background: var(--bg); min-height: 100vh; }
+.page { background: var(--bg); min-height: 100svh; }
+@supports (min-height: 100dvh) { .page { min-height: 100dvh; } }
 
 /* ── Shared ── */
 .inner { max-width: var(--max-w-tight); margin: 0 auto; }

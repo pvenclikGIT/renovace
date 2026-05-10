@@ -4,7 +4,8 @@
   text-only (no image right column).
 */
 
-.page { background: var(--bg); min-height: 100vh; }
+.page { background: var(--bg); min-height: 100svh; }
+@supports (min-height: 100dvh) { .page { min-height: 100dvh; } }
 
 /* ── HERO ──────────────────────────────────────────────────── */
 .hero {

@@ -4,7 +4,8 @@
   pull quotes, sticky TOC sidebar, reading progress bar.
 */
 
-.page { background: var(--bg); min-height: 100vh; }
+.page { background: var(--bg); min-height: 100svh; }
+@supports (min-height: 100dvh) { .page { min-height: 100dvh; } }
 
 /* ─────────────────────────────────────────────
    READING PROGRESS BAR (article detail)
