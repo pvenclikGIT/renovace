@@ -131,7 +131,7 @@
 
 .featureTitle {
   font-family: var(--font-display);
-  font-size: var(--fs-lg);
+  font-size: var(--fs-xl);
   font-weight: 500;
   color: var(--dark);
   margin-bottom: 0.28rem;
