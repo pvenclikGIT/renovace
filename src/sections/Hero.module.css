@@ -169,7 +169,7 @@
   font-weight: 500;
   line-height: 1;
   color: var(--dark);
-  letter-spacing: -0.04em;
+  letter-spacing: -0.035em;
   white-space: nowrap;
   font-feature-settings: "lnum";
 }

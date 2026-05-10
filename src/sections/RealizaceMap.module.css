@@ -130,11 +130,13 @@
   margin-bottom: var(--space-1);
 }
 .panelTitle {
-  font-size: var(--fs-xl);
-  font-weight: 800; color: var(--white);
-  letter-spacing: -0.03em; line-height: 1.15;
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: 500; color: var(--white);
+  letter-spacing: -0.025em; line-height: 1.05;
   margin-bottom: var(--space-4);
   text-wrap: balance;
+  font-optical-sizing: auto;
 }
 
 .panelCountRow {
@@ -143,9 +145,11 @@
   margin-bottom: var(--space-4);
 }
 .panelNum {
+  font-family: var(--font-display);
   font-size: var(--fs-4xl);
-  font-weight: 900; color: var(--gold);
-  letter-spacing: -0.06em; line-height: 1;
+  font-weight: 500; color: var(--gold);
+  letter-spacing: -0.04em; line-height: 1;
+  font-feature-settings: "lnum";
 }
 .panelCountMeta { display: flex; flex-direction: column; gap: 1px; }
 .panelCountWord {
@@ -183,9 +187,11 @@
 }
 .panelStatDiv { width: 1px; background: rgba(255,255,255,0.07); }
 .panelStatVal {
-  font-size: var(--fs-md);
-  font-weight: 900; color: var(--white);
-  letter-spacing: -0.03em;
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 500; color: var(--white);
+  letter-spacing: -0.025em;
+  font-feature-settings: "lnum";
 }
 .panelStatLabel {
   font-size: var(--fs-2xs);
@@ -278,9 +284,11 @@
   min-width: 0;
 }
 .emptyZoneNum {
+  font-family: var(--font-display);
   font-size: var(--fs-2xl);
-  font-weight: 900; color: var(--gold);
-  letter-spacing: -0.04em;
+  font-weight: 500; color: var(--gold);
+  letter-spacing: -0.035em;
+  font-feature-settings: "lnum";
 }
 .emptyZoneLabel {
   font-size: var(--fs-2xs);
@@ -310,9 +318,11 @@
   border-color: rgba(201,150,60,0.3);
 }
 .statNum {
+  font-family: var(--font-display);
   font-size: var(--fs-2xl);
-  font-weight: 900; color: var(--white);
-  letter-spacing: -0.05em;
+  font-weight: 500; color: var(--white);
+  letter-spacing: -0.035em;
+  font-feature-settings: "lnum";
 }
 .statLabel {
   font-size: var(--fs-sm);

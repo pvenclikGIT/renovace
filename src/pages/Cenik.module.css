@@ -171,9 +171,19 @@
   display: flex; flex-direction: column; gap: var(--space-1);
   max-width: calc(100% - 2rem);
 }
-.heroBadgeLabel { font-size: var(--fs-xs); font-weight: 700; color: var(--light); letter-spacing: 0.08em; text-transform: uppercase; }
-.heroBadgeNum   { font-size: var(--fs-xl); font-weight: 800; color: var(--dark); letter-spacing: -0.03em; line-height: 1; }
-.heroBadgeSub   { font-size: var(--fs-xs); color: var(--light); }
+.heroBadgeLabel {
+  font-family: var(--font-body);
+  font-size: var(--fs-2xs); font-weight: 600;
+  color: var(--mid);
+  letter-spacing: 0.18em; text-transform: uppercase;
+}
+.heroBadgeNum {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl); font-weight: 500;
+  color: var(--dark); letter-spacing: -0.03em; line-height: 1;
+  font-feature-settings: "lnum";
+}
+.heroBadgeSub { font-size: var(--fs-xs); color: var(--light); }
 
 /* ─────────────────────────────────────────────────────────────
    SROVNANI
@@ -272,7 +282,12 @@
 .tierHighlight .tierTagline { color: var(--light); }
 
 .tierRateRow { display: flex; align-items: baseline; gap: 0.4rem; margin-bottom: 0.6rem; flex-wrap: wrap; }
-.tierNum { font-size: var(--fs-2xl); font-weight: 900; color: var(--dark); letter-spacing: -0.04em; line-height: 1; }
+.tierNum {
+  font-family: var(--font-display);
+  font-size: var(--fs-3xl); font-weight: 500; color: var(--dark);
+  letter-spacing: -0.035em; line-height: 1;
+  font-feature-settings: "lnum";
+}
 .tierUnit { font-size: var(--fs-sm); color: var(--light); align-self: center; }
 .tierHighlight .tierNum  { color: var(--dark); }
 .tierHighlight .tierUnit { color: var(--mid); }
@@ -384,7 +399,12 @@
 }
 .matPriceLabel { font-size: var(--fs-xs); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 0.4rem; }
 .matPriceVal { display: flex; align-items: baseline; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0; }
-.matPriceNum  { font-size: var(--fs-3xl); font-weight: 900; color: var(--white); letter-spacing: -0.04em; line-height: 1; }
+.matPriceNum {
+  font-family: var(--font-display);
+  font-size: var(--fs-3xl); font-weight: 500; color: var(--white);
+  letter-spacing: -0.035em; line-height: 1;
+  font-feature-settings: "lnum";
+}
 .matPriceUnit { font-size: var(--fs-sm); color: rgba(255,255,255,0.35); align-self: center; }
 .matPriceDivider { height: 1px; background: rgba(255,255,255,0.08); margin: 1.25rem 0; }
 .matPriceNote { font-size: var(--fs-xs); color: rgba(255,255,255,0.4); line-height: 1.6; margin-bottom: 1.5rem; }
@@ -498,12 +518,14 @@
 }
 
 .typoPrice {
+  font-family: var(--font-display);
   font-size: var(--fs-2xl);
-  font-weight: 900;
-  color: var(--gold);
+  font-weight: 500;
+  color: var(--dark);
   letter-spacing: -0.03em;
   line-height: 1;
   white-space: nowrap;
+  font-feature-settings: "lnum";
 }
 
 .typoPriceUnit {
@@ -563,7 +585,12 @@
   padding: 1.35rem 2rem; background: var(--dark);
 }
 .calcTotalLabel { font-size: var(--fs-sm); font-weight: 500; color: rgba(255,255,255,0.5); }
-.calcTotalNum   { font-size: var(--fs-2xl); font-weight: 800; color: var(--gold); letter-spacing: -0.03em; }
+.calcTotalNum {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl); font-weight: 500; color: var(--gold);
+  letter-spacing: -0.035em;
+  font-feature-settings: "lnum";
+}
 .calcNote { padding: 1.1rem 2rem; font-size: var(--fs-xs); color: var(--light); line-height: 1.6; }
 .calcNote a { color: var(--gold); }
 .calcNote a:hover { text-decoration: underline; }
