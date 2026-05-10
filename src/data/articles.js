@@ -491,6 +491,70 @@ articles.push({
 })
 
 /* ─────────────────────────────────────────────────────────────
+   12. RADY — Sanita
+   ───────────────────────────────────────────────────────────── */
+articles.push({
+  slug: 'sanita-a-sterka-vany-sprchy-baterie',
+  category: 'rady',
+  title: 'Sanita a stěrka: na co myslet u vany, sprchy a baterií',
+  lead: 'Stěrka sama je půlka řešení. Druhá půlka je sanita — vana, sprcha, baterie. Tady je, co řešíme s každým klientem před realizací.',
+  coverImage: '/renovace/images/podlaha-09.jpg',
+  coverAlt: 'Stěrková koupelna s rohovou vanou',
+  author: PETR,
+  date: '2025-12-08',
+  readTime: 4,
+  blocks: [
+    { type: 'lead', text: 'Klienti se často soustředí jen na barvu a strukturu stěrky. Sanita ale zásadně ovlivňuje, jestli celé řešení bude vodotěsné a estetické. Tady jsou věci, na které se ptáme nejdřív.' },
+
+    { type: 'heading', level: 2, id: 'vana', text: 'Vana — kontakt se stěrkou' },
+    { type: 'paragraph', text: 'Mezi vanou a stěnou musí být silikonový pásek po celém obvodu. Bez něj voda časem začne podtékat a podlézat za stěrku. Volíme silikon v barvě stěrky, takže opticky splývá. U starých van často musíme vanu mírně přetěsnit, abychom mohli stěrku dotáhnout přesně k jejímu okraji.' },
+
+    { type: 'heading', level: 2, id: 'sprcha', text: 'Sprchový kout' },
+    { type: 'paragraph', text: 'Pokud máte sprchový kout zděný (z desek), stěrka jde přes celou plochu včetně sedátka, polic a niky. To je <strong>nejhezčí řešení</strong>, protože sprcha pak vypadá jako vyříznutá z jednoho kusu. Pokud máte sprchový žlab v podlaze, vyžadujeme spádovou betonovou mazaninu se správným spádem k odtoku — bez toho se voda začne hromadit a stěrka se neradí.' },
+
+    { type: 'heading', level: 2, id: 'baterie', text: 'Baterie a otvory' },
+    { type: 'paragraph', text: 'Otvory pro baterie, sprchovou tyč a věšáky musíme vědět dopředu. Vrtání po realizaci je možné, ale vždy z toho zůstane drobná oblast, kterou musíme přetmelit. Lepší je dát si na začátku 30 minut a označit přesné body. Zlatá pravidla:' },
+    { type: 'list', items: [
+      'Sprchová baterie 110 cm nad podlahou (nebo dle nového standardu 120 cm)',
+      'Umyvadlová baterie 95 cm nad podlahou',
+      'Vývod sprchové hlavice 200 až 220 cm — záleží na výšce uživatelů',
+      'Háčky 165 cm nad podlahou (komfort dospělého člověka)',
+    ]},
+
+    { type: 'callout', kind: 'tip', title: 'Mokré tahy a baterie', text: 'Pokud zvažujete „chytrou" digitální baterii, sdělte to dopředu. Vyžaduje rozvod elektřiny pod stěrku a to je jediná věc, která musí být hotová <strong>před</strong> aplikací stěrky.' },
+  ],
+})
+
+/* ─────────────────────────────────────────────────────────────
+   13. MATERIÁLY — Stěrka v kuchyni
+   ───────────────────────────────────────────────────────────── */
+articles.push({
+  slug: 'cementova-sterka-v-kuchyni',
+  category: 'materialy',
+  title: 'Stěrka v kuchyni: pracovní deska, záda, podlaha — co dává smysl',
+  lead: 'Klienti, kteří dělají koupelnu se stěrkou, se často ptají: „A v kuchyni by to šlo?" Ano, ale jinak. Stěrka v kuchyni má specifické pravidla.',
+  coverImage: '/renovace/images/podlaha-03.jpg',
+  coverAlt: 'Stěrkový povrch v kuchyni',
+  author: PETR,
+  date: '2025-11-25',
+  readTime: 3,
+  blocks: [
+    { type: 'lead', text: 'Stěrka funguje skvěle v koupelně, ale kuchyně je trochu jiný svět. Jiné chemické zatížení (olej, ocet, citrón), jiné mechanické nároky (krájení, řezání, žhavá pánev). Tady je, kam stěrku v kuchyni posíláme a kam ne.' },
+
+    { type: 'heading', level: 2, id: 'zada', text: 'Stěna za pracovní deskou („záda kuchyně")' },
+    { type: 'paragraph', text: 'Klasická volba pro klienty, kterým se nelíbí typický skleněný splash-back nebo bílé kachličky. Epoxidová stěrka v matném provedení odpovídá kuchyni perfektně — voděodolná, nehoří, snadno se utírá od mastnoty. Cena 3 750 Kč/m² s prací.' },
+
+    { type: 'heading', level: 2, id: 'podlaha', text: 'Podlaha kuchyně' },
+    { type: 'paragraph', text: 'Funguje, pokud správně zvolíte materiál. <strong>Pryskyřičnou stěrku</strong> doporučujeme — pružná, snese teplotní změny, snadno se čistí, kombinuje se s podlahovým topením. Cementová stěrka <strong>není vhodná</strong> kvůli kyselinám (ocet, citrón) — postupně vytváří matné fleky.' },
+
+    { type: 'heading', level: 2, id: 'deska', text: 'Pracovní deska' },
+    { type: 'paragraph', text: 'Tady jsme opatrní. Stěrka jako pracovní deska technicky možná je, ale <strong>nedoporučujeme ji</strong>. Ostré nože ji časem otvarují, žhavá pánev může popálit, krev z masa se vsákne. Pro pracovní desku raději volte žulu, kvarcit nebo dubovou desku s olejovou impregnací.' },
+
+    { type: 'callout', kind: 'warn', title: 'Kde stěrku do kuchyně nedávat', text: 'Bezprostřední okolí sporáku (10 cm kolem) — žhavé hrnce a postříkání olejem stěrku za pár let zničí. Tady volíme nerez nebo sklo.' },
+  ],
+})
+
+/* ─────────────────────────────────────────────────────────────
    Sort by date desc (newest first)
    ───────────────────────────────────────────────────────────── */
 articles.sort((a, b) => new Date(b.date) - new Date(a.date))
@@ -503,4 +567,4 @@ export function getRelatedArticles(currentSlug, limit = 2) {
   return articles.filter(a => a.slug !== currentSlug).slice(0, limit)
 }
 
-export const ARTICLES_PER_PAGE = 10
+export const ARTICLES_PER_PAGE = 12

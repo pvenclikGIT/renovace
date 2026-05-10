@@ -35,7 +35,7 @@
 .heroInner {
   max-width: var(--max-w-tight);
   margin-inline: auto;
-  padding-block: var(--space-9) var(--space-10);
+  padding-block: var(--space-9) var(--space-5);
   padding-inline: var(--section-px);
   container-type: inline-size;
 }
