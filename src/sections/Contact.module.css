@@ -42,6 +42,7 @@
   font-size: var(--fs-sm);
   font-weight: 400; color: var(--light);
   margin-top: var(--space-1);
+  text-wrap: pretty;
 }
 
 .guarantee {
@@ -151,6 +152,7 @@
   font-size: var(--fs-sm);
   font-weight: 400; color: var(--light);
   text-align: center;
+  text-wrap: pretty;
 }
 
 .success {
