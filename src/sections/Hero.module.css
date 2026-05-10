@@ -220,7 +220,7 @@
   background: rgba(255,255,255,0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-radius: 14px;
+  border-radius: var(--r);
   padding-block: var(--space-3);
   padding-inline: var(--space-4);
   box-shadow: 0 12px 40px rgba(0,0,0,0.12);
