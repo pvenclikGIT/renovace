@@ -1,5 +1,7 @@
-import { motion } from 'framer-motion'
+import { useRef } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import { IconArrow } from '../components/Icons'
+import { useMagnetic } from '../components/useMagnetic'
 import styles from './Hero.module.css'
 
 const stats = [
@@ -18,8 +20,21 @@ const item = {
 }
 
 export default function Hero() {
+  /* Parallax: image translates slower than scroll, creating subtle depth.
+     Image is scaled 1.1× (see motion.div style) so the small translate
+     stays within the cropped frame without revealing background edges. */
+  const sectionRef = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start start', 'end start'],
+  })
+  const imageY = useTransform(scrollYProgress, [0, 1], ['-4%', '4%'])
+
+  /* Magnetic primary CTA */
+  const magneticRef = useMagnetic(0.25)
+
   return (
-    <section className={styles.hero}>
+    <section ref={sectionRef} className={styles.hero}>
       <div className={styles.left}>
         <motion.div variants={stagger} initial="hidden" animate="show" className={styles.content}>
           <motion.div variants={item} className={styles.tag}>
@@ -38,7 +53,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.div variants={item} className={styles.actions}>
-            <a href="#contact" className={styles.btnPrimary}>
+            <a ref={magneticRef} href="#contact" className={styles.btnPrimary}>
               Chci konzultaci zdarma
               <span className={styles.btnIcon}><IconArrow /></span>
             </a>
@@ -67,9 +82,10 @@ export default function Hero() {
       <div className={styles.right}>
         <motion.div
           className={styles.imgWrap}
-          initial={{ opacity: 0, scale: 1.08 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, scale: 1.16 }}
+          animate={{ opacity: 1, scale: 1.08 }}
           transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+          style={{ y: imageY }}
         >
           <img src="/renovace/images/real-12.jpg" alt="Koupelna po realizaci cementové stěrky" />
           <div className={styles.imgOverlay} />

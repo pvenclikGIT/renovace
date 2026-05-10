@@ -1,9 +1,10 @@
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { useRef, useState } from 'react'
+import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import FadeIn from '../components/FadeIn'
 import SectionHeader from '../components/SectionHeader'
 import Process from '../sections/Process'
+import { useMagnetic } from '../components/useMagnetic'
 import styles from './Cenik.module.css'
 
 const HOME = '/renovace/'
@@ -282,11 +283,20 @@ export default function Cenik() {
   const [activeMat, setActiveMat] = useState('epoxid')
   const mat = materials.find(m => m.slug === activeMat)
 
+  /* Parallax + magnetic CTA */
+  const heroRef = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ['start start', 'end start'],
+  })
+  const heroImageY = useTransform(scrollYProgress, [0, 1], ['-4%', '4%'])
+  const magneticRef = useMagnetic(0.25)
+
   return (
     <main className={styles.page}>
 
       {/* ── HERO ──────────────────────────────────────────────── */}
-      <section className={styles.hero}>
+      <section ref={heroRef} className={styles.hero}>
 
         {/* levý sloupec — text */}
         <div className={styles.heroLeft}>
@@ -336,7 +346,7 @@ export default function Cenik() {
               className={styles.heroActions}
               variants={{ hidden: { opacity: 0, y: 14 }, show: { opacity: 1, y: 0, transition: { duration: 0.6 } } }}
             >
-              <a href={`${HOME}#contact`} className={styles.heroBtnPrimary}>
+              <a ref={magneticRef} href={`${HOME}#contact`} className={styles.heroBtnPrimary}>
                 Chci nezávaznou kalkulaci
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
                   <path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -380,9 +390,10 @@ export default function Cenik() {
         {/* pravý sloupec — fotka */}
         <motion.div
           className={styles.heroRight}
-          initial={{ opacity: 0, scale: 1.06 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, scale: 1.14 }}
+          animate={{ opacity: 1, scale: 1.08 }}
           transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
+          style={{ y: heroImageY }}
         >
           <img
             src="/renovace/images/real-05.jpg"
