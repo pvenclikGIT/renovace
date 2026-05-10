@@ -5,43 +5,32 @@
 }
 .section > * { max-width: var(--max-w-tight); margin-inline: auto; }
 /*
-  Bento grid: epoxidová (the most popular) gets the wider row 1 spot,
-  cementová + pryskyřičná flank below in 2-col.
-  On mobile: clean 1-col stack.
+  Three material cards side-by-side on desktop.
+  Each card: image at top (16:10 aspect), body below with name + desc + tags.
 */
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-4);
   margin-top: var(--space-8);
 }
-.card:nth-child(2) {
-  grid-column: 1 / -1;
-}
-@media (max-width: 860px) {
-  .grid { grid-template-columns: 1fr; }
-  .card:nth-child(2) { grid-column: auto; }
-}
 
 .card {
-  container-type: inline-size;
   background: rgba(255,255,255,.05);
   border-radius: var(--r-lg);
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.08);
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s var(--ease), border-color 0.3s;
+  transition: transform 0.3s var(--ease), border-color 0.3s, background 0.3s;
 }
-.card:hover { transform: translateY(-2px) scale(1.005); border-color: rgba(201,150,60,.3); }
-
-@container (min-width: 520px) {
-  .card { flex-direction: row; align-items: stretch; }
-  .cardImg { width: 42%; aspect-ratio: auto; align-self: stretch; flex-shrink: 0; }
-  .cardBody { flex: 1; }
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,.18);
+  background: rgba(255,255,255,.07);
 }
 
-.cardImg { aspect-ratio: 4 / 3; overflow: hidden; }
+.cardImg { aspect-ratio: 16 / 10; overflow: hidden; }
 .cardImg img {
   width: 100%; height: 100%;
   object-fit: cover; display: block;
@@ -50,34 +39,34 @@
 .card:hover .cardImg img { transform: scale(1.06); }
 
 .cardBody {
-  padding-block: var(--space-6) var(--space-7);
-  padding-inline: var(--space-6);
+  padding: var(--space-6);
+  display: flex; flex-direction: column;
+  gap: var(--space-3);
+  flex: 1;
 }
 .cardName {
   font-family: var(--font-display);
-  font-size: var(--fs-2xl);
+  font-size: var(--fs-xl);
   font-weight: 500;
   color: var(--white);
-  margin-bottom: var(--space-2);
-  letter-spacing: -0.025em;
-  line-height: 1.05;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
   text-wrap: balance;
   font-optical-sizing: auto;
 }
 .cardDesc {
   font-size: var(--fs-body);
   font-weight: 300;
-  color: rgba(255,255,255,.45);
+  color: rgba(255,255,255,.55);
   line-height: var(--lh-relaxed);
-  margin-bottom: var(--space-4);
   text-wrap: pretty;
 }
 .ideal {
   font-size: var(--fs-sm);
   font-weight: 400;
-  color: var(--gold2);
-  margin-bottom: var(--space-4);
-  line-height: 1.5;
+  color: rgba(255,255,255,0.7);
+  line-height: var(--lh-relaxed);
+  text-wrap: pretty;
 }
 .idealLabel {
   display: block;
@@ -104,7 +93,7 @@
 }
 .card:hover .tag { border-color: rgba(201,150,60,.3); color: rgba(255,255,255,.6); }
 
-/* Structural — on phones the bento collapses to 1-col stack (handled above) */
-@media (max-width: 560px) {
-  .cardImg { aspect-ratio: 16 / 10; }
-}
+/* Tablet 2-col, mobile 1-col */
+@media (max-width: 960px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .grid { grid-template-columns: 1fr; gap: var(--space-3); } }
+.tags { margin-top: auto; }
