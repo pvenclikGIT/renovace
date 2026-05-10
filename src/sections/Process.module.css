@@ -21,7 +21,7 @@
   transition: transform 0.3s var(--ease), box-shadow 0.3s;
   cursor: default;
 }
-.step:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.step:hover { transform: translateY(-2px) scale(1.005); box-shadow: var(--shadow-md); }
 
 .stepAccent {
   height: 2px;
@@ -47,26 +47,25 @@
 .step:hover .num { color: var(--gold-pale2); }
 
 .dayBadge {
+  font-family: var(--font-body);
   font-size: var(--fs-2xs);
-  font-weight: 800;
-  letter-spacing: 0.1em;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold);
-  background: var(--gold-pale);
-  padding-block: var(--space-1);
-  padding-inline: var(--space-3);
-  border-radius: 100px;
+  color: var(--mid);
   white-space: nowrap; flex-shrink: 0;
 }
 
 .title {
-  font-size: var(--fs-md);
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 500;
   color: var(--dark);
   margin-bottom: var(--space-2);
-  letter-spacing: -0.025em;
+  letter-spacing: -0.02em;
   text-wrap: balance;
-  line-height: var(--lh-snug);
+  line-height: 1.15;
+  font-optical-sizing: auto;
 }
 .text {
   font-size: var(--fs-body);

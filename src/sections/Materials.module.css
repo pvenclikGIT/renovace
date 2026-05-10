@@ -21,7 +21,7 @@
   flex-direction: column;
   transition: transform 0.3s var(--ease), border-color 0.3s;
 }
-.card:hover { transform: translateY(-5px); border-color: rgba(201,150,60,.3); }
+.card:hover { transform: translateY(-2px) scale(1.005); border-color: rgba(201,150,60,.3); }
 
 @container (min-width: 520px) {
   .card { flex-direction: row; align-items: stretch; }
@@ -42,12 +42,15 @@
   padding-inline: var(--space-6);
 }
 .cardName {
-  font-size: var(--fs-xl);
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: 500;
   color: var(--white);
   margin-bottom: var(--space-2);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
   text-wrap: balance;
+  font-optical-sizing: auto;
 }
 .cardDesc {
   font-size: var(--fs-body);
@@ -66,11 +69,12 @@
 }
 .idealLabel {
   display: block;
+  font-family: var(--font-body);
   font-size: var(--fs-2xs);
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: rgba(255,255,255,0.5);
   margin-bottom: var(--space-1);
 }
 .tags { display: flex; flex-wrap: wrap; gap: var(--space-2); }

@@ -8,23 +8,27 @@
 
 .tag {
   display: inline-flex; align-items: center; gap: var(--space-2);
+  font-family: var(--font-body);
   font-size: var(--fs-2xs);
-  font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--gold); background: var(--gold-pale);
-  padding-block: var(--space-2);
-  padding-inline: var(--space-4);
-  border-radius: 100px;
+  font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--mid);
   margin-bottom: var(--space-4);
   width: fit-content;
 }
 .tagDot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
 .title {
+  font-family: var(--font-display);
   font-size: var(--fs-3xl);
-  font-weight: 800; line-height: var(--lh-tight);
-  color: var(--dark); letter-spacing: -0.04em;
+  font-weight: 500; line-height: 1.05;
+  color: var(--dark); letter-spacing: -0.025em;
   text-wrap: balance; margin-bottom: var(--space-3);
+  font-optical-sizing: auto;
 }
-.title em { font-style: normal; color: var(--gold); }
+.title em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--dark);
+}
 .lead {
   font-size: var(--fs-lead);
   font-weight: 300; color: var(--mid);
@@ -48,7 +52,7 @@
   border: 1px solid var(--bg3);
   transition: transform 0.3s var(--ease), box-shadow 0.3s;
 }
-.certCard:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.certCard:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
 .certIcon {
   width: 44px; height: 44px;
   border-radius: var(--r);

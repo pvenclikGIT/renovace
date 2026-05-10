@@ -19,12 +19,13 @@
   gap: var(--space-3);
   padding-block: var(--space-5);
   background: none; border: none; text-align: left;
-  font-family: var(--font);
-  font-size: var(--fs-body);
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 500;
   color: var(--dark);
   cursor: pointer;
   letter-spacing: -0.02em;
+  line-height: 1.2;
   min-height: var(--tap);
   transition: color 0.2s;
 }

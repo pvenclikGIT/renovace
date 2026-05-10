@@ -30,7 +30,7 @@
   transition: transform 0.35s var(--ease), box-shadow 0.35s, border-color 0.3s;
   position: relative;
 }
-.featCard:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--gold); }
+.featCard:hover { transform: translateY(-2px) scale(1.005); box-shadow: var(--shadow-lg); border-color: var(--gold); }
 
 @container (min-width: 560px) {
   .featCard { flex-direction: row; align-items: stretch; }
@@ -82,23 +82,26 @@
 }
 
 .sub {
+  font-family: var(--font-body);
   font-size: var(--fs-2xs);
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--mid);
   margin-bottom: var(--space-2);
 }
-.subDark { color: var(--gold2); }
+.subDark { color: rgba(255,255,255,0.55); }
 
 .title {
+  font-family: var(--font-display);
   font-size: var(--fs-2xl);
-  font-weight: 800;
+  font-weight: 500;
   color: var(--dark);
   margin-bottom: var(--space-3);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.025em;
   text-wrap: balance;
-  line-height: var(--lh-snug);
+  line-height: 1.1;
+  font-optical-sizing: auto;
 }
 .titleDark { color: var(--white); }
 
@@ -152,7 +155,7 @@
   display: flex; flex-direction: column;
   transition: transform 0.35s var(--ease), box-shadow 0.35s, border-color 0.3s;
 }
-.smallCard:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--gold); }
+.smallCard:hover { transform: translateY(-2px) scale(1.005); box-shadow: var(--shadow-md); border-color: var(--gold); }
 
 @container (min-width: 540px) {
   .smallCard { flex-direction: row; align-items: stretch; }
@@ -184,13 +187,15 @@
   display: flex; flex-direction: column; flex: 1;
 }
 .smallTitle {
-  font-size: var(--fs-lg);
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: 500;
   color: var(--dark);
   margin-bottom: var(--space-2);
-  letter-spacing: -0.03em;
-  line-height: var(--lh-snug);
+  letter-spacing: -0.025em;
+  line-height: 1.1;
   text-wrap: balance;
+  font-optical-sizing: auto;
 }
 .smallDesc {
   font-size: var(--fs-body);
