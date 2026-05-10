@@ -26,6 +26,8 @@ import Cenik from './pages/Cenik'
 import ObchodniPodminky from './pages/ObchodniPodminky'
 import Gdpr from './pages/Gdpr'
 import Cookies from './pages/Cookies'
+import Blog from './pages/Blog'
+import BlogArticle from './pages/BlogArticle'
 import './App.css'
 
 function ScrollToTop() {
@@ -71,6 +73,8 @@ export default function App() {
         <Route path="/obchodni-podminky" element={<ObchodniPodminky />} />
         <Route path="/gdpr" element={<Gdpr />} />
         <Route path="/cookies" element={<Cookies />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogArticle />} />
       </Routes>
       <Footer />
       <FloatingCta />

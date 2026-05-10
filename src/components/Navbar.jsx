@@ -71,6 +71,7 @@ export default function Navbar() {
           </li>
           {links.map(l => <li key={l.href}><a href={homeHref(l.href)}>{l.label}</a></li>)}
           <li><Link to="/cenik" className={location.pathname === '/cenik' ? styles.navActive : ''}>Ceník</Link></li>
+          <li><Link to="/blog" className={location.pathname.startsWith('/blog') ? styles.navActive : ''}>Blog</Link></li>
           <li><a href={homeHref('#contact')} className={styles.cta}>Konzultace zdarma</a></li>
         </ul>
         <button className={styles.hamburger} onClick={() => setOpen(v => !v)} aria-label="Menu">
@@ -83,6 +84,7 @@ export default function Navbar() {
           <Link to="/" onClick={onHomeClick} className={styles.drawerLink}>Domů</Link>
           {links.map(l => <a key={l.href} href={homeHref(l.href)} onClick={close} className={styles.drawerLink}>{l.label}</a>)}
           <Link to="/cenik" onClick={close} className={styles.drawerLink}>Ceník</Link>
+          <Link to="/blog" onClick={close} className={styles.drawerLink}>Blog</Link>
           <a href={homeHref('#contact')} onClick={close} className={styles.drawerCta}>Konzultace zdarma</a>
         </div>
       </div>

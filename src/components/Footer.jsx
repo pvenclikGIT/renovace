@@ -44,6 +44,7 @@ export default function Footer() {
             <li><Link to="/">Domů</Link></li>
             {nav.map(l => <li key={l.href}><a href={homeHref(l.href)}>{l.label}</a></li>)}
             <li><Link to="/cenik">Ceník</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
           </ul>
         </div>
 
