@@ -57,6 +57,7 @@
   letter-spacing: -0.02em;
   line-height: 1.15;
   margin-bottom: var(--space-1);
+  text-wrap: balance;
   font-optical-sizing: auto;
 }
 .catDesc {

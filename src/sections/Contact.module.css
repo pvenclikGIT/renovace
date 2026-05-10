@@ -36,6 +36,7 @@
 .infoText {
   font-size: var(--fs-body);
   font-weight: 600; color: var(--dark);
+  text-wrap: pretty;
 }
 .infoNote {
   font-size: var(--fs-sm);
@@ -60,6 +61,7 @@
   margin-bottom: var(--space-1);
   letter-spacing: -0.02em;
   line-height: 1.15;
+  text-wrap: balance;
   font-optical-sizing: auto;
 }
 .guaranteeText {
@@ -85,11 +87,13 @@
   margin-bottom: var(--space-1);
   letter-spacing: -0.025em;
   line-height: 1.1;
+  text-wrap: balance;
   font-optical-sizing: auto;
 }
 .formSub {
   font-size: var(--fs-body);
-  font-weight: 400; color: var(--light);
+  font-weight: 300; color: var(--light);
+  text-wrap: pretty;
 }
 .row {
   display: grid;
@@ -168,6 +172,7 @@
   font-weight: 500; color: var(--dark);
   letter-spacing: -0.025em;
   line-height: 1.1;
+  text-wrap: balance;
   font-optical-sizing: auto;
 }
 .success p {

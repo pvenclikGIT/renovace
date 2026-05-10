@@ -173,6 +173,7 @@
   font-size: var(--fs-sm);
   font-weight: 300; color: var(--dark3);
   line-height: 1.4;
+  text-wrap: pretty;
 }
 .compRate {
   font-family: var(--font-display);
@@ -352,6 +353,7 @@
   line-height: 1.65;
   border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: var(--space-4);
+  text-wrap: pretty;
 }
 
 /* Email */

@@ -45,9 +45,9 @@
 .lead {
   font-family: var(--font-body);
   font-size: var(--fs-lead);
-  font-weight: 400;
+  font-weight: 300;
   color: var(--mid);
-  line-height: 1.65;
+  line-height: var(--lh-relaxed);
   margin-top: var(--space-4);
   max-width: 56ch;
   text-wrap: pretty;

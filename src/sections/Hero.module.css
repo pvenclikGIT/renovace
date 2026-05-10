@@ -90,9 +90,9 @@
 .sub {
   font-family: var(--font-body);
   font-size: var(--fs-lead);
-  font-weight: 400;
+  font-weight: 300;
   color: var(--mid);
-  line-height: 1.6;
+  line-height: var(--lh-relaxed);
   max-width: 56ch;
   margin-bottom: var(--space-7);
   text-wrap: pretty;

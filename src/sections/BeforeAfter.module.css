@@ -181,6 +181,7 @@
   color: var(--white);
   letter-spacing: -0.02em;
   line-height: 1.2;
+  text-wrap: balance;
 }
 .ctaLeft span {
   font-size: var(--fs-body);
