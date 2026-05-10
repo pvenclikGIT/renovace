@@ -101,30 +101,12 @@ export default function BlogArticle() {
       <article className={styles.article}>
         <header className={styles.articleHeader}>
           <div className={styles.articleHeaderInner}>
-            <motion.nav
-              className={styles.breadcrumb}
-              aria-label="Drobečková navigace"
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <Link to="/">Domů</Link>
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                <path d="M4 2l4 4-4 4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-              <Link to="/blog">Blog</Link>
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                <path d="M4 2l4 4-4 4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-              <span aria-current="page">{cat.label}</span>
-            </motion.nav>
-
             <motion.span
               className={styles.articleCat}
               style={{ background: cat.color }}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.1 }}
+              transition={{ duration: 0.4 }}
             >
               {cat.label}
             </motion.span>

@@ -264,7 +264,7 @@
   padding-block-start: var(--nav-h);
 }
 .articleHeaderInner {
-  max-width: 760px;
+  max-width: var(--max-w-tight);
   margin-inline: auto;
   padding-block: var(--space-9) var(--space-7);
   padding-inline: var(--section-px);
