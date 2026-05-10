@@ -431,7 +431,7 @@
 
 /* TYPOGRAPHY INSIDE BODY */
 .bodyLead {
-  font-size: clamp(1.25rem, 1.6vw, 1.5rem);
+  font-size: var(--fs-xl);
   font-weight: 300;
   line-height: 1.55;
   color: var(--dark2);
@@ -510,7 +510,7 @@
 }
 .bodyQuote p {
   font-family: var(--font-display);
-  font-size: clamp(1.4rem, 2.4vw, 1.875rem);
+  font-size: var(--fs-2xl);
   font-weight: 400;
   font-style: italic;
   line-height: 1.3;
