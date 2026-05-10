@@ -120,7 +120,7 @@
 }
 .totalVal {
   font-family: var(--font-display);
-  font-size: var(--fs-md);
+  font-size: var(--fs-lg);
   font-weight: 500; color: var(--dark);
   letter-spacing: -0.025em;
   font-feature-settings: "lnum";
