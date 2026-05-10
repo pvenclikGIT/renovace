@@ -49,12 +49,29 @@ src/
 │   ├── Faq.jsx                      # 8 FAQ items
 │   └── Contact.jsx                  # info + custom-select form
 └── pages/
-    └── Cenik.jsx + .module.css      # /cenik subpage (hero + tiery + materials + extras + FAQ)
+    ├── Cenik.jsx + .module.css      # /cenik subpage (hero + tiery + materials + extras + FAQ)
+    ├── ObchodniPodminky.jsx         # /obchodni-podminky (legal)
+    ├── Gdpr.jsx                     # /gdpr (privacy / GDPR)
+    ├── Cookies.jsx                  # /cookies
+    ├── LegalLayout.jsx              # shared shell for legal pages
+    ├── Legal.module.css             # shared legal styles
+    ├── Blog.jsx                     # /blog (paginated grid, 12 per page)
+    ├── BlogArticle.jsx              # /blog/:slug (TOC, progress bar, drop-cap)
+    └── Blog.module.css              # blog editorial styles
+
+src/components/useMagnetic.js        # magnetic cursor hook for primary CTAs
+src/data/articles.js                 # 13 article entries with structured blocks
 ```
 
-## Design system — fluid responsive (Google-style)
+## Design system — Editorial 2024 (fluid + token + container queries + motion)
 
 Všechny CSS moduly konzumují tokeny z **`src/index.css`**. Žádné hardcoded font-sizes nebo paddings v komponentách.
+
+### Typography stack (2024+ editorial)
+
+- **`--font-display: 'Newsreader'`** — variable serif s optical-size axis pro h1/h2 (weight 500, italic on em)
+- **`--font-body: 'Inter'`** — variable sans pro body, UI, captions (300–800)
+- Base rule v index.css: `h1, h2 { font-family: var(--font-display); font-weight: 500 }`
 
 ### Token systém
 
@@ -77,16 +94,26 @@ Všechny CSS moduly konzumují tokeny z **`src/index.css`**. Žádné hardcoded 
 
 ### Pravidla která **MUSÍ** být dodržena
 
-1. **Žádné hardcoded `font-size: Xrem`** v sekcích — vždy `var(--fs-*)`. Výjimka: dekorativní glyphy <1ch a třetí strany (Leaflet).
-2. **Žádné hardcoded `padding/margin/gap: Xrem`** — vždy `var(--space-*)`. Výjimka: dekorativní border-widths, dot sizes, ikonky <12px.
-3. **Logical properties** všude: `padding-block/inline`, `inset-block/inline`, `margin-inline: auto`. NIKDY `padding-left/right/top/bottom`.
-4. **`@media`** výhradně pro **strukturální shifts** (grid columns, flex direction, hide/show dekorací). NIKDY `@media { font-size: ... }` ani `@media { padding: ... }` — fluid clamp tokens to dělají.
-5. **`text-wrap: balance`** na každém `<h1>/<h2>/<h3>` heading. **`text-wrap: pretty`** na každém body paragraphu (sub, desc, lead, FAQ answer).
-6. **`min-height: var(--tap)`** na každém clickable elementu (button, link.cta, .csOption, .question, .toggle, atd.).
-7. **`aspect-ratio`** místo fixních heightů na image kontejnerech (cards, hero image, before/after slider).
-8. **Modern viewport units**: `svh` + `@supports (... dvh)` fallback. Nikdy `100vh` (mobilní URL bar bug).
-9. **Container queries** (`@container`) pro karty které žijí v různých grid layoutech (`Materials.card`, `Segments.featCard/.smallCard`, `Cenik.tierCard`). Karta sama detekuje svou šířku a flipne layout.
-10. **Hero H1 sized via `cqi`** — `clamp(1.5rem, 8cqi, 3.25rem)`. `.content` má `container-type: inline-size`. H1 respektuje 580 px content max-width, ne celý viewport. Jinak by na desktopu maxoval na 68 px a "Koupelna bez bourání." (21 znaků) by se lámalo na 4 řádky místo 3.
+1. **Headings používají display serif** — `font-family: var(--font-display); font-weight: 500;` Inter weight 800/900 na headings je 2018 SaaS template. Newsreader 500 je editorial 2024.
+2. **`title em` italic display serif**, ne gold color — italic Newsreader weight 400 (`color` matches body, ne `var(--gold)`).
+3. **Žádné gold pill eyebrows** — eyebrow taggy jsou plain small-caps text (Inter 600, letter-spacing 0.18em, color: var(--mid) on light / rgba(255,255,255,0.55) on dark). Bez `background`, bez `padding`, bez `border-radius`.
+4. **Žádné hardcoded `font-size/padding/margin/gap: Xrem`** v sekcích — vždy `var(--fs-*)` / `var(--space-*)`. Výjimka: dekorativní glyphy <1ch a třetí strany (Leaflet).
+5. **Logical properties** všude: `padding-block/inline`, `inset-block/inline`, `margin-inline: auto`. NIKDY `padding-left/right/top/bottom`.
+6. **`@media`** výhradně pro **strukturální shifts** (grid columns, flex direction, hide/show dekorací). NIKDY `@media { font-size: ... }` ani `@media { padding: ... }` — fluid clamp tokens to dělají.
+7. **`text-wrap: balance`** na každém heading. **`text-wrap: pretty`** na každém body paragraphu.
+8. **`min-height: var(--tap)`** (44px) na každém clickable elementu.
+9. **`aspect-ratio`** místo fixních heightů na image kontejnerech.
+10. **Modern viewport units**: `svh` + `@supports (... dvh)` fallback. Nikdy `100vh`.
+11. **Container queries** (`@container`) pro karty které žijí v různých grid layoutech.
+12. **Hero H1 sized via `cqi`** — `clamp(1.5rem, 8cqi, 3.25rem)` na `.content` s `container-type: inline-size`. Nebo `9cqi` až `11cqi` pro velké hero (Hero homepage, Blog hero).
+13. **Sparing gold accent** — gold (`var(--gold)`) pouze na: pulse dots, focus borders, hover state borders, brand emphasis icons. NIKDY na velká stat numbers (jsou dark/white podle bg) ani comparison values.
+14. **Numeric values use display serif + lnum** — `font-family: var(--font-display); font-weight: 500; font-feature-settings: "lnum"` pro tabular-friendly čísla.
+15. **Bento layouts** kde to dává smysl — Why .features (1 featured + 7 grid), Materials .grid (1 spans full width).
+16. **Magnetic CTA** přes `useMagnetic` hook na primary CTA buttons.
+17. **Parallax image** přes `useScroll` + `useTransform` na hero images (-4% → 4% range, scaled 1.08).
+18. **Masonry layout** přes `column-count` u Reviews (vs grid).
+19. **Animated link underlines** přes `.linkUnderline` utility class (background-image gradient).
+20. **`:focus-visible` global** se zlatým outline + offset, `prefers-reduced-motion` respect.
 
 ### Container hierarchy
 

@@ -61,11 +61,14 @@
   flex-shrink: 0;
 }
 .certTitle {
-  font-size: var(--fs-body);
-  font-weight: 800; color: var(--dark);
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 500; color: var(--dark);
   margin-bottom: var(--space-1);
   letter-spacing: -0.02em;
+  line-height: 1.15;
   text-wrap: balance;
+  font-optical-sizing: auto;
 }
 .certDesc {
   font-size: var(--fs-sm);

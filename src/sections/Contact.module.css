@@ -53,10 +53,13 @@
 }
 .guaranteeIcon { color: var(--gold); flex-shrink: 0; margin-top: 2px; }
 .guaranteeTitle {
-  font-size: var(--fs-body);
-  font-weight: 800; color: var(--dark);
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 500; color: var(--dark);
   margin-bottom: var(--space-1);
   letter-spacing: -0.02em;
+  line-height: 1.15;
+  font-optical-sizing: auto;
 }
 .guaranteeText {
   font-size: var(--fs-body);
@@ -75,10 +78,13 @@
 }
 .formHeader { margin-bottom: var(--space-1); }
 .formTitle {
-  font-size: var(--fs-xl);
-  font-weight: 800; color: var(--dark);
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: 500; color: var(--dark);
   margin-bottom: var(--space-1);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  font-optical-sizing: auto;
 }
 .formSub {
   font-size: var(--fs-body);
@@ -155,9 +161,12 @@
 }
 .successCheck { margin-bottom: var(--space-2); }
 .success h3 {
+  font-family: var(--font-display);
   font-size: var(--fs-2xl);
-  font-weight: 800; color: var(--dark);
-  letter-spacing: -0.03em;
+  font-weight: 500; color: var(--dark);
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  font-optical-sizing: auto;
 }
 .success p {
   font-size: var(--fs-body);

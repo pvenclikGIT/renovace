@@ -39,7 +39,12 @@
   letter-spacing: -0.02em;
   line-height: 1.4;
 }
-.title em { font-style: normal; color: var(--gold); }
+.title em {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gold);
+}
 .sub {
   font-size: var(--fs-sm);
   font-weight: 300; color: rgba(255,255,255,0.38);
