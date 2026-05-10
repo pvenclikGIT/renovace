@@ -366,6 +366,14 @@ export default function Cenik() {
                 </div>
               ))}
             </motion.div>
+
+            <motion.div
+              className={styles.heroTrust}
+              variants={{ hidden: { opacity: 0, y: 14 }, show: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.2 } } }}
+            >
+              <span className={styles.heroTrustDot} />
+              Ozveme se do 24 hodin. Termín domluvíme během pár dnů.
+            </motion.div>
           </motion.div>
         </div>
 

@@ -125,6 +125,21 @@
 .statLabel { font-size: var(--fs-xs); color: var(--light); line-height: 1.35; }
 .statDiv  { display: none; }
 
+.heroTrust {
+  display: flex; align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-sm);
+  font-weight: 400;
+  color: var(--light);
+  margin-top: var(--space-4);
+}
+.heroTrustDot {
+  width: 8px; height: 8px;
+  border-radius: 50%; background: #4CAF50;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(76,175,80,0.18);
+}
+
 /* pravý sloupec — fotka */
 .heroRight { position: relative; overflow: hidden; background: var(--dark2); min-height: 100%; }
 .heroImg   {
@@ -443,7 +458,7 @@
   .breadcrumb { justify-content: center; }
   .heroTag { margin-inline: auto; }
   .heroLead { margin-inline: auto; }
-  .heroActions, .heroStats { justify-content: center; }
+  .heroActions, .heroStats, .heroTrust { justify-content: center; }
   .heroRight { aspect-ratio: 16 / 10; min-height: auto; }
   .heroPriceBadge { display: none; }
   .tiers { grid-template-columns: repeat(2, minmax(0, 1fr)); }
