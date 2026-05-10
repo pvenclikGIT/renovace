@@ -59,7 +59,7 @@
   inset-inline-end: var(--space-5);
   top: 50%; transform: translateY(-50%);
   font-size: var(--fs-4xl);
-  font-weight: 900; color: rgba(255,255,255,0.04);
+  font-weight: 800; color: rgba(255,255,255,0.04);
   letter-spacing: -0.06em; line-height: 1;
   pointer-events: none;
   transition: color 0.25s;

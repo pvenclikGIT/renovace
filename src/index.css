@@ -1,10 +1,10 @@
 /*
   Modern typography stack:
-  - Inter (variable sans) for body, UI, captions
+  - Manrope (variable humanistic grotesque) for body, UI, captions — warm + premium
   - Newsreader (variable serif with optical-size axis) for editorial display headings
   Both free from Google Fonts, modern (2023+), expressive.
 */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=Newsreader:opsz,ital,wght@6..72,0..1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Newsreader:opsz,ital,wght@6..72,0..1,300..800&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -35,7 +35,7 @@
   --warn: #FF6B35;          /* urgency / countdown pulse */
 
   /* ── Foundation ── */
-  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-display: 'Newsreader', Georgia, 'Times New Roman', serif;
   --font: var(--font-body);
   --nav-h: 74px;
@@ -118,7 +118,7 @@ body {
   overflow-x: hidden;
   font-size: var(--fs-body);
   line-height: var(--lh-base);
-  font-feature-settings: "ss01", "cv02", "cv11"; /* Inter stylistic alternates */
+  font-feature-settings: "kern", "liga", "calt"; /* Manrope: kerning, ligatures, contextual alts */
 }
 /* All headings default to display serif. Components can opt out. */
 h1, h2 { font-family: var(--font-display); font-weight: 500; }

@@ -17,7 +17,7 @@
 
 .logo {
   font-size: var(--fs-xl);
-  font-weight: 900;
+  font-weight: 800;
   color: var(--white);
   display: flex; align-items: center;
   gap: var(--space-2);

@@ -126,7 +126,7 @@
 
 .logoFallback {
   font-size: var(--fs-2xs);
-  font-weight: 900; color: var(--dark2);
+  font-weight: 800; color: var(--dark2);
   letter-spacing: 0.04em;
   text-align: center; line-height: 1.2;
   word-break: break-all;

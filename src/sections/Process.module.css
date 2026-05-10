@@ -48,7 +48,7 @@
 }
 .num {
   font-size: var(--fs-4xl);
-  font-weight: 900;
+  font-weight: 800;
   color: var(--bg4);
   line-height: 1; letter-spacing: -0.05em;
   transition: color 0.3s; user-select: none;
