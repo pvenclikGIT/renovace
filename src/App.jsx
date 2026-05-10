@@ -23,6 +23,9 @@ import Testimonials from './sections/Testimonials'
 import Faq from './sections/Faq'
 import Contact from './sections/Contact'
 import Cenik from './pages/Cenik'
+import ObchodniPodminky from './pages/ObchodniPodminky'
+import Gdpr from './pages/Gdpr'
+import Cookies from './pages/Cookies'
 import './App.css'
 
 function ScrollToTop() {
@@ -65,6 +68,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/cenik" element={<Cenik />} />
+        <Route path="/obchodni-podminky" element={<ObchodniPodminky />} />
+        <Route path="/gdpr" element={<Gdpr />} />
+        <Route path="/cookies" element={<Cookies />} />
       </Routes>
       <Footer />
       <FloatingCta />

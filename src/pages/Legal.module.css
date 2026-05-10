@@ -1,0 +1,258 @@
+/*
+  Shared layout for legal subpages: Obchodní podmínky, GDPR, Cookies.
+  Uses fluid tokens from index.css. Same hero pattern as Cenik but
+  text-only (no image right column).
+*/
+
+.page { background: var(--bg); min-height: 100vh; }
+
+/* ── HERO ──────────────────────────────────────────────────── */
+.hero {
+  padding-block-start: var(--nav-h);
+  background: var(--bg);
+}
+.heroInner {
+  max-width: var(--max-w-tight);
+  margin-inline: auto;
+  padding-block: var(--space-8) var(--space-9);
+  padding-inline: var(--section-px);
+  container-type: inline-size;
+}
+.breadcrumb {
+  display: flex; align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-xs);
+  font-weight: 500; color: var(--light);
+  margin-bottom: var(--space-5);
+}
+.breadcrumb a { color: var(--light); transition: color 0.2s; }
+.breadcrumb a:hover { color: var(--gold); }
+.breadcrumb svg { opacity: 0.4; flex-shrink: 0; }
+.breadcrumb span[aria-current] { color: var(--dark); font-weight: 600; }
+
+.tag {
+  display: inline-flex; align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-2xs);
+  font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold); background: var(--gold-pale);
+  padding-block: var(--space-2);
+  padding-inline: var(--space-4);
+  border-radius: 100px;
+  margin-bottom: var(--space-4);
+  width: fit-content;
+}
+.tagDot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+.h1 {
+  font-size: clamp(1.5rem, 8cqi, 3.25rem);
+  font-weight: 800;
+  line-height: var(--lh-tight);
+  letter-spacing: -0.04em;
+  color: var(--dark);
+  margin-bottom: var(--space-4);
+  text-wrap: balance;
+}
+.lead {
+  font-size: var(--fs-lead);
+  font-weight: 300;
+  color: var(--mid);
+  line-height: var(--lh-relaxed);
+  max-width: 60ch;
+  text-wrap: pretty;
+}
+.meta {
+  display: inline-flex; align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+  padding-block: var(--space-2);
+  padding-inline: var(--space-3);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  color: var(--mid);
+  background: var(--bg2);
+  border-radius: 100px;
+}
+.metaDot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+/* ── ARTICLE BODY ──────────────────────────────────────────── */
+.body {
+  background: var(--white);
+  padding-block: var(--section-py);
+  padding-inline: var(--section-px);
+}
+.bodyInner {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.toc {
+  margin-bottom: var(--space-9);
+  padding: var(--space-6);
+  background: var(--bg);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--bg3);
+}
+.tocTitle {
+  font-size: var(--fs-2xs);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: var(--space-3);
+}
+.tocList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2) var(--space-5);
+  counter-reset: toc;
+}
+.tocList li {
+  counter-increment: toc;
+  display: flex; align-items: baseline;
+  gap: var(--space-2);
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+}
+.tocList li::before {
+  content: counter(toc, upper-roman) ".";
+  font-weight: 700;
+  color: var(--gold);
+  flex-shrink: 0;
+  font-size: var(--fs-2xs);
+  min-width: 2.2em;
+}
+.tocList a {
+  color: var(--dark3);
+  transition: color 0.2s;
+}
+.tocList a:hover { color: var(--gold); }
+
+.section {
+  margin-bottom: var(--space-9);
+  scroll-margin-top: calc(var(--nav-h) + var(--space-4));
+}
+.section:last-child { margin-bottom: 0; }
+
+.h2 {
+  font-size: var(--fs-2xl);
+  font-weight: 800;
+  line-height: var(--lh-tight);
+  letter-spacing: -0.03em;
+  color: var(--dark);
+  margin-bottom: var(--space-5);
+  text-wrap: balance;
+  display: flex; align-items: baseline; gap: var(--space-3);
+}
+.h2 small {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.h3 {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  line-height: var(--lh-snug);
+  letter-spacing: -0.02em;
+  color: var(--dark);
+  margin-block: var(--space-6) var(--space-3);
+  text-wrap: balance;
+}
+
+.body p {
+  font-size: var(--fs-body);
+  font-weight: 300;
+  color: var(--dark3);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-4);
+  text-wrap: pretty;
+}
+.body p:last-child { margin-bottom: 0; }
+.body strong { font-weight: 700; color: var(--dark); }
+.body a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
+.body a:hover { color: var(--gold2); }
+
+.list {
+  list-style: none;
+  display: flex; flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  padding-inline-start: 0;
+}
+.list li {
+  position: relative;
+  padding-inline-start: var(--space-5);
+  font-size: var(--fs-body);
+  font-weight: 300;
+  color: var(--dark3);
+  line-height: var(--lh-relaxed);
+}
+.list li::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 0.65em;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.list strong { font-weight: 700; color: var(--dark); }
+
+.contactBox {
+  margin-top: var(--space-9);
+  padding: var(--space-7);
+  background: var(--gold-pale);
+  border: 1px solid rgba(201,150,60,0.3);
+  border-radius: var(--r-lg);
+}
+.contactTitle {
+  font-size: var(--fs-lg);
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-3);
+}
+.contactBox p {
+  font-size: var(--fs-body);
+  color: var(--dark3);
+  margin-bottom: var(--space-3);
+}
+.contactBox p:last-child { margin-bottom: 0; }
+.contactList {
+  list-style: none;
+  display: flex; flex-direction: column;
+  gap: var(--space-2);
+}
+.contactList li {
+  display: flex; align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-body);
+  color: var(--dark3);
+}
+.contactList strong {
+  font-weight: 700;
+  color: var(--dark);
+  min-width: 8em;
+}
+
+@media (max-width: 760px) {
+  .tocList { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .h2 { flex-direction: column; align-items: flex-start; gap: var(--space-2); }
+}

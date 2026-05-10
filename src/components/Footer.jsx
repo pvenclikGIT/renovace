@@ -72,8 +72,9 @@ export default function Footer() {
       <div className={styles.bottom}>
         <span>© 2025 BezSpár.cz, ServisProfi s.r.o. Všechna práva vyhrazena.</span>
         <div className={styles.legal}>
-          <a href="#">Zpracování osobních údajů</a>
-          <a href="#">Obchodní podmínky</a>
+          <Link to="/gdpr">Zpracování osobních údajů</Link>
+          <Link to="/cookies">Cookies</Link>
+          <Link to="/obchodni-podminky">Obchodní podmínky</Link>
         </div>
       </div>
     </footer>
