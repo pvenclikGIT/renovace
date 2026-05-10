@@ -43,19 +43,18 @@
 
 .badge {
   position: absolute;
-  inset-block-start: var(--space-3);
-  inset-inline-start: var(--space-3);
+  inset-block-start: var(--space-4);
+  inset-inline-start: var(--space-4);
   z-index: 3;
-  background: var(--gold); color: white;
+  font-family: var(--font-body);
+  color: var(--gold);
   font-size: var(--fs-2xs);
-  font-weight: 800;
-  letter-spacing: 0.14em;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  padding-block: var(--space-1);
-  padding-inline: var(--space-3);
-  border-radius: 100px;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.5);
 }
-.badgeDark { background: var(--gold); }
+.badgeDark { color: var(--gold); }
 
 .featImg {
   width: 100%;

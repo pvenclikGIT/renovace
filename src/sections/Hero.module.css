@@ -245,10 +245,11 @@
   50%     { box-shadow: 0 0 0 5px rgba(76,175,80,0); }
 }
 .badgeLabel {
+  font-family: var(--font-body);
   font-size: var(--fs-2xs);
-  font-weight: 500;
+  font-weight: 600;
   color: var(--mid);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 .badgeText {
@@ -288,8 +289,8 @@
 }
 .scrollText {
   font-family: var(--font-body);
-  font-size: 0.625rem;
-  font-weight: 500;
+  font-size: var(--fs-2xs);
+  font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.55);

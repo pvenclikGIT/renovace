@@ -82,8 +82,9 @@
   padding-top: var(--space-7);
 }
 .brandsLabel {
+  font-family: var(--font-body);
   font-size: var(--fs-2xs);
-  font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
   color: var(--light);
   margin-bottom: var(--space-4);
 }

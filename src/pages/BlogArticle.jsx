@@ -103,7 +103,7 @@ export default function BlogArticle() {
           <div className={styles.articleHeaderInner}>
             <motion.span
               className={styles.articleCat}
-              style={{ background: cat.color }}
+              style={{ color: cat.color }}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
@@ -198,9 +198,9 @@ export default function BlogArticle() {
                     <Link to={`/blog/${a.slug}`} className={styles.card}>
                       <div className={styles.cardImage}>
                         <img src={a.coverImage} alt={a.coverAlt} loading="lazy" />
-                        <span className={styles.cardCat} style={{ background: c.color }}>{c.label}</span>
                       </div>
                       <div className={styles.cardBody}>
+                        <span className={styles.cardCat} style={{ color: c.color }}>{c.label}</span>
                         <h3 className={styles.cardTitle}>{a.title}</h3>
                         <p className={styles.cardLead}>{a.lead}</p>
                         <div className={styles.cardMeta}>

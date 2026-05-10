@@ -149,8 +149,9 @@
   margin-bottom: var(--space-1);
 }
 .brandSystem {
+  font-family: var(--font-body);
   font-size: var(--fs-2xs);
-  font-weight: 700; letter-spacing: 0.05em;
+  font-weight: 600; letter-spacing: 0.18em;
   text-transform: uppercase; color: var(--gold);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }

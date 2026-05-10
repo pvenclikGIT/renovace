@@ -112,8 +112,9 @@
   gap: var(--space-2);
 }
 .sectionEyebrow {
+  font-family: var(--font-body);
   font-size: var(--fs-2xs);
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold);
@@ -174,16 +175,11 @@
 .card:hover .cardImage img { transform: scale(1.04); }
 
 .cardCat {
-  position: absolute;
-  inset-block-start: var(--space-3);
-  inset-inline-start: var(--space-3);
+  font-family: var(--font-body);
   font-size: var(--fs-2xs);
-  font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
-  color: white;
-  padding-block: var(--space-1);
-  padding-inline: var(--space-3);
-  border-radius: 100px;
-  backdrop-filter: blur(4px);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
 .cardBody {
@@ -283,14 +279,11 @@
 }
 .articleCat {
   display: inline-flex;
+  font-family: var(--font-body);
   font-size: var(--fs-2xs);
-  font-weight: 800;
-  letter-spacing: 0.14em;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: white;
-  padding-block: var(--space-1);
-  padding-inline: var(--space-3);
-  border-radius: 100px;
   margin-bottom: var(--space-5);
 }
 .articleTitle {
@@ -384,9 +377,10 @@
   inset-block-start: calc(var(--nav-h) + var(--space-5));
 }
 .tocLabel {
+  font-family: var(--font-body);
   font-size: var(--fs-2xs);
-  font-weight: 800;
-  letter-spacing: 0.14em;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold);
   margin-bottom: var(--space-3);
@@ -600,9 +594,10 @@
   border-inline-start-color: #DC2626;
 }
 .bodyCalloutTitle {
+  font-family: var(--font-body);
   font-size: var(--fs-2xs);
-  font-weight: 800;
-  letter-spacing: 0.14em;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold);
   margin-bottom: var(--space-2);

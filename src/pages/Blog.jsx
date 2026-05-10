@@ -15,9 +15,9 @@ function ArticleCard({ article }) {
     <Link to={`/blog/${article.slug}`} className={styles.card}>
       <div className={styles.cardImage}>
         <img src={article.coverImage} alt={article.coverAlt} loading="lazy" />
-        <span className={styles.cardCat} style={{ background: cat.color }}>{cat.label}</span>
       </div>
       <div className={styles.cardBody}>
+        <span className={styles.cardCat} style={{ color: cat.color }}>{cat.label}</span>
         <h3 className={styles.cardTitle}>{article.title}</h3>
         <p className={styles.cardLead}>{article.lead}</p>
         <div className={styles.cardMeta}>

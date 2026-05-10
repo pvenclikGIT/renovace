@@ -105,28 +105,20 @@
 
 .zoneBadge {
   display: inline-flex; align-items: center;
+  font-family: var(--font-body);
   font-size: var(--fs-2xs);
-  font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
-  padding-block: var(--space-1);
-  padding-inline: var(--space-2);
-  border-radius: 100px; width: fit-content;
+  font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+  width: fit-content;
   margin-bottom: var(--space-4);
 }
-.zonePraha {
-  background: rgba(201,150,60,0.18);
-  color: var(--gold2);
-  border: 1px solid rgba(201,150,60,0.3);
-}
-.zoneRegion {
-  background: rgba(59,130,246,0.15);
-  color: #93c5fd;
-  border: 1px solid rgba(59,130,246,0.25);
-}
+.zonePraha { color: var(--gold2); }
+.zoneRegion { color: #93c5fd; }
 
 .panelLabel {
+  font-family: var(--font-body);
   font-size: var(--fs-2xs);
-  font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
-  color: rgba(255,255,255,0.38);
+  font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
   margin-bottom: var(--space-1);
 }
 .panelTitle {
@@ -194,22 +186,19 @@
   font-feature-settings: "lnum";
 }
 .panelStatLabel {
+  font-family: var(--font-body);
   font-size: var(--fs-2xs);
-  font-weight: 600; color: rgba(255,255,255,0.35);
-  letter-spacing: 0.05em; text-transform: uppercase;
+  font-weight: 600; color: rgba(255,255,255,0.45);
+  letter-spacing: 0.18em; text-transform: uppercase;
 }
 
 .panelTagLine { margin-bottom: var(--space-4); }
 .panelTag {
   display: inline-flex;
+  font-family: var(--font-body);
   font-size: var(--fs-2xs);
-  font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
-  background: rgba(255,255,255,0.06);
-  padding-block: var(--space-1);
-  padding-inline: var(--space-2);
-  border-radius: 100px;
-  border: 1px solid rgba(255,255,255,0.08);
+  font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
 }
 
 .panelCta {

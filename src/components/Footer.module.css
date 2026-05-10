@@ -46,20 +46,18 @@
   margin-top: var(--space-4);
 }
 .certBadge {
+  font-family: var(--font-body);
   font-size: var(--fs-2xs);
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: rgba(255,255,255,.3);
-  border: 1px solid rgba(255,255,255,.1);
-  padding-block: var(--space-1);
-  padding-inline: var(--space-2);
-  border-radius: 100px;
 }
 
 .colTitle {
+  font-family: var(--font-body);
   font-size: var(--fs-2xs);
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold);

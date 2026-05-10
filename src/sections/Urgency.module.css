@@ -73,10 +73,11 @@
   font-variant-numeric: tabular-nums;
 }
 .unitLabel {
+  font-family: var(--font-body);
   font-size: var(--fs-2xs);
   font-weight: 600;
-  color: rgba(255,255,255,0.3);
-  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
