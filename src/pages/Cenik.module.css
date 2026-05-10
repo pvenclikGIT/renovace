@@ -116,8 +116,8 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: center;
   gap: var(--space-3);
-  padding-top: var(--space-5);
-  border-top: 1px solid var(--bg3);
+  padding-block-start: var(--space-5);
+  border-block-start: 1px solid var(--bg3);
 }
 .stat {
   display: flex; flex-direction: column; gap: var(--space-1);
@@ -170,7 +170,7 @@
 .heroPriceBadge {
   position: absolute; bottom: clamp(1.5rem, 3vw, 2.5rem); left: 0;
   background: var(--white); border-radius: 0 var(--r) var(--r) 0;
-  padding: 1rem 1.6rem; box-shadow: var(--shadow-md);
+  padding: var(--space-4) var(--space-6); box-shadow: var(--shadow-md);
   display: flex; flex-direction: column; gap: var(--space-1);
   max-width: calc(100% - 2rem);
 }
@@ -214,16 +214,16 @@
   font-weight: 400;
   color: var(--white);
 }
-.compareLead { font-size: var(--fs-sm); color: rgba(255,255,255,0.45); line-height: 1.75; margin-bottom: 2rem; max-width: 640px; text-wrap: pretty; }
+.compareLead { font-size: var(--fs-sm); color: rgba(255,255,255,0.45); line-height: 1.75; margin-bottom: var(--space-8); max-width: 640px; text-wrap: pretty; }
 
 .compareTable { border-radius: var(--r-lg); overflow: hidden; border: 1px solid rgba(255,255,255,0.08); }
 .compareRow {
   display: grid; grid-template-columns: 1.4fr 1fr 1fr;
-  padding: 0.8rem 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding: var(--space-3) var(--space-5); border-bottom: 1px solid rgba(255,255,255,0.05);
   font-size: var(--fs-sm); align-items: center;
 }
 .compareRow:last-child { border-bottom: none; }
-.compareHead { background: rgba(255,255,255,0.04); padding: 0.65rem 1.25rem; }
+.compareHead { background: rgba(255,255,255,0.04); padding: var(--space-2) var(--space-5); }
 .compareClassicHead { font-size: var(--fs-xs); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.25); }
 .compareUsHead { font-size: var(--fs-xs); font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--white); }
 .compareLabel  { color: rgba(255,255,255,0.5); font-weight: 500; }
@@ -274,7 +274,7 @@
 .tierBadgeGold { color: var(--gold); }
 .tierBadgeDim  { color: var(--mid); }
 
-.tierTop { margin-bottom: 1.5rem; }
+.tierTop { margin-bottom: var(--space-6); }
 .tierName {
   font-family: var(--font-display);
   font-size: var(--fs-xl); font-weight: 500; color: var(--dark);
@@ -285,10 +285,10 @@
 }
 .tierHighlight .tierName { color: var(--dark); }
 
-.tierTagline { font-size: var(--fs-sm); color: var(--light); margin-bottom: 1.1rem; font-style: italic; }
+.tierTagline { font-size: var(--fs-sm); color: var(--light); margin-bottom: var(--space-4); font-style: italic; }
 .tierHighlight .tierTagline { color: var(--light); }
 
-.tierRateRow { display: flex; align-items: baseline; gap: 0.4rem; margin-bottom: 0.6rem; flex-wrap: wrap; }
+.tierRateRow { display: flex; align-items: baseline; gap: var(--space-2); margin-bottom: var(--space-2); flex-wrap: wrap; }
 .tierNum {
   font-family: var(--font-display);
   font-size: var(--fs-3xl); font-weight: 500; color: var(--dark);
@@ -300,7 +300,7 @@
 .tierHighlight .tierUnit { color: var(--mid); }
 
 .tierExample {
-  font-size: var(--fs-sm); color: var(--mid); line-height: 1.5; margin-bottom: 0.5rem;
+  font-size: var(--fs-sm); color: var(--mid); line-height: 1.5; margin-bottom: var(--space-2);
   text-wrap: pretty;
 }
 .tierExample strong { color: var(--dark); font-weight: 700; }
@@ -311,9 +311,9 @@
 .tierSuitable strong { font-weight: 600; }
 .tierHighlight .tierSuitable { color: var(--light); }
 
-.tierFeatures { list-style: none; flex: 1; display: flex; flex-direction: column; gap: 0.65rem; margin: 1.5rem 0 2rem; }
+.tierFeatures { list-style: none; flex: 1; display: flex; flex-direction: column; gap: var(--space-2); margin-block: var(--space-6) var(--space-8); }
 .tierFeat {
-  display: flex; align-items: flex-start; gap: 0.6rem;
+  display: flex; align-items: flex-start; gap: var(--space-2);
   font-size: var(--fs-sm); color: var(--dark3); line-height: 1.45;
 }
 .tierFeatIcon { flex-shrink: 0; margin-top: 1px; color: var(--success); }
@@ -323,8 +323,8 @@
 .tierFeatNo .tierFeatIcon { color: var(--bg4) !important; }
 
 .tierCta {
-  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
-  padding: 0.9rem 1.5rem; border-radius: 100px; border: 1.5px solid var(--bg3);
+  display: flex; align-items: center; justify-content: center; gap: var(--space-2);
+  padding: var(--space-3) var(--space-6); border-radius: 100px; border: 1.5px solid var(--bg3);
   font-size: var(--fs-btn); font-weight: 700; color: var(--dark); margin-top: auto;
   transition: border-color 0.22s, color 0.22s;
 }
@@ -333,7 +333,7 @@
 .tierCtaGold:hover { background: var(--dark2); border-color: var(--dark2); transform: translateY(-1px); }
 
 .tiersNote {
-  text-align: center; margin-top: 2rem;
+  text-align: center; margin-top: var(--space-8);
   font-size: var(--fs-sm); color: var(--light); line-height: 1.6;
 }
 .tiersNote a { color: var(--gold); text-decoration: underline; }
@@ -341,7 +341,7 @@
 /* ─────────────────────────────────────────────────────────────
    MATERIALS
 ───────────────────────────────────────────────────────────── */
-.matTabs { display: flex; gap: 0.75rem; margin-top: 3rem; flex-wrap: wrap; }
+.matTabs { display: flex; gap: var(--space-3); margin-top: var(--space-10); flex-wrap: wrap; }
 .matTab {
   display: inline-flex; align-items: center; gap: var(--space-2);
   padding-block: var(--space-3);
@@ -365,19 +365,19 @@
   letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--mid);
   border: 1px solid currentColor;
-  padding: 0.1rem 0.5rem; border-radius: 100px;
+  padding: 0.1rem var(--space-2); border-radius: 100px;
   background: transparent;
 }
 .matTabActive .matTabPill { color: var(--mid); }
 
 .matPanel {
-  margin-top: 1.25rem; border-radius: var(--r-lg); overflow: hidden;
+  margin-top: var(--space-5); border-radius: var(--r-lg); overflow: hidden;
   border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.04);
 }
 .matAccentBar { height: 4px; }
 .matPanelBody { display: grid; grid-template-columns: 1fr auto; gap: var(--space-7); padding: var(--space-7); align-items: start; }
 
-.matPanelTags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
+.matPanelTags { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-3); }
 .matPanelTag {
   font-family: var(--font-body);
   font-size: var(--fs-2xs); font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
@@ -390,13 +390,13 @@
   line-height: 1.05;
   font-optical-sizing: auto;
 }
-.matPanelDesc { font-size: var(--fs-sm); color: rgba(255,255,255,0.5); line-height: 1.65; margin-bottom: 0.75rem; text-wrap: pretty; }
-.matPanelSuitable { font-size: var(--fs-sm); color: rgba(255,255,255,0.45); line-height: 1.6; margin-bottom: 1.25rem; text-wrap: pretty; }
+.matPanelDesc { font-size: var(--fs-sm); color: rgba(255,255,255,0.5); line-height: 1.65; margin-bottom: var(--space-3); text-wrap: pretty; }
+.matPanelSuitable { font-size: var(--fs-sm); color: rgba(255,255,255,0.45); line-height: 1.6; margin-bottom: var(--space-5); text-wrap: pretty; }
 .matPanelSuitable strong { color: rgba(255,255,255,0.65); font-weight: 600; }
 
-.matPanelPros { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.matPanelPros { list-style: none; display: flex; flex-direction: column; gap: var(--space-2); }
 .matPanelPros li {
-  display: flex; align-items: flex-start; gap: 0.55rem;
+  display: flex; align-items: flex-start; gap: var(--space-2);
   font-size: var(--fs-sm); color: rgba(255,255,255,0.65); line-height: 1.45;
 }
 .matPanelPros li > span { flex-shrink: 0; margin-top: 1px; }
@@ -406,7 +406,7 @@
   padding: var(--space-6) var(--space-7); min-width: 240px;
 }
 .matPriceLabel { font-family: var(--font-body); font-size: var(--fs-2xs); font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: var(--space-2); }
-.matPriceVal { display: flex; align-items: baseline; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0; }
+.matPriceVal { display: flex; align-items: baseline; gap: var(--space-2); flex-wrap: wrap; margin-bottom: 0; }
 .matPriceNum {
   font-family: var(--font-display);
   font-size: var(--fs-3xl); font-weight: 500; color: var(--white);
@@ -414,12 +414,12 @@
   font-feature-settings: "lnum";
 }
 .matPriceUnit { font-size: var(--fs-sm); color: rgba(255,255,255,0.35); align-self: center; }
-.matPriceDivider { height: 1px; background: rgba(255,255,255,0.08); margin: 1.25rem 0; }
-.matPriceNote { font-size: var(--fs-xs); color: rgba(255,255,255,0.4); line-height: 1.6; margin-bottom: 1.5rem; }
+.matPriceDivider { height: 1px; background: rgba(255,255,255,0.08); margin-block: var(--space-5); }
+.matPriceNote { font-size: var(--fs-xs); color: rgba(255,255,255,0.4); line-height: 1.6; margin-bottom: var(--space-6); }
 .matPriceNote strong { color: rgba(255,255,255,0.7); font-weight: 600; }
 .matPriceCta {
   display: block; width: 100%; text-align: center;
-  padding: 0.85rem 1rem; border-radius: 100px; color: var(--dark);
+  padding: var(--space-3) var(--space-4); border-radius: 100px; color: var(--dark);
   font-size: var(--fs-btn); font-weight: 700; transition: opacity 0.2s, transform 0.18s;
 }
 .matPriceCta:hover { opacity: 0.88; transform: translateY(-1px); }
@@ -427,13 +427,13 @@
 /* ─────────────────────────────────────────────────────────────
    INCLUDED / EXTRAS
 ───────────────────────────────────────────────────────────── */
-.includedGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
+.includedGrid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); margin-top: var(--space-10); }
 
 .includedCard {
   background: var(--white); border-radius: var(--r-lg);
-  border: 1.5px solid var(--bg3); padding: 2.25rem;
+  border: 1.5px solid var(--bg3); padding: var(--space-8);
 }
-.includedCardHeader { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.75rem; }
+.includedCardHeader { display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-7); }
 .includedCardIcon {
   width: 46px; height: 46px; border-radius: 12px;
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
@@ -446,18 +446,18 @@
   font-optical-sizing: auto;
 }
 
-.includedList { list-style: none; display: flex; flex-direction: column; gap: 1.1rem; }
-.includedItem { display: flex; align-items: flex-start; gap: 0.9rem; }
+.includedList { list-style: none; display: flex; flex-direction: column; gap: var(--space-4); }
+.includedItem { display: flex; align-items: flex-start; gap: var(--space-3); }
 .includedIcon { flex-shrink: 0; margin-top: 1px; color: var(--success); display: flex; align-items: center; }
 .includedLabel { display: block; font-size: var(--fs-sm); font-weight: 600; color: var(--dark3); }
 .includedNote  { display: block; font-size: var(--fs-xs); color: var(--light); margin-top: var(--space-1); }
 
 .extrasList { list-style: none; display: flex; flex-direction: column; }
 .extrasItem {
-  display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem;
-  padding: 0.95rem 0; border-bottom: 1px solid var(--bg2);
+  display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-4);
+  padding-block: var(--space-3); border-bottom: 1px solid var(--bg2);
 }
-.extrasItem:last-child { border-bottom: none; padding-bottom: 0; }
+.extrasItem:last-child { border-block-end: none; padding-block-end: 0; }
 .extrasLabel { display: block; font-size: var(--fs-sm); font-weight: 600; color: var(--dark3); }
 .extrasNote  { display: block; font-size: var(--fs-xs); color: var(--light); margin-top: var(--space-1); }
 .extrasPrice { font-size: var(--fs-sm); font-weight: 700; color: var(--gold); white-space: nowrap; flex-shrink: 0; }
@@ -579,20 +579,20 @@
    CALC
 ───────────────────────────────────────────────────────────── */
 .calc {
-  max-width: 780px; margin: 3rem auto 0;
+  max-width: 780px; margin: var(--space-10) auto 0;
   background: var(--white); border-radius: var(--r-lg);
   border: 1.5px solid var(--bg3); overflow: hidden;
 }
-.calcRows { padding: 0 2rem; }
+.calcRows { padding-inline: var(--space-8); }
 .calcRow {
-  display: flex; justify-content: space-between; align-items: center; gap: 1.5rem;
-  padding: 1rem 0; border-bottom: 1px solid var(--bg2); font-size: var(--fs-sm);
+  display: flex; justify-content: space-between; align-items: center; gap: var(--space-6);
+  padding-block: var(--space-4); border-bottom: 1px solid var(--bg2); font-size: var(--fs-sm);
 }
 .calcItem { color: var(--dark3); flex: 1; }
 .calcVal  { font-weight: 600; color: var(--dark); white-space: nowrap; flex-shrink: 0; }
 .calcTotal {
   display: flex; justify-content: space-between; align-items: center;
-  padding: 1.35rem 2rem; background: var(--dark);
+  padding: var(--space-5) var(--space-8); background: var(--dark);
 }
 .calcTotalLabel { font-size: var(--fs-sm); font-weight: 500; color: rgba(255,255,255,0.5); }
 .calcTotalNum {
@@ -601,14 +601,14 @@
   letter-spacing: -0.035em;
   font-feature-settings: "lnum";
 }
-.calcNote { padding: 1.1rem 2rem; font-size: var(--fs-xs); color: var(--light); line-height: 1.6; }
+.calcNote { padding: var(--space-4) var(--space-8); font-size: var(--fs-xs); color: var(--light); line-height: 1.6; }
 .calcNote a { color: var(--gold); }
 .calcNote a:hover { text-decoration: underline; }
 
 /* ─────────────────────────────────────────────────────────────
    FAQ
 ───────────────────────────────────────────────────────────── */
-.faqColumns { display: grid; grid-template-columns: 1fr 1fr; gap: 0 5vw; margin-top: 4rem; }
+.faqColumns { display: grid; grid-template-columns: 1fr 1fr; gap: 0 5vw; margin-top: var(--space-12); }
 .faqCol { display: flex; flex-direction: column; }
 .faqItem { border-bottom: 1px solid var(--bg3); }
 .faqItem:first-child { border-top: 1px solid var(--bg3); }
@@ -667,7 +667,7 @@
 }
 
 @media (max-width: 960px) {
-  .matPanelBody { grid-template-columns: 1fr; gap: 2rem; padding: 2rem; }
+  .matPanelBody { grid-template-columns: 1fr; gap: var(--space-8); padding: var(--space-8); }
   .matPriceCard { min-width: unset; }
 }
 
@@ -675,8 +675,8 @@
   .compareTable { border-radius: var(--r); }
   .compareRow {
     grid-template-columns: 1fr;
-    gap: 0.4rem;
-    padding: 0.9rem 1.1rem;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
   }
   .compareHead { display: none; }
   .compareLabel {
@@ -686,7 +686,7 @@
   }
   .compareClassic, .compareUs {
     display: flex; align-items: center; justify-content: space-between;
-    gap: 0.75rem;
+    gap: var(--space-3);
   }
   .compareClassic::before {
     content: 'Klasika'; font-size: var(--fs-2xs); letter-spacing: 0.08em;
@@ -708,10 +708,10 @@
 }
 
 @media (max-width: 720px) {
-  .tiers        { grid-template-columns: 1fr; gap: 1.25rem; }
+  .tiers        { grid-template-columns: 1fr; gap: var(--space-5); }
   .includedGrid { grid-template-columns: 1fr; }
   .calcRow      { flex-direction: column; align-items: flex-start; gap: var(--space-1); }
-  .calcRows, .calcTotal, .calcNote { padding-left: 1.4rem; padding-right: 1.4rem; }
+  .calcRows, .calcTotal, .calcNote { padding-inline: var(--space-5); }
 }
 
 @media (max-width: 640px) {
