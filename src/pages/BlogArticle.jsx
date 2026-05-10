@@ -237,21 +237,6 @@ export default function BlogArticle() {
         </section>
       )}
 
-      {/* CTA */}
-      <section className={styles.ctaBlock}>
-        <div className={styles.ctaInner}>
-          <FadeIn>
-            <h2 className={styles.ctaTitle}>Máte konkrétní koupelnu na mysli?</h2>
-            <p className={styles.ctaText}>Bezplatná prohlídka, závazná nabídka do 24 hodin, termín domluvíme během pár dnů.</p>
-            <Link to="/#contact" className={styles.ctaBtn}>
-              Chci konzultaci zdarma
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </Link>
-          </FadeIn>
-        </div>
-      </section>
     </main>
   )
 }
