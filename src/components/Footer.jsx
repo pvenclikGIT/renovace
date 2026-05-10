@@ -1,6 +1,8 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { BSLogo } from './Navbar'
 import styles from './Footer.module.css'
+
+const BASE = '/renovace'
 
 const nav = [
   { label: 'Jak to funguje', href: '#process' },
@@ -12,6 +14,12 @@ const nav = [
 ]
 
 export default function Footer() {
+  const location = useLocation()
+  const isHome = location.pathname === '/'
+  // Section anchors must be absolute when on a subpage (e.g. /cenik),
+  // so they navigate back to homepage and scroll to the section.
+  const homeHref = (hash) => isHome ? hash : `${BASE}/${hash}`
+
   return (
     <footer className={styles.footer}>
       <div className={styles.top}>
@@ -34,7 +42,8 @@ export default function Footer() {
         <div className={styles.col}>
           <div className={styles.colTitle}>Navigace</div>
           <ul>
-            {nav.map(l => <li key={l.href}><a href={l.href}>{l.label}</a></li>)}
+            <li><Link to="/">Domů</Link></li>
+            {nav.map(l => <li key={l.href}><a href={homeHref(l.href)}>{l.label}</a></li>)}
             <li><Link to="/cenik">Ceník</Link></li>
           </ul>
         </div>

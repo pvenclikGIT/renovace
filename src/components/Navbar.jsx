@@ -43,6 +43,16 @@ export default function Navbar() {
 
   const homeHref = (hash) => isHome ? hash : `${BASE}/${hash}`
 
+  // Click handler for "Domů" link: on homepage scroll to top smoothly,
+  // on other pages let react-router navigate (then ScrollToTop handles it).
+  const onHomeClick = (e) => {
+    if (isHome) {
+      e.preventDefault()
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+    close()
+  }
+
   return (
     <>
       <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
@@ -50,6 +60,15 @@ export default function Navbar() {
           <BSLogo />
         </Link>
         <ul className={styles.links}>
+          <li>
+            <Link
+              to="/"
+              onClick={onHomeClick}
+              className={isHome ? styles.navActive : ''}
+            >
+              Domů
+            </Link>
+          </li>
           {links.map(l => <li key={l.href}><a href={homeHref(l.href)}>{l.label}</a></li>)}
           <li><Link to="/cenik" className={location.pathname === '/cenik' ? styles.navActive : ''}>Ceník</Link></li>
           <li><a href={homeHref('#faq')}>FAQ</a></li>
@@ -62,6 +81,7 @@ export default function Navbar() {
 
       <div className={`${styles.drawer} ${open ? styles.drawerOpen : ''}`}>
         <div className={styles.drawerInner}>
+          <Link to="/" onClick={onHomeClick} className={styles.drawerLink}>Domů</Link>
           {links.map(l => <a key={l.href} href={homeHref(l.href)} onClick={close} className={styles.drawerLink}>{l.label}</a>)}
           <Link to="/cenik" onClick={close} className={styles.drawerLink}>Ceník</Link>
           <a href={homeHref('#faq')} onClick={close} className={styles.drawerLink}>FAQ</a>
