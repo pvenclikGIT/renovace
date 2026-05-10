@@ -125,7 +125,7 @@
    ───────────────────────────────────────────── */
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-5);
 }
 .gridTwo {
@@ -656,9 +656,82 @@
 }
 
 /* ─────────────────────────────────────────────
+   PAGINATION
+   ───────────────────────────────────────────── */
+.pagination {
+  display: flex; align-items: center; justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-9);
+  flex-wrap: wrap;
+}
+.pageBtn {
+  display: inline-flex; align-items: center;
+  gap: var(--space-2);
+  padding-block: var(--space-3);
+  padding-inline: var(--space-5);
+  border-radius: 100px;
+  border: 1.5px solid var(--bg3);
+  background: var(--white);
+  color: var(--dark);
+  font-size: var(--fs-btn);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  min-height: var(--tap);
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s, transform 0.2s;
+}
+.pageBtn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-1px);
+}
+.pageBtnDisabled {
+  opacity: 0.35;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.pageNums {
+  display: flex; align-items: center;
+  gap: var(--space-1);
+  list-style: none;
+}
+.pageNum {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: var(--tap);
+  min-height: var(--tap);
+  padding-inline: var(--space-3);
+  border-radius: 100px;
+  border: 1.5px solid transparent;
+  background: transparent;
+  color: var(--mid);
+  font-size: var(--fs-btn);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+}
+.pageNum:hover {
+  background: var(--bg2);
+  color: var(--dark);
+  transform: translateY(-1px);
+}
+.pageNumActive {
+  background: var(--dark) !important;
+  color: var(--white) !important;
+  border-color: var(--dark) !important;
+}
+
+/* ─────────────────────────────────────────────
    STRUCTURAL BREAKPOINTS
    ───────────────────────────────────────────── */
-@media (max-width: 760px) {
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
   .grid { grid-template-columns: 1fr; }
   .gridTwo { grid-template-columns: 1fr; }
+  .pagination { gap: var(--space-2); }
+  .pageBtn span { display: none; }
+  .pageBtn { padding-inline: var(--space-3); }
 }

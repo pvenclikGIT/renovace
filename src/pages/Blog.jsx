@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import FadeIn from '../components/FadeIn'
-import { articles, CATEGORIES } from '../data/articles'
+import { articles, ARTICLES_PER_PAGE, CATEGORIES } from '../data/articles'
 import styles from './Blog.module.css'
 
 function formatDate(iso) {
@@ -9,13 +9,10 @@ function formatDate(iso) {
   return d.toLocaleDateString('cs-CZ', { day: 'numeric', month: 'long', year: 'numeric' })
 }
 
-function ArticleCard({ article, featured = false }) {
+function ArticleCard({ article }) {
   const cat = CATEGORIES[article.category]
   return (
-    <Link
-      to={`/blog/${article.slug}`}
-      className={`${styles.card} ${featured ? styles.cardFeatured : ''}`}
-    >
+    <Link to={`/blog/${article.slug}`} className={styles.card}>
       <div className={styles.cardImage}>
         <img src={article.coverImage} alt={article.coverAlt} loading="lazy" />
         <span className={styles.cardCat} style={{ background: cat.color }}>{cat.label}</span>
@@ -36,33 +33,70 @@ function ArticleCard({ article, featured = false }) {
   )
 }
 
+function Pagination({ currentPage, totalPages }) {
+  if (totalPages <= 1) return null
+  const pages = Array.from({ length: totalPages }, (_, i) => i + 1)
+  return (
+    <nav className={styles.pagination} aria-label="Stránkování článků">
+      <Link
+        to={currentPage > 1 ? `?page=${currentPage - 1}` : '#'}
+        className={`${styles.pageBtn} ${currentPage === 1 ? styles.pageBtnDisabled : ''}`}
+        aria-disabled={currentPage === 1}
+        onClick={e => { if (currentPage === 1) e.preventDefault() }}
+      >
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M9 2L4 7l5 5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+        <span>Předchozí</span>
+      </Link>
+
+      <ol className={styles.pageNums}>
+        {pages.map(p => (
+          <li key={p}>
+            <Link
+              to={p === 1 ? '/blog' : `?page=${p}`}
+              className={`${styles.pageNum} ${p === currentPage ? styles.pageNumActive : ''}`}
+              aria-current={p === currentPage ? 'page' : undefined}
+            >
+              {p}
+            </Link>
+          </li>
+        ))}
+      </ol>
+
+      <Link
+        to={currentPage < totalPages ? `?page=${currentPage + 1}` : '#'}
+        className={`${styles.pageBtn} ${currentPage === totalPages ? styles.pageBtnDisabled : ''}`}
+        aria-disabled={currentPage === totalPages}
+        onClick={e => { if (currentPage === totalPages) e.preventDefault() }}
+      >
+        <span>Další</span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M5 2l5 5-5 5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </Link>
+    </nav>
+  )
+}
+
 export default function Blog() {
-  const [featured, ...rest] = articles
+  const [searchParams] = useSearchParams()
+  const currentPage = Math.max(1, parseInt(searchParams.get('page') || '1', 10))
+  const totalPages = Math.max(1, Math.ceil(articles.length / ARTICLES_PER_PAGE))
+  const safePage = Math.min(currentPage, totalPages)
+  const start = (safePage - 1) * ARTICLES_PER_PAGE
+  const pageArticles = articles.slice(start, start + ARTICLES_PER_PAGE)
 
   return (
     <main className={styles.page}>
-      {/* HERO */}
+      {/* HERO — no breadcrumb */}
       <section className={styles.hero}>
         <div className={styles.heroInner}>
-          <motion.nav
-            className={styles.breadcrumb}
-            aria-label="Drobečková navigace"
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Link to="/">Domů</Link>
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-              <path d="M4 2l4 4-4 4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            <span aria-current="page">Blog</span>
-          </motion.nav>
-
           <motion.div
             className={styles.heroTag}
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.05 }}
+            transition={{ duration: 0.6 }}
           >
             <span className={styles.heroTagDot} />
             Blog
@@ -72,7 +106,7 @@ export default function Blog() {
             className={styles.heroH1}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
+            transition={{ duration: 0.7, delay: 0.05 }}
           >
             Rady, příběhy, <em>technika.</em>
           </motion.h1>
@@ -81,49 +115,27 @@ export default function Blog() {
             className={styles.heroLead}
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.15 }}
+            transition={{ duration: 0.65, delay: 0.1 }}
           >
             Píšeme o tom, co z naší práce stojí za to vědět dřív, než si objednáte první prohlídku. Bez marketingových frází, bez SEO balastu, bez výplní.
           </motion.p>
         </div>
       </section>
 
-      {/* FEATURED */}
+      {/* GRID — 10 articles per page, paginated */}
       <section className={styles.section}>
         <div className={styles.sectionInner}>
-          <FadeIn>
-            <div className={styles.sectionLead}>
-              <span className={styles.sectionEyebrow}>Doporučujeme</span>
-              <h2 className={styles.sectionTitle}>Nejnovější článek</h2>
-            </div>
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <ArticleCard article={featured} featured />
-          </FadeIn>
+          <div className={styles.grid}>
+            {pageArticles.map((a, i) => (
+              <FadeIn key={a.slug} delay={i * 0.06}>
+                <ArticleCard article={a} />
+              </FadeIn>
+            ))}
+          </div>
+
+          <Pagination currentPage={safePage} totalPages={totalPages} />
         </div>
       </section>
-
-      {/* GRID */}
-      {rest.length > 0 && (
-        <section className={`${styles.section} ${styles.sectionAlt}`}>
-          <div className={styles.sectionInner}>
-            <FadeIn>
-              <div className={styles.sectionLead}>
-                <span className={styles.sectionEyebrow}>Archiv</span>
-                <h2 className={styles.sectionTitle}>Další články</h2>
-              </div>
-            </FadeIn>
-            <div className={styles.grid}>
-              {rest.map((a, i) => (
-                <FadeIn key={a.slug} delay={i * 0.08}>
-                  <ArticleCard article={a} />
-                </FadeIn>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
     </main>
   )
 }
