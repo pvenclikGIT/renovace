@@ -83,7 +83,7 @@
   font-family: var(--font-body);
   font-size: var(--fs-2xs);
   font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
-  color: #F87171;
+  color: var(--danger-light);
   white-space: nowrap; flex-shrink: 0;
 }
 .mythX { font-size: var(--fs-sm); }
@@ -123,7 +123,7 @@
   font-family: var(--font-body);
   font-size: var(--fs-2xs);
   font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
-  color: #4ADE80;
+  color: var(--success-light);
   margin-bottom: var(--space-3);
 }
 .truthCheck { font-size: var(--fs-sm); }

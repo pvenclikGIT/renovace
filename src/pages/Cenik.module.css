@@ -148,7 +148,7 @@
 }
 .heroTrustDot {
   width: 8px; height: 8px;
-  border-radius: 50%; background: #4CAF50;
+  border-radius: 50%; background: var(--success);
   flex-shrink: 0;
   box-shadow: 0 0 0 3px rgba(76,175,80,0.18);
 }
@@ -313,9 +313,9 @@
   display: flex; align-items: flex-start; gap: 0.6rem;
   font-size: var(--fs-sm); color: var(--dark3); line-height: 1.45;
 }
-.tierFeatIcon { flex-shrink: 0; margin-top: 1px; color: #4CAF50; }
+.tierFeatIcon { flex-shrink: 0; margin-top: 1px; color: var(--success); }
 .tierHighlight .tierFeat { color: var(--dark3); }
-.tierHighlight .tierFeatIcon { color: #4CAF50; }
+.tierHighlight .tierFeatIcon { color: var(--success); }
 .tierFeatNo { color: var(--light) !important; text-decoration: line-through; }
 .tierFeatNo .tierFeatIcon { color: var(--bg4) !important; }
 
@@ -445,7 +445,7 @@
 
 .includedList { list-style: none; display: flex; flex-direction: column; gap: 1.1rem; }
 .includedItem { display: flex; align-items: flex-start; gap: 0.9rem; }
-.includedIcon { flex-shrink: 0; margin-top: 1px; color: #4CAF50; display: flex; align-items: center; }
+.includedIcon { flex-shrink: 0; margin-top: 1px; color: var(--success); display: flex; align-items: center; }
 .includedLabel { display: block; font-size: var(--fs-sm); font-weight: 600; color: var(--dark3); }
 .includedNote  { display: block; font-size: var(--fs-xs); color: var(--light); margin-top: var(--space-1); }
 

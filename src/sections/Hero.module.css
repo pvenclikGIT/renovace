@@ -191,7 +191,7 @@
 }
 .trustDot {
   width: 6px; height: 6px;
-  border-radius: 50%; background: #4CAF50;
+  border-radius: 50%; background: var(--success);
   flex-shrink: 0;
   box-shadow: 0 0 0 3px rgba(76,175,80,0.18);
 }
@@ -236,7 +236,7 @@
 .badgePulse {
   width: 7px; height: 7px;
   border-radius: 50%;
-  background: #4CAF50;
+  background: var(--success);
   flex-shrink: 0;
   animation: pulse 2s infinite;
 }

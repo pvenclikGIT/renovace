@@ -23,7 +23,7 @@
 .pulse {
   width: 10px; height: 10px;
   border-radius: 50%;
-  background: #FF6B35;
+  background: var(--warn);
   flex-shrink: 0;
   animation: pulse 1.8s ease-in-out infinite;
 }

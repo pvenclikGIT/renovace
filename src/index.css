@@ -27,6 +27,13 @@
   --gold-pale2: #F2E0B8;
   --teal: #3D7A77;
 
+  /* ── Semantic colors (status / state) ── */
+  --success: #4CAF50;       /* green pulse, check icons, success indicators */
+  --success-light: #4ADE80; /* truth/positive on dark bg (Myths) */
+  --danger: #DC2626;        /* warning callout (Blog) */
+  --danger-light: #F87171;  /* myth/negative on dark bg (Myths) */
+  --warn: #FF6B35;          /* urgency / countdown pulse */
+
   /* ── Foundation ── */
   --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-display: 'Newsreader', Georgia, 'Times New Roman', serif;
