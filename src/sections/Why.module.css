@@ -69,18 +69,51 @@
   background: var(--white);
 }
 
+/*
+  Bento grid: first feature is featured (spans full width),
+  remaining 7 features fit in 2-col grid with subtle borders.
+*/
 .features {
   margin-top: var(--space-7);
-  display: flex; flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
 }
 .feature {
-  display: flex;
-  gap: var(--space-4);
+  display: flex; flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  background: var(--bg);
+  border: 1px solid var(--bg3);
+  border-radius: var(--r-lg);
+  transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
   align-items: flex-start;
-  padding-block: var(--space-5);
-  border-bottom: 1px solid var(--bg2);
 }
-.feature:first-child { border-top: 1px solid var(--bg2); }
+.feature:hover {
+  border-color: var(--dark2);
+  background: var(--white);
+}
+.feature:first-child {
+  grid-column: 1 / -1;
+  background: var(--dark);
+  border-color: var(--dark);
+  flex-direction: row;
+  gap: var(--space-5);
+}
+.feature:first-child .iconWrap {
+  background: rgba(255,255,255,0.08);
+  color: var(--gold);
+}
+.feature:first-child:hover .iconWrap {
+  background: var(--gold);
+  color: var(--white);
+}
+.feature:first-child .featureTitle { color: var(--white); font-size: var(--fs-2xl); }
+.feature:first-child .featureText { color: rgba(255,255,255,0.6); }
+@media (max-width: 640px) {
+  .features { grid-template-columns: 1fr; }
+  .feature:first-child { flex-direction: column; }
+}
 
 .iconWrap {
   width: 44px; height: 44px;

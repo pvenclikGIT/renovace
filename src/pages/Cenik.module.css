@@ -222,10 +222,10 @@
 .compareRow:last-child { border-bottom: none; }
 .compareHead { background: rgba(255,255,255,0.04); padding: 0.65rem 1.25rem; }
 .compareClassicHead { font-size: var(--fs-xs); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.25); }
-.compareUsHead { font-size: var(--fs-xs); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); }
+.compareUsHead { font-size: var(--fs-xs); font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--white); }
 .compareLabel  { color: rgba(255,255,255,0.5); font-weight: 500; }
 .compareClassic { color: rgba(255,255,255,0.28); }
-.compareUs  { color: var(--gold); font-weight: 600; }
+.compareUs  { color: var(--white); font-weight: 600; }
 
 /* ─────────────────────────────────────────────────────────────
    TIERS
@@ -587,7 +587,7 @@
 .calcTotalLabel { font-size: var(--fs-sm); font-weight: 500; color: rgba(255,255,255,0.5); }
 .calcTotalNum {
   font-family: var(--font-display);
-  font-size: var(--fs-2xl); font-weight: 500; color: var(--gold);
+  font-size: var(--fs-2xl); font-weight: 500; color: var(--white);
   letter-spacing: -0.035em;
   font-feature-settings: "lnum";
 }

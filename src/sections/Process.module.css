@@ -5,10 +5,19 @@
 }
 .inner { max-width: var(--max-w-tight); margin-inline: auto; }
 .header { margin-bottom: var(--space-8); }
+/*
+  Alternating L/R flow on desktop: each step takes one row,
+  alternating which side has the number and which has content.
+  On tablet: 2-col flat. On mobile: 1-col.
+*/
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--space-4);
+}
+@media (min-width: 1101px) {
+  .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  /* keep horizontal 4-col layout on big desktop */
 }
 
 .step {

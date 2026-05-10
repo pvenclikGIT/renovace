@@ -4,11 +4,23 @@
   padding-inline: var(--section-px);
 }
 .section > * { max-width: var(--max-w-tight); margin-inline: auto; }
+/*
+  Bento grid: epoxidová (the most popular) gets the wider row 1 spot,
+  cementová + pryskyřičná flank below in 2-col.
+  On mobile: clean 1-col stack.
+*/
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-4);
   margin-top: var(--space-8);
+}
+.card:nth-child(2) {
+  grid-column: 1 / -1;
+}
+@media (max-width: 860px) {
+  .grid { grid-template-columns: 1fr; }
+  .card:nth-child(2) { grid-column: auto; }
 }
 
 .card {
@@ -92,9 +104,7 @@
 }
 .card:hover .tag { border-color: rgba(201,150,60,.3); color: rgba(255,255,255,.6); }
 
-/* Structural only */
-@media (max-width: 860px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+/* Structural — on phones the bento collapses to 1-col stack (handled above) */
 @media (max-width: 560px) {
-  .grid { grid-template-columns: 1fr; }
   .cardImg { aspect-ratio: 16 / 10; }
 }

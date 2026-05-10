@@ -147,7 +147,7 @@
 .panelNum {
   font-family: var(--font-display);
   font-size: var(--fs-4xl);
-  font-weight: 500; color: var(--gold);
+  font-weight: 500; color: var(--white);
   letter-spacing: -0.04em; line-height: 1;
   font-feature-settings: "lnum";
 }
@@ -286,7 +286,7 @@
 .emptyZoneNum {
   font-family: var(--font-display);
   font-size: var(--fs-2xl);
-  font-weight: 500; color: var(--gold);
+  font-weight: 500; color: var(--white);
   letter-spacing: -0.035em;
   font-feature-settings: "lnum";
 }
