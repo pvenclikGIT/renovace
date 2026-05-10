@@ -102,7 +102,7 @@ export default function Certificates() {
                 <c.Icon />
               </div>
               <div>
-                <div className={styles.certTitle}>{c.title}</div>
+                <h3 className={styles.certTitle}>{c.title}</h3>
                 <div className={styles.certDesc}>{c.desc}</div>
               </div>
             </div>

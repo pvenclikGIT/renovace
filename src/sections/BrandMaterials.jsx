@@ -172,7 +172,7 @@ function BrandCard({ brand, delay, open, onToggle }) {
           <BrandLogo logo={brand.logo} name={brand.name} />
         </div>
         <div className={styles.cardMeta}>
-          <div className={styles.brandName}>{brand.name}</div>
+          <h3 className={styles.brandName}>{brand.name}</h3>
           <div className={styles.brandCountry}><span>{brand.flag}</span>{brand.country}</div>
           <div className={styles.brandSystem}>{brand.system}</div>
         </div>

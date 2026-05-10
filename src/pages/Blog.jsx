@@ -18,7 +18,7 @@ function ArticleCard({ article }) {
       </div>
       <div className={styles.cardBody}>
         <span className={styles.cardCat} style={{ color: cat.color }}>{cat.label}</span>
-        <h3 className={styles.cardTitle}>{article.title}</h3>
+        <h2 className={styles.cardTitle}>{article.title}</h2>
         <p className={styles.cardLead}>{article.lead}</p>
         <div className={styles.cardMeta}>
           <span className={styles.cardAvatar} aria-hidden="true">{article.author.initials}</span>
