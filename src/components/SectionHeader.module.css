@@ -1,42 +1,59 @@
+/*
+  SectionHeader — modern editorial style.
+  - No pill background on the eyebrow tag (drop the WP-2018 chip)
+  - Tag becomes a subtle small-caps caption
+  - Title uses display serif (Newsreader) at confident weight 500
+  - Lead stays sans body for legibility
+*/
+
 .wrap { max-width: 720px; }
+
 .tag {
-  display: inline-flex; align-items: center; gap: var(--space-2);
+  display: inline-flex; align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
   font-size: var(--fs-2xs);
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold);
-  background: var(--gold-pale);
-  padding-block: var(--space-2);
-  padding-inline: var(--space-4);
-  border-radius: 100px;
+  color: var(--mid);
   margin-bottom: var(--space-4);
-  width: fit-content;
 }
 .tagDot {
   width: 5px; height: 5px;
-  border-radius: 50%; background: var(--gold);
+  border-radius: 50%;
+  background: var(--gold);
   flex-shrink: 0;
 }
+
 .title {
+  font-family: var(--font-display);
   font-size: var(--fs-3xl);
-  font-weight: 800;
-  line-height: var(--lh-tight);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
   color: var(--dark);
-  letter-spacing: -0.03em;
   text-wrap: balance;
+  font-optical-sizing: auto;
 }
-.title em { font-style: normal; color: var(--gold); }
+.title em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--dark);
+}
+
 .lead {
+  font-family: var(--font-body);
   font-size: var(--fs-lead);
-  font-weight: 300;
+  font-weight: 400;
   color: var(--mid);
-  line-height: var(--lh-relaxed);
+  line-height: 1.65;
   margin-top: var(--space-4);
   max-width: 56ch;
   text-wrap: pretty;
 }
+
 .light .title { color: var(--white); }
-.light .lead { color: rgba(255,255,255,0.5); }
-.light .tag { background: rgba(201,150,60,0.18); color: var(--gold3); }
+.light .lead { color: rgba(255,255,255,0.6); }
+.light .tag { color: rgba(255,255,255,0.65); }
 .light .tagDot { background: var(--gold3); }

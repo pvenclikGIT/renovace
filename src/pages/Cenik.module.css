@@ -44,24 +44,35 @@
 
 .heroTag {
   display: inline-flex; align-items: center; gap: var(--space-2);
-  font-size: var(--fs-2xs); font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--gold); background: var(--gold-pale);
-  padding: var(--space-2) var(--space-4);
-  border-radius: 100px; margin-bottom: var(--space-5); width: fit-content;
+  font-family: var(--font-body);
+  font-size: var(--fs-2xs); font-weight: 600;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: var(--space-5); width: fit-content;
 }
-.heroDot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+.heroDot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--gold); flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(201,150,60,0.18);
+}
 
-/* Sized by .heroContent's inline width — same approach as Hero homepage */
+/* Sized by .heroContent's inline width — display serif for editorial impact */
 .heroH1 {
-  font-size: clamp(1.5rem, 8cqi, 3.25rem);
-  font-weight: 800;
-  line-height: var(--lh-tight);
-  letter-spacing: -0.04em;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 9cqi, 4.5rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.035em;
   color: var(--dark);
   margin-bottom: var(--space-5);
   text-wrap: balance;
+  font-optical-sizing: auto;
 }
-.heroGold { color: var(--gold); font-style: normal; }
+.heroGold {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--dark);
+}
 
 .heroLead {
   font-size: var(--fs-lead); font-weight: 300; color: var(--mid);
