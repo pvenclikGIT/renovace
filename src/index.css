@@ -74,9 +74,6 @@
   --section-py: var(--space-10);
   --section-px: var(--space-5);
 
-  /* Backwards-compatible aliases (legacy rules still using --px/--py) */
-  --px: var(--section-px);
-  --py: var(--section-py);
 
   /* ─────────────────────────────────────────────
      FLUID TYPE SCALE
