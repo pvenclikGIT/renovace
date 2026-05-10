@@ -10,7 +10,6 @@ const nav = [
   { label: 'Materiály', href: '#materials' },
   { label: 'Realizace', href: '#gallery' },
   { label: 'Mýty a realita', href: '#myths' },
-  { label: 'FAQ', href: '#faq' },
 ]
 
 export default function Footer() {
