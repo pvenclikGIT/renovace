@@ -658,13 +658,60 @@ export default function Cenik() {
         <div className={styles.inner}>
           <FadeIn>
             <SectionHeader
-              tag="Příklad kalkulace"
-              title="Kolik vyjde <em>průměrná koupelna?</em>"
-              lead="Průměrná koupelna: podlaha 6 m², stěny 16 m², celkem 22 m². Kombinace cementové stěrky na stěnách a epoxidové na podlaze."
+              tag="Orientační ceny podle typu prostoru"
+              title="Kolik vyjde <em>vaše koupelna?</em>"
+              lead="Cena se odvíjí od plochy a kombinace materiálů. Standardně dáváme cementovou stěrku na stěny (3 000 Kč/m²) a epoxidovou na podlahu (3 750 Kč/m²), která snese trvalou vlhkost a chemii. Pryskyřičnou volíme tam, kde má smysl podlahové topení nebo designové vzory."
             />
           </FadeIn>
 
           <FadeIn delay={0.1}>
+            <div className={styles.typologyGrid}>
+              {[
+                {
+                  id: 'wc',
+                  tag: 'Nejmenší',
+                  name: 'Samostatné WC',
+                  area: '4 až 6 m² (stěny i podlaha)',
+                  price: '13 000 až 19 000 Kč',
+                  desc: 'Toaleta nebo malá technická místnost. Většinu času zabere příprava podkladu, samotná aplikace je rychlá.',
+                },
+                {
+                  id: 'panelak',
+                  tag: 'Nejčastější',
+                  name: 'Paneláková koupelna',
+                  area: '15 až 18 m² (stěny i podlaha)',
+                  price: '48 000 až 58 000 Kč',
+                  desc: 'Standardní byt 2+kk až 3+1 se sprchovým koutem, vanou a umyvadlem. Nejčastější realizace co u nás děláme.',
+                  highlight: true,
+                },
+                {
+                  id: 'rd',
+                  tag: 'Větší',
+                  name: 'Koupelna v rodinném domě',
+                  area: '25 až 35 m² (stěny i podlaha)',
+                  price: '81 000 až 113 000 Kč',
+                  desc: 'Větší koupelna s vanou, samostatným sprchovým koutem, dvojitým umyvadlem, případně podlahovým topením. Tady často sahneme po pryskyřici na podlaze.',
+                },
+              ].map(t => (
+                <div key={t.id} className={`${styles.typoCard} ${t.highlight ? styles.typoCardHi : ''}`}>
+                  <div className={styles.typoTag}>{t.tag}</div>
+                  <h3 className={styles.typoName}>{t.name}</h3>
+                  <div className={styles.typoArea}>{t.area}</div>
+                  <div className={styles.typoPriceRow}>
+                    <span className={styles.typoPrice}>{t.price}</span>
+                    <span className={styles.typoPriceUnit}>bez DPH</span>
+                  </div>
+                  <p className={styles.typoDesc}>{t.desc}</p>
+                </div>
+              ))}
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.2}>
+            <div className={styles.exampleHeader}>
+              <h3 className={styles.exampleTitle}>Konkrétní rozpis: paneláková koupelna 22 m²</h3>
+              <p className={styles.exampleSub}>Stěny 16 m² + podlaha 6 m². Cementová stěrka na stěnách, epoxidová na podlaze do mokrého provozu.</p>
+            </div>
             <div className={styles.calc}>
               <div className={styles.calcRows}>
                 {[
@@ -685,10 +732,9 @@ export default function Cenik() {
                 <span className={styles.calcTotalNum}>70 500 Kč</span>
               </div>
               <p className={styles.calcNote}>
-                Toto je orientační kalkulace. Konečná cena závisí na stavu povrchu a zvoleném materiálu.
-                Přesnější odhad dostanete přes{' '}
+                Konečná cena záleží na stavu povrchu, počtu nik a zvolené kombinaci materiálů. Pro přesný odhad nám pošlete pár fotek na WhatsApp nebo e-mailem, ozveme se do 24 hodin s konkrétní nabídkou. Spočítat si můžete i sami přes{' '}
                 <a href={`${HOME}#calculator`}>interaktivní kalkulátor</a> nebo{' '}
-                <a href={`${HOME}#contact`}>napište nám</a> a spočítáme to zdarma.
+                <a href={`${HOME}#contact`}>napište nám</a> a domluvíme bezplatnou prohlídku.
               </p>
             </div>
           </FadeIn>
