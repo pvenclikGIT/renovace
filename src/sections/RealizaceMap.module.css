@@ -257,20 +257,23 @@
   margin-bottom: var(--space-5);
 }
 .emptyZones {
-  display: flex; align-items: center;
-  gap: var(--space-5);
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-4);
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.07);
   border-radius: var(--r);
   padding-block: var(--space-3);
   padding-inline: var(--space-5);
+  width: 100%;
+  max-width: 320px;
 }
 .emptyZone {
   display: flex; flex-direction: column;
   gap: 2px;
   align-items: center;
+  min-width: 0;
 }
 .emptyZoneNum {
   font-size: var(--fs-2xl);
