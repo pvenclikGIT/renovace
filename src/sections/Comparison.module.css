@@ -67,23 +67,19 @@
 }
 .thBadge {
   display: inline-flex; align-items: center;
-  font-size: var(--fs-btn);
-  font-weight: 700;
-  color: var(--gold);
-  background: rgba(201,150,60,.15);
-  padding-block: var(--space-2);
-  padding-inline: var(--space-3);
-  border-radius: 100px; white-space: nowrap;
+  font-family: var(--font-body);
+  font-size: var(--fs-2xs);
+  font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--white);
+  white-space: nowrap;
 }
 .thBadgeGray {
   display: inline-flex; align-items: center;
-  font-size: var(--fs-btn);
-  font-weight: 600;
-  color: rgba(255,255,255,.35);
-  background: rgba(255,255,255,.06);
-  padding-block: var(--space-2);
-  padding-inline: var(--space-3);
-  border-radius: 100px; white-space: nowrap;
+  font-family: var(--font-body);
+  font-size: var(--fs-2xs);
+  font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  white-space: nowrap;
 }
 .thLong { display: inline; }
 .thShort { display: none; }

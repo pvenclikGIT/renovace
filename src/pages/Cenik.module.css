@@ -128,10 +128,12 @@
   width: 1px; height: 28px; background: var(--bg3);
 }
 .statNum {
-  font-size: var(--fs-xl);
-  font-weight: 800; line-height: 1;
-  color: var(--dark); letter-spacing: -0.04em;
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: 500; line-height: 1;
+  color: var(--dark); letter-spacing: -0.035em;
   white-space: nowrap;
+  font-feature-settings: "lnum";
 }
 .statLabel { font-size: var(--fs-xs); color: var(--light); line-height: 1.35; }
 .statDiv  { display: none; }
@@ -242,18 +244,19 @@
 .tierCard:hover { border-color: var(--bg4); box-shadow: 0 8px 32px rgba(0,0,0,0.07); }
 
 .tierHighlight {
-  background: var(--dark); border-color: var(--gold);
-  box-shadow: 0 12px 40px rgba(201,150,60,0.2);
+  border-color: var(--dark);
+  box-shadow: 0 16px 48px rgba(23,20,18,0.08);
 }
-.tierHighlight:hover { border-color: var(--gold2); box-shadow: 0 16px 48px rgba(201,150,60,0.26); }
+.tierHighlight:hover { border-color: var(--dark); box-shadow: 0 24px 64px rgba(23,20,18,0.12); }
 
 .tierBadge {
   position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
-  font-size: var(--fs-2xs); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-  padding: 0.3rem 1.1rem; border-radius: 100px; white-space: nowrap;
+  font-family: var(--font-body);
+  font-size: var(--fs-2xs); font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+  padding: 0.35rem 1.1rem; border-radius: 100px; white-space: nowrap;
 }
-.tierBadgeGold { background: var(--gold); color: var(--dark); }
-.tierBadgeDim  { background: var(--dark3); color: rgba(255,255,255,0.7); }
+.tierBadgeGold { background: var(--dark); color: var(--white); }
+.tierBadgeDim  { background: var(--bg3); color: var(--mid); }
 
 .tierTop { margin-bottom: 1.5rem; }
 .tierName {
@@ -263,27 +266,27 @@
   line-height: 1.1;
   font-optical-sizing: auto;
 }
-.tierHighlight .tierName { color: var(--white); }
+.tierHighlight .tierName { color: var(--dark); }
 
 .tierTagline { font-size: var(--fs-sm); color: var(--light); margin-bottom: 1.1rem; font-style: italic; }
-.tierHighlight .tierTagline { color: rgba(255,255,255,0.4); }
+.tierHighlight .tierTagline { color: var(--light); }
 
 .tierRateRow { display: flex; align-items: baseline; gap: 0.4rem; margin-bottom: 0.6rem; flex-wrap: wrap; }
 .tierNum { font-size: var(--fs-2xl); font-weight: 900; color: var(--dark); letter-spacing: -0.04em; line-height: 1; }
 .tierUnit { font-size: var(--fs-sm); color: var(--light); align-self: center; }
-.tierHighlight .tierNum  { color: var(--white); }
-.tierHighlight .tierUnit { color: rgba(255,255,255,0.4); }
+.tierHighlight .tierNum  { color: var(--dark); }
+.tierHighlight .tierUnit { color: var(--mid); }
 
 .tierExample {
   font-size: var(--fs-sm); color: var(--mid); line-height: 1.5; margin-bottom: 0.5rem;
 }
 .tierExample strong { color: var(--dark); font-weight: 700; }
-.tierHighlight .tierExample { color: rgba(255,255,255,0.45); }
-.tierHighlight .tierExample strong { color: var(--gold2); }
+.tierHighlight .tierExample { color: var(--mid); }
+.tierHighlight .tierExample strong { color: var(--dark); }
 
 .tierSuitable { font-size: var(--fs-xs); color: var(--light); line-height: 1.5; margin-bottom: 0; }
 .tierSuitable strong { font-weight: 600; }
-.tierHighlight .tierSuitable { color: rgba(255,255,255,0.35); }
+.tierHighlight .tierSuitable { color: var(--light); }
 
 .tierFeatures { list-style: none; flex: 1; display: flex; flex-direction: column; gap: 0.65rem; margin: 1.5rem 0 2rem; }
 .tierFeat {
@@ -291,8 +294,8 @@
   font-size: var(--fs-sm); color: var(--dark3); line-height: 1.45;
 }
 .tierFeatIcon { flex-shrink: 0; margin-top: 1px; color: #4CAF50; }
-.tierHighlight .tierFeat { color: rgba(255,255,255,0.8); }
-.tierHighlight .tierFeatIcon { color: var(--gold2); }
+.tierHighlight .tierFeat { color: var(--dark3); }
+.tierHighlight .tierFeatIcon { color: #4CAF50; }
 .tierFeatNo { color: var(--light) !important; text-decoration: line-through; }
 .tierFeatNo .tierFeatIcon { color: var(--bg4) !important; }
 
@@ -302,9 +305,9 @@
   font-size: var(--fs-btn); font-weight: 700; color: var(--dark); margin-top: auto;
   transition: border-color 0.22s, color 0.22s;
 }
-.tierCta:hover { border-color: var(--gold); color: var(--gold); }
-.tierCtaGold { background: var(--gold); border-color: var(--gold); color: var(--dark); }
-.tierCtaGold:hover { background: var(--gold2); border-color: var(--gold2); transform: translateY(-1px); }
+.tierCta:hover { border-color: var(--dark); background: var(--dark); color: var(--white); }
+.tierCtaGold { background: var(--dark); border-color: var(--dark); color: var(--white); }
+.tierCtaGold:hover { background: var(--dark2); border-color: var(--dark2); transform: translateY(-1px); }
 
 .tiersNote {
   text-align: center; margin-top: 2rem;
@@ -317,18 +320,32 @@
 ───────────────────────────────────────────────────────────── */
 .matTabs { display: flex; gap: 0.75rem; margin-top: 3rem; flex-wrap: wrap; }
 .matTab {
-  display: inline-flex; align-items: center; gap: 0.6rem;
-  padding: 0.7rem 1.4rem; border-radius: 100px;
-  border: 1.5px solid rgba(255,255,255,0.12);
-  font-size: var(--fs-sm); font-weight: 600; color: rgba(255,255,255,0.45);
-  background: transparent; cursor: pointer; transition: all 0.22s; white-space: nowrap;
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  padding-block: var(--space-3);
+  padding-inline: var(--space-5);
+  border-radius: 100px;
+  border: 1px solid rgba(255,255,255,0.15);
+  font-family: var(--font-body);
+  font-size: var(--fs-sm); font-weight: 500;
+  color: rgba(255,255,255,0.5);
+  background: transparent; cursor: pointer;
+  transition: all 0.22s; white-space: nowrap;
+  min-height: var(--tap);
 }
-.matTab:hover { border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.75); }
-.matTabActive { background: rgba(255,255,255,0.05); color: var(--white); }
+.matTab:hover { border-color: rgba(255,255,255,0.4); color: var(--white); }
+.matTabActive {
+  background: var(--white); color: var(--dark);
+  border-color: var(--white);
+}
 .matTabPill {
-  font-size: var(--fs-2xs); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-  background: var(--gold); color: var(--dark); padding: 0.15rem 0.55rem; border-radius: 100px;
+  font-size: 0.6rem; font-weight: 600;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--mid);
+  border: 1px solid currentColor;
+  padding: 0.1rem 0.5rem; border-radius: 100px;
+  background: transparent;
 }
+.matTabActive .matTabPill { color: var(--mid); }
 
 .matPanel {
   margin-top: 1.25rem; border-radius: var(--r-lg); overflow: hidden;

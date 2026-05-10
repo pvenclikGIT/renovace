@@ -141,8 +141,8 @@
 }
 .compBtn:hover { border-color: var(--bg4); transform: translateX(3px); }
 .compBtnActive {
-  border-color: var(--gold) !important;
-  background: var(--gold-pale) !important;
+  border-color: var(--dark) !important;
+  background: var(--white) !important;
   transform: translateX(4px) !important;
 }
 .compTop {
@@ -155,21 +155,19 @@
   letter-spacing: -0.02em;
 }
 .compBadge {
+  font-family: var(--font-body);
   font-size: var(--fs-2xs);
-  font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--gold); background: white;
+  font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--mid);
+  background: transparent;
   padding-block: var(--space-1);
   padding-inline: var(--space-2);
   border-radius: 100px;
-  border: 1px solid var(--gold-pale2);
+  border: 1px solid var(--bg3);
   white-space: nowrap;
 }
-.compBadgePrem {
-  color: #7B4F00;
-  background: var(--gold-pale2);
-  border-color: var(--gold);
-}
-.compBtnActive .compBadge { background: var(--gold-pale2); }
+.compBadgePrem { color: var(--mid); }
+.compBtnActive .compBadge { background: transparent; border-color: var(--dark); color: var(--dark); }
 .compDesc {
   font-size: var(--fs-sm);
   font-weight: 300; color: var(--dark3);

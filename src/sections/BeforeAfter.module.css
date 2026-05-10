@@ -47,24 +47,24 @@
 .tabLong { display: inline; }
 .tabShort { display: none; }
 .tab {
-  font-family: var(--font);
+  font-family: var(--font-body);
   font-size: var(--fs-btn);
   font-weight: 500;
-  color: rgba(255,255,255,0.4);
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.5);
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
   padding-block: var(--space-2);
   padding-inline: var(--space-4);
   border-radius: 100px;
   cursor: pointer;
   transition: all 0.25s var(--ease);
+  min-height: var(--tap);
 }
-.tab:hover { color: rgba(255,255,255,0.75); border-color: rgba(255,255,255,0.2); }
+.tab:hover { color: var(--white); border-color: rgba(255,255,255,0.4); }
 .tabActive {
-  color: var(--gold) !important;
-  background: rgba(201,150,60,0.12) !important;
-  border-color: rgba(201,150,60,0.35) !important;
-  font-weight: 700 !important;
+  color: var(--dark) !important;
+  background: var(--white) !important;
+  border-color: var(--white) !important;
 }
 
 .sliderWrap { position: relative; border-radius: var(--r-lg); overflow: hidden; }

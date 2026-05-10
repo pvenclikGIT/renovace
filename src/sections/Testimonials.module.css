@@ -23,13 +23,10 @@
 .cardTop { display: flex; align-items: center; justify-content: space-between; }
 .stars { display: flex; gap: 3px; color: var(--gold); }
 .type {
+  font-family: var(--font-body);
   font-size: var(--fs-2xs);
-  font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--light);
-  background: var(--bg2);
-  padding-block: var(--space-1);
-  padding-inline: var(--space-3);
-  border-radius: 100px;
+  font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--mid);
 }
 .text {
   font-family: var(--font-display);
