@@ -112,7 +112,7 @@
   box-shadow: 0 6px 20px rgba(201,150,60,0.4);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .inner { flex-wrap: wrap; justify-content: center; text-align: center; }
   .left { justify-content: center; flex: unset; width: 100%; }
   .cta { width: 100%; justify-content: center; }

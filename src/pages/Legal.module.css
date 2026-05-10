@@ -93,7 +93,7 @@
   padding-inline: var(--section-px);
 }
 .bodyInner {
-  max-width: 760px;
+  max-width: 768px;
   margin-inline: auto;
 }
 
@@ -261,9 +261,9 @@
   min-width: 8em;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   .tocList { grid-template-columns: 1fr; }
 }
-@media (max-width: 560px) {
+@media (max-width: 640px) {
   .h2 { flex-direction: column; align-items: flex-start; gap: var(--space-2); }
 }

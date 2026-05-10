@@ -207,7 +207,7 @@
 }
 
 /* Structural only — no @media font/padding overrides */
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
   .featuredRow { grid-template-columns: 1fr; }
   .smallRow { grid-template-columns: 1fr; }
 }

@@ -32,7 +32,7 @@
   min-width: 0;
 }
 .heroContent {
-  width: 100%; max-width: 560px; min-width: 0;
+  width: 100%; max-width: 640px; min-width: 0;
   container-type: inline-size;
 }
 
@@ -668,12 +668,12 @@
   .tiers { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
   .matPanelBody { grid-template-columns: 1fr; gap: var(--space-8); padding: var(--space-8); }
   .matPriceCard { min-width: unset; }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .compareTable { border-radius: var(--r); }
   .compareRow {
     grid-template-columns: 1fr;
@@ -700,16 +700,16 @@
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   .faqColumns { grid-template-columns: 1fr; gap: 0; }
   .faqCol:last-child .faqItem:first-child { border-block-start: none; }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1024px) {
   .typologyGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   .tiers        { grid-template-columns: 1fr; gap: var(--space-5); }
   .includedGrid { grid-template-columns: 1fr; }
   .calcRow      { flex-direction: column; align-items: flex-start; gap: var(--space-1); }
@@ -722,7 +722,7 @@
   .heroRight { aspect-ratio: 4 / 3; }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 640px) {
   .typologyGrid { grid-template-columns: 1fr; }
 }
 

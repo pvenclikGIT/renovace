@@ -139,5 +139,5 @@
 }
 .swatchCta:hover { gap: var(--space-3); }
 
-@media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
-@media (max-width: 360px) { .swatchGrid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 1024px) { .grid { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .swatchGrid { grid-template-columns: repeat(3, 1fr); } }

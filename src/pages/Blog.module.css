@@ -421,7 +421,7 @@
 .tocList a:hover { color: var(--gold); }
 
 .articleBody {
-  max-width: 720px;
+  max-width: 768px;
   font-size: var(--fs-lg);
   line-height: var(--lh-relaxed);
   color: var(--dark3);
@@ -628,7 +628,7 @@
   padding-inline: var(--section-px);
 }
 .ctaInner {
-  max-width: 720px;
+  max-width: 768px;
   margin-inline: auto;
   text-align: center;
 }

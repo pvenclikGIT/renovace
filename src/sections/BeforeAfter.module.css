@@ -205,7 +205,7 @@
 .ctaBtn:hover { background: var(--gold2); transform: translateY(-1px); }
 
 /* Structural only */
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   .tabLong { display: none; }
   .tabShort { display: inline; }
 }

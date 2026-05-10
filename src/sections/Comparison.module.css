@@ -166,7 +166,7 @@
 .ctaBtn:hover { background: var(--gold); transform: translateY(-1px); }
 
 /* Structural only */
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   .tableHead { display: none; }
   .row {
     grid-template-columns: 1fr 1fr;

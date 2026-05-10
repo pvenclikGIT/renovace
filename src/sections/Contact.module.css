@@ -252,7 +252,7 @@
 
 .csCheck { color: var(--gold); flex-shrink: 0; display: flex; }
 
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
   .inner { grid-template-columns: 1fr; gap: var(--space-7); }
   .row { grid-template-columns: 1fr; }
 }

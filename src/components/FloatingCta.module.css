@@ -36,6 +36,6 @@
 .arr { transition: transform 0.2s; }
 .btn:hover .arr { transform: translateX(3px); }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
   .wrap { display: none; }
 }

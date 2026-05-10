@@ -106,5 +106,5 @@
 }
 .brandBadge:hover { border-color: var(--gold); color: var(--dark); }
 
-@media (max-width: 860px) { .certsGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 560px) { .certsGrid { grid-template-columns: 1fr; } }
+@media (max-width: 1024px) { .certsGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .certsGrid { grid-template-columns: 1fr; } }

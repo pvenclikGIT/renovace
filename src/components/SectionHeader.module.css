@@ -6,7 +6,7 @@
   - Lead stays sans body for legibility
 */
 
-.wrap { max-width: 720px; }
+.wrap { max-width: 768px; }
 
 .tag {
   display: inline-flex; align-items: center;

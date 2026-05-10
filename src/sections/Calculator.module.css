@@ -416,12 +416,12 @@
 }
 
 /* Structural only */
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
   .grid { grid-template-columns: 1fr; }
   .result { position: static; }
   .compBtn:hover { transform: none; }
   .compBtnActive { transform: none !important; }
 }
-@media (max-width: 560px) {
+@media (max-width: 640px) {
   .emailFlex { flex-direction: column; }
 }
